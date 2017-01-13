@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
+		713D5F151E295DA500DD76FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F141E295DA500DD76FA /* ViewController.swift */; };
+		713D5F181E295DA500DD76FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F161E295DA500DD76FA /* Main.storyboard */; };
+		713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F191E295DA500DD76FA /* ArtNYC.xcdatamodeld */; };
+		713D5F1D1E295DA500DD76FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1C1E295DA500DD76FA /* Assets.xcassets */; };
+		713D5F201E295DA500DD76FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */; };
+		713D5F2B1E295DA500DD76FA /* ArtNYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		713D5F271E295DA500DD76FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713D5F071E295DA500DD76FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 713D5F0E1E295DA500DD76FA;
+			remoteInfo = ArtNYC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		713D5F121E295DA500DD76FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		713D5F141E295DA500DD76FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		713D5F171E295DA500DD76FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		713D5F1A1E295DA500DD76FA /* ArtNYC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtNYC.xcdatamodel; sourceTree = "<group>"; };
+		713D5F1C1E295DA500DD76FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		713D5F1F1E295DA500DD76FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		713D5F211E295DA500DD76FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713D5F261E295DA500DD76FA /* ArtNYCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtNYCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtNYCTests.swift; sourceTree = "<group>"; };
+		713D5F2C1E295DA500DD76FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		713D5F0C1E295DA500DD76FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713D5F231E295DA500DD76FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		713D5F061E295DA500DD76FA = {
+			isa = PBXGroup;
+			children = (
+				713D5F111E295DA500DD76FA /* ArtNYC */,
+				713D5F291E295DA500DD76FA /* ArtNYCTests */,
+				713D5F101E295DA500DD76FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		713D5F101E295DA500DD76FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				713D5F0F1E295DA500DD76FA /* ArtNYC.app */,
+				713D5F261E295DA500DD76FA /* ArtNYCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		713D5F111E295DA500DD76FA /* ArtNYC */ = {
+			isa = PBXGroup;
+			children = (
+				713D5F121E295DA500DD76FA /* AppDelegate.swift */,
+				713D5F141E295DA500DD76FA /* ViewController.swift */,
+				713D5F161E295DA500DD76FA /* Main.storyboard */,
+				713D5F1C1E295DA500DD76FA /* Assets.xcassets */,
+				713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */,
+				713D5F211E295DA500DD76FA /* Info.plist */,
+				713D5F191E295DA500DD76FA /* ArtNYC.xcdatamodeld */,
+			);
+			path = ArtNYC;
+			sourceTree = "<group>";
+		};
+		713D5F291E295DA500DD76FA /* ArtNYCTests */ = {
+			isa = PBXGroup;
+			children = (
+				713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */,
+				713D5F2C1E295DA500DD76FA /* Info.plist */,
+			);
+			path = ArtNYCTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		713D5F0E1E295DA500DD76FA /* ArtNYC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713D5F2F1E295DA500DD76FA /* Build configuration list for PBXNativeTarget "ArtNYC" */;
+			buildPhases = (
+				713D5F0B1E295DA500DD76FA /* Sources */,
+				713D5F0C1E295DA500DD76FA /* Frameworks */,
+				713D5F0D1E295DA500DD76FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtNYC;
+			productName = ArtNYC;
+			productReference = 713D5F0F1E295DA500DD76FA /* ArtNYC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		713D5F251E295DA500DD76FA /* ArtNYCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713D5F321E295DA500DD76FA /* Build configuration list for PBXNativeTarget "ArtNYCTests" */;
+			buildPhases = (
+				713D5F221E295DA500DD76FA /* Sources */,
+				713D5F231E295DA500DD76FA /* Frameworks */,
+				713D5F241E295DA500DD76FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				713D5F281E295DA500DD76FA /* PBXTargetDependency */,
+			);
+			name = ArtNYCTests;
+			productName = ArtNYCTests;
+			productReference = 713D5F261E295DA500DD76FA /* ArtNYCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		713D5F071E295DA500DD76FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Jacqueline Schweiger";
+				TargetAttributes = {
+					713D5F0E1E295DA500DD76FA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					713D5F251E295DA500DD76FA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 713D5F0E1E295DA500DD76FA;
+					};
+				};
+			};
+			buildConfigurationList = 713D5F0A1E295DA500DD76FA /* Build configuration list for PBXProject "ArtNYC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 713D5F061E295DA500DD76FA;
+			productRefGroup = 713D5F101E295DA500DD76FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				713D5F0E1E295DA500DD76FA /* ArtNYC */,
+				713D5F251E295DA500DD76FA /* ArtNYCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		713D5F0D1E295DA500DD76FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713D5F201E295DA500DD76FA /* LaunchScreen.storyboard in Resources */,
+				713D5F1D1E295DA500DD76FA /* Assets.xcassets in Resources */,
+				713D5F181E295DA500DD76FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713D5F241E295DA500DD76FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		713D5F0B1E295DA500DD76FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713D5F151E295DA500DD76FA /* ViewController.swift in Sources */,
+				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
+				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713D5F221E295DA500DD76FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713D5F2B1E295DA500DD76FA /* ArtNYCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		713D5F281E295DA500DD76FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 713D5F0E1E295DA500DD76FA /* ArtNYC */;
+			targetProxy = 713D5F271E295DA500DD76FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		713D5F161E295DA500DD76FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713D5F171E295DA500DD76FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713D5F1F1E295DA500DD76FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		713D5F2D1E295DA500DD76FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		713D5F2E1E295DA500DD76FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		713D5F301E295DA500DD76FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ArtNYC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		713D5F311E295DA500DD76FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ArtNYC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		713D5F331E295DA500DD76FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ArtNYCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtNYC.app/ArtNYC";
+			};
+			name = Debug;
+		};
+		713D5F341E295DA500DD76FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ArtNYCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtNYC.app/ArtNYC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		713D5F0A1E295DA500DD76FA /* Build configuration list for PBXProject "ArtNYC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713D5F2D1E295DA500DD76FA /* Debug */,
+				713D5F2E1E295DA500DD76FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		713D5F2F1E295DA500DD76FA /* Build configuration list for PBXNativeTarget "ArtNYC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713D5F301E295DA500DD76FA /* Debug */,
+				713D5F311E295DA500DD76FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		713D5F321E295DA500DD76FA /* Build configuration list for PBXNativeTarget "ArtNYCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713D5F331E295DA500DD76FA /* Debug */,
+				713D5F341E295DA500DD76FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		713D5F191E295DA500DD76FA /* ArtNYC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				713D5F1A1E295DA500DD76FA /* ArtNYC.xcdatamodel */,
+			);
+			currentVersion = 713D5F1A1E295DA500DD76FA /* ArtNYC.xcdatamodel */;
+			path = ArtNYC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 713D5F071E295DA500DD76FA /* Project object */;
+}
