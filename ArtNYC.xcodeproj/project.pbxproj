@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7132CBF11E2969E0008CA655 /* MuseumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF01E2969E0008CA655 /* MuseumsTableViewCell.swift */; };
 		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
-		713D5F151E295DA500DD76FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F141E295DA500DD76FA /* ViewController.swift */; };
+		713D5F151E295DA500DD76FA /* MuseumsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */; };
 		713D5F181E295DA500DD76FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F161E295DA500DD76FA /* Main.storyboard */; };
 		713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F191E295DA500DD76FA /* ArtNYC.xcdatamodeld */; };
 		713D5F1D1E295DA500DD76FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1C1E295DA500DD76FA /* Assets.xcassets */; };
 		713D5F201E295DA500DD76FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */; };
 		713D5F2B1E295DA500DD76FA /* ArtNYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */; };
+		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
+		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7132CBF01E2969E0008CA655 /* MuseumsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumsTableViewCell.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713D5F121E295DA500DD76FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		713D5F141E295DA500DD76FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumsTableVC.swift; sourceTree = "<group>"; };
 		713D5F171E295DA500DD76FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		713D5F1A1E295DA500DD76FA /* ArtNYC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtNYC.xcdatamodel; sourceTree = "<group>"; };
 		713D5F1C1E295DA500DD76FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		713D5F261E295DA500DD76FA /* ArtNYCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtNYCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtNYCTests.swift; sourceTree = "<group>"; };
 		713D5F2C1E295DA500DD76FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
+		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7132CBEC1E29696E008CA655 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7191AC881E295ECB00F2D06D /* Museum.swift */,
+				7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7132CBED1E29697A008CA655 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7132CBF01E2969E0008CA655 /* MuseumsTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7132CBEF1E29698A008CA655 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		713D5F061E295DA500DD76FA = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +110,10 @@
 		713D5F111E295DA500DD76FA /* ArtNYC */ = {
 			isa = PBXGroup;
 			children = (
+				7132CBEF1E29698A008CA655 /* Controllers */,
+				7132CBED1E29697A008CA655 /* Views */,
+				7132CBEC1E29696E008CA655 /* Models */,
 				713D5F121E295DA500DD76FA /* AppDelegate.swift */,
-				713D5F141E295DA500DD76FA /* ViewController.swift */,
 				713D5F161E295DA500DD76FA /* Main.storyboard */,
 				713D5F1C1E295DA500DD76FA /* Assets.xcassets */,
 				713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */,
@@ -202,9 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713D5F151E295DA500DD76FA /* ViewController.swift in Sources */,
+				713D5F151E295DA500DD76FA /* MuseumsTableVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
+				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
+				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
+				7132CBF11E2969E0008CA655 /* MuseumsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +446,7 @@
 				713D5F311E295DA500DD76FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		713D5F321E295DA500DD76FA /* Build configuration list for PBXNativeTarget "ArtNYCTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +455,7 @@
 				713D5F341E295DA500DD76FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
