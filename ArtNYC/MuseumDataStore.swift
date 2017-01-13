@@ -14,7 +14,7 @@ class MuseumDataStore {
     
     var museums: [Museum]!
     
-    func createMuseums() {
+    func loadMuseums() {
         let metMuseum = Museum(name: "Metropolitan Museum of Art", address: "1000 5th Ave")
         let neueGalerie = Museum(name: "Neue Galerie New York", address: "1048 5th Ave")
         let rubinMuseum = Museum(name: "Rubin Museum of Art", address: "150 W 17th St")

@@ -15,7 +15,7 @@ class MuseumsTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.createMuseums()
+        store.loadMuseums()
         
     }
     

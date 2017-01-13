@@ -17,6 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OK5-lC-nsa">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Filter" id="snO-Vt-4y6"/>
+                                <barButtonItem systemItem="flexibleSpace" id="qFg-ZU-euD"/>
+                                <barButtonItem systemItem="add" id="sH1-cY-PTF"/>
+                                <barButtonItem systemItem="flexibleSpace" id="tcc-T3-ZOy"/>
+                                <barButtonItem title="Map" id="XgW-IX-tv2"/>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" id="YYm-w5-KVp" customClass="MuseumsTableViewCell" customModule="ArtNYC" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
