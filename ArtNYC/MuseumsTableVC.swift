@@ -11,7 +11,7 @@ import UIKit
 class MuseumsTableVC: UITableViewController {
     
     var store = MuseumDataStore.sharedInstance
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,15 +29,23 @@ class MuseumsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = MuseumsTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "basicCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath) as! MuseumsTableViewCell
+        //let cell = MuseumsTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "basicCell")
         cell.textLabel?.text = store.museums[indexPath.row].name
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("segue pressed")
+        if segue.identifier == "showDetail" {
+            if let dest = segue.destination as? DetailVC,
+                let indexPath = tableView.indexPathForSelectedRow {
+                dest.museum = store.museums[indexPath.row]
+            }
+        }
+    }
     
-
     
-
-
 }
+
 

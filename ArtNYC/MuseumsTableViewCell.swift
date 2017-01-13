@@ -11,12 +11,16 @@ import UIKit
 
 class MuseumsTableViewCell: UITableViewCell {
     
-    var imageViewInst:UIImageView = UIImageView()
-    var textLabelInst:UILabel = UILabel()
+//    var imageViewInst:UIImageView = UIImageView()
+//    var textLabelInst:UILabel = UILabel()
+//    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
+
     
-    required init(coder aDecoder: NSCoder) { fatalError("init(coder:)") }
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
 }

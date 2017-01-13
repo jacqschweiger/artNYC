@@ -40,6 +40,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tcj-rq-MrT" kind="show" identifier="showDetail" id="Pul-f2-Po2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -69,6 +72,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuz-EY-seK">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Home" id="VNU-Xx-kPf"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="BSR-Gf-ICc"/>
+                                    <barButtonItem systemItem="add" id="nKr-TZ-vkn"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="qbM-R0-ECM"/>
+                                    <barButtonItem title="Filter" id="cXv-Pt-wiS"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-Df-ioi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="ART • NYC" id="PgV-yc-jEj"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -78,7 +99,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-lL-enE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="56"/>
+            <point key="canvasLocation" x="1839" y="56"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="bcK-nF-y27">
+            <objects>
+                <viewController id="tcj-rq-MrT" customClass="DetailVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pDM-9J-dit"/>
+                        <viewControllerLayoutGuide type="bottom" id="CBR-Dk-ulx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YrL-XY-w2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-0z-LoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="811"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t2C-Uy-2h1">

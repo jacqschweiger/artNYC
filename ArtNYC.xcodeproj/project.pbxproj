@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7132CBF11E2969E0008CA655 /* MuseumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF01E2969E0008CA655 /* MuseumsTableViewCell.swift */; };
 		7132CBF51E29752C008CA655 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF41E29752C008CA655 /* MapVC.swift */; };
+		7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF61E2978A8008CA655 /* DetailVC.swift */; };
 		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
 		713D5F151E295DA500DD76FA /* MuseumsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */; };
 		713D5F181E295DA500DD76FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F161E295DA500DD76FA /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		7132CBF01E2969E0008CA655 /* MuseumsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumsTableViewCell.swift; sourceTree = "<group>"; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713D5F121E295DA500DD76FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumsTableVC.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */,
 				7132CBF41E29752C008CA655 /* MapVC.swift */,
+				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				713D5F151E295DA500DD76FA /* MuseumsTableVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
+				7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */,
 				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,

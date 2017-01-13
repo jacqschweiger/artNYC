@@ -12,21 +12,24 @@ import MapKit
 class MapVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    
     let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialLocation = CLLocation(latitude: 40.7829, longitude: -73.9654)
-        centerMapOnLocation(location: initialLocation)
+        DispatchQueue.main.async {
+            let initialLocation = CLLocation(latitude: 40.7829, longitude: -73.9654)
+            self.centerMapOnLocation(location: initialLocation)
+        }
         
     }
     
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
     
 }
