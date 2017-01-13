@@ -25,7 +25,11 @@
                                 <barButtonItem systemItem="flexibleSpace" id="qFg-ZU-euD"/>
                                 <barButtonItem systemItem="add" id="sH1-cY-PTF"/>
                                 <barButtonItem systemItem="flexibleSpace" id="tcc-T3-ZOy"/>
-                                <barButtonItem title="Map" id="XgW-IX-tv2"/>
+                                <barButtonItem title="Map" id="XgW-IX-tv2">
+                                    <connections>
+                                        <segue destination="oVa-3O-cfI" kind="presentation" id="P8u-oB-pGq"/>
+                                    </connections>
+                                </barButtonItem>
                             </items>
                         </toolbar>
                         <prototypes>
@@ -48,6 +52,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQW-j7-cZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="925.60000000000002" y="56.221889055472268"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="OuP-ef-53R">
+            <objects>
+                <viewController id="oVa-3O-cfI" customClass="MapVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ah-v7-ClX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ndq-qt-rmH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ic-qi-Pxh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UVT-GQ-FRt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="UVT-GQ-FRt" id="IfS-1U-wSr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-lL-enE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t2C-Uy-2h1">
