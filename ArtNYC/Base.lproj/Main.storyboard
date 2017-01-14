@@ -213,17 +213,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Src-Zb-ohc">
-                                <rect key="frame" x="16" y="638" width="77" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-cf-LQ7">
+                                <rect key="frame" x="14" y="629" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-cf-LQ7">
-                                <rect key="frame" x="86" y="633" width="273" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Website"/>
                                 <connections>
                                     <action selector="urlPressed:" destination="tcj-rq-MrT" eventType="touchUpInside" id="qvi-m6-nks"/>
                                     <segue destination="1i3-dk-5Wk" kind="show" identifier="showWebView" id="DM1-lh-wNq"/>
@@ -246,7 +240,6 @@
                         <outlet property="thursdayLabel" destination="oiE-3E-MQL" id="bJM-A5-R3F"/>
                         <outlet property="tuesdayLabel" destination="Lei-qr-8w0" id="FVe-cN-cou"/>
                         <outlet property="urlLabel" destination="Rce-cf-LQ7" id="ISj-JQ-rfz"/>
-                        <outlet property="websiteLabel" destination="Src-Zb-ohc" id="u0S-v9-Od5"/>
                         <outlet property="wednesdayLabel" destination="0fa-uy-rXQ" id="YfP-Fk-J7S"/>
                     </connections>
                 </viewController>

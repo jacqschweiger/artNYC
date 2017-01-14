@@ -20,6 +20,7 @@
 		716027451E2A8F7900CAF26B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716027441E2A8F7900CAF26B /* WebVC.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
+		BD095B46B7788DDAF717A231 /* Pods_ArtNYC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FA7AE539C17AC120132072E /* Pods-ArtNYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.debug.xcconfig"; sourceTree = "<group>"; };
+		517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtNYC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +53,8 @@
 		716027441E2A8F7900CAF26B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
+		B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
+		D9DEAC22F9E6FAEB9490DF2A /* libPods-ArtNYCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArtNYCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD095B46B7788DDAF717A231 /* Pods_ArtNYC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,8 @@
 				713D5F111E295DA500DD76FA /* ArtNYC */,
 				713D5F291E295DA500DD76FA /* ArtNYCTests */,
 				713D5F101E295DA500DD76FA /* Products */,
+				C7CEF8DBEC70C2BDC8BB3CD2 /* Pods */,
+				9F1D6A15143A36EC0127DCAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +149,24 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9F1D6A15143A36EC0127DCAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */,
+				D9DEAC22F9E6FAEB9490DF2A /* libPods-ArtNYCTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7CEF8DBEC70C2BDC8BB3CD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FA7AE539C17AC120132072E /* Pods-ArtNYC.debug.xcconfig */,
+				B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 713D5F2F1E295DA500DD76FA /* Build configuration list for PBXNativeTarget "ArtNYC" */;
 			buildPhases = (
+				0BF3750DC0B467E63FA546BE /* [CP] Check Pods Manifest.lock */,
 				713D5F0B1E295DA500DD76FA /* Sources */,
 				713D5F0C1E295DA500DD76FA /* Frameworks */,
 				713D5F0D1E295DA500DD76FA /* Resources */,
+				FFDD331BAFDF0BC86FC67785 /* [CP] Embed Pods Frameworks */,
+				2D8066584FC3658D6B2D9E18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +267,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF3750DC0B467E63FA546BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2D8066584FC3658D6B2D9E18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFDD331BAFDF0BC86FC67785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		713D5F0B1E295DA500DD76FA /* Sources */ = {
@@ -389,6 +466,7 @@
 		};
 		713D5F301E295DA500DD76FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA7AE539C17AC120132072E /* Pods-ArtNYC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ArtNYC/Info.plist;
@@ -401,6 +479,7 @@
 		};
 		713D5F311E295DA500DD76FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ArtNYC/Info.plist;

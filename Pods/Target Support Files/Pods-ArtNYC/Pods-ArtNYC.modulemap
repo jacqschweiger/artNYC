@@ -1,0 +1,6 @@
+framework module Pods_ArtNYC {
+  umbrella header "Pods-ArtNYC-umbrella.h"
+
+  export *
+  module * { export * }
+}
