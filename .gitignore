@@ -5,6 +5,8 @@
 ## Build generated
 build/
 DerivedData/
+Secrets.swift
+.DS_Store
 
 ## Various settings
 *.pbxuser
