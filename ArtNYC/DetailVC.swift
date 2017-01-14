@@ -33,12 +33,11 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
-        print(thursdayLabel.text)
     }
     
     func setUpElements() {
         nameLabel.text = museum.name
-        addressLabel.text = museum.address
+        addressLabel.text = "Address: \(museum.address)"
         guard let sunday = museum.hours["Sunday"] else { return }
         guard let monday = museum.hours["Monday"] else { return }
         guard let tuesday = museum.hours["Tuesday"] else { return }
@@ -53,6 +52,9 @@ class DetailVC: UIViewController {
         thursdayLabel.text = "Thursday: \(thursday)"
         fridayLabel.text = "Friday: \(friday)"
         saturdayLabel.text = "Saturday: \(saturday)"
+        admissionLabel.text = "Admission: \(museum.ticketPrice)"
+        freeAdmissionLabel.text = "Free Admission: \(museum.freeHours)"
+        artCategoriesLabel.text = "Art Categories: \(museum.artCategories)"
     }
     
 }

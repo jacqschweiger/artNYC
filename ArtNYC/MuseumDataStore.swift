@@ -23,7 +23,7 @@ class MuseumDataStore {
                                hours: ["Sunday":"10am-5:30pm", "Monday":"10am-5:30pm", "Tuesday":"10am-5:30pm", "Wednesday":"10am-5:30pm", "Thursday":"10am-5:30pm", "Friday":"10am-9pm", "Saturday":"10am-9pm"],
                                ticketPrice: "$25 (suggested)",
                                freeHours: "tbd",
-                               artCategories: ["European","Asian","African","Islamic","Modern"])
+                               artCategories: "European, Modern, Asian, Islamic, African, Ancient, Egyptian")
         let neueGalerie = Museum(name: "Neue Galerie New York", address: "1048 5th Ave")
         let rubinMuseum = Museum(name: "Rubin Museum of Art", address: "150 W 17th St")
         let whitney = Museum(name: "Whitney Museum of American Art", address: "99 Gansevoort St")

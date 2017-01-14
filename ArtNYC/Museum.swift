@@ -18,13 +18,13 @@ class Museum {
     var hours: [String: String]
     var ticketPrice: String
     var freeHours: String
-    var artCategories: [String]
+    var artCategories: String
     
     convenience init(name: String, address: String) {
-        self.init(name: name, logo: UIImage(named: "placeholder")!, address: address, coordinates: "0,0", hours: ["0":"0"], ticketPrice: "$0", freeHours: "0", artCategories: ["0"])
+        self.init(name: name, logo: UIImage(named: "placeholder")!, address: address, coordinates: "0,0", hours: ["0":"0"], ticketPrice: "$0", freeHours: "0", artCategories: "0")
     }
     
-    init(name: String, logo: UIImage, address: String, coordinates: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: [String]){
+    init(name: String, logo: UIImage, address: String, coordinates: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: String){
         self.name = name
         self.logo = logo
         self.address = address
