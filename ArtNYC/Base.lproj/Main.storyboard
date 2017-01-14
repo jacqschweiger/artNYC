@@ -215,7 +215,8 @@
                                 <state key="normal" title="Website"/>
                                 <connections>
                                     <action selector="urlPressed:" destination="tcj-rq-MrT" eventType="touchUpInside" id="qvi-m6-nks"/>
-                                    <segue destination="1i3-dk-5Wk" kind="show" identifier="showWebView" id="DM1-lh-wNq"/>
+                                    <action selector="websitePressed:" destination="tcj-rq-MrT" eventType="touchUpInside" id="IUI-Rb-aAp"/>
+                                    <segue destination="1i3-dk-5Wk" kind="show" identifier="showWebView" id="VC3-Ej-X85"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nt1-j4-XdD" customClass="GMSPanoramaView">

@@ -34,7 +34,7 @@ class MapVC: UIViewController {
         let camera = GMSCameraPosition.camera(withLatitude: 40.7829, longitude: -73.9654, zoom: 12)
         self.mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
-        mapView.isMyLocationEnabled = true
+        mapView.isMyLocationEnabled = false
         
         addLocations()
         
@@ -47,6 +47,13 @@ class MapVC: UIViewController {
             marker.title = museum.title!
             marker.map = mapView
         }
+        
+    }
+    
+    
+    // MARK: GMSMapViewDelegate
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         
     }
     
