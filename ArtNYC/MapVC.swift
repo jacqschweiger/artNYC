@@ -14,6 +14,7 @@ class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var store = MuseumDataStore.sharedInstance
+    var selectedMuseum: Museum!
     let regionRadius: CLLocationDistance = 1500
     
     override func viewDidLoad() {
@@ -61,14 +62,15 @@ extension MapVC: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let museum = view.annotation as! Museum
-//        let placeName = museum.title
-//        let placeInfo = museum.address
-//        
-//        let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
-//        ac.addAction(UIAlertAction(title: "OK", style: .default))
-//        present(ac, animated: true)
+        selectedMuseum = view.annotation as! Museum
         
         performSegue(withIdentifier: "showMuseum", sender: control)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMuseum" {
+            let dest = segue.destination as! DetailVC
+            dest.museum = selectedMuseum
+        }
     }
 }
