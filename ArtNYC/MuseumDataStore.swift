@@ -18,7 +18,6 @@ class MuseumDataStore {
     
     func loadMuseums() {
         let metMuseum = Museum(title:"Metropolitan Museum of Art",
-                               locationName: "Metropolitan Museum of Art",
                                logo: UIImage(named: "placeholder")!,
                                address: "1000 5th Ave",
                                hours: ["Sunday":"10am-5:30pm", "Monday":"10am-5:30pm", "Tuesday":"10am-5:30pm", "Wednesday":"10am-5:30pm", "Thursday":"10am-5:30pm", "Friday":"10am-9pm", "Saturday":"10am-9pm"],
