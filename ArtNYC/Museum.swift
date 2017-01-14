@@ -12,7 +12,8 @@ import MapKit
 
 class Museum: NSObject, MKAnnotation {
 
-    let name: String
+    let title: String?
+    let locationName: String
     let address: String
     let logo: UIImage
     let hours: [String: String]
@@ -21,12 +22,13 @@ class Museum: NSObject, MKAnnotation {
     let artCategories: String
     let coordinate: CLLocationCoordinate2D
     
-    convenience init(name: String, address: String) {
-        self.init(name: name, logo: UIImage(named: "placeholder")!, address: address, hours: ["0":"0"], ticketPrice: "$0", freeHours: "0", artCategories: "0", coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634))
-    }
+//    convenience init(locationName: String, address: String) {
+//        self.init(title: "test", locationName: locationName, logo: UIImage(named: "placeholder")!, address: address, hours: ["0":"0"], ticketPrice: "$0", freeHours: "0", artCategories: "0", coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634))
+//    }
     
-    init(name: String, logo: UIImage, address: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: String, coordinate: CLLocationCoordinate2D){
-        self.name = name
+    init(title: String, locationName: String, logo: UIImage, address: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: String, coordinate: CLLocationCoordinate2D){
+        self.title = title
+        self.locationName = locationName
         self.logo = logo
         self.address = address
         self.hours = hours
@@ -34,5 +36,11 @@ class Museum: NSObject, MKAnnotation {
         self.freeHours = freeHours
         self.artCategories = artCategories
         self.coordinate = coordinate
+        
+        super.init()
+    }
+    
+    var subtitle: String? {
+        return locationName
     }
 }

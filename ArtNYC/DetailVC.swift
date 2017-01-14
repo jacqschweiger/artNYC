@@ -36,7 +36,7 @@ class DetailVC: UIViewController {
     }
     
     func setUpElements() {
-        nameLabel.text = museum.name
+        nameLabel.text = museum.locationName
         addressLabel.text = "Address: \(museum.address)"
         guard let sunday = museum.hours["Sunday"] else { return }
         guard let monday = museum.hours["Monday"] else { return }

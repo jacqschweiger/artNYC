@@ -28,7 +28,7 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
-        cell.textLabel?.text = store.museums[indexPath.row].name
+        cell.textLabel?.text = store.museums[indexPath.row].locationName
         return cell
     }
     
