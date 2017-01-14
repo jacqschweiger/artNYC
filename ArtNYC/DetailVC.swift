@@ -14,15 +14,21 @@ class DetailVC: UIViewController {
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var admissionLabel: UILabel!
+    @IBOutlet weak var freeAdmissionLabel: UILabel!
+    @IBOutlet weak var artCategoriesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(museum.name)
-        
-        self.view.backgroundColor = UIColor.blue
-        
+        setUpElements()
     }
     
-    
+    func setUpElements() {
+        nameLabel.text = museum.name
+        addressLabel.text = museum.address
+    }
     
 }

@@ -13,7 +13,7 @@ class MapVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 1500
     
     override func viewDidLoad() {
         super.viewDidLoad()
