@@ -27,7 +27,7 @@ class MapVC: UIViewController {
             self.centerMapOnLocation(location: initialLocation)
         }
         
-        mapView.addAnnotation(store.museums[0])
+        mapView.addAnnotations(store.museums)
         
     }
     
