@@ -16,6 +16,8 @@
 		713D5F1D1E295DA500DD76FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1C1E295DA500DD76FA /* Assets.xcassets */; };
 		713D5F201E295DA500DD76FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */; };
 		713D5F2B1E295DA500DD76FA /* ArtNYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */; };
+		715204471E2A6B0300AD04AB /* MuseumListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715204461E2A6B0300AD04AB /* MuseumListVC.swift */; };
+		715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		713D5F261E295DA500DD76FA /* ArtNYCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtNYCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtNYCTests.swift; sourceTree = "<group>"; };
 		713D5F2C1E295DA500DD76FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		715204461E2A6B0300AD04AB /* MuseumListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumListVC.swift; sourceTree = "<group>"; };
+		715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCellTableViewCell.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +85,8 @@
 				713D5F141E295DA500DD76FA /* MuseumsTableVC.swift */,
 				7132CBF41E29752C008CA655 /* MapVC.swift */,
 				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
+				715204461E2A6B0300AD04AB /* MuseumListVC.swift */,
+				715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -232,9 +238,11 @@
 			files = (
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				713D5F151E295DA500DD76FA /* MuseumsTableVC.swift in Sources */,
+				715204471E2A6B0300AD04AB /* MuseumListVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
 				7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */,
 				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
+				715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
 			);

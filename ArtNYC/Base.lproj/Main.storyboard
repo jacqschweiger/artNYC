@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PRE-wW-DBc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Srg-Kq-ZhE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,52 +9,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Museums TableVC-->
-        <scene sceneID="xG8-YV-kJp">
+        <!--Museum ListVC-->
+        <scene sceneID="ZDY-Fb-SKt">
             <objects>
-                <tableViewController id="fVq-TA-2av" customClass="MuseumsTableVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kkq-TU-wdE">
+                <viewController id="zIr-vy-VVy" customClass="MuseumListVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qvc-PZ-CaH"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJo-LD-gsl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6fy-6r-Zlx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OK5-lC-nsa">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Filter" id="snO-Vt-4y6"/>
-                                <barButtonItem systemItem="flexibleSpace" id="qFg-ZU-euD"/>
-                                <barButtonItem systemItem="add" id="sH1-cY-PTF"/>
-                                <barButtonItem systemItem="flexibleSpace" id="tcc-T3-ZOy"/>
-                                <barButtonItem title="Map" id="XgW-IX-tv2">
-                                    <connections>
-                                        <segue destination="oVa-3O-cfI" kind="show" identifier="showMap" id="lvT-Hg-jwO"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                        </toolbar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" id="YYm-w5-KVp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YYm-w5-KVp" id="Twa-of-fjj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U30-Zo-Lyv">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Filter" id="H4L-Hg-VCk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6RZ-f3-dMy"/>
+                                    <barButtonItem title="Item" systemItem="add" id="yu6-jk-qVb"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RET-cH-kai"/>
+                                    <barButtonItem title="Map" id="loV-f6-2NQ">
+                                        <connections>
+                                            <segue destination="oVa-3O-cfI" kind="show" identifier="showMap" id="MQV-EO-Nk0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="27E-yJ-IAi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" id="Q87-aM-uWC" customClass="MuseumTableViewCell" customModule="ArtNYC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q87-aM-uWC" id="gNp-d1-gwA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tcj-rq-MrT" kind="show" identifier="showDetail" id="a6d-yj-ecm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <segue destination="tcj-rq-MrT" kind="show" identifier="showDetail" id="Pul-f2-Po2"/>
+                                    <outlet property="dataSource" destination="zIr-vy-VVy" id="kxc-lR-Jok"/>
+                                    <outlet property="delegate" destination="zIr-vy-VVy" id="X7Y-NA-DDX"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fVq-TA-2av" id="cRD-fD-MNk"/>
-                            <outlet property="delegate" destination="fVq-TA-2av" id="kFN-6x-Xqb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="5xX-A5-iKz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RQW-j7-cZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ixs-iR-c1m"/>
+                    <connections>
+                        <outlet property="museumTableView" destination="27E-yJ-IAi" id="0DN-C6-Ahx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOB-Ws-GkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="56.221889055472268"/>
+            <point key="canvasLocation" x="2908" y="769.56521739130437"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="OuP-ef-53R">
@@ -92,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-lL-enE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3716" y="55.322338830584712"/>
+            <point key="canvasLocation" x="2908" y="1565"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="bcK-nF-y27">
@@ -218,25 +232,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-0z-LoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="806.44677661169419"/>
+            <point key="canvasLocation" x="3793" y="770"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="qeF-3c-osQ">
+        <scene sceneID="PtL-BM-47f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PRE-wW-DBc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Srg-Kq-ZhE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iYO-UT-siq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ec9-eB-7yY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fVq-TA-2av" kind="relationship" relationship="rootViewController" id="UPQ-f9-UpN"/>
+                        <segue destination="zIr-vy-VVy" kind="relationship" relationship="rootViewController" id="n2N-YI-4VN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MDu-Cb-NLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z22-oY-IVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="56.221889055472268"/>
+            <point key="canvasLocation" x="1968.8" y="769.56521739130437"/>
         </scene>
     </scenes>
 </document>

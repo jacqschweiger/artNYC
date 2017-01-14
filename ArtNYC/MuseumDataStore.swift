@@ -24,6 +24,7 @@ class MuseumDataStore {
                                ticketPrice: "$25 (suggested)",
                                freeHours: "tbd",
                                artCategories: "European, Modern, Asian, Islamic, African, Ancient, Egyptian")
+        
         let neueGalerie = Museum(name: "Neue Galerie New York", address: "1048 5th Ave")
         let rubinMuseum = Museum(name: "Rubin Museum of Art", address: "150 W 17th St")
         let whitney = Museum(name: "Whitney Museum of American Art", address: "99 Gansevoort St")
