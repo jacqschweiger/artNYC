@@ -54,7 +54,7 @@ class DetailVC: UIViewController {
         saturdayLabel.text = "Saturday: \(saturday)"
         admissionLabel.text = "Admission: \(museum.ticketPrice)"
         freeAdmissionLabel.text = "Free Admission: \(museum.freeHours)"
-        artCategoriesLabel.text = "Type: \(museum.artCategories)"
+        artCategoriesLabel.text = "Art: \(museum.artCategories)"
     }
     
 }
