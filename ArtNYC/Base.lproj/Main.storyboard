@@ -163,7 +163,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Free Admission:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-qs-bFx">
-                                <rect key="frame" x="16" y="502" width="122" height="20.5"/>
+                                <rect key="frame" x="16" y="508" width="122" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -191,7 +191,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Art Categories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-r8-9jA">
-                                <rect key="frame" x="16" y="599" width="122" height="20.5"/>
+                                <rect key="frame" x="16" y="600" width="122" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -205,8 +205,15 @@
                         <outlet property="admissionLabel" destination="bp9-Ut-dUH" id="rf0-GA-owI"/>
                         <outlet property="artCategoriesLabel" destination="UxL-r8-9jA" id="Vgf-xj-gae"/>
                         <outlet property="freeAdmissionLabel" destination="mAy-qs-bFx" id="jDQ-JS-Ykh"/>
+                        <outlet property="fridayLabel" destination="XcJ-lY-gkT" id="4nh-gi-jid"/>
                         <outlet property="hoursLabel" destination="VpP-YT-tPq" id="BBb-bk-hp2"/>
+                        <outlet property="mondayLabel" destination="zmv-cP-qsb" id="YTh-Qj-6mP"/>
                         <outlet property="nameLabel" destination="0Nf-Lz-jol" id="yFC-LJ-uBg"/>
+                        <outlet property="saturdayLabel" destination="75g-Ed-Vls" id="4dK-6z-aPe"/>
+                        <outlet property="sundayLabel" destination="M5u-d9-k1K" id="HqH-NU-JRa"/>
+                        <outlet property="thursdayLabel" destination="oiE-3E-MQL" id="bJM-A5-R3F"/>
+                        <outlet property="tuesdayLabel" destination="Lei-qr-8w0" id="FVe-cN-cou"/>
+                        <outlet property="wednesdayLabel" destination="0fa-uy-rXQ" id="YfP-Fk-J7S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-0z-LoW" userLabel="First Responder" sceneMemberID="firstResponder"/>

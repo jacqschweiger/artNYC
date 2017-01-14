@@ -16,7 +16,16 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    
     @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var sundayLabel: UILabel!
+    @IBOutlet weak var mondayLabel: UILabel!
+    @IBOutlet weak var tuesdayLabel: UILabel!
+    @IBOutlet weak var wednesdayLabel: UILabel!
+    @IBOutlet weak var thursdayLabel: UILabel!
+    @IBOutlet weak var fridayLabel: UILabel!
+    @IBOutlet weak var saturdayLabel: UILabel!
+    
     @IBOutlet weak var admissionLabel: UILabel!
     @IBOutlet weak var freeAdmissionLabel: UILabel!
     @IBOutlet weak var artCategoriesLabel: UILabel!
@@ -24,11 +33,26 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
+        print(thursdayLabel.text)
     }
     
     func setUpElements() {
         nameLabel.text = museum.name
         addressLabel.text = museum.address
+        guard let sunday = museum.hours["Sunday"] else { return }
+        guard let monday = museum.hours["Monday"] else { return }
+        guard let tuesday = museum.hours["Tuesday"] else { return }
+        guard let wednesday = museum.hours["Wednesday"] else { return }
+        guard let thursday = museum.hours["Thursday"] else { return }
+        guard let friday = museum.hours["Friday"] else { return }
+        guard let saturday = museum.hours["Saturday"] else { return }
+        sundayLabel.text = "Sunday: \(sunday)"
+        mondayLabel.text = "Monday: \(monday)"
+        tuesdayLabel.text = "Tuesday: \(tuesday)"
+        wednesdayLabel.text = "Wednesday: \(wednesday)"
+        thursdayLabel.text = "Thursday: \(thursday)"
+        fridayLabel.text = "Friday: \(friday)"
+        saturdayLabel.text = "Saturday: \(saturday)"
     }
     
 }
