@@ -8,14 +8,16 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
-class DetailVC: UIViewController {
+class DetailVC: UIViewController, GMSMapViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var panoView: GMSPanoramaView!
     
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var sundayLabel: UILabel!
@@ -34,6 +36,9 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        panoView.moveNearCoordinate(CLLocationCoordinate2D(latitude: -33.732, longitude: 150.312))
+        
         setUpElements()
     }
     
