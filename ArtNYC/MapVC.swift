@@ -59,4 +59,16 @@ extension MapVC: MKMapViewDelegate {
         }
         return nil
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let museum = view.annotation as! Museum
+//        let placeName = museum.title
+//        let placeInfo = museum.address
+//        
+//        let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "OK", style: .default))
+//        present(ac, animated: true)
+        
+        performSegue(withIdentifier: "showMuseum", sender: control)
+    }
 }

@@ -99,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="UVT-GQ-FRt" id="IfS-1U-wSr"/>
+                        <segue destination="tcj-rq-MrT" kind="show" identifier="showMuseum" id="laa-6A-SNc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-lL-enE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-0z-LoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3793" y="770"/>
+            <point key="canvasLocation" x="4346" y="770"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PtL-BM-47f">
@@ -250,4 +251,7 @@
             <point key="canvasLocation" x="1968.8" y="769.56521739130437"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="laa-6A-SNc"/>
+    </inferredMetricsTieBreakers>
 </document>
