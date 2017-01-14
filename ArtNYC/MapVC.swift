@@ -15,7 +15,7 @@ class MapVC: UIViewController {
     
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum!
-    let regionRadius: CLLocationDistance = 1500
+    let regionRadius: CLLocationDistance = 6000
     
     override func viewDidLoad() {
         super.viewDidLoad()

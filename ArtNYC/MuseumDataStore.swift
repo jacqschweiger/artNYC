@@ -20,25 +20,68 @@ class MuseumDataStore {
         let metMuseum = Museum(title:"Metropolitan Museum of Art",
                                logo: UIImage(named: "placeholder")!,
                                address: "1000 5th Ave",
-                               hours: ["Sunday":"10am-5:30pm", "Monday":"10am-5:30pm", "Tuesday":"10am-5:30pm", "Wednesday":"10am-5:30pm", "Thursday":"10am-5:30pm", "Friday":"10am-9pm", "Saturday":"10am-9pm"],
+                               hours: ["Sunday":"10am-5:30pm",
+                                       "Monday":"10am-5:30pm",
+                                       "Tuesday":"10am-5:30pm",
+                                       "Wednesday":"10am-5:30pm",
+                                       "Thursday":"10am-5:30pm",
+                                       "Friday":"10am-9pm",
+                                       "Saturday":"10am-9pm"],
                                ticketPrice: "$25 (suggested)",
                                freeHours: "Pay what you will with suggested admission",
                                artCategories: "All cultures and time periods",
-                               coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634))
+                               coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634),
+                               url: "http://www.metmuseum.org/")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
                                  logo: UIImage(named: "placeholder")!,
                                  address: "1048 5th Ave",
-                                 hours: ["Sunday":"11am–6pm", "Monday":"11am–6pm", "Tuesday":"Closed", "Wednesday":"Closed", "Thursday":"11am–6pm", "Friday":"10am-9pm", "Saturday":"11AM–6pm"],
+                                 hours: ["Sunday":"11am–6pm",
+                                         "Monday":"11am–6pm",
+                                         "Tuesday":"Closed",
+                                         "Wednesday":"Closed",
+                                         "Thursday":"11am–6pm",
+                                         "Friday":"10am-9pm",
+                                         "Saturday":"11AM–6pm"],
                                  ticketPrice: "$20",
                                  freeHours: "First Friday of every month from 6 to 8 p.m.",
                                  artCategories: "Austrian and German",
-                                 coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603))
+                                 coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
+                                 url: "http://neuegalerie.org/")
         
+        let rubinMuseum = Museum(title: "Rubin Museum of Art",
+                                 logo: UIImage(named: "placeholder")!,
+                                 address: "150 W 17th St",
+                                 hours: ["Sunday":"11AM–6PM",
+                                         "Monday":"11AM–5PM",
+                                         "Tuesday":"Closed",
+                                         "Wednesday":"11AM–9PM",
+                                         "Thursday":"11AM–5PM",
+                                         "Friday":"11AM–10PM",
+                                         "Saturday":"11AM–6PM"],
+                                 ticketPrice: "$20",
+                                 freeHours: "First Friday of every month from 6 to 8 p.m.",
+                                 artCategories: "Austrian and German",
+                                 coordinate: CLLocationCoordinate2D(latitude: 40.7400, longitude: -73.9973),
+                                 url: "http://rubinmuseum.org/")
         
+        let whitney = Museum(title: "Whitney Museum of American Art",
+                                 logo: UIImage(named: "placeholder")!,
+                                 address: "99 Gansevoort St",
+                                 hours: ["Sunday":"10:30AM–6PM",
+                                         "Monday":"10:30AM–6PM",
+                                         "Tuesday":"Closed",
+                                         "Wednesday":"10:30AM–6PM",
+                                         "Thursday":"10:30AM–6PM",
+                                         "Friday":"10:30AM–10PM",
+                                         "Saturday":"10:30AM–10PM"],
+                                 ticketPrice: "$25",
+                                 freeHours: "None",
+                                 artCategories: "American Modern and Contemporary",
+                                 coordinate: CLLocationCoordinate2D(latitude: 40.7394, longitude: -74.0092),
+                                 url: "http://whitney.org/")
         
-//        let rubinMuseum = Museum(title: "Rubin Museum of Art", address: "150 W 17th St")
-//        let whitney = Museum(title: "Whitney Museum of American Art", address: "99 Gansevoort St")
+
 //        let moma = Museum(title: "Museum of Modern Art", address: "11 W 53rd St")
 //        let guggenheim = Museum(title: "Solomon R. Guggenheim Museum", address: "1071 5th Ave")
 //        let jewishMuseum = Museum(title: "Jewish Museum", address: "1109 5th Ave")
@@ -57,7 +100,7 @@ class MuseumDataStore {
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
         
 //        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, metBreuer, cloisters, drawingCenter, frick, hispanicSociety, asiaSociety, mad, folkArt, morganLibrary, newMuseum, museoDelBarrio, cooperHewitt, fit]
-        museums = [metMuseum, neueGalerie]
+        museums = [metMuseum, neueGalerie, rubinMuseum, whitney]
     }
 
     
