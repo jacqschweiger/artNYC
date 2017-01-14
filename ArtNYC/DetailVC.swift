@@ -32,8 +32,12 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var freeAdmissionLabel: UILabel!
     @IBOutlet weak var artCategoriesLabel: UILabel!
     
-    @IBAction func websitePressed(_ sender: Any) {
-    }
+//    @IBAction func websitePressed(_ sender: UIButton) {
+//        
+//        
+//        
+//    }
+    
     @IBOutlet weak var urlLabel: UIButton!
     
     override func viewDidLoad() {
@@ -66,6 +70,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
         artCategoriesLabel.text = "Art: \(museum.artCategories)"
     }
     
+    //TODO: fix segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showWebView" {
             let dest = segue.destination as! WebVC

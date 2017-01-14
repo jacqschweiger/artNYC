@@ -34,10 +34,13 @@ class WebVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: museumURL)
-        let request = NSURLRequest(url: url as! URL)
-        museumWebView.loadRequest(request as URLRequest)
-    
+        DispatchQueue.main.async {
+            let url = NSURL(string: self.museumURL)
+            let request = NSURLRequest(url: url as! URL)
+            self.museumWebView.loadRequest(request as URLRequest)
+        }
+        
+        self.reloadInputViews()
     }
     
 }
