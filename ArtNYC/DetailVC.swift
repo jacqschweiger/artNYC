@@ -31,13 +31,6 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var admissionLabel: UILabel!
     @IBOutlet weak var freeAdmissionLabel: UILabel!
     @IBOutlet weak var artCategoriesLabel: UILabel!
-    
-//    @IBAction func websitePressed(_ sender: UIButton) {
-//        
-//        
-//        
-//    }
-    
     @IBOutlet weak var urlLabel: UIButton!
     
     override func viewDidLoad() {

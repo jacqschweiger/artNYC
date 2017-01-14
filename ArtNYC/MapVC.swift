@@ -10,7 +10,7 @@ import Foundation
 //import MapKit
 import GoogleMaps
 
-class MapVC: UIViewController {
+class MapVC: UIViewController, GMSMapViewDelegate {
     
     //@IBOutlet weak var mapView: MKMapView!
     
@@ -24,16 +24,17 @@ class MapVC: UIViewController {
         
         //mapView.delegate = self
         
-//        DispatchQueue.main.async {
-//            let initialLocation = CLLocation(latitude: 40.7829, longitude: -73.9654)
-//            self.centerMapOnLocation(location: initialLocation)
-//        }
-//        
-//        mapView.addAnnotations(store.museums)
+        //        DispatchQueue.main.async {
+        //            let initialLocation = CLLocation(latitude: 40.7829, longitude: -73.9654)
+        //            self.centerMapOnLocation(location: initialLocation)
+        //        }
+        //
+        //        mapView.addAnnotations(store.museums)
         
         let camera = GMSCameraPosition.camera(withLatitude: 40.7829, longitude: -73.9654, zoom: 12)
         self.mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
+        mapView.delegate = self
         mapView.isMyLocationEnabled = false
         
         addLocations()
@@ -53,15 +54,29 @@ class MapVC: UIViewController {
     
     // MARK: GMSMapViewDelegate
     
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        
+//    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+//        
+//        
+//    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        performSegue(withIdentifier: "showMuseum", sender: marker)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMuseum" {
+            let dest = segue.destination as! DetailVC
+            selectedMuseum = store.museums[0]
+            dest.museum = selectedMuseum
+        }
     }
     
     
-//    func centerMapOnLocation(location: CLLocation) {
-//        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
-//        mapView.setRegion(coordinateRegion, animated: true)
-//    }
+    
+    //    func centerMapOnLocation(location: CLLocation) {
+    //        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+    //        mapView.setRegion(coordinateRegion, animated: true)
+    //    }
     
     
 }
@@ -86,13 +101,13 @@ class MapVC: UIViewController {
 //        }
 //        return nil
 //    }
-//    
+//
 //    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 //        selectedMuseum = view.annotation as! Museum
-//        
+//
 //        performSegue(withIdentifier: "showMuseum", sender: control)
 //    }
-//    
+//
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "showMuseum" {
 //            let dest = segue.destination as! DetailVC
