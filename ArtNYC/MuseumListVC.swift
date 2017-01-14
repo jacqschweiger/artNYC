@@ -8,10 +8,15 @@
 
 import Foundation
 import UIKit
+import NotificationCenter
 
 class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var museumTableView: UITableView!
+    
+    @IBAction func filterPressed(_ sender: Any) {
+        sortAZ()
+    }
     
     var store = MuseumDataStore.sharedInstance
     
@@ -44,6 +49,22 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             _ = segue.destination as? MapVC
         }
     }
-
     
+    private func sortAZ(){
+        store.museums.sort { (museum1, museum2) -> Bool in
+            return museum1.title! < museum2.title!
+        }
+        museumTableView.reloadData()
+    }
+    
+    func sortZA(){
+        store.museums.sort { (museum1, museum2) -> Bool in
+            return museum1.title! > museum2.title!
+        }
+        
+        museumTableView.reloadData()
+    }
+    
+
+
 }

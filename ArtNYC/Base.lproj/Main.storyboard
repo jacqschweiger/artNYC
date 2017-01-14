@@ -25,7 +25,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Filter" id="H4L-Hg-VCk"/>
+                                    <barButtonItem title="Filter" id="H4L-Hg-VCk">
+                                        <connections>
+                                            <action selector="filterPressed:" destination="zIr-vy-VVy" id="wTS-7R-Lse"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6RZ-f3-dMy"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="RET-cH-kai"/>
                                     <barButtonItem title="Map" id="loV-f6-2NQ">
@@ -121,7 +125,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nf-Lz-jol">
                                 <rect key="frame" x="0.0" y="72" width="359" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -217,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-cf-LQ7">
-                                <rect key="frame" x="86" y="633" width="108" height="30"/>
+                                <rect key="frame" x="86" y="633" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -271,25 +275,25 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="refresh" id="5ar-r5-giB">
+                                    <barButtonItem title="&lt;" id="5ar-r5-giB">
                                         <connections>
                                             <action selector="doRefresh:" destination="1i3-dk-5Wk" id="Esl-l1-8gZ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lu5-Ty-bXk"/>
-                                    <barButtonItem tag="15" title="&lt;" id="Hcr-IN-Xqq">
+                                    <barButtonItem tag="15" systemItem="refresh" id="Hcr-IN-Xqq">
                                         <connections>
                                             <action selector="goBack:" destination="1i3-dk-5Wk" id="zge-dw-qaH"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="G50-Mg-vZS"/>
-                                    <barButtonItem title="&gt;" id="owX-Pc-Irm">
+                                    <barButtonItem systemItem="stop" id="owX-Pc-Irm">
                                         <connections>
                                             <action selector="goForward:" destination="1i3-dk-5Wk" id="Ewz-Te-lDt"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HNa-hX-MyX"/>
-                                    <barButtonItem systemItem="stop" id="eYd-7P-lEa">
+                                    <barButtonItem title="&gt;" id="eYd-7P-lEa">
                                         <connections>
                                             <action selector="stop:" destination="1i3-dk-5Wk" id="duD-Pw-6dI"/>
                                         </connections>
@@ -327,6 +331,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="laa-6A-SNc"/>
+        <segue reference="a6d-yj-ecm"/>
     </inferredMetricsTieBreakers>
 </document>
