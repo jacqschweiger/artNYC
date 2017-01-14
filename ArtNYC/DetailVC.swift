@@ -29,6 +29,11 @@ class DetailVC: UIViewController {
     @IBOutlet weak var admissionLabel: UILabel!
     @IBOutlet weak var freeAdmissionLabel: UILabel!
     @IBOutlet weak var artCategoriesLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    
+    @IBOutlet weak var urlLabel: UIButton!
+    @IBAction func urlPressed(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +60,14 @@ class DetailVC: UIViewController {
         admissionLabel.text = "Admission: \(museum.ticketPrice)"
         freeAdmissionLabel.text = "Free Admission: \(museum.freeHours)"
         artCategoriesLabel.text = "Art: \(museum.artCategories)"
+        urlLabel.setTitle(museum.url, for: .normal)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showWebView" {
+            let dest = segue.destination as! WebVC
+            dest.museumURL = self.museum.url
+        }
     }
     
 }

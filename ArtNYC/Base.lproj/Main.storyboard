@@ -44,7 +44,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q87-aM-uWC" id="gNp-d1-gwA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -209,6 +209,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Src-Zb-ohc">
+                                <rect key="frame" x="16" y="638" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-cf-LQ7">
+                                <rect key="frame" x="86" y="633" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="urlPressed:" destination="tcj-rq-MrT" eventType="touchUpInside" id="qvi-m6-nks"/>
+                                    <segue destination="1i3-dk-5Wk" kind="show" identifier="showWebView" id="DM1-lh-wNq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -225,12 +241,71 @@
                         <outlet property="sundayLabel" destination="M5u-d9-k1K" id="HqH-NU-JRa"/>
                         <outlet property="thursdayLabel" destination="oiE-3E-MQL" id="bJM-A5-R3F"/>
                         <outlet property="tuesdayLabel" destination="Lei-qr-8w0" id="FVe-cN-cou"/>
+                        <outlet property="urlLabel" destination="Rce-cf-LQ7" id="ISj-JQ-rfz"/>
+                        <outlet property="websiteLabel" destination="Src-Zb-ohc" id="u0S-v9-Od5"/>
                         <outlet property="wednesdayLabel" destination="0fa-uy-rXQ" id="YfP-Fk-J7S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-0z-LoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4346" y="770"/>
+            <point key="canvasLocation" x="4133.6000000000004" y="789.35532233883066"/>
+        </scene>
+        <!--WebVC-->
+        <scene sceneID="erp-AN-ynw">
+            <objects>
+                <viewController id="1i3-dk-5Wk" customClass="WebVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L42-VK-Mba"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0O-Ou-QSA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yDh-Y0-Q1n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upl-0U-8fO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Stx-qz-nf6">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="5ar-r5-giB">
+                                        <connections>
+                                            <action selector="doRefresh:" destination="1i3-dk-5Wk" id="Esl-l1-8gZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lu5-Ty-bXk"/>
+                                    <barButtonItem tag="15" title="&lt;" id="Hcr-IN-Xqq">
+                                        <connections>
+                                            <action selector="goBack:" destination="1i3-dk-5Wk" id="zge-dw-qaH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G50-Mg-vZS"/>
+                                    <barButtonItem title="&gt;" id="owX-Pc-Irm">
+                                        <connections>
+                                            <action selector="goForward:" destination="1i3-dk-5Wk" id="Ewz-Te-lDt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HNa-hX-MyX"/>
+                                    <barButtonItem systemItem="stop" id="eYd-7P-lEa">
+                                        <connections>
+                                            <action selector="stop:" destination="1i3-dk-5Wk" id="duD-Pw-6dI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="museumWebView" destination="Upl-0U-8fO" id="73G-bm-8TQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvf-tk-8Zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4898.3999999999996" y="792.95352323838085"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PtL-BM-47f">

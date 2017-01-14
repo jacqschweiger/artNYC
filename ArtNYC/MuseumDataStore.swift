@@ -31,7 +31,7 @@ class MuseumDataStore {
                                freeHours: "Pay what you will with suggested admission",
                                artCategories: "All cultures and time periods",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634),
-                               url: "http://www.metmuseum.org/")
+                               url: "https://www.metmuseum.org/")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
                                  logo: UIImage(named: "placeholder")!,
@@ -47,7 +47,7 @@ class MuseumDataStore {
                                  freeHours: "First Friday of every month from 6 to 8 p.m.",
                                  artCategories: "Austrian and German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
-                                 url: "http://neuegalerie.org/")
+                                 url: "https://neuegalerie.org/")
         
         let rubinMuseum = Museum(title: "Rubin Museum of Art",
                                  logo: UIImage(named: "placeholder")!,
@@ -63,7 +63,7 @@ class MuseumDataStore {
                                  freeHours: "First Friday of every month from 6 to 8 p.m.",
                                  artCategories: "Austrian and German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7400, longitude: -73.9973),
-                                 url: "http://rubinmuseum.org/")
+                                 url: "https://rubinmuseum.org/")
         
         let whitney = Museum(title: "Whitney Museum of American Art",
                                  logo: UIImage(named: "placeholder")!,
@@ -79,7 +79,7 @@ class MuseumDataStore {
                                  freeHours: "None",
                                  artCategories: "American Modern and Contemporary",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7394, longitude: -74.0092),
-                                 url: "http://whitney.org/")
+                                 url: "https://whitney.org/")
         
 
 //        let moma = Museum(title: "Museum of Modern Art", address: "11 W 53rd St")

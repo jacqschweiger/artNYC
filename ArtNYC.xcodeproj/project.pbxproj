@@ -17,6 +17,7 @@
 		713D5F2B1E295DA500DD76FA /* ArtNYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */; };
 		715204471E2A6B0300AD04AB /* MuseumListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715204461E2A6B0300AD04AB /* MuseumListVC.swift */; };
 		715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */; };
+		716027451E2A8F7900CAF26B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716027441E2A8F7900CAF26B /* WebVC.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		713D5F2C1E295DA500DD76FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715204461E2A6B0300AD04AB /* MuseumListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumListVC.swift; sourceTree = "<group>"; };
 		715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCellTableViewCell.swift; sourceTree = "<group>"; };
+		716027441E2A8F7900CAF26B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				7132CBF41E29752C008CA655 /* MapVC.swift */,
 				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
 				715204461E2A6B0300AD04AB /* MuseumListVC.swift */,
+				716027441E2A8F7900CAF26B /* WebVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716027451E2A8F7900CAF26B /* WebVC.swift in Sources */,
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				715204471E2A6B0300AD04AB /* MuseumListVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
