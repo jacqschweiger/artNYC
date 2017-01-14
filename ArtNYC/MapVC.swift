@@ -13,6 +13,7 @@ class MapVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var store = MuseumDataStore.sharedInstance
     let regionRadius: CLLocationDistance = 1500
     
     override func viewDidLoad() {
@@ -22,6 +23,8 @@ class MapVC: UIViewController {
             let initialLocation = CLLocation(latitude: 40.7829, longitude: -73.9654)
             self.centerMapOnLocation(location: initialLocation)
         }
+        
+        mapView.addAnnotation(store.museums[0])
         
     }
     

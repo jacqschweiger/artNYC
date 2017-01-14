@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class MuseumDataStore {
     
@@ -19,11 +20,11 @@ class MuseumDataStore {
         let metMuseum = Museum(name: "Metropolitan Museum of Art",
                                logo: UIImage(named: "placeholder")!,
                                address: "1000 5th Ave",
-                               coordinates: "0,0",
                                hours: ["Sunday":"10am-5:30pm", "Monday":"10am-5:30pm", "Tuesday":"10am-5:30pm", "Wednesday":"10am-5:30pm", "Thursday":"10am-5:30pm", "Friday":"10am-9pm", "Saturday":"10am-9pm"],
                                ticketPrice: "$25 (suggested)",
                                freeHours: "tbd",
-                               artCategories: "European, Modern, Asian, Islamic, African, Ancient, Egyptian")
+                               artCategories: "European, Modern, Asian, Islamic, African, Ancient",
+                               coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634))
         
         let neueGalerie = Museum(name: "Neue Galerie New York", address: "1048 5th Ave")
         let rubinMuseum = Museum(name: "Rubin Museum of Art", address: "150 W 17th St")
@@ -42,7 +43,7 @@ class MuseumDataStore {
         let morganLibrary = Museum(name: "Morgan Library & Museum", address: "225 Madison Ave")
         let newMuseum = Museum(name: "The New Museum", address: "235 Bowery")
         let museoDelBarrio = Museum(name: "El Museo Del Barrio", address: "1230 5th Ave")
-        let cooperHewitt = Museum(name: "Cooper Hewitt, Smithsonian Design Museum", address: "2 E 91st St")
+        let cooperHewitt = Museum(name: "Cooper Hewitt", address: "2 E 91st St")
         let fit = Museum(name: "The Museum at FIT", address: "227 W 27th St")
         
         museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, metBreuer, cloisters, drawingCenter, frick, hispanicSociety, asiaSociety, mad, folkArt, morganLibrary, newMuseum, museoDelBarrio, cooperHewitt, fit]
