@@ -31,6 +31,8 @@ class DetailView: UIView, GMSMapViewDelegate {
     var freeAdmissionContent = UILabel()
     var artCategoriesLabel = UILabel()
     var artCategoriesContent = UILabel()
+    var websiteLabel = UILabel()
+    var websiteButton: UIButton!
     
     
     init(frame:CGRect, museum: Museum){
@@ -143,7 +145,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Free Admission Content
         self.addSubview(freeAdmissionContent)
         freeAdmissionContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
-        freeAdmissionContent.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor, constant: 2).isActive = true
+        freeAdmissionContent.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor).isActive = true
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionContent.text = museum.freeHours
@@ -154,7 +156,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.addSubview(hoursLabel)
         hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         hoursLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        hoursLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 5).isActive = true
+        hoursLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 3).isActive = true
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         
         hoursLabel.text = "Hours"
@@ -165,7 +167,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.addSubview(sundayLabel)
         sundayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         sundayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        sundayLabel.topAnchor.constraint(equalTo: self.hoursLabel.bottomAnchor, constant: 2).isActive = true
+        sundayLabel.topAnchor.constraint(equalTo: self.hoursLabel.bottomAnchor).isActive = true
         sundayLabel.translatesAutoresizingMaskIntoConstraints = false
         
         guard let sunday = museum.hours["Sunday"] else { return }
@@ -244,7 +246,27 @@ class DetailView: UIView, GMSMapViewDelegate {
         saturdayLabel.text = "Saturday: \(saturday)"
         saturdayLabel.font = UIFont(name: "Avenir Black", size: 14)
         saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-
+        
+        //Website Label
+        self.addSubview(websiteLabel)
+        websiteLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        websiteLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 3).isActive = true
+        websiteLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        websiteLabel.text = "Website"
+        websiteLabel.font = UIFont(name: "Avenir Black", size: 17)
+        websiteLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Website Button
+        websiteButton = UIButton(type: .roundedRect)
+//        websiteButton.addTarget(self, action: #selector(), for: UIControlEvents.touchUpInside)
+        self.addSubview(websiteButton)
+        websiteButton.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
+        websiteButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
+        websiteButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        websiteButton.setTitle(museum.url, for: .normal)
+        websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 14)!
     }
     
 }
