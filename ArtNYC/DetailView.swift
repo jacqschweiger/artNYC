@@ -168,14 +168,23 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Address Label
         self.addSubview(addressLabel)
         addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        addressLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        addressLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 2).isActive = true
+        addressLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 3).isActive = true
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        addressLabel.text = "Address: \(museum.address)"
+        addressLabel.text = "Address "
         addressLabel.font = UIFont(name: "Avenir Black", size: 17)
         addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
+        //Address Content
+        self.addSubview(addressContent)
+        addressContent.leftAnchor.constraint(equalTo: self.addressLabel.rightAnchor).isActive = true
+        addressContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        addressContent.centerYAnchor.constraint(equalTo: self.addressLabel.centerYAnchor).isActive = true
+        addressContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        addressContent.text = museum.address
+        addressContent.font = UIFont(name: "Avenir Black", size: 14)
+        addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Admission Label
         self.addSubview(admissionLabel)
@@ -229,7 +238,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         artCategoriesLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 2).isActive = true
         artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        artCategoriesLabel.text = "Art: \(museum.artCategories)"
+        artCategoriesLabel.text = "Art"
         artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 17)
         artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
