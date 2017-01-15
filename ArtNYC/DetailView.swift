@@ -86,7 +86,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let sunday = museum.hours["Sunday"] else { return }
         sundayLabel.text = "Sunday: \(sunday)"
-        sundayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        sundayLabel.font = UIFont(name: "Avenir Black", size: 14)
         sundayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
@@ -98,7 +98,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let monday = museum.hours["Monday"] else { return }
         mondayLabel.text = "Monday: \(monday)"
-        mondayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        mondayLabel.font = UIFont(name: "Avenir Black", size: 14)
         mondayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
@@ -110,7 +110,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let tuesday = museum.hours["Tuesday"] else { return }
         tuesdayLabel.text = "Tuesday: \(tuesday)"
-        tuesdayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        tuesdayLabel.font = UIFont(name: "Avenir Black", size: 14)
         tuesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
@@ -122,7 +122,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let wednesday = museum.hours["Wednesday"] else { return }
         wednesdayLabel.text = "Wednesday: \(wednesday)"
-        wednesdayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        wednesdayLabel.font = UIFont(name: "Avenir Black", size: 14)
         wednesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
@@ -134,7 +134,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let thursday = museum.hours["Thursday"] else { return }
         thursdayLabel.text = "Thursday: \(thursday)"
-        thursdayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        thursdayLabel.font = UIFont(name: "Avenir Black", size: 14)
         thursdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
@@ -146,7 +146,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let friday = museum.hours["Friday"] else { return }
         fridayLabel.text = "Friday: \(friday)"
-        fridayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        fridayLabel.font = UIFont(name: "Avenir Black", size: 14)
         fridayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
@@ -158,16 +158,57 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         guard let saturday = museum.hours["Saturday"] else { return }
         saturdayLabel.text = "Saturday: \(saturday)"
-        saturdayLabel.font = UIFont(name: "Avenir Black", size: 12)
+        saturdayLabel.font = UIFont(name: "Avenir Black", size: 14)
         saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-//            addressLabel.text = "Address: \(museum.address)"
-//            admissionLabel.text = "Admission: \(museum.ticketPrice)"
-//            freeAdmissionLabel.text = "Free Admission: \(museum.freeHours)"
-//            artCategoriesLabel.text = "Art: \(museum.artCategories)"
+        //Address Label
+        self.addSubview(addressLabel)
+        addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        addressLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        addressLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 2).isActive = true
+        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        addressLabel.text = "Address: \(museum.address)"
+        addressLabel.font = UIFont(name: "Avenir Black", size: 17)
+        addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         
+        //Admission Label
+        self.addSubview(admissionLabel)
+        admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        admissionLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        admissionLabel.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor, constant: 2).isActive = true
+        admissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        admissionLabel.text = "Admission: \(museum.ticketPrice)"
+        admissionLabel.font = UIFont(name: "Avenir Black", size: 17)
+        admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        
+        //Free Admission Label
+        self.addSubview(freeAdmissionLabel)
+        freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        freeAdmissionLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionLabel.bottomAnchor, constant: 2).isActive = true
+        freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        freeAdmissionLabel.text = "Free Admission: \(museum.freeHours)"
+        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 17)
+        freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+
+        //Art Categories Label
+        self.addSubview(artCategoriesLabel)
+        artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        artCategoriesLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        artCategoriesLabel.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor, constant: 2).isActive = true
+        artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        artCategoriesLabel.text = "Art: \(museum.artCategories)"
+        artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 17)
+        artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+
     }
     
 }
