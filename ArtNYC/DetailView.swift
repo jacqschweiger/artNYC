@@ -92,7 +92,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Address Label
         self.addSubview(addressLabel)
         addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        addressLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: 3).isActive = true
+        addressLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: 5).isActive = true
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         
         addressLabel.text = "Address "
@@ -112,7 +112,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Admission Label
         self.addSubview(admissionLabel)
         admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        admissionLabel.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor, constant: 3).isActive = true
+        admissionLabel.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor, constant: 5).isActive = true
         admissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         admissionLabel.text = "Admission "
@@ -133,7 +133,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Free Admission Label
         self.addSubview(freeAdmissionLabel)
         freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionLabel.bottomAnchor, constant: 2).isActive = true
+        freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionLabel.bottomAnchor, constant: 5).isActive = true
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionLabel.text = "Free Admission "
@@ -142,20 +142,19 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Free Admission Content
         self.addSubview(freeAdmissionContent)
-        freeAdmissionContent.leftAnchor.constraint(equalTo: self.freeAdmissionLabel.rightAnchor).isActive = true
-        freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionLabel.centerYAnchor).isActive = true
+        freeAdmissionContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
+        freeAdmissionContent.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor, constant: 2).isActive = true
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionContent.text = museum.freeHours
         freeAdmissionContent.font = UIFont(name: "Avenir Black", size: 14)
         freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
-        
         //Hours Label
         self.addSubview(hoursLabel)
         hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         hoursLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        hoursLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 3).isActive = true
+        hoursLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 5).isActive = true
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         
         hoursLabel.text = "Hours"
