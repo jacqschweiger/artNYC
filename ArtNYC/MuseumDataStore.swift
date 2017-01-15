@@ -18,7 +18,7 @@ class MuseumDataStore {
     
     func loadMuseums() {
         let metMuseum = Museum(title:"Metropolitan Museum of Art",
-                               logo: UIImage(named: "placeholder")!,
+                               logo: UIImage(named: "the_met_logo")!,
                                address: "1000 5th Ave",
                                hours: ["Sunday":"10am-5:30pm",
                                        "Monday":"10am-5:30pm",
@@ -190,20 +190,21 @@ class MuseumDataStore {
                                             "Saturday":"10AM–6PM"],
                                     ticketPrice: "$16",
                                     freeHours: "Pay what you wish Thursdays, 6-9pm",                                    artCategories: "Contemporary and historic craft, art and design",
-                                    coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
+                                    coordinate: CLLocationCoordinate2D(latitude: 40.7674, longitude: -73.9820),
                                     url: "http://www.madmuseum.org/")
 
+//        let cooperHewitt = Museum(title: "Cooper Hewitt", address: "2 E 91st St")
+//        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
+//        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
         
+//        let drawingCenter = Museum(title: "The Drawing Center", address: "35 Wooster St")
+//        let frick = Museum(title: "The Frick Collection", address: "1 E 70th St")
+//        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
         
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
 //        let cloisters = Museum(title: "The Met Cloisters", address: "99 Margaret Corbin Dr")
-//        let drawingCenter = Museum(title: "The Drawing Center", address: "35 Wooster St")
-//        let frick = Museum(title: "The Frick Collection", address: "1 E 70th St")
-//        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
-//        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
 //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
-//        let cooperHewitt = Museum(title: "Cooper Hewitt", address: "2 E 91st St")
-//        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
+
         
 
         museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad]
