@@ -11,6 +11,9 @@ import UIKit
 
 class WebVC: UIViewController {
     
+    var museumURL: String!
+    var webView: WebView!
+    
     @IBOutlet weak var museumWebView: UIWebView!
     
     @IBAction func doRefresh(_: AnyObject) {
@@ -29,20 +32,22 @@ class WebVC: UIViewController {
         museumWebView.stopLoading()
     }
     
-    var museumURL: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            let url = NSURL(string: self.museumURL)
-            let request = NSURLRequest(url: url as! URL)
-            self.museumWebView.loadRequest(request as URLRequest)
-        }
+        self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
+        self.view = self.webView
+        
+//        DispatchQueue.main.async {
+//            let url = NSURL(string: self.museumURL)
+//            let request = NSURLRequest(url: url as! URL)
+//            self.museumWebView.loadRequest(request as URLRequest)
+//        }
         
         self.reloadInputViews()
     }
     
+
 }
 
-    
+

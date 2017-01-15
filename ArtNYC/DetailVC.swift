@@ -30,8 +30,10 @@ class DetailVC: UIViewController, GMSMapViewDelegate, GoToWebViewDelegate {
     }
     
     func goToWebView() {
-        print("go to")
         let webViewController = WebVC()
+        if let museum = museum {
+            webViewController.museumURL = museum.url
+        }
         navigationController?.pushViewController(webViewController, animated: false)
     }
     

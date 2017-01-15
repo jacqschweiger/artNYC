@@ -275,7 +275,6 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     func onGoToWebView(){
-        print("pressed On Go")
         self.delegate?.goToWebView()
     }
     
