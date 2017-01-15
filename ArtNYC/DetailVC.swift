@@ -36,7 +36,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        panoView.moveNearCoordinate(CLLocationCoordinate2D(latitude: -33.732, longitude: 150.312))
+        panoView.moveNearCoordinate(self.museum.coordinate)
         
         setUpElements()
     }
@@ -63,7 +63,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
         artCategoriesLabel.text = "Art: \(museum.artCategories)"
     }
     
-    //TODO: fix segue
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showWebView" {
             let dest = segue.destination as! WebVC

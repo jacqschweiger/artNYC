@@ -62,7 +62,7 @@ class MuseumDataStore {
                                  ticketPrice: "$20",
                                  freeHours: "Every Friday 6–10pm",
                                  artCategories: "Himalayan and Asian",
-                                 coordinate: CLLocationCoordinate2D(latitude: 40.7400, longitude: -73.9973),
+                                 coordinate: CLLocationCoordinate2D(latitude: 40.740109, longitude: -73.9977899),
                                  url: "http://rubinmuseum.org/")
         
         let whitney = Museum(title: "Whitney Museum of American Art",
