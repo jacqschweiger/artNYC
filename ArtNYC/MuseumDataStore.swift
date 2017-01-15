@@ -28,7 +28,7 @@ class MuseumDataStore {
                                        "Friday":"10am-9pm",
                                        "Saturday":"10am-9pm"],
                                ticketPrice: "$25 (suggested)",
-                               freeHours: "Pay what you wish with suggested admission",
+                               freeHours: "Pay what you wish, everyday",
                                artCategories: "All cultures and time periods",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7802722, longitude: -73.9622221),
                                url: "http://www.metmuseum.org/")
@@ -45,7 +45,7 @@ class MuseumDataStore {
                                          "Saturday":"11am–6pm"],
                                  ticketPrice: "$20",
                                  freeHours: "First Friday of every month, 6-8pm",
-                                 artCategories: "Austrian and German",
+                                 artCategories: "Austrian & German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
                                  url: "http://neuegalerie.org/")
         
@@ -61,7 +61,7 @@ class MuseumDataStore {
                                          "Saturday":"11am–6pm"],
                                  ticketPrice: "$20",
                                  freeHours: "Fridays 6–10pm",
-                                 artCategories: "Himalayan and Asian",
+                                 artCategories: "Himalayan & Asian",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.740109, longitude: -73.9977899),
                                  url: "http://rubinmuseum.org/")
         
@@ -77,7 +77,7 @@ class MuseumDataStore {
                                          "Saturday":"10:30am–10pm"],
                                  ticketPrice: "$25",
                                  freeHours: "None",
-                                 artCategories: "American Modern and Contemporary",
+                                 artCategories: "American modern & contemporary",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7396877, longitude: -74.0088928),
                                  url: "http://whitney.org/")
         
@@ -94,7 +94,7 @@ class MuseumDataStore {
                                   "Saturday":"10:30AM–5:30PM"],
                           ticketPrice: "$25",
                           freeHours: "Fridays, 4-8pm",
-                          artCategories: "Modern and Contemporary",
+                          artCategories: "Modern & contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
                           url: "https://www.moma.org/")
         
@@ -110,7 +110,7 @@ class MuseumDataStore {
                                   "Saturday":"10AM–7:45PM"],
                           ticketPrice: "$15",
                           freeHours: "Pay what you wish Saturdays, 5:45–7:45pm",
-                          artCategories: "Modern and Contemporary",
+                          artCategories: "Modern & contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7829473, longitude: -73.959093),
                           url: "https://www.guggenheim.org/")
         
@@ -126,7 +126,7 @@ class MuseumDataStore {
                                         "Saturday":"11AM–5:45PM"],
                                 ticketPrice: "$15",
                                 freeHours: "Saturdays free; Pay what you wish Thursdays, 5–8pm",
-                                artCategories: "Jewish artists, Judaica",
+                                artCategories: "Jewish art & artists, contemporary & historic",
                                 coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
                                 url: "http://thejewishmuseum.org/")
         
@@ -142,7 +142,7 @@ class MuseumDataStore {
                                           "Saturday":"11:30AM–7PM"],
                                   ticketPrice: "Free",
                                   freeHours: "Always free",
-                                  artCategories: "American folk art",
+                                  artCategories: "American folk",
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7732, longitude: -73.9814),
                                   url: "http://folkartmuseum.org/")
         
@@ -174,7 +174,7 @@ class MuseumDataStore {
                                        "Saturday":"11AM–6PM"],
                                ticketPrice: "$9",
                                freeHours: "Every third Saturday of the month",
-                               artCategories: "Latino, Caribbean, and Latin American",
+                               artCategories: "Latino, Caribbean, & Latin American",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
                                url: "http://www.elmuseo.org/")
         
@@ -189,7 +189,7 @@ class MuseumDataStore {
                                             "Friday":"10AM–9PM",
                                             "Saturday":"10AM–6PM"],
                                     ticketPrice: "$16",
-                                    freeHours: "Pay what you wish Thursdays, 6-9pm",                                    artCategories: "Contemporary and historic craft, art and design",
+                                    freeHours: "Pay what you wish Thursdays, 6-9pm",                                    artCategories: "Craft, art & design, contemporary & historic",
                                     coordinate: CLLocationCoordinate2D(latitude: 40.7674, longitude: -73.9820),
                                     url: "http://www.madmuseum.org/")
 

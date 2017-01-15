@@ -60,20 +60,102 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.addSubview(nameLabel)
         nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: self.panoView.bottomAnchor, constant: 5).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: self.panoView.bottomAnchor, constant: 7).isActive = true
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         nameLabel.text = museum.title
-        nameLabel.font = UIFont(name: "Avenir Black", size: 24)
+        nameLabel.font = UIFont(name: "Avenir Black", size: 22)
         nameLabel.textColor = UIColor(red:44/255, green: 62/255, blue:80/255, alpha:1.0)
         nameLabel.textAlignment = .center
+        
+        //Art Categories Label
+        self.addSubview(artCategoriesLabel)
+        artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        artCategoriesLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 5).isActive = true
+        artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        artCategoriesLabel.text = "Art "
+        artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 17)
+        artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Art Categories Content
+        self.addSubview(artCategoriesContent)
+        artCategoriesContent.leftAnchor.constraint(equalTo: self.artCategoriesLabel.rightAnchor).isActive = true
+        artCategoriesContent.centerYAnchor.constraint(equalTo: self.artCategoriesLabel.centerYAnchor).isActive = true
+        artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        artCategoriesContent.text = museum.artCategories
+        artCategoriesContent.font = UIFont(name: "Avenir Black", size: 14)
+        artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        
+        
+        //Address Label
+        self.addSubview(addressLabel)
+        addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        addressLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: 3).isActive = true
+        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        addressLabel.text = "Address "
+        addressLabel.font = UIFont(name: "Avenir Black", size: 17)
+        addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Address Content
+        self.addSubview(addressContent)
+        addressContent.leftAnchor.constraint(equalTo: self.addressLabel.rightAnchor).isActive = true
+        addressContent.centerYAnchor.constraint(equalTo: self.addressLabel.centerYAnchor).isActive = true
+        addressContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        addressContent.text = museum.address
+        addressContent.font = UIFont(name: "Avenir Black", size: 14)
+        addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        
+        //Admission Label
+        self.addSubview(admissionLabel)
+        admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        admissionLabel.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor, constant: 3).isActive = true
+        admissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        admissionLabel.text = "Admission "
+        admissionLabel.font = UIFont(name: "Avenir Black", size: 17)
+        admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Admission Content
+        self.addSubview(admissionContent)
+        admissionContent.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
+        admissionContent.centerYAnchor.constraint(equalTo: self.admissionLabel.centerYAnchor).isActive = true
+        admissionContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        admissionContent.text = museum.ticketPrice
+        admissionContent.font = UIFont(name: "Avenir Black", size: 14)
+        admissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        
+        
+        //Free Admission Label
+        self.addSubview(freeAdmissionLabel)
+        freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionLabel.bottomAnchor, constant: 2).isActive = true
+        freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        freeAdmissionLabel.text = "Free Admission "
+        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 17)
+        freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Free Admission Content
+        self.addSubview(freeAdmissionContent)
+        freeAdmissionContent.leftAnchor.constraint(equalTo: self.freeAdmissionLabel.rightAnchor).isActive = true
+        freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionLabel.centerYAnchor).isActive = true
+        freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        freeAdmissionContent.text = museum.freeHours
+        freeAdmissionContent.font = UIFont(name: "Avenir Black", size: 14)
+        freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         //Hours Label
         self.addSubview(hoursLabel)
         hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         hoursLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        hoursLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 3).isActive = true
+        hoursLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 3).isActive = true
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         
         hoursLabel.text = "Hours"
@@ -163,95 +245,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         saturdayLabel.text = "Saturday: \(saturday)"
         saturdayLabel.font = UIFont(name: "Avenir Black", size: 14)
         saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        
-        
-        //Address Label
-        self.addSubview(addressLabel)
-        addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        addressLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 3).isActive = true
-        addressLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        addressLabel.text = "Address "
-        addressLabel.font = UIFont(name: "Avenir Black", size: 17)
-        addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Address Content
-        self.addSubview(addressContent)
-        addressContent.leftAnchor.constraint(equalTo: self.addressLabel.rightAnchor).isActive = true
-        addressContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        addressContent.centerYAnchor.constraint(equalTo: self.addressLabel.centerYAnchor).isActive = true
-        addressContent.translatesAutoresizingMaskIntoConstraints = false
-        
-        addressContent.text = museum.address
-        addressContent.font = UIFont(name: "Avenir Black", size: 14)
-        addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        
-        //Admission Label
-        self.addSubview(admissionLabel)
-        admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        admissionLabel.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor, constant: 2).isActive = true
-        admissionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        admissionLabel.text = "Admission "
-        admissionLabel.font = UIFont(name: "Avenir Black", size: 17)
-        admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Admission Content
-        self.addSubview(admissionContent)
-        admissionContent.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
-        admissionContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        admissionContent.centerYAnchor.constraint(equalTo: self.admissionLabel.centerYAnchor).isActive = true
-        admissionContent.translatesAutoresizingMaskIntoConstraints = false
-        
-        admissionContent.text = museum.ticketPrice
-        admissionContent.font = UIFont(name: "Avenir Black", size: 14)
-        admissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        
-        
-        //Free Admission Label
-        self.addSubview(freeAdmissionLabel)
-        freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionLabel.bottomAnchor, constant: 2).isActive = true
-        freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        freeAdmissionLabel.text = "Free Admission"
-        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 17)
-        freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Free Admission Content
-        self.addSubview(freeAdmissionContent)
-        freeAdmissionContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
-        freeAdmissionContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        freeAdmissionContent.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor).isActive = true
-        freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
-        
-        freeAdmissionContent.text = museum.freeHours
-        freeAdmissionContent.font = UIFont(name: "Avenir Black", size: 14)
-        freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-
-        
-
-        //Art Categories Label
-        self.addSubview(artCategoriesLabel)
-        artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        artCategoriesLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        artCategoriesLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 2).isActive = true
-        artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        artCategoriesLabel.text = "Art"
-        artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 17)
-        artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Art Categories Content
-        self.addSubview(artCategoriesContent)
-        artCategoriesContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
-        artCategoriesContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor).isActive = true
-        artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
-        
-        artCategoriesContent.text = museum.artCategories
-        artCategoriesContent.font = UIFont(name: "Avenir Black", size: 14)
-        artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
 
     }
     
