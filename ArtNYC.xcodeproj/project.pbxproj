@@ -21,6 +21,7 @@
 		716027451E2A8F7900CAF26B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716027441E2A8F7900CAF26B /* WebVC.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
+		71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF916B1E2BDA0000943648 /* DetailView.swift */; };
 		BD095B46B7788DDAF717A231 /* Pods_ArtNYC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		716027441E2A8F7900CAF26B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
+		71DF916B1E2BDA0000943648 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
 		D9DEAC22F9E6FAEB9490DF2A /* libPods-ArtNYCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArtNYCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 		7152044A1E2A702E00AD04AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71DF916B1E2BDA0000943648 /* DetailView.swift */,
 				715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */,
 			);
 			name = Views;
@@ -329,6 +332,7 @@
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				715204471E2A6B0300AD04AB /* MuseumListVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
+				71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */,
 				7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */,
 				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
 				715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */,

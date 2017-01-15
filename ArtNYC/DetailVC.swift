@@ -14,6 +14,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
+    var detailView: DetailView!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -36,9 +37,15 @@ class DetailVC: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        panoView.moveNearCoordinate(self.museum.coordinate)
+        //panoView.moveNearCoordinate(self.museum.coordinate)
         
-        setUpElements()
+        //setUpElements()
+    }
+    
+    
+    override func loadView(){
+        self.detailView = DetailView(frame: CGRect.zero, museum: museum)
+        self.view = self.detailView
     }
     
     func setUpElements() {
