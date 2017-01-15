@@ -6,6 +6,7 @@
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class MuseumTableViewCell: UITableViewCell {
@@ -13,19 +14,21 @@ class MuseumTableViewCell: UITableViewCell {
     var museumLogo: UIImageView = UIImageView()
     var museumNameLabel: UILabel = UILabel()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+//    init(frame: CGRect) {
+//        super.init(frame: frame)
+//    
+//        setUpElements()
+//        
+//    }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         
-        // Configure the view for the selected state
+        setUpElements()
+        
     }
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+    private func setUpElements(){
         //image
         contentView.addSubview(museumLogo)
         museumLogo.topAnchor.constraint(equalTo: self.topAnchor, constant: 3).isActive = true
@@ -39,10 +42,6 @@ class MuseumTableViewCell: UITableViewCell {
         museumNameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         museumNameLabel.leftAnchor.constraint(equalTo: self.museumLogo.rightAnchor, constant: 3).isActive = true
         museumNameLabel.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }
