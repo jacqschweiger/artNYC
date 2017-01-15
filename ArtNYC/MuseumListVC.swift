@@ -33,7 +33,6 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath) as! MuseumTableViewCell
-        //let cell = MuseumTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "basiCell")
         cell.museumNameLabel.text = store.museums[indexPath.row].title
         cell.museumLogo.image = store.museums[indexPath.row].logo
         return cell

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710D80451E2C1750002AD134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710D80441E2C1750002AD134 /* Constants.swift */; };
 		7119AA1A1E2AD41B00F55150 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119AA191E2AD41B00F55150 /* Secrets.swift */; };
 		7132CBF51E29752C008CA655 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF41E29752C008CA655 /* MapVC.swift */; };
 		7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF61E2978A8008CA655 /* DetailVC.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2FA7AE539C17AC120132072E /* Pods-ArtNYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.debug.xcconfig"; sourceTree = "<group>"; };
 		517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtNYC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		710D80441E2C1750002AD134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7119AA191E2AD41B00F55150 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				7152044A1E2A702E00AD04AB /* Views */,
 				7132CBEC1E29696E008CA655 /* Models */,
 				713D5F121E295DA500DD76FA /* AppDelegate.swift */,
+				710D80441E2C1750002AD134 /* Constants.swift */,
 				7119AA191E2AD41B00F55150 /* Secrets.swift */,
 				713D5F161E295DA500DD76FA /* Main.storyboard */,
 				713D5F1C1E295DA500DD76FA /* Assets.xcassets */,
@@ -338,6 +341,7 @@
 				715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
+				710D80451E2C1750002AD134 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

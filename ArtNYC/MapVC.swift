@@ -12,7 +12,7 @@ import GoogleMaps
 class MapVC: UIViewController, GMSMapViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
-    var selectedMuseum: Museum!
+    var selectedMuseum: Museum?
     var mapView: GMSMapView!
     
     override func viewDidLoad() {
@@ -32,7 +32,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         for museum in store.museums {
             let position = museum.coordinate
             let marker = GMSMarker(position: position)
-            marker.title = museum.title!
+            if let museumTitle = museum.title {
+                marker.title = museumTitle
+            }
             marker.snippet = "See more"
             marker.map = mapView
         }
