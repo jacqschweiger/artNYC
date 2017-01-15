@@ -13,6 +13,8 @@ class WebView: UIView {
     
     var museumURL: String!
     var museumWebView: UIWebView!
+    var webToolbar: UINavigationItem!
+    var backButton: UIBarButtonItem!
     
     init(frame:CGRect, museumURL: String){
         super.init(frame: frame)
@@ -44,6 +46,42 @@ class WebView: UIView {
         }
     }
     
+//    func setUpToolbar() {
+//        webToolbar = UINavigationItem()
+//        self.addSubview(webToolbar)
+//        webToolbar.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+//        webToolbar.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+//        webToolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        webToolbar.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        //Back Button
+//        backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        
+//        backButton.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
+//        backButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
+//        backButton.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        backButton.setTitle(museum.url, for: .normal)
+//        backButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 14)!
+
+
+//        // set font size of nav bar buttons
+//        let labelFont: UIFont = UIFont(name: Constants.appFont.regular.rawValue, size: CGFloat(Constants.fontSize.xsmall.rawValue))!
+//        let attributesTextNormal = [ NSFontAttributeName : labelFont ]
+//        allStepsButton.setTitleTextAttributes(attributesTextNormal, for: .normal)
+//        myMenuButton.setTitleTextAttributes(attributesTextNormal, for: UIControlState.normal)
+
         
         
-}
+        
+        
+    }
+    
+//    func goBack(_: AnyObject) {
+//        museumWebView.goBack()
+//    }
+
+    
+        
+        
+

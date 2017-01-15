@@ -37,15 +37,18 @@ class WebVC: UIViewController {
         
         self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
         self.view = self.webView
-        
-//        DispatchQueue.main.async {
-//            let url = NSURL(string: self.museumURL)
-//            let request = NSURLRequest(url: url as! URL)
-//            self.museumWebView.loadRequest(request as URLRequest)
-//        }
-        
-        self.reloadInputViews()
+
     }
+//    
+//    self.navigationController?.toolbarHidden = false
+//    var items = [UIBarButtonItem]()
+//    items.append(
+//    UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+//    )
+//    items.append(
+//    UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "onClickedToolbeltButton:")
+//    )
+//    self.navigationController?.toolbar.items = items
     
 
 }
