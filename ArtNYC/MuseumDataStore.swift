@@ -60,7 +60,7 @@ class MuseumDataStore {
                                          "Friday":"11am–10pm",
                                          "Saturday":"11am–6pm"],
                                  ticketPrice: "$20",
-                                 freeHours: "Every Friday 6–10pm",
+                                 freeHours: "Fridays 6–10pm",
                                  artCategories: "Himalayan and Asian",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.740109, longitude: -73.9977899),
                                  url: "http://rubinmuseum.org/")
@@ -94,7 +94,7 @@ class MuseumDataStore {
                                   "Saturday":"10:30AM–5:30PM"],
                           ticketPrice: "$25",
                           freeHours: "Every Friday, 4-8pm",
-                          artCategories: "American Modern and Contemporary",
+                          artCategories: "Modern and Contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
                           url: "https://www.moma.org/")
         
@@ -109,14 +109,29 @@ class MuseumDataStore {
                                   "Friday":"10AM–5:45PM",
                                   "Saturday":"10AM–7:45PM"],
                           ticketPrice: "$15",
-                          freeHours: "Pay what you wish every Saturday, 5:45–7:45pm",
-                          artCategories: "American Modern and Contemporary",
+                          freeHours: "Pay what you wish Saturdays, 5:45–7:45pm",
+                          artCategories: "Modern and Contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7829473, longitude: -73.959093),
                           url: "https://www.guggenheim.org/")
         
-
-//        let  = Museum(title: "", address: "")
-//        let jewishMuseum = Museum(title: "Jewish Museum", address: "1109 5th Ave")
+        let jewishMuseum = Museum(title: "Jewish Museum",
+                                logo: UIImage(named: "placeholder")!,
+                                address: "1109 5th Ave",
+                                hours: ["Sunday":"11AM–5:45PM",
+                                        "Monday":"11AM–5:45PM",
+                                        "Tuesday":"11AM–5:45PM",
+                                        "Wednesday":"Closed",
+                                        "Thursday":"11AM–8PM",
+                                        "Friday":"11AM–4PM",
+                                        "Saturday":"11AM–5:45PM"],
+                                ticketPrice: "$15",
+                                freeHours: "Saturdays free; Pay what you wish Thursdays, 5–8pm",
+                                artCategories: "Jewish",
+                                coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
+                                url: "http://thejewishmuseum.org/")
+        
+        
+        
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
 //        let cloisters = Museum(title: "The Met Cloisters", address: "99 Margaret Corbin Dr")
 //        let drawingCenter = Museum(title: "The Drawing Center", address: "35 Wooster St")
@@ -132,7 +147,7 @@ class MuseumDataStore {
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
         
 //        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, metBreuer, cloisters, drawingCenter, frick, hispanicSociety, asiaSociety, mad, folkArt, morganLibrary, newMuseum, museoDelBarrio, cooperHewitt, fit]
-        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim]
+        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum]
     }
 
     
