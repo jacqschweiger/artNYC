@@ -28,9 +28,9 @@ class MuseumDataStore {
                                        "Friday":"10am-9pm",
                                        "Saturday":"10am-9pm"],
                                ticketPrice: "$25 (suggested)",
-                               freeHours: "Pay what you will with suggested admission",
+                               freeHours: "Pay what you wish with suggested admission",
                                artCategories: "All cultures and time periods",
-                               coordinate: CLLocationCoordinate2D(latitude: 40.7794, longitude: -73.9634),
+                               coordinate: CLLocationCoordinate2D(latitude: 40.7802722, longitude: -73.9622221),
                                url: "http://www.metmuseum.org/")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
@@ -44,7 +44,7 @@ class MuseumDataStore {
                                          "Friday":"10am-9pm",
                                          "Saturday":"11am–6pm"],
                                  ticketPrice: "$20",
-                                 freeHours: "First Friday of every month from 6 to 8 p.m.",
+                                 freeHours: "First Friday of every month, 6-8pm",
                                  artCategories: "Austrian and German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
                                  url: "http://neuegalerie.org/")
@@ -78,12 +78,44 @@ class MuseumDataStore {
                                  ticketPrice: "$25",
                                  freeHours: "None",
                                  artCategories: "American Modern and Contemporary",
-                                 coordinate: CLLocationCoordinate2D(latitude: 40.7394, longitude: -74.0092),
+                                 coordinate: CLLocationCoordinate2D(latitude: 40.7396877, longitude: -74.0088928),
                                  url: "http://whitney.org/")
         
 
-//        let moma = Museum(title: "Museum of Modern Art", address: "11 W 53rd St")
-//        let guggenheim = Museum(title: "Solomon R. Guggenheim Museum", address: "1071 5th Ave")
+        let moma = Museum(title: "Museum of Modern Art",
+                          logo: UIImage(named: "placeholder")!,
+                          address: "11 W 53rd St",
+                          hours: ["Sunday":"10:30AM–5:30PM",
+                                  "Monday":"10:30AM–5:30PM",
+                                  "Tuesday":"10:30AM–5:30PM",
+                                  "Wednesday":"10:30AM–5:30PM",
+                                  "Thursday":"10:30AM–5:30PM",
+                                  "Friday":"10:30AM–8PM",
+                                  "Saturday":"10:30AM–5:30PM"],
+                          ticketPrice: "$25",
+                          freeHours: "Every Friday, 4-8pm",
+                          artCategories: "American Modern and Contemporary",
+                          coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
+                          url: "https://www.moma.org/")
+        
+        let guggenheim = Museum(title: "Solomon R. Guggenheim Museum",
+                          logo: UIImage(named: "placeholder")!,
+                          address: "1071 5th Ave",
+                          hours: ["Sunday":"10AM–5:45PM",
+                                  "Monday":"10AM–5:45PM",
+                                  "Tuesday":"10AM–5:45PM",
+                                  "Wednesday":"10AM–5:45PM",
+                                  "Thursday":"Closed",
+                                  "Friday":"10AM–5:45PM",
+                                  "Saturday":"10AM–7:45PM"],
+                          ticketPrice: "$15",
+                          freeHours: "Pay what you wish every Saturday, 5:45–7:45pm",
+                          artCategories: "American Modern and Contemporary",
+                          coordinate: CLLocationCoordinate2D(latitude: 40.7829473, longitude: -73.959093),
+                          url: "https://www.guggenheim.org/")
+        
+
+//        let  = Museum(title: "", address: "")
 //        let jewishMuseum = Museum(title: "Jewish Museum", address: "1109 5th Ave")
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
 //        let cloisters = Museum(title: "The Met Cloisters", address: "99 Margaret Corbin Dr")
@@ -100,7 +132,7 @@ class MuseumDataStore {
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
         
 //        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, metBreuer, cloisters, drawingCenter, frick, hispanicSociety, asiaSociety, mad, folkArt, morganLibrary, newMuseum, museoDelBarrio, cooperHewitt, fit]
-        museums = [metMuseum, neueGalerie, rubinMuseum, whitney]
+        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim]
     }
 
     
