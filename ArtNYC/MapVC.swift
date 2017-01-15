@@ -33,6 +33,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             let position = museum.coordinate
             let marker = GMSMarker(position: position)
             marker.title = museum.title!
+            marker.snippet = "See more"
             marker.map = mapView
         }
         
