@@ -10,8 +10,13 @@ import Foundation
 import UIKit
 import GoogleMaps
 
+protocol GoToWebViewDelegate: class {
+    func goToWebView()
+}
+
 class DetailView: UIView, GMSMapViewDelegate {
     
+    weak var delegate: GoToWebViewDelegate?
     var museum: Museum!
     var panoView = GMSPanoramaView()
     var nameLabel = UILabel()
@@ -259,7 +264,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Website Button
         websiteButton = UIButton(type: .roundedRect)
-//        websiteButton.addTarget(self, action: #selector(), for: UIControlEvents.touchUpInside)
+        websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
         self.addSubview(websiteButton)
         websiteButton.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
         websiteButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
@@ -267,6 +272,11 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         websiteButton.setTitle(museum.url, for: .normal)
         websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 14)!
+    }
+    
+    func onGoToWebView(){
+        print("pressed On Go")
+        self.delegate?.goToWebView()
     }
     
 }
