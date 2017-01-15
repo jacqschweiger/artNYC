@@ -18,7 +18,7 @@ class MuseumDataStore {
     
     func loadMuseums() {
         let metMuseum = Museum(title:"Metropolitan Museum of Art",
-                               logo: UIImage(named: "the_met_logo")!,
+                               logo: UIImage(named: "metLogo")!,
                                address: "1000 5th Ave",
                                hours: ["Sunday":"10am-5:30pm",
                                        "Monday":"10am-5:30pm",
@@ -34,7 +34,7 @@ class MuseumDataStore {
                                url: "http://www.metmuseum.org/")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
-                                 logo: UIImage(named: "placeholder")!,
+                                 logo: UIImage(named: "neueGalerieLogo")!,
                                  address: "1048 5th Ave",
                                  hours: ["Sunday":"11am–6pm",
                                          "Monday":"11am–6pm",
@@ -50,7 +50,7 @@ class MuseumDataStore {
                                  url: "http://neuegalerie.org/")
         
         let rubinMuseum = Museum(title: "Rubin Museum of Art",
-                                 logo: UIImage(named: "placeholder")!,
+                                 logo: UIImage(named: "rubinLogo")!,
                                  address: "150 W 17th St",
                                  hours: ["Sunday":"11am–6pm",
                                          "Monday":"11am–5pm",
@@ -66,7 +66,7 @@ class MuseumDataStore {
                                  url: "http://rubinmuseum.org/")
         
         let whitney = Museum(title: "Whitney Museum of American Art",
-                                 logo: UIImage(named: "placeholder")!,
+                                 logo: UIImage(named: "whitneyLogo")!,
                                  address: "99 Gansevoort St",
                                  hours: ["Sunday":"10:30am–6pm",
                                          "Monday":"10:30am–6pm",
@@ -83,7 +83,7 @@ class MuseumDataStore {
         
 
         let moma = Museum(title: "Museum of Modern Art",
-                          logo: UIImage(named: "placeholder")!,
+                          logo: UIImage(named: "momaLogo")!,
                           address: "11 W 53rd St",
                           hours: ["Sunday":"10:30AM–5:30PM",
                                   "Monday":"10:30AM–5:30PM",
@@ -99,7 +99,7 @@ class MuseumDataStore {
                           url: "https://www.moma.org/")
         
         let guggenheim = Museum(title: "Solomon R. Guggenheim Museum",
-                          logo: UIImage(named: "placeholder")!,
+                          logo: UIImage(named: "guggenheimLogo")!,
                           address: "1071 5th Ave",
                           hours: ["Sunday":"10AM–5:45PM",
                                   "Monday":"10AM–5:45PM",
@@ -115,7 +115,7 @@ class MuseumDataStore {
                           url: "https://www.guggenheim.org/")
         
         let jewishMuseum = Museum(title: "Jewish Museum",
-                                logo: UIImage(named: "placeholder")!,
+                                logo: UIImage(named: "jewishMuseumLogo")!,
                                 address: "1109 5th Ave",
                                 hours: ["Sunday":"11AM–5:45PM",
                                         "Monday":"11AM–5:45PM",
@@ -131,7 +131,7 @@ class MuseumDataStore {
                                 url: "http://thejewishmuseum.org/")
         
         let folkArt = Museum(title: "American Folk Art Museum",
-                                  logo: UIImage(named: "placeholder")!,
+                                  logo: UIImage(named: "folkArtLogo")!,
                                   address: "2 Lincoln Square",
                                   hours: ["Sunday":"12–6PM",
                                           "Monday":"Closed",
@@ -147,7 +147,7 @@ class MuseumDataStore {
                                   url: "http://folkartmuseum.org/")
         
         let newMuseum = Museum(title: "The New Museum",
-                             logo: UIImage(named: "placeholder")!,
+                             logo: UIImage(named: "newMuseumLogo")!,
                              address: "235 Bowery",
                              hours: ["Sunday":"11AM–6PM",
                                      "Monday":"Closed",
@@ -163,7 +163,7 @@ class MuseumDataStore {
                              url: "http://www.newmuseum.org/")
         
         let museoDelBarrio = Museum(title: "El Museo Del Barrio",
-                               logo: UIImage(named: "placeholder")!,
+                               logo: UIImage(named: "museoDelBarrioLogo")!,
                                address: "1230 5th Ave",
                                hours: ["Sunday":"12–5PM",
                                        "Monday":"Closed",
@@ -179,7 +179,7 @@ class MuseumDataStore {
                                url: "http://www.elmuseo.org/")
         
         let mad = Museum(title: "Museum of Arts and Design",
-                                    logo: UIImage(named: "placeholder")!,
+                                    logo: UIImage(named: "madLogo")!,
                                     address: "2 Columbus Circle",
                                     hours: ["Sunday":"10AM–6PM",
                                             "Monday":"Closed",
