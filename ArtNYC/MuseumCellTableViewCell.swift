@@ -23,11 +23,17 @@ class MuseumTableViewCell: UITableViewCell {
     private func setUpElements(){
         //image
         contentView.addSubview(museumLogo)
+        museumLogo.contentMode = .scaleToFill
         museumLogo.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         museumLogo.heightAnchor.constraint(equalToConstant: 38).isActive = true
         museumLogo.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         museumLogo.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.10).isActive = true
         museumLogo.translatesAutoresizingMaskIntoConstraints = false
+        
+        museumLogo.layer.cornerRadius = 5
+        museumLogo.layer.borderWidth = 1
+        museumLogo.layer.borderColor = UIColor.gray.cgColor
+        museumLogo.clipsToBounds = true
         
         //text label
         contentView.addSubview(museumNameLabel)
