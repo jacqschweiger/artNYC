@@ -50,23 +50,23 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
         
     }
+
     
     
     // MARK: GMSMapViewDelegate
     
-//    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-//        
-//        
-//    }
-    
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        for museum in store.museums {
+            if museum.title == marker.title {
+                self.selectedMuseum = museum
+            }
+        }
         performSegue(withIdentifier: "showMuseum", sender: marker)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMuseum" {
             let dest = segue.destination as! DetailVC
-            selectedMuseum = store.museums[0]
             dest.museum = selectedMuseum
         }
     }
