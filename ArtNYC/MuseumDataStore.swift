@@ -93,7 +93,7 @@ class MuseumDataStore {
                                   "Friday":"10:30AM–8PM",
                                   "Saturday":"10:30AM–5:30PM"],
                           ticketPrice: "$25",
-                          freeHours: "Every Friday, 4-8pm",
+                          freeHours: "Fridays, 4-8pm",
                           artCategories: "Modern and Contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
                           url: "https://www.moma.org/")
@@ -161,10 +161,38 @@ class MuseumDataStore {
                              artCategories: "Contemporary",
                              coordinate: CLLocationCoordinate2D(latitude: 40.7223779, longitude: -73.993038),
                              url: "http://www.newmuseum.org/")
-
-//        let museoDelBarrio = Museum(title: "El Museo Del Barrio", address: "1230 5th Ave")
-//        let mad = Museum(title: "The Museum of Arts and Design", address: "2 Columbus Circle")
         
+        let museoDelBarrio = Museum(title: "El Museo Del Barrio",
+                               logo: UIImage(named: "placeholder")!,
+                               address: "1230 5th Ave",
+                               hours: ["Sunday":"12–5PM",
+                                       "Monday":"Closed",
+                                       "Tuesday":"Closed",
+                                       "Wednesday":"11AM–6PM",
+                                       "Thursday":"11AM–6PM",
+                                       "Friday":"11AM–6PM",
+                                       "Saturday":"11AM–6PM"],
+                               ticketPrice: "$9",
+                               freeHours: "Every third Saturday of the month",
+                               artCategories: "Latino, Caribbean, and Latin American",
+                               coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
+                               url: "http://www.elmuseo.org/")
+        
+        let mad = Museum(title: "Museum of Arts and Design",
+                                    logo: UIImage(named: "placeholder")!,
+                                    address: "2 Columbus Circle",
+                                    hours: ["Sunday":"10AM–6PM",
+                                            "Monday":"Closed",
+                                            "Tuesday":"10AM–6PM",
+                                            "Wednesday":"10AM–6PM",
+                                            "Thursday":"10AM–9PM",
+                                            "Friday":"10AM–9PM",
+                                            "Saturday":"10AM–6PM"],
+                                    ticketPrice: "$16",
+                                    freeHours: "Pay what you wish Thursdays, 6-9pm",                                    artCategories: "Contemporary and historic craft, art and design",
+                                    coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
+                                    url: "http://www.madmuseum.org/")
+
         
         
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
@@ -177,8 +205,8 @@ class MuseumDataStore {
 //        let cooperHewitt = Museum(title: "Cooper Hewitt", address: "2 E 91st St")
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
         
-//        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, metBreuer, cloisters, drawingCenter, frick, hispanicSociety, asiaSociety, mad, folkArt, morganLibrary, newMuseum, museoDelBarrio, cooperHewitt, fit]
-        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, folkArt, newMuseum]
+
+        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad]
     }
 
     
