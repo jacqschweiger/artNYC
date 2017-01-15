@@ -126,9 +126,44 @@ class MuseumDataStore {
                                         "Saturday":"11AM–5:45PM"],
                                 ticketPrice: "$15",
                                 freeHours: "Saturdays free; Pay what you wish Thursdays, 5–8pm",
-                                artCategories: "Jewish",
+                                artCategories: "Jewish artists, Judaica",
                                 coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
                                 url: "http://thejewishmuseum.org/")
+        
+        let folkArt = Museum(title: "American Folk Art Museum",
+                                  logo: UIImage(named: "placeholder")!,
+                                  address: "2 Lincoln Square",
+                                  hours: ["Sunday":"12–6PM",
+                                          "Monday":"Closed",
+                                          "Tuesday":"11:30AM–7PM",
+                                          "Wednesday":"11:30AM–7PM",
+                                          "Thursday":"11:30AM–7PM",
+                                          "Friday":"12–7:30PM",
+                                          "Saturday":"11:30AM–7PM"],
+                                  ticketPrice: "Free",
+                                  freeHours: "Always free",
+                                  artCategories: "American folk art",
+                                  coordinate: CLLocationCoordinate2D(latitude: 40.7732, longitude: -73.9814),
+                                  url: "http://folkartmuseum.org/")
+        
+        let newMuseum = Museum(title: "The New Museum",
+                             logo: UIImage(named: "placeholder")!,
+                             address: "235 Bowery",
+                             hours: ["Sunday":"11AM–6PM",
+                                     "Monday":"Closed",
+                                     "Tuesday":"11AM–6PM",
+                                     "Wednesday":"11AM–6PM",
+                                     "Thursday":"11AM–9PM",
+                                     "Friday":"11AM–6PM",
+                                     "Saturday":"11AM–6PM"],
+                             ticketPrice: "$18",
+                             freeHours: "Pay what you wish Thursdays, 7-9pm",
+                             artCategories: "Contemporary",
+                             coordinate: CLLocationCoordinate2D(latitude: 40.7223779, longitude: -73.993038),
+                             url: "http://www.newmuseum.org/")
+
+//        let museoDelBarrio = Museum(title: "El Museo Del Barrio", address: "1230 5th Ave")
+//        let mad = Museum(title: "The Museum of Arts and Design", address: "2 Columbus Circle")
         
         
         
@@ -138,16 +173,12 @@ class MuseumDataStore {
 //        let frick = Museum(title: "The Frick Collection", address: "1 E 70th St")
 //        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
 //        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
-//        let mad = Museum(title: "The Museum of Arts and Design", address: "2 Columbus Circle")
-//        let folkArt = Museum(title: "American Folk Art Museum", address: "2 Lincoln Square")
 //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
-//        let newMuseum = Museum(title: "The New Museum", address: "235 Bowery")
-//        let museoDelBarrio = Museum(title: "El Museo Del Barrio", address: "1230 5th Ave")
 //        let cooperHewitt = Museum(title: "Cooper Hewitt", address: "2 E 91st St")
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
         
 //        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, metBreuer, cloisters, drawingCenter, frick, hispanicSociety, asiaSociety, mad, folkArt, morganLibrary, newMuseum, museoDelBarrio, cooperHewitt, fit]
-        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum]
+        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, folkArt, newMuseum]
     }
 
     
