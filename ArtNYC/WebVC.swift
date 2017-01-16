@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
+//TODO: add nav icons
+
 class WebVC: UIViewController {
     
     var museumURL: String!
     var webView: WebView!
     var toolbar: UIToolbar!
-    
-    @IBOutlet weak var museumWebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

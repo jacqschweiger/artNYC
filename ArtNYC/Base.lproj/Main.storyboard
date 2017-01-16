@@ -123,34 +123,6 @@
             </objects>
             <point key="canvasLocation" x="4133.6000000000004" y="769.56521739130437"/>
         </scene>
-        <!--WebVC-->
-        <scene sceneID="erp-AN-ynw">
-            <objects>
-                <viewController id="1i3-dk-5Wk" customClass="WebVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L42-VK-Mba"/>
-                        <viewControllerLayoutGuide type="bottom" id="x0O-Ou-QSA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yDh-Y0-Q1n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upl-0U-8fO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="museumWebView" destination="Upl-0U-8fO" id="73G-bm-8TQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvf-tk-8Zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4898" y="770"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PtL-BM-47f">
             <objects>
