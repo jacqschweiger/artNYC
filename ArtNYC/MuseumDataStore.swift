@@ -269,22 +269,32 @@ class MuseumDataStore {
                                    url: "http://www.metmuseum.org/visit/met-cloisters",
                                    interiorMapView: false)
 
-        
-//        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
-//        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
-        
+        let hispanicSociety = Museum(title: "Hispanic Society of America",
+                               logo: UIImage(named: "hispanicSocietyLogo")!,
+                               address: "613 W 155th St",
+                               hours: ["Sunday":"1–4PM",
+                                       "Monday":"Closed",
+                                       "Tuesday":"10AM–4:30PM",
+                                       "Wednesday":"10AM–4:30PM",
+                                       "Thursday":"10AM–4:30PM",
+                                       "Friday":"10AM–4:30PM",
+                                       "Saturday":"10AM–4:30PM"],
+                               ticketPrice: "Free",
+                               freeHours: "Always free",                               artCategories: "Spanish & Portuguese",
+                               coordinate: CLLocationCoordinate2D(latitude: 40.8333768, longitude: -73.9470945),
+                               url: "http://hispanicsociety.org/",
+                               interiorMapView: false)
 
-//        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
-        
-//        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
-
-//        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
-
-        
-
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters]
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety]
     }
 
+    
+    // TODO: museums to add:
+    
+    //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
+    //        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
+    //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
+    //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
     
     
     
