@@ -16,22 +16,6 @@ class WebVC: UIViewController {
     
     @IBOutlet weak var museumWebView: UIWebView!
     
-    @IBAction func doRefresh(_: AnyObject) {
-        museumWebView.reload()
-    }
-    
-//    @IBAction func goBack(_: AnyObject) {
-//        museumWebView.goBack()
-//    }
-    
-    @IBAction func goForward(_: AnyObject) {
-        museumWebView.goForward()
-    }
-    
-    @IBAction func stop(_: AnyObject) {
-        museumWebView.stopLoading()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,21 +27,35 @@ class WebVC: UIViewController {
     
     func setUpToolbar (){
         
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        let backButton = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(goBack))
+        let forwardButton = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(goForward))
+        let refreshButton = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(doRefresh))
+        let stopButton = UIBarButtonItem(title: "X", style: .plain, target: self, action: #selector(stop))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
+        let toolbarButtons: [UIBarButtonItem] = [backButton, spacer, forwardButton, spacer, refreshButton, spacer, stopButton]
         
         self.navigationController?.isToolbarHidden = false
-        var toolbarButtons = [UIBarButtonItem]()
-        toolbarButtons.append(backButton)
         self.navigationController?.toolbar.items = toolbarButtons
-        self.navigationController?.toolbar.barTintColor = UIColor.blue
-        navigationItem.leftBarButtonItem = backButton
-        
+        self.navigationController?.toolbar.setItems(toolbarItems, animated: false)
     }
     
     func goBack(_: AnyObject) {
         webView.museumWebView.goBack()
     }
+    
+    func goForward(_: AnyObject) {
+        webView.museumWebView.goForward()
+    }
+    
+    func stop(_: AnyObject) {
+        webView.museumWebView.stopLoading()
+    }
+    
+    func doRefresh(_: AnyObject) {
+        webView.museumWebView.reload()
+    }
+
     
     
     
