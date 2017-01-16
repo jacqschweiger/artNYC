@@ -220,7 +220,7 @@ class MuseumDataStore {
                          url: "https://www.cooperhewitt.org/",
                          interiorMapView: false)
         
-        let frick = Museum(title: "Frick Collection",
+        let frick = Museum(title: "The Frick Collection",
                                   logo: UIImage(named: "frickLogo")!,
                                   address: "1 E 70th St",
                                   hours: ["Sunday":"11AM–5PM",
@@ -231,16 +231,34 @@ class MuseumDataStore {
                                           "Friday":"10AM–6PM",
                                           "Saturday":"10AM–6PM"],
                                   ticketPrice: "$22",
-                                  freeHours: "First Friday of every month, 6-9pm",                                    artCategories: "Old Masters, European decorative",
+                                  freeHours: "First Friday of every month, 6-9pm",
+                                  artCategories: "Old Masters, European decorative",
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
                                   url: "http://www.frick.org/",
                                   interiorMapView: true)
+        
+        let drawingCenter = Museum(title: "The Drawing Center",
+                           logo: UIImage(named: "drawingCenterLogo")!,
+                           address: "35 Wooster St",
+                           hours: ["Sunday":"12–6PM",
+                                   "Monday":"Closed",
+                                   "Tuesday":"Closed",
+                                   "Wednesday":"12–6PM",
+                                   "Thursday":"12–8PM",
+                                   "Friday":"12–6PM",
+                                   "Saturday":"12–6PM"],
+                           ticketPrice: "$5",
+                           freeHours: "Thursdays, 6–8pm",                               artCategories: "Works on paper",
+                           coordinate: CLLocationCoordinate2D(latitude: 40.7223326, longitude: -74.0026948),
+                           url: "http://www.drawingcenter.org/",
+                           interiorMapView: false)
+
 
 
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
 //        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
         
-//        let drawingCenter = Museum(title: "The Drawing Center", address: "35 Wooster St")
+
 //        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
         
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
@@ -249,7 +267,7 @@ class MuseumDataStore {
 
         
 
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt]
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter]
     }
 
     
