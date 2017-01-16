@@ -2,7 +2,7 @@
 //  MuseumDataStore.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 1/13/17.
+//  Created by Jacqueline Schweiger on 1/13/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -203,13 +203,44 @@ class MuseumDataStore {
                                     coordinate: CLLocationCoordinate2D(latitude: 40.7674, longitude: -73.9820),
                                     url: "http://www.madmuseum.org/",
                                     interiorMapView: false)
+        
+        let cooperHewitt = Museum(title: "Cooper Hewitt",
+                         logo: UIImage(named: "cooperHewittLogo")!,
+                         address: "2 E 91st St",
+                         hours: ["Sunday":"10AM–6PM",
+                                 "Monday":"10AM–6PM",
+                                 "Tuesday":"10AM–6PM",
+                                 "Wednesday":"10AM–6PM",
+                                 "Thursday":"10AM–6PM",
+                                 "Friday":"10AM–6PM",
+                                 "Saturday":"10AM–9PM"],
+                         ticketPrice: "$18",
+                         freeHours: "Pay what you wish Saturdays, 6-9pm",                                    artCategories: "Design",
+                         coordinate: CLLocationCoordinate2D(latitude: 40.7844391, longitude: -73.9578551),
+                         url: "https://www.cooperhewitt.org/",
+                         interiorMapView: false)
+        
+        let frick = Museum(title: "Frick Collection",
+                                  logo: UIImage(named: "frickLogo")!,
+                                  address: "1 E 70th St",
+                                  hours: ["Sunday":"11AM–5PM",
+                                          "Monday":"Closed",
+                                          "Tuesday":"10AM–6PM",
+                                          "Wednesday":"10AM–6PM",
+                                          "Thursday":"10AM–6PM",
+                                          "Friday":"10AM–6PM",
+                                          "Saturday":"10AM–6PM"],
+                                  ticketPrice: "$22",
+                                  freeHours: "First Friday of every month, 6-9pm",                                    artCategories: "Old Masters, European decorative",
+                                  coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
+                                  url: "http://www.frick.org/",
+                                  interiorMapView: true)
 
-//        let cooperHewitt = Museum(title: "Cooper Hewitt", address: "2 E 91st St")
+
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
 //        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
         
 //        let drawingCenter = Museum(title: "The Drawing Center", address: "35 Wooster St")
-//        let frick = Museum(title: "The Frick Collection", address: "1 E 70th St")
 //        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
         
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
@@ -218,7 +249,7 @@ class MuseumDataStore {
 
         
 
-        museums = [metMuseum, rubinMuseum, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad]
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt]
     }
 
     
