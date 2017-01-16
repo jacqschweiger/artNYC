@@ -218,7 +218,7 @@ class MuseumDataStore {
 
         
 
-        museums = [metMuseum, neueGalerie, rubinMuseum, whitney, moma, guggenheim, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad]
+        museums = [metMuseum, rubinMuseum, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad]
     }
 
     
