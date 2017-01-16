@@ -13,6 +13,7 @@ class WebVC: UIViewController {
     
     var museumURL: String!
     var webView: WebView!
+    var toolbar: UIToolbar!
     
     @IBOutlet weak var museumWebView: UIWebView!
     
@@ -35,9 +36,12 @@ class WebVC: UIViewController {
         
         let toolbarButtons: [UIBarButtonItem] = [backButton, spacer, forwardButton, spacer, refreshButton, spacer, stopButton]
         
-        self.navigationController?.isToolbarHidden = false
-        self.navigationController?.toolbar.items = toolbarButtons
-        self.navigationController?.toolbar.setItems(toolbarItems, animated: false)
+        toolbar = UIToolbar()
+        self.view.addSubview(toolbar)
+        self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.toolbar.setItems(toolbarButtons, animated: false)
     }
     
     func goBack(_: AnyObject) {

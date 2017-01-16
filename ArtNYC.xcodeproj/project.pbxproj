@@ -130,12 +130,8 @@
 				7132CBEF1E29698A008CA655 /* Controllers */,
 				7152044A1E2A702E00AD04AB /* Views */,
 				7132CBEC1E29696E008CA655 /* Models */,
-				713D5F121E295DA500DD76FA /* AppDelegate.swift */,
-				710D80441E2C1750002AD134 /* Constants.swift */,
-				7119AA191E2AD41B00F55150 /* Secrets.swift */,
-				713D5F161E295DA500DD76FA /* Main.storyboard */,
+				71732BE91E2C48D9009A5D75 /* Supporting Files */,
 				713D5F1C1E295DA500DD76FA /* Assets.xcassets */,
-				713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */,
 				713D5F211E295DA500DD76FA /* Info.plist */,
 				713D5F191E295DA500DD76FA /* ArtNYC.xcdatamodeld */,
 			);
@@ -157,8 +153,20 @@
 				71732BE71E2C3D28009A5D75 /* WebView.swift */,
 				71DF916B1E2BDA0000943648 /* DetailView.swift */,
 				715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */,
+				713D5F161E295DA500DD76FA /* Main.storyboard */,
+				713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		71732BE91E2C48D9009A5D75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				710D80441E2C1750002AD134 /* Constants.swift */,
+				7119AA191E2AD41B00F55150 /* Secrets.swift */,
+				713D5F121E295DA500DD76FA /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9F1D6A15143A36EC0127DCAB /* Frameworks */ = {
