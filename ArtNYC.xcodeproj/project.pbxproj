@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		710D80451E2C1750002AD134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710D80441E2C1750002AD134 /* Constants.swift */; };
-		7119AA1A1E2AD41B00F55150 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119AA191E2AD41B00F55150 /* Secrets.swift */; };
 		7132CBF51E29752C008CA655 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF41E29752C008CA655 /* MapVC.swift */; };
 		7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF61E2978A8008CA655 /* DetailVC.swift */; };
 		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
@@ -41,7 +40,6 @@
 		2FA7AE539C17AC120132072E /* Pods-ArtNYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.debug.xcconfig"; sourceTree = "<group>"; };
 		517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtNYC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710D80441E2C1750002AD134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7119AA191E2AD41B00F55150 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				710D80441E2C1750002AD134 /* Constants.swift */,
-				7119AA191E2AD41B00F55150 /* Secrets.swift */,
 				713D5F121E295DA500DD76FA /* AppDelegate.swift */,
 			);
 			name = "Supporting Files";
@@ -342,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				716027451E2A8F7900CAF26B /* WebVC.swift in Sources */,
-				7119AA1A1E2AD41B00F55150 /* Secrets.swift in Sources */,
 				71732BE81E2C3D28009A5D75 /* WebView.swift in Sources */,
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				715204471E2A6B0300AD04AB /* MuseumListVC.swift in Sources */,

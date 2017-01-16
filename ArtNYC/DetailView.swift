@@ -14,9 +14,6 @@ protocol GoToWebViewDelegate: class {
     func goToWebView()
 }
 
-//TODO: fix scroll view to stop at title
-//TODO: if interiorMapView = false, show still image instead
-
 class DetailView: UIView, GMSMapViewDelegate {
     
     weak var delegate: GoToWebViewDelegate?

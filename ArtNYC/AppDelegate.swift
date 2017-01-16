@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        GMSServices.provideAPIKey(Secrets.key)
-        GMSPlacesClient.provideAPIKey(Secrets.key)
+        GMSServices.provideAPIKey(Constants.key)
+        GMSPlacesClient.provideAPIKey(Constants.key)
         
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor(named: UIColor.ColorName.turquoise)

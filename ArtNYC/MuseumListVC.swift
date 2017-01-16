@@ -61,7 +61,7 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     
-    //TODO: create filter/sort menu and functions: sort by alpha, show museums with free admission, late hours?, google street view interiors, by category
+    // TODO: create filter/sort menu and functions: sort by alpha; filter by museums with free admission, google street view interiors, art category
     
     func sortAZ(){
         store.museums.sort { (museum1, museum2) -> Bool in
