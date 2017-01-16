@@ -36,6 +36,10 @@ class WebVC: UIViewController {
         
         let toolbarButtons: [UIBarButtonItem] = [backButton, spacer, forwardButton, spacer, refreshButton, spacer, stopButton]
         
+        for button in toolbarButtons {
+            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
+        }
+        
         toolbar = UIToolbar()
         self.view.addSubview(toolbar)
         self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true

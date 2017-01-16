@@ -154,35 +154,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Stx-qz-nf6">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="&lt;" id="5ar-r5-giB">
-                                        <connections>
-                                            <action selector="goBack:" destination="1i3-dk-5Wk" id="cQh-1e-Hb1"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lu5-Ty-bXk"/>
-                                    <barButtonItem tag="15" systemItem="refresh" id="Hcr-IN-Xqq">
-                                        <connections>
-                                            <action selector="doRefresh:" destination="1i3-dk-5Wk" id="es6-yv-7Tz"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G50-Mg-vZS"/>
-                                    <barButtonItem systemItem="stop" id="owX-Pc-Irm">
-                                        <connections>
-                                            <action selector="stop:" destination="1i3-dk-5Wk" id="shr-PP-9E4"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HNa-hX-MyX"/>
-                                    <barButtonItem title="&gt;" id="eYd-7P-lEa">
-                                        <connections>
-                                            <action selector="goForward:" destination="1i3-dk-5Wk" id="mjJ-ao-gpO"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
