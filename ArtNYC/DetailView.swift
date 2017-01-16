@@ -14,11 +14,15 @@ protocol GoToWebViewDelegate: class {
     func goToWebView()
 }
 
+//TODO: fix scroll view to stop at title
+//TODO: if interiorMapView = false, show still image instead
+
 class DetailView: UIView, GMSMapViewDelegate {
     
     weak var delegate: GoToWebViewDelegate?
     var museum: Museum!
     var panoView = GMSPanoramaView()
+    var scrollView = UIScrollView()
     var nameLabel = UILabel()
     var hoursLabel = UILabel()
     var sundayLabel = UILabel()
@@ -63,11 +67,19 @@ class DetailView: UIView, GMSMapViewDelegate {
         panoView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.45).isActive = true
         panoView.translatesAutoresizingMaskIntoConstraints = false
         
+        //Scroll View
+        self.addSubview(scrollView)
+        scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: self.panoView.bottomAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
         //Museum Title Label
-        self.addSubview(nameLabel)
+        scrollView.addSubview(nameLabel)
         nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: self.panoView.bottomAnchor, constant: 7).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 7).isActive = true
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         nameLabel.text = museum.title
@@ -76,17 +88,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         nameLabel.textAlignment = .center
         
         //Art Categories Label
-        self.addSubview(artCategoriesLabel)
+        scrollView.addSubview(artCategoriesLabel)
         artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         artCategoriesLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 5).isActive = true
         artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        artCategoriesLabel.text = "Art "
+        artCategoriesLabel.text = "• Art  "
         artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 17)
         artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Art Categories Content
-        self.addSubview(artCategoriesContent)
+        scrollView.addSubview(artCategoriesContent)
         artCategoriesContent.leftAnchor.constraint(equalTo: self.artCategoriesLabel.rightAnchor).isActive = true
         artCategoriesContent.centerYAnchor.constraint(equalTo: self.artCategoriesLabel.centerYAnchor).isActive = true
         artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
@@ -97,17 +109,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         //Address Label
-        self.addSubview(addressLabel)
+        scrollView.addSubview(addressLabel)
         addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         addressLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: 5).isActive = true
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        addressLabel.text = "Address "
+        addressLabel.text = "• Address  "
         addressLabel.font = UIFont(name: "Avenir Black", size: 17)
         addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Address Content
-        self.addSubview(addressContent)
+        scrollView.addSubview(addressContent)
         addressContent.leftAnchor.constraint(equalTo: self.addressLabel.rightAnchor).isActive = true
         addressContent.centerYAnchor.constraint(equalTo: self.addressLabel.centerYAnchor).isActive = true
         addressContent.translatesAutoresizingMaskIntoConstraints = false
@@ -117,17 +129,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Admission Label
-        self.addSubview(admissionLabel)
+        scrollView.addSubview(admissionLabel)
         admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         admissionLabel.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor, constant: 5).isActive = true
         admissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        admissionLabel.text = "Admission "
+        admissionLabel.text = "• Admission  "
         admissionLabel.font = UIFont(name: "Avenir Black", size: 17)
         admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Admission Content
-        self.addSubview(admissionContent)
+        scrollView.addSubview(admissionContent)
         admissionContent.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
         admissionContent.centerYAnchor.constraint(equalTo: self.admissionLabel.centerYAnchor).isActive = true
         admissionContent.translatesAutoresizingMaskIntoConstraints = false
@@ -138,17 +150,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         //Free Admission Label
-        self.addSubview(freeAdmissionLabel)
+        scrollView.addSubview(freeAdmissionLabel)
         freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionLabel.bottomAnchor, constant: 5).isActive = true
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        freeAdmissionLabel.text = "Free Admission "
+        freeAdmissionLabel.text = "• Free Admission  "
         freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 17)
         freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Free Admission Content
-        self.addSubview(freeAdmissionContent)
+        scrollView.addSubview(freeAdmissionContent)
         freeAdmissionContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         freeAdmissionContent.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor).isActive = true
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
@@ -158,18 +170,18 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Hours Label
-        self.addSubview(hoursLabel)
+        scrollView.addSubview(hoursLabel)
         hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         hoursLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         hoursLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 3).isActive = true
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        hoursLabel.text = "Hours"
+        hoursLabel.text = "• Hours"
         hoursLabel.font = UIFont(name: "Avenir Black", size: 17)
         hoursLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Days Labels
-        self.addSubview(sundayLabel)
+        scrollView.addSubview(sundayLabel)
         sundayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         sundayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         sundayLabel.topAnchor.constraint(equalTo: self.hoursLabel.bottomAnchor).isActive = true
@@ -181,7 +193,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         sundayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-        self.addSubview(mondayLabel)
+        scrollView.addSubview(mondayLabel)
         mondayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         mondayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         mondayLabel.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor).isActive = true
@@ -193,7 +205,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         mondayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-        self.addSubview(tuesdayLabel)
+        scrollView.addSubview(tuesdayLabel)
         tuesdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         tuesdayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         tuesdayLabel.topAnchor.constraint(equalTo: self.mondayLabel.bottomAnchor).isActive = true
@@ -205,7 +217,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         tuesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-        self.addSubview(wednesdayLabel)
+        scrollView.addSubview(wednesdayLabel)
         wednesdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         wednesdayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         wednesdayLabel.topAnchor.constraint(equalTo: self.tuesdayLabel.bottomAnchor).isActive = true
@@ -217,7 +229,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         wednesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-        self.addSubview(thursdayLabel)
+        scrollView.addSubview(thursdayLabel)
         thursdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         thursdayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         thursdayLabel.topAnchor.constraint(equalTo: self.wednesdayLabel.bottomAnchor).isActive = true
@@ -229,7 +241,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         thursdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-        self.addSubview(fridayLabel)
+        scrollView.addSubview(fridayLabel)
         fridayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         fridayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         fridayLabel.topAnchor.constraint(equalTo: self.thursdayLabel.bottomAnchor).isActive = true
@@ -241,7 +253,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         fridayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
-        self.addSubview(saturdayLabel)
+        scrollView.addSubview(saturdayLabel)
         saturdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
         saturdayLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         saturdayLabel.topAnchor.constraint(equalTo: self.fridayLabel.bottomAnchor).isActive = true
@@ -253,19 +265,20 @@ class DetailView: UIView, GMSMapViewDelegate {
         saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Website Label
-        self.addSubview(websiteLabel)
+        scrollView.addSubview(websiteLabel)
         websiteLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         websiteLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 3).isActive = true
+        websiteLabel.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
         websiteLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        websiteLabel.text = "Website"
+        websiteLabel.text = "• Website"
         websiteLabel.font = UIFont(name: "Avenir Black", size: 17)
         websiteLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Website Button
         websiteButton = UIButton(type: .roundedRect)
         websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
-        self.addSubview(websiteButton)
+        scrollView.addSubview(websiteButton)
         websiteButton.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
         websiteButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
         websiteButton.translatesAutoresizingMaskIntoConstraints = false

@@ -31,7 +31,8 @@ class MuseumDataStore {
                                freeHours: "Pay what you wish, everyday",
                                artCategories: "All cultures and time periods",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7802722, longitude: -73.9622221),
-                               url: "http://www.metmuseum.org/")
+                               url: "http://www.metmuseum.org/",
+                               interiorMapView: true)
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
                                  logo: UIImage(named: "neueGalerieLogo")!,
@@ -47,7 +48,8 @@ class MuseumDataStore {
                                  freeHours: "First Friday of every month, 6-8pm",
                                  artCategories: "Austrian & German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
-                                 url: "http://neuegalerie.org/")
+                                 url: "http://neuegalerie.org/",
+                                 interiorMapView: false)
         
         let rubinMuseum = Museum(title: "Rubin Museum of Art",
                                  logo: UIImage(named: "rubinLogo")!,
@@ -63,7 +65,8 @@ class MuseumDataStore {
                                  freeHours: "Fridays 6–10pm",
                                  artCategories: "Himalayan & Asian",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.740109, longitude: -73.9977899),
-                                 url: "http://rubinmuseum.org/")
+                                 url: "http://rubinmuseum.org/",
+                                 interiorMapView: true)
         
         let whitney = Museum(title: "Whitney Museum of American Art",
                                  logo: UIImage(named: "whitneyLogo")!,
@@ -79,7 +82,8 @@ class MuseumDataStore {
                                  freeHours: "None",
                                  artCategories: "American modern & contemporary",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7396877, longitude: -74.0088928),
-                                 url: "http://whitney.org/")
+                                 url: "http://whitney.org/",
+                                 interiorMapView: false)
         
 
         let moma = Museum(title: "Museum of Modern Art",
@@ -96,7 +100,8 @@ class MuseumDataStore {
                           freeHours: "Fridays, 4-8pm",
                           artCategories: "Modern & contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
-                          url: "https://www.moma.org/")
+                          url: "https://www.moma.org/",
+                          interiorMapView: true)
         
         let guggenheim = Museum(title: "Solomon R. Guggenheim Museum",
                           logo: UIImage(named: "guggenheimLogo")!,
@@ -112,7 +117,8 @@ class MuseumDataStore {
                           freeHours: "Pay what you wish Saturdays, 5:45–7:45pm",
                           artCategories: "Modern & contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7829473, longitude: -73.959093),
-                          url: "https://www.guggenheim.org/")
+                          url: "https://www.guggenheim.org/",
+                          interiorMapView: true)
         
         let jewishMuseum = Museum(title: "Jewish Museum",
                                 logo: UIImage(named: "jewishMuseumLogo")!,
@@ -128,7 +134,8 @@ class MuseumDataStore {
                                 freeHours: "Saturdays free; pay what you wish Thursdays, 5–8pm",
                                 artCategories: "Jewish art & artists, contemporary & historic",
                                 coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
-                                url: "http://thejewishmuseum.org/")
+                                url: "http://thejewishmuseum.org/",
+                                interiorMapView: false)
         
         let folkArt = Museum(title: "American Folk Art Museum",
                                   logo: UIImage(named: "folkArtLogo")!,
@@ -144,7 +151,8 @@ class MuseumDataStore {
                                   freeHours: "Always free",
                                   artCategories: "American folk",
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7732, longitude: -73.9814),
-                                  url: "http://folkartmuseum.org/")
+                                  url: "http://folkartmuseum.org/",
+                                  interiorMapView: false)
         
         let newMuseum = Museum(title: "The New Museum",
                              logo: UIImage(named: "newMuseumLogo")!,
@@ -160,7 +168,8 @@ class MuseumDataStore {
                              freeHours: "Pay what you wish Thursdays, 7-9pm",
                              artCategories: "Contemporary",
                              coordinate: CLLocationCoordinate2D(latitude: 40.7223779, longitude: -73.993038),
-                             url: "http://www.newmuseum.org/")
+                             url: "http://www.newmuseum.org/",
+                             interiorMapView: false)
         
         let museoDelBarrio = Museum(title: "El Museo Del Barrio",
                                logo: UIImage(named: "museoDelBarrioLogo")!,
@@ -176,7 +185,8 @@ class MuseumDataStore {
                                freeHours: "Every third Saturday of the month",
                                artCategories: "Latino, Caribbean, & Latin American",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
-                               url: "http://www.elmuseo.org/")
+                               url: "http://www.elmuseo.org/",
+                               interiorMapView: false)
         
         let mad = Museum(title: "Museum of Arts and Design",
                                     logo: UIImage(named: "madLogo")!,
@@ -191,7 +201,8 @@ class MuseumDataStore {
                                     ticketPrice: "$16",
                                     freeHours: "Pay what you wish Thursdays, 6-9pm",                                    artCategories: "Craft, art & design, contemporary & historic",
                                     coordinate: CLLocationCoordinate2D(latitude: 40.7674, longitude: -73.9820),
-                                    url: "http://www.madmuseum.org/")
+                                    url: "http://www.madmuseum.org/",
+                                    interiorMapView: false)
 
 //        let cooperHewitt = Museum(title: "Cooper Hewitt", address: "2 E 91st St")
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")

@@ -22,10 +22,6 @@ class DetailVC: UIViewController, GMSMapViewDelegate, GoToWebViewDelegate {
         super.viewDidLoad()
         detailView.delegate = self
     }
-    
-    override func viewWillAppear(_ animated: Bool){
-        self.navigationController?.navigationBar.topItem?.title = "Back"
-    }
 
     override func loadView(){
         guard let museum = self.museum else { return }
