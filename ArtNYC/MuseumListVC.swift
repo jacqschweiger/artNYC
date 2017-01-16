@@ -28,9 +28,7 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     override func viewWillAppear(_ animated: Bool){
-        let nav = self.navigationController?.navigationBar
-        nav?.topItem?.title = "Art Museums NYC"
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(named:UIColor.ColorName.turquoise), NSFontAttributeName: UIFont(name: "Avenir Black", size: 22)!]
+        self.navigationController?.navigationBar.topItem?.title = "Art Museums NYC"
     }
     
     
@@ -42,7 +40,6 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath) as! MuseumTableViewCell
         cell.museumNameLabel.text = store.museums[indexPath.row].title
         cell.museumLogo.image = store.museums[indexPath.row].logo
-        cell.selectionStyle = .none
         return cell
     }
     
