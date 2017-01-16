@@ -20,9 +20,9 @@ class WebVC: UIViewController {
         museumWebView.reload()
     }
     
-    @IBAction func goBack(_: AnyObject) {
-        museumWebView.goBack()
-    }
+//    @IBAction func goBack(_: AnyObject) {
+//        museumWebView.goBack()
+//    }
     
     @IBAction func goForward(_: AnyObject) {
         museumWebView.goForward()
@@ -37,18 +37,29 @@ class WebVC: UIViewController {
         
         self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
         self.view = self.webView
+        setUpToolbar()
 
     }
-//    
-//    self.navigationController?.toolbarHidden = false
-//    var items = [UIBarButtonItem]()
-//    items.append(
-//    UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
-//    )
-//    items.append(
-//    UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "onClickedToolbeltButton:")
-//    )
-//    self.navigationController?.toolbar.items = items
+    
+    func setUpToolbar (){
+        
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        
+        
+        self.navigationController?.isToolbarHidden = false
+        var toolbarButtons = [UIBarButtonItem]()
+        toolbarButtons.append(backButton)
+        self.navigationController?.toolbar.items = toolbarButtons
+        self.navigationController?.toolbar.barTintColor = UIColor.blue
+        navigationItem.leftBarButtonItem = backButton
+        
+    }
+    
+    func goBack(_: AnyObject) {
+        webView.museumWebView.goBack()
+    }
+    
+    
     
 
 }

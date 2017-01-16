@@ -77,9 +77,7 @@ class WebView: UIView {
         
     }
     
-//    func goBack(_: AnyObject) {
-//        museumWebView.goBack()
-//    }
+
 
     
         
