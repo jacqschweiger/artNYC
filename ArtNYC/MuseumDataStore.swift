@@ -252,9 +252,24 @@ class MuseumDataStore {
                            coordinate: CLLocationCoordinate2D(latitude: 40.7223326, longitude: -74.0026948),
                            url: "http://www.drawingcenter.org/",
                            interiorMapView: false)
+        
+        let cloisters = Museum(title: "The Met Cloisters",
+                                   logo: UIImage(named: "metLogo")!,
+                                   address: "99 Margaret Corbin Dr",
+                                   hours: ["Sunday":"10AM–4:45PM",
+                                           "Monday":"10AM–4:45PM",
+                                           "Tuesday":"10AM–4:45PM",
+                                           "Wednesday":"10AM–4:45PM",
+                                           "Thursday":"10AM–4:45PM",
+                                           "Friday":"10AM–4:45PM",
+                                           "Saturday":"10AM–4:45PM"],
+                                   ticketPrice: "$25 (suggested)",
+                                   freeHours: "Pay what you wish, everyday",                               artCategories: "Medieval",
+                                   coordinate: CLLocationCoordinate2D(latitude: 40.8652285, longitude: -73.9310879),
+                                   url: "http://www.metmuseum.org/visit/met-cloisters",
+                                   interiorMapView: false)
 
-
-
+        
 //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
 //        let hispanicSociety = Museum(title: "Hispanic Society of America", address: "613 W 155th St")
         
@@ -262,12 +277,12 @@ class MuseumDataStore {
 //        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
         
 //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
-//        let cloisters = Museum(title: "The Met Cloisters", address: "99 Margaret Corbin Dr")
+
 //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
 
         
 
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter]
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters]
     }
 
     
