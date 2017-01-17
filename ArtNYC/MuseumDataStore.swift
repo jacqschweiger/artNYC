@@ -358,5 +358,6 @@ class MuseumDataStore {
         museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
     }
     
+    // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum
     
 }

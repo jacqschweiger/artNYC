@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var museumTableView: UITableView!
-    
+class MuseumListVC: UIViewController, MuseumListDelegate {
+
+    let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
-    var toolbar: UIToolbar!
+    weak var delegate: MuseumListDelegate?
+    var selectedMuseum: Museum?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         store.loadMuseums()
-        setUpToolbar()
+        museumListView.delegate = self
         self.reloadInputViews()
     }
     
@@ -29,54 +29,18 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.navigationController?.navigationBar.topItem?.title = "Art Museums NYC"
     }
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.museums.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath) as! MuseumTableViewCell
-        cell.museumNameLabel.text = store.museums[indexPath.row].title
-        cell.museumLogo.image = store.museums[indexPath.row].logo
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let dest = segue.destination as? DetailVC,
-                let indexPath = museumTableView.indexPathForSelectedRow {
-                dest.museum = store.museums[indexPath.row]
-            }
-        }
-    }
-    
-    func setUpToolbar (){
-        
-        let filterButton = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(sortAZ))
-        let mapButton = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(showMap))
-        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let toolbarButtons: [UIBarButtonItem] = [filterButton, spacer, mapButton]
-        
-        for button in toolbarButtons {
-            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        }
-        
-        toolbar = UIToolbar()
-        self.view.addSubview(toolbar)
-        self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.toolbar.setItems(toolbarButtons, animated: false)
+    override func loadView() {
+        self.view = museumListView
     }
     
     func showMap(){
         let mapViewController = MapVC()
         navigationController?.pushViewController(mapViewController, animated: false)
+    }
+    
+    func goToDetailView(){
+        let detailViewController = DetailVC()
+        navigationController?.pushViewController(detailViewController, animated: false)
     }
 
     
@@ -87,7 +51,7 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         store.museums.sort { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
-        museumTableView.reloadData()
+        museumListView.reloadInputViews()
     }
     
     func sortZA(){
@@ -95,7 +59,7 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             return museum1.title! > museum2.title!
         }
         
-        museumTableView.reloadData()
+        museumListView.reloadInputViews()
     }
     
     
