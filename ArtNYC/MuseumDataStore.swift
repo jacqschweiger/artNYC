@@ -351,9 +351,9 @@ class MuseumDataStore {
                          ticketPrice: "$20",
                          freeHours: "Fridays, 7-9pm",
                          artCategories: "Rare books, music, drawings",
-                         coordinate: CLLocationCoordinate2D(latitude: 40.7489755, longitude: -73.9812668),
+                         coordinate: CLLocationCoordinate2D(latitude: 40.7494742, longitude: -73.9817367),
                          url: "http://www.themorgan.org/",
-                         interiorMapView: true)
+                         interiorMapView: false)
 
         museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
     }

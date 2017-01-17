@@ -273,15 +273,14 @@ class DetailView: UIView, GMSMapViewDelegate {
         websiteLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Website Button
-        websiteButton = UIButton(type: .roundedRect)
+        websiteButton = UIButton(type: .detailDisclosure)
         websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
         scrollView.addSubview(websiteButton)
-        websiteButton.leftAnchor.constraint(equalTo: self.admissionLabel.rightAnchor).isActive = true
+        websiteButton.leftAnchor.constraint(equalTo: self.websiteLabel.rightAnchor, constant: 4).isActive = true
         websiteButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
+        websiteButton.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        websiteButton.widthAnchor.constraint(equalToConstant: 15).isActive = true
         websiteButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        websiteButton.setTitle(museum.url, for: .normal)
-        websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 14)!
     }
     
     func onGoToWebView(){
