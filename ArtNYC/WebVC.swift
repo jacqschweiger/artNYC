@@ -23,7 +23,6 @@ class WebVC: UIViewController {
         self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
         self.view = self.webView
         setUpToolbar()
-
     }
     
     func setUpToolbar (){

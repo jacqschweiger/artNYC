@@ -15,9 +15,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate, GoToWebViewDelegate {
     var store = MuseumDataStore.sharedInstance
     var museum: Museum?
     var detailView: DetailView!
-    
-    @IBOutlet weak var urlLabel: UIButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         detailView.delegate = self

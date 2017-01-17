@@ -14,10 +14,6 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet weak var museumTableView: UITableView!
     
-    @IBAction func filterPressed(_ sender: Any) {
-        sortAZ()
-    }
-    
     var store = MuseumDataStore.sharedInstance
     var toolbar: UIToolbar!
     
