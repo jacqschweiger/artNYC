@@ -18,7 +18,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: 40.784, longitude: -73.9654, zoom: 12)
+        let camera = GMSCameraPosition.camera(withLatitude: 40.784, longitude: -73.9654, zoom: 11.5)
         self.mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
         mapView.delegate = self
@@ -51,14 +51,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
                 self.selectedMuseum = museum
             }
         }
-        performSegue(withIdentifier: "showMuseum", sender: marker)
+        let detailViewController = DetailVC()
+        detailViewController.museum = self.selectedMuseum
+        navigationController?.pushViewController(detailViewController, animated: false)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMuseum" {
-            let dest = segue.destination as! DetailVC
-            dest.museum = selectedMuseum
-        }
-    }
-
 }
