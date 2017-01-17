@@ -248,13 +248,14 @@ class MuseumDataStore {
                                    "Friday":"12–6PM",
                                    "Saturday":"12–6PM"],
                            ticketPrice: "$5",
-                           freeHours: "Thursdays, 6–8pm",                               artCategories: "Works on paper",
+                           freeHours: "Thursdays, 6–8pm",
+                           artCategories: "Works on paper",
                            coordinate: CLLocationCoordinate2D(latitude: 40.7223326, longitude: -74.0026948),
                            url: "http://www.drawingcenter.org/",
                            interiorMapView: false)
         
         let cloisters = Museum(title: "The Met Cloisters",
-                                   logo: UIImage(named: "metLogo")!,
+                                   logo: UIImage(named: "cloistersLogo")!,
                                    address: "99 Margaret Corbin Dr",
                                    hours: ["Sunday":"10AM–4:45PM",
                                            "Monday":"10AM–4:45PM",
@@ -280,20 +281,54 @@ class MuseumDataStore {
                                        "Friday":"10AM–4:30PM",
                                        "Saturday":"10AM–4:30PM"],
                                ticketPrice: "Free",
-                               freeHours: "Always free",                               artCategories: "Spanish & Portuguese",
+                               freeHours: "Always free",
+                               artCategories: "Spanish & Portuguese",
                                coordinate: CLLocationCoordinate2D(latitude: 40.8333768, longitude: -73.9470945),
                                url: "http://hispanicsociety.org/",
                                interiorMapView: false)
-
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety]
+        
+        let metBreuer = Museum(title: "The Met Breuer",
+                                     logo: UIImage(named: "breuerLogo")!,
+                                     address: "945 Madison Ave",
+                                     hours: ["Sunday":"10AM–5:30PM",
+                                             "Monday":"Closed",
+                                             "Tuesday":"10AM–5:30PM",
+                                             "Wednesday":"10AM–5:30PM",
+                                             "Thursday":"10AM–5:30PM",
+                                             "Friday":"10AM–9PM",
+                                             "Saturday":"10AM–9PM"],
+                                     ticketPrice: "$25 (suggested)",
+                                     freeHours: "Pay what you wish, everyday",
+                                     artCategories: "Modern & contemporary",
+                                     coordinate: CLLocationCoordinate2D(latitude: 40.7735936, longitude: -73.9641533),
+                                     url: "http://www.metmuseum.org/visit/met-breuer",
+                                     interiorMapView: false)
+    
+        let asiaSociety = Museum(title: "Asia Society",
+                               logo: UIImage(named: "asiaLogo")!,
+                               address: "725 Park Ave",
+                               hours: ["Sunday":"11AM–6PM",
+                                       "Monday":"Closed",
+                                       "Tuesday":"11AM–6PM",
+                                       "Wednesday":"11AM–6PM",
+                                       "Thursday":"11AM–6PM",
+                                       "Friday":"11AM–9PM",
+                                       "Saturday":"11AM–6PM"],
+                               ticketPrice: "$12",
+                               freeHours: "Fridays, 6-9pm",
+                               artCategories: "Asian",
+                               coordinate: CLLocationCoordinate2D(latitude: 40.7700221, longitude: -73.9645825),
+                               url: "http://asiasociety.org/museum",
+                               interiorMapView: false)
+        
+        
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety]
     }
 
     
     // TODO: museums to add:
     
     //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
-    //        let asiaSociety = Museum(title: "Asia Society", address: "725 Park Ave")
-    //        let metBreuer = Museum(title: "The Met Breuer", address: "945 Madison Ave")
     //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
     
     
