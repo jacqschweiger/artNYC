@@ -27,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
         
-        window!.rootViewController = initialViewController
-        window!.makeKeyAndVisible()
+        let navigationController = UINavigationController(rootViewController: self.initialViewController!)
+        self.window!.rootViewController = navigationController
+        self.window!.makeKeyAndVisible()
         
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor(named: UIColor.ColorName.turquoise)

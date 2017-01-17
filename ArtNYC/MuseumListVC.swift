@@ -19,6 +19,8 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(false, animated: .init(true))
+        
         store.loadMuseums()
         museumListView.delegate = self
         
