@@ -276,7 +276,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         websiteButton = UIButton(type: .detailDisclosure)
         websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
         scrollView.addSubview(websiteButton)
-        websiteButton.leftAnchor.constraint(equalTo: self.websiteLabel.rightAnchor, constant: 4).isActive = true
+        websiteButton.leftAnchor.constraint(equalTo: self.websiteLabel.rightAnchor, constant: 5).isActive = true
         websiteButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
         websiteButton.heightAnchor.constraint(equalToConstant: 15).isActive = true
         websiteButton.widthAnchor.constraint(equalToConstant: 15).isActive = true

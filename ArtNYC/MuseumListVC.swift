@@ -46,7 +46,7 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,16 +56,12 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                 dest.museum = store.museums[indexPath.row]
             }
         }
-        
-//        if segue.identifier == "showMap" {
-//            _ = segue.destination as? MapVC
-//        }
     }
     
     func setUpToolbar (){
         
-        let filterButton = UIBarButtonItem(title: "Filter!", style: .plain, target: self, action: #selector(sortAZ))
-        let mapButton = UIBarButtonItem(title: "Map!", style: .plain, target: self, action: #selector(showMap))
+        let filterButton = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(sortAZ))
+        let mapButton = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(showMap))
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         let toolbarButtons: [UIBarButtonItem] = [filterButton, spacer, mapButton]
