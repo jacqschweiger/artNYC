@@ -28,30 +28,12 @@
             </objects>
             <point key="canvasLocation" x="2908" y="769.56521739130437"/>
         </scene>
-        <!--DetailVC-->
-        <scene sceneID="bcK-nF-y27">
-            <objects>
-                <viewController id="tcj-rq-MrT" customClass="DetailVC" customModule="ArtNYC" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pDM-9J-dit"/>
-                        <viewControllerLayoutGuide type="bottom" id="CBR-Dk-ulx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YrL-XY-w2t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iKZ-0z-LoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3705" y="770"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PtL-BM-47f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Srg-Kq-ZhE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ec9-eB-7yY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ec9-eB-7yY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

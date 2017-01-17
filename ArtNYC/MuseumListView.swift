@@ -22,6 +22,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     let tableView = UITableView()
     let toolbar = UIToolbar()
     var store = MuseumDataStore.sharedInstance
+    var selectedMuseum: Museum!
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -50,6 +51,11 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedMuseum = store.museums[indexPath.row]
+        self.delegate?.goToDetailView()
     }
     
     func setUpTableView(){

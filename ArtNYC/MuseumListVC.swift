@@ -12,16 +12,16 @@ import NotificationCenter
 
 class MuseumListVC: UIViewController, MuseumListDelegate {
 
+    weak var delegate: MuseumListDelegate?
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
-    weak var delegate: MuseumListDelegate?
-    var selectedMuseum: Museum?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         store.loadMuseums()
         museumListView.delegate = self
+        
         self.reloadInputViews()
     }
     
@@ -40,6 +40,7 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
     
     func goToDetailView(){
         let detailViewController = DetailVC()
+        detailViewController.museum = self.museumListView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: false)
     }
 
@@ -58,7 +59,6 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
         store.museums.sort { (museum1, museum2) -> Bool in
             return museum1.title! > museum2.title!
         }
-        
         museumListView.reloadInputViews()
     }
     
