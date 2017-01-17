@@ -15,10 +15,20 @@ import GooglePlaces
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var initialViewController :UIViewController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         GMSServices.provideAPIKey(Constants.key)
         GMSPlacesClient.provideAPIKey(Constants.key)
+        
+        initialViewController  = MuseumListVC(nibName:"MuseumListVC",bundle:nil)
+        
+        let frame = UIScreen.main.bounds
+        window = UIWindow(frame: frame)
+        
+        window!.rootViewController = initialViewController
+        window!.makeKeyAndVisible()
         
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor(named: UIColor.ColorName.turquoise)
