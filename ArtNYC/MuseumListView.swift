@@ -29,7 +29,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        self.addSubview(tableView)
+        setUpTableView()
         setUpToolbar()
     }
     
@@ -42,7 +42,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath) as! MuseumTableViewCell
+        let cell = MuseumTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "basicCell")
         cell.museumNameLabel.text = store.museums[indexPath.row].title
         cell.museumLogo.image = store.museums[indexPath.row].logo
         return cell
@@ -50,6 +50,14 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func setUpTableView(){
+        self.addSubview(tableView)
+        self.tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setUpToolbar (){

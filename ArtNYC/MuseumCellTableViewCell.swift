@@ -14,6 +14,12 @@ class MuseumTableViewCell: UITableViewCell {
     var museumLogo: UIImageView = UIImageView()
     var museumNameLabel: UILabel = UILabel()
     
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setUpElements()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
