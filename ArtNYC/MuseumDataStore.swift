@@ -321,15 +321,30 @@ class MuseumDataStore {
                                url: "http://asiasociety.org/museum",
                                interiorMapView: false)
         
-        
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety]
+        let fit = Museum(title: "The Museum at FIT",
+                                 logo: UIImage(named: "fitLogo")!,
+                                 address: "227 W 27th St",
+                                 hours: ["Sunday":"Closed",
+                                         "Monday":"Closed",
+                                         "Tuesday":"12–8PM",
+                                         "Wednesday":"12–8PM",
+                                         "Thursday":"12–8PM",
+                                         "Friday":"12–8PM",
+                                         "Saturday":"10AM–5PM"],
+                                 ticketPrice: "Free",
+                                 freeHours: "Always free",
+                                 artCategories: "Fashion",
+                                 coordinate: CLLocationCoordinate2D(latitude: 40.7464981, longitude: -73.993782),
+                                 url: "http://www.fitnyc.edu/museum/",
+                                 interiorMapView: false)
+
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit]
     }
 
     
     // TODO: museums to add:
     
-    //        let fit = Museum(title: "The Museum at FIT", address: "227 W 27th St")
-    //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
+        //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
     
     
     
