@@ -337,15 +337,26 @@ class MuseumDataStore {
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7464981, longitude: -73.993782),
                                  url: "http://www.fitnyc.edu/museum/",
                                  interiorMapView: false)
+        
+        let morganLibrary = Museum(title: "Morgan Library & Museum",
+                         logo: UIImage(named: "morganLogo")!,
+                         address: "225 Madison Ave",
+                         hours: ["Sunday":"Closed",
+                                 "Monday":"Closed",
+                                 "Tuesday":"12–8PM",
+                                 "Wednesday":"12–8PM",
+                                 "Thursday":"12–8PM",
+                                 "Friday":"12–8PM",
+                                 "Saturday":"10AM–5PM"],
+                         ticketPrice: "$20",
+                         freeHours: "Fridays, 7-9pm",
+                         artCategories: "Rare books, music, drawings",
+                         coordinate: CLLocationCoordinate2D(latitude: 40.7489755, longitude: -73.9812668),
+                         url: "http://www.themorgan.org/",
+                         interiorMapView: true)
 
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit]
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney,  jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
     }
-
-    
-    // TODO: museums to add:
-    
-        //        let morganLibrary = Museum(title: "Morgan Library & Museum", address: "225 Madison Ave")
-    
     
     
 }
