@@ -19,11 +19,13 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     var store = MuseumDataStore.sharedInstance
+    var toolbar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         store.loadMuseums()
+        setUpToolbar()
         self.reloadInputViews()
     }
     
@@ -55,10 +57,36 @@ class MuseumListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
         }
         
-        if segue.identifier == "showMap" {
-            _ = segue.destination as? MapVC
-        }
+//        if segue.identifier == "showMap" {
+//            _ = segue.destination as? MapVC
+//        }
     }
+    
+    func setUpToolbar (){
+        
+        let filterButton = UIBarButtonItem(title: "Filter!", style: .plain, target: self, action: #selector(sortAZ))
+        let mapButton = UIBarButtonItem(title: "Map!", style: .plain, target: self, action: #selector(showMap))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let toolbarButtons: [UIBarButtonItem] = [filterButton, spacer, mapButton]
+        
+        for button in toolbarButtons {
+            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
+        }
+        
+        toolbar = UIToolbar()
+        self.view.addSubview(toolbar)
+        self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.toolbar.setItems(toolbarButtons, animated: false)
+    }
+    
+    func showMap(){
+        let mapViewController = MapVC()
+        navigationController?.pushViewController(mapViewController, animated: false)
+    }
+
     
     
     // TODO: create filter/sort menu and functions: sort by alpha; filter by museums with free admission, google street view interiors, art category
