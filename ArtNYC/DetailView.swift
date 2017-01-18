@@ -14,9 +14,15 @@ protocol GoToWebViewDelegate: class {
     func goToWebView()
 }
 
+protocol DetailViewDelegate: class {
+    func goHome()
+    func showMap()
+}
+
 class DetailView: UIView, GMSMapViewDelegate {
     
     weak var delegate: GoToWebViewDelegate?
+    weak var detailDelegate: DetailViewDelegate?
     var toolbar = UIToolbar()
     var museum: Museum!
     var panoView = GMSPanoramaView()
@@ -290,7 +296,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
-        homeButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         
         let homeBarButton = UIBarButtonItem()
         homeBarButton.customView = homeButton
@@ -298,7 +304,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         let mapButton = UIButton()
         mapButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         mapButton.setImage(UIImage(named: "Compass-50"), for: .normal)
-        mapButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
         let mapBarButton = UIBarButtonItem()
         mapBarButton.customView = mapButton
@@ -306,7 +312,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         let settingsButton = UIButton()
         settingsButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         settingsButton.setImage(UIImage(named: "Settings-50"), for: .normal)
-        settingsButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
         let settingsBarButton = UIBarButtonItem()
         settingsBarButton.customView = settingsButton
@@ -330,8 +336,12 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.delegate?.goToWebView()
     }
     
-    func test(){
-        
+    func goHome(){
+        self.detailDelegate?.goHome()
+    }
+    
+    func showMap(){
+        self.detailDelegate?.showMap()
     }
     
 }

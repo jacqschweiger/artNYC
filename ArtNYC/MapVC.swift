@@ -87,8 +87,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     // MARK: Toolbar Functions
     
     func goHome(){
-        let museumListController = MuseumListVC()
-        navigationController?.pushViewController(museumListController, animated: false)
+        let homeController = MuseumListVC()
+        navigationController?.pushViewController(homeController, animated: false)
     }
     
     func showMap(){
