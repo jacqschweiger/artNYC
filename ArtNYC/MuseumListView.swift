@@ -70,7 +70,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
-        homeButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         
         let homeBarButton = UIBarButtonItem()
         homeBarButton.customView = homeButton
@@ -104,6 +104,10 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.toolbar.translatesAutoresizingMaskIntoConstraints = false
         self.toolbar.setItems(toolbarButtons, animated: false)
+    }
+    
+    func goHome(){
+        
     }
     
     func showMap() {

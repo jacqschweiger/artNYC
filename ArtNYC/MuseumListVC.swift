@@ -57,7 +57,6 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
         filterBarButton.customView = filterButton
 
         self.navigationItem.rightBarButtonItem = filterBarButton
-        
     }
     
     
