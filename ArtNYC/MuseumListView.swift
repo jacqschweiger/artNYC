@@ -68,11 +68,33 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func setUpToolbar (){
         
-        let filterButton = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(sortAZ))
-        let mapButton = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(showMap))
+        let homeButton = UIButton()
+        homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
+        homeButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        
+        let homeBarButton = UIBarButtonItem()
+        homeBarButton.customView = homeButton
+        
+        let mapButton = UIButton()
+        mapButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        mapButton.setImage(UIImage(named: "Compass-50"), for: .normal)
+        mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        
+        let mapBarButton = UIBarButtonItem()
+        mapBarButton.customView = mapButton
+        
+        let settingsButton = UIButton()
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        settingsButton.setImage(UIImage(named: "Settings-50"), for: .normal)
+        settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        
+        let settingsBarButton = UIBarButtonItem()
+        settingsBarButton.customView = settingsButton
+        
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let toolbarButtons: [UIBarButtonItem] = [filterButton, spacer, mapButton]
+        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
         for button in toolbarButtons {
             button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
