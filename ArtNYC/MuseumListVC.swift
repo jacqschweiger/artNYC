@@ -72,14 +72,4 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
             self.museumListView.tableView.reloadData()
         }
     }
-    
-    func sortZA(){
-        store.museums.sort { (museum1, museum2) -> Bool in
-            return museum1.title! > museum2.title!
-        }
-        museumListView.reloadInputViews()
-    }
-    
-    
-    
 }

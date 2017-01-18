@@ -13,7 +13,6 @@ protocol MuseumListDelegate: class {
     func goToDetailView()
     func showMap()
     func sortAZ()
-    func sortZA()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {

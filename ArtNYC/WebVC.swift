@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-//TODO: add nav icons
-
-class WebVC: UIViewController {
+class WebVC: UIViewController, WebViewDelegate {
     
     var museumURL: String!
     var webView: WebView!
@@ -22,10 +20,11 @@ class WebVC: UIViewController {
         
         self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
         self.view = self.webView
-        setUpToolbar()
+        webView.delegate = self
     }
+
     
-    func setUpToolbar (){
+    func setUpToolbar2 (){
         
         let backButton = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(goBack))
         let forwardButton = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(goForward))
