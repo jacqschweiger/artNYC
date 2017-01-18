@@ -40,7 +40,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             marker.snippet = "See more"
             marker.map = mapView
         }
-        
     }
     
     func setUpToolbar (){
@@ -83,6 +82,14 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.toolbar.translatesAutoresizingMaskIntoConstraints = false
         self.toolbar.setItems(toolbarButtons, animated: false)
     }
+
+    
+    // MARK: Toolbar Functions
+    
+    func goHome(){
+        let museumListController = MuseumListVC()
+        navigationController?.pushViewController(museumListController, animated: false)
+    }
     
     func showMap(){
         let mapViewController = MapVC()
@@ -94,22 +101,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     func sortAZ(){
         print("sort pressed")
-//        store.museums.sort { (museum1, museum2) -> Bool in
-//            return museum1.title! < museum2.title!
-//        }
-//        DispatchQueue.main.async {
-//            self.museumListView.tableView.reloadData()
-//        }
     }
     
-    func goHome(){
-        let museumListController = MuseumListVC()
-        navigationController?.pushViewController(museumListController, animated: false)
-    }
 
-
-    
-    
     // MARK: GMSMapViewDelegate
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {

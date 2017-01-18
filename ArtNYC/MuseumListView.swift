@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 protocol MuseumListDelegate: class {
-    func goToDetailView()
+    func goHome()
     func showMap()
     func sortAZ()
+    func goToDetailView()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
@@ -29,8 +30,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        setUpTableView()
-        setUpToolbar()
+        setUpElements()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -57,16 +57,17 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.delegate?.goToDetailView()
     }
     
-    func setUpTableView(){
+    func setUpElements(){
+        
+        //Table View Set Up
         self.addSubview(tableView)
         self.tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
-    }
     
-    func setUpToolbar (){
-        
+
+        //Toolbar Set Up
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
@@ -106,8 +107,11 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.toolbar.setItems(toolbarButtons, animated: false)
     }
     
+    
+    // MARK: Toolbar Functions
+    
     func goHome(){
-        
+        self.delegate?.goHome()
     }
     
     func showMap() {
@@ -117,9 +121,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     func sortAZ(){
         self.delegate?.sortAZ()
     }
-    
-
-
     
     
 }

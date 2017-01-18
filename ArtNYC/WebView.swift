@@ -105,6 +105,8 @@ class WebView: UIView {
         self.toolbar.setItems(toolbarButtons, animated: false)
     }
     
+    // MARK: Toolbar Functions
+    
     func goBack(){
         self.delegate?.goBack(UIBarButtonItem.self)
     }
