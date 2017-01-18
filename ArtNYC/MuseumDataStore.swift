@@ -17,7 +17,7 @@ class MuseumDataStore {
     var museums: [Museum]!
     
     func loadMuseums() {
-        let metMuseum = Museum(title:"Metropolitan Museum of Art",
+        let metMuseum = Museum(title:"The Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
                                address: "1000 5th Ave",
                                hours: ["Sunday":"10am-5:30pm",

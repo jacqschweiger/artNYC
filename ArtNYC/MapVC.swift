@@ -14,6 +14,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum?
     var mapView: GMSMapView!
+    var toolbar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         mapView.isMyLocationEnabled = false
         
+        setUpToolbar()
         addLocations()
         
     }
@@ -40,6 +42,71 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
         
     }
+    
+    func setUpToolbar (){
+        
+        let homeButton = UIButton()
+        homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
+        homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
+        
+        let homeBarButton = UIBarButtonItem()
+        homeBarButton.customView = homeButton
+        
+        let mapButton = UIButton()
+        mapButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        mapButton.setImage(UIImage(named: "Compass-50"), for: .normal)
+        mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        
+        let mapBarButton = UIBarButtonItem()
+        mapBarButton.customView = mapButton
+        
+        let settingsButton = UIButton()
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        settingsButton.setImage(UIImage(named: "Settings-50"), for: .normal)
+        settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        
+        let settingsBarButton = UIBarButtonItem()
+        settingsBarButton.customView = settingsButton
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
+        
+        for button in toolbarButtons {
+            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
+        }
+        
+        self.view.addSubview(toolbar)
+        self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.toolbar.setItems(toolbarButtons, animated: false)
+    }
+    
+    func showMap(){
+        let mapViewController = MapVC()
+        navigationController?.pushViewController(mapViewController, animated: false)
+    }
+    
+    func goToDetailView(){
+    }
+    
+    func sortAZ(){
+        print("sort pressed")
+//        store.museums.sort { (museum1, museum2) -> Bool in
+//            return museum1.title! < museum2.title!
+//        }
+//        DispatchQueue.main.async {
+//            self.museumListView.tableView.reloadData()
+//        }
+    }
+    
+    func goHome(){
+        let museumListController = MuseumListVC()
+        navigationController?.pushViewController(museumListController, animated: false)
+    }
+
 
     
     
