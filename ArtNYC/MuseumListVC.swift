@@ -20,6 +20,7 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(false, animated: .init(true))
+        setFilterIcon()
         
         store.loadMuseums()
         museumListView.delegate = self
@@ -46,15 +47,30 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
         navigationController?.pushViewController(detailViewController, animated: false)
     }
 
+    func setFilterIcon(){
+        let filterButton = UIButton()
+        filterButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        filterButton.setImage(UIImage(named: "Filter-50"), for: .normal)
+        filterButton.addTarget(self, action: #selector(sortAZ), for: .touchUpInside)
+        
+        let filterBarButton = UIBarButtonItem()
+        filterBarButton.customView = filterButton
+
+        self.navigationItem.rightBarButtonItem = filterBarButton
+        
+    }
     
     
     // TODO: create filter/sort menu and functions: sort by alpha; filter by museums with free admission, google street view interiors, art category
     
     func sortAZ(){
+        print("sort pressed")
         store.museums.sort { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
-        museumListView.reloadInputViews()
+        DispatchQueue.main.async {
+            self.museumListView.tableView.reloadData()
+        }
     }
     
     func sortZA(){
