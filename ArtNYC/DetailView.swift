@@ -17,6 +17,7 @@ protocol GoToWebViewDelegate: class {
 class DetailView: UIView, GMSMapViewDelegate {
     
     weak var delegate: GoToWebViewDelegate?
+    var toolbar = UIToolbar()
     var museum: Museum!
     var panoView = GMSPanoramaView()
     var scrollView = UIScrollView()
@@ -45,6 +46,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         super.init(frame: frame)
         self.museum = museum
         self.backgroundColor = UIColor.white
+        self.setUpToolbar()
         self.setUpElements()
         self.panoView.moveNearCoordinate(museum.coordinate)
         reloadInputViews()
@@ -69,7 +71,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: self.panoView.bottomAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         //Museum Title Label
@@ -283,8 +285,53 @@ class DetailView: UIView, GMSMapViewDelegate {
         websiteButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    func setUpToolbar(){
+        
+        let homeButton = UIButton()
+        homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
+        homeButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        
+        let homeBarButton = UIBarButtonItem()
+        homeBarButton.customView = homeButton
+        
+        let mapButton = UIButton()
+        mapButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        mapButton.setImage(UIImage(named: "Compass-50"), for: .normal)
+        mapButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        
+        let mapBarButton = UIBarButtonItem()
+        mapBarButton.customView = mapButton
+        
+        let settingsButton = UIButton()
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        settingsButton.setImage(UIImage(named: "Settings-50"), for: .normal)
+        settingsButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        
+        let settingsBarButton = UIBarButtonItem()
+        settingsBarButton.customView = settingsButton
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
+        
+        for button in toolbarButtons {
+            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
+        }
+        
+        self.addSubview(toolbar)
+        self.toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
+        self.toolbar.setItems(toolbarButtons, animated: false)
+    }
+
     func onGoToWebView(){
         self.delegate?.goToWebView()
+    }
+    
+    func test(){
+        
     }
     
 }
