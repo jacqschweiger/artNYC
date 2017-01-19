@@ -62,8 +62,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         mapBarButton.customView = mapButton
         
         let settingsButton = UIButton()
-        settingsButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        settingsButton.setImage(UIImage(named: "Settings-50"), for: .normal)
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        settingsButton.setImage(UIImage(named: "Settings Icon"), for: .normal)
         settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
         let settingsBarButton = UIBarButtonItem()
