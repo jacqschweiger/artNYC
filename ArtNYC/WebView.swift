@@ -83,8 +83,8 @@ class WebView: UIView {
         forwardBarButton.customView = forwardButton
         
         let refreshButton = UIButton()
-        refreshButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        refreshButton.setImage(UIImage(named: "Refresh"), for: .normal)
+        refreshButton.frame = CGRect(x: 0, y: 0, width: 18, height: 20)
+        refreshButton.setImage(UIImage(named: "Refresh Icon"), for: .normal)
         refreshButton.addTarget(self, action: #selector(doRefresh), for: .touchUpInside)
         
         let refreshBarButton = UIBarButtonItem()
@@ -92,7 +92,7 @@ class WebView: UIView {
         
         let stopButton = UIButton()
         stopButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        stopButton.setImage(UIImage(named: "Stop"), for: .normal)
+        stopButton.setImage(UIImage(named: "Stop Icon"), for: .normal)
         stopButton.addTarget(self, action: #selector(stop), for: .touchUpInside)
         
         let stopBarButton = UIBarButtonItem()
