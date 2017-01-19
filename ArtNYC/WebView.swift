@@ -14,6 +14,7 @@ protocol WebViewDelegate: class {
     func goForward(_: AnyObject)
     func doRefresh(_: AnyObject)
     func stop(_: AnyObject)
+    func goBackToDetail()
 }
 
 class WebView: UIView {
@@ -21,7 +22,7 @@ class WebView: UIView {
     weak var delegate: WebViewDelegate?
     var museumURL: String!
     var museumWebView: UIWebView!
-    var header = UILabel()
+    var header = UIToolbar()
     var webToolbar: UINavigationItem!
     var backButton: UIBarButtonItem!
     var toolbar = UIToolbar()
@@ -30,8 +31,10 @@ class WebView: UIView {
         super.init(frame: frame)
         self.museumURL = museumURL
         self.backgroundColor = UIColor.white
+        setUpHeader()
         setUpWebView()
         setUpToolbar()
+
         reloadInputViews()
     }
     
@@ -40,13 +43,6 @@ class WebView: UIView {
     }
     
     func setUpWebView(){
-        
-        self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.05).isActive = true
-        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.header.translatesAutoresizingMaskIntoConstraints = false
-        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         museumWebView = UIWebView()
         self.addSubview(museumWebView)
@@ -62,6 +58,25 @@ class WebView: UIView {
             let request = NSURLRequest(url: url as! URL)
             self.museumWebView.loadRequest(request as URLRequest)
         }
+    }
+    
+    func setUpHeader(){
+        self.addSubview(header)
+        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.header.translatesAutoresizingMaskIntoConstraints = false
+        self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        let backToDetailButton = UIButton()
+        backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
+        backToDetailButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+        backToDetailButton.addTarget(self, action: #selector(goBackToDetail), for: .touchUpInside)
+        
+        let backToDetailBarButton = UIBarButtonItem()
+        backToDetailBarButton.customView = backToDetailButton
+        
+        let toolbarButtons: [UIBarButtonItem] = [backToDetailBarButton]
+        self.header.setItems(toolbarButtons, animated: false)
     }
     
     func setUpToolbar (){
@@ -102,10 +117,6 @@ class WebView: UIView {
         
         let toolbarButtons: [UIBarButtonItem] = [backBarButton, spacer, forwardBarButton, spacer, refreshBarButton, spacer, stopBarButton]
         
-        for button in toolbarButtons {
-            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        }
-        
         self.addSubview(toolbar)
         self.toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
@@ -130,6 +141,10 @@ class WebView: UIView {
     
     func stop(){
         self.delegate?.stop(UIBarButtonItem.self)
+    }
+    
+    func goBackToDetail(){
+        self.delegate?.goBackToDetail()
     }
 }
 

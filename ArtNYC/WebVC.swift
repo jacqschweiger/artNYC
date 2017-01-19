@@ -39,6 +39,10 @@ class WebVC: UIViewController, WebViewDelegate {
         webView.museumWebView.reload()
     }
     
+    func goBackToDetail(){
+        self.navigationController?.popViewController(animated: false)
+    }
+    
 }
 
 
