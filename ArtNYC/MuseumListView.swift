@@ -82,16 +82,16 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         //Toolbar Set Up
         let homeButton = UIButton()
-        homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        homeButton.setImage(UIImage(named: "Home-50"), for: .normal)
+        homeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        homeButton.setImage(UIImage(named: "Home Icon"), for: .normal)
         homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         
         let homeBarButton = UIBarButtonItem()
         homeBarButton.customView = homeButton
         
         let mapButton = UIButton()
-        mapButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        mapButton.setImage(UIImage(named: "Compass-50"), for: .normal)
+        mapButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        mapButton.setImage(UIImage(named: "compass"), for: .normal)
         mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
         let mapBarButton = UIBarButtonItem()
