@@ -91,7 +91,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         let mapButton = UIButton()
         mapButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        mapButton.setImage(UIImage(named: "compass"), for: .normal)
+        mapButton.setImage(UIImage(named: "Compass Icon"), for: .normal)
         mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
         let mapBarButton = UIBarButtonItem()
