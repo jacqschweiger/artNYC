@@ -15,6 +15,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var selectedMuseum: Museum?
     var mapView: GMSMapView!
     var toolbar = UIToolbar()
+    var header = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +82,17 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.toolbar.translatesAutoresizingMaskIntoConstraints = false
         self.toolbar.setItems(toolbarButtons, animated: false)
+        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Header
+        self.view.addSubview(header)
+        self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
+        self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.header.translatesAutoresizingMaskIntoConstraints = false
+        
+        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+
     }
 
     

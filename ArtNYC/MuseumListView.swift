@@ -118,6 +118,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.toolbar.translatesAutoresizingMaskIntoConstraints = false
         self.toolbar.setItems(toolbarButtons, animated: false)
+        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
     
