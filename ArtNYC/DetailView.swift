@@ -45,7 +45,6 @@ class DetailView: UIView, GMSMapViewDelegate {
     var freeAdmissionContent = UILabel()
     var artCategoriesLabel = UILabel()
     var artCategoriesContent = UILabel()
-    var websiteLabel = UILabel()
     var websiteButton: UIButton!
     
     
@@ -522,25 +521,18 @@ class DetailView: UIView, GMSMapViewDelegate {
         saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Website Label
-        scrollView.addSubview(websiteLabel)
-        websiteLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        websiteLabel.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 3).isActive = true
-        websiteLabel.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
-        websiteLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        websiteLabel.text = "• Website"
-        websiteLabel.font = UIFont(name: "Avenir Black", size: 17)
-        websiteLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Website Button
-        websiteButton = UIButton(type: .detailDisclosure)
+        websiteButton = UIButton(type: .custom)
         websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
         scrollView.addSubview(websiteButton)
-        websiteButton.leftAnchor.constraint(equalTo: self.websiteLabel.rightAnchor, constant: 5).isActive = true
-        websiteButton.centerYAnchor.constraint(equalTo: self.websiteLabel.centerYAnchor).isActive = true
-        websiteButton.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        websiteButton.widthAnchor.constraint(equalToConstant: 15).isActive = true
+        websiteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        websiteButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 50).isActive = true
+        websiteButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
+        websiteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25).isActive = true
         websiteButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        websiteButton.setTitle("See Website", for: .normal)
+        websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        websiteButton.tintColor = UIColor.white
     }
 
     
