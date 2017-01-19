@@ -23,9 +23,10 @@ class DetailView: UIView, GMSMapViewDelegate {
     
     weak var delegate: GoToWebViewDelegate?
     weak var detailDelegate: DetailViewDelegate?
-    var toolbar = UIToolbar()
     var museum: Museum!
     var panoView = GMSPanoramaView()
+    var header = UILabel()
+     var toolbar = UIToolbar()
     var scrollView = UIScrollView()
     var nameLabel = UILabel()
     var hoursLabel = UILabel()
@@ -63,12 +64,21 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     func setUpElements() {
+        
+        //Header
+        self.addSubview(header)
+        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.05).isActive = true
+        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.header.translatesAutoresizingMaskIntoConstraints = false
+        
+        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
     
         //Pano View
         self.addSubview(panoView)
         panoView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         panoView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        panoView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        panoView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
         panoView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.45).isActive = true
         panoView.translatesAutoresizingMaskIntoConstraints = false
         

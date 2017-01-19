@@ -19,6 +19,7 @@ protocol MuseumListDelegate: class {
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     weak var delegate: MuseumListDelegate?
+    let header = UILabel()
     let tableView = UITableView()
     let toolbar = UIToolbar()
     var store = MuseumDataStore.sharedInstance
@@ -58,15 +59,27 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func setUpElements(){
+    
+        //Header Set Up
+        self.addSubview(header)
+        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
+        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.header.translatesAutoresizingMaskIntoConstraints = false
+        
+        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        header.text = "Art Museums NYC"
+        header.font = UIFont(name: "Avenir Black", size: 26)
+        header.textAlignment = .center
+        header.textColor = UIColor.white
         
         //Table View Set Up
         self.addSubview(tableView)
-        self.tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
         self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
-    
-
+        
         //Toolbar Set Up
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)

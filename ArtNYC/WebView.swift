@@ -21,6 +21,7 @@ class WebView: UIView {
     weak var delegate: WebViewDelegate?
     var museumURL: String!
     var museumWebView: UIWebView!
+    var header = UILabel()
     var webToolbar: UINavigationItem!
     var backButton: UIBarButtonItem!
     var toolbar = UIToolbar()
@@ -40,11 +41,18 @@ class WebView: UIView {
     
     func setUpWebView(){
         
+        self.addSubview(header)
+        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.05).isActive = true
+        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.header.translatesAutoresizingMaskIntoConstraints = false
+        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        
         museumWebView = UIWebView()
         self.addSubview(museumWebView)
         museumWebView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         museumWebView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        museumWebView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        museumWebView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
         museumWebView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         museumWebView.translatesAutoresizingMaskIntoConstraints = false
         museumWebView.backgroundColor = UIColor.white
