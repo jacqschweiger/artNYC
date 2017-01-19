@@ -73,16 +73,9 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         header.textAlignment = .center
         header.textColor = UIColor.white
         
-        //Table View Set Up
-        self.addSubview(tableView)
-        self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         //Toolbar Set Up
         let homeButton = UIButton()
-        homeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         homeButton.setImage(UIImage(named: "Home Icon"), for: .normal)
         homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         
@@ -90,7 +83,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         homeBarButton.customView = homeButton
         
         let mapButton = UIButton()
-        mapButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        mapButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         mapButton.setImage(UIImage(named: "Compass Icon"), for: .normal)
         mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
@@ -98,7 +91,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         mapBarButton.customView = mapButton
         
         let settingsButton = UIButton()
-        settingsButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         settingsButton.setImage(UIImage(named: "Settings Icon"), for: .normal)
         settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
@@ -119,6 +112,13 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.toolbar.translatesAutoresizingMaskIntoConstraints = false
         self.toolbar.setItems(toolbarButtons, animated: false)
         self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Table View Set Up
+        self.addSubview(tableView)
+        self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
+        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     

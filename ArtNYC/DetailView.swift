@@ -304,7 +304,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     func setUpToolbar(){
         
         let homeButton = UIButton()
-        homeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         homeButton.setImage(UIImage(named: "Home Icon"), for: .normal)
         homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         
@@ -312,7 +312,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         homeBarButton.customView = homeButton
         
         let mapButton = UIButton()
-        mapButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        mapButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         mapButton.setImage(UIImage(named: "Compass Icon"), for: .normal)
         mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         
@@ -320,7 +320,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         mapBarButton.customView = mapButton
         
         let settingsButton = UIButton()
-        settingsButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         settingsButton.setImage(UIImage(named: "Settings Icon"), for: .normal)
         settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
         

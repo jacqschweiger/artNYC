@@ -67,16 +67,16 @@ class WebView: UIView {
     func setUpToolbar (){
         
         let backButton = UIButton()
-        backButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        backButton.setImage(UIImage(named: "Back"), for: .normal)
+        backButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
+        backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         
         let backBarButton = UIBarButtonItem()
         backBarButton.customView = backButton
         
         let forwardButton = UIButton()
-        forwardButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        forwardButton.setImage(UIImage(named: "Forward"), for: .normal)
+        forwardButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
+        forwardButton.setImage(UIImage(named: "Forward Icon"), for: .normal)
         forwardButton.addTarget(self, action: #selector(goForward), for: .touchUpInside)
         
         let forwardBarButton = UIBarButtonItem()
