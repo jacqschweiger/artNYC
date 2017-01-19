@@ -10,19 +10,14 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-protocol GoToWebViewDelegate: class {
+protocol showWebViewDelegate: class {
     func goToWebView()
-}
-
-protocol DetailViewDelegate: class {
-    func goHome()
-    func showMap()
 }
 
 class DetailView: UIView, GMSMapViewDelegate {
     
-    weak var delegate: GoToWebViewDelegate?
-    weak var detailDelegate: DetailViewDelegate?
+    weak var showWebViewDelegate: showWebViewDelegate?
+    weak var navDelegate: NavBarDelegate?
     var museum: Museum!
     var panoView = GMSPanoramaView()
     var header = UILabel()
@@ -342,15 +337,15 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
 
     func onGoToWebView(){
-        self.delegate?.goToWebView()
+        self.showWebViewDelegate?.goToWebView()
     }
     
     func goHome(){
-        self.detailDelegate?.goHome()
+        self.navDelegate?.goHome()
     }
     
     func showMap(){
-        self.detailDelegate?.showMap()
+        self.navDelegate?.showMap()
     }
     
 }

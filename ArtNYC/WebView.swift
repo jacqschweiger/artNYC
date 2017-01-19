@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol WebViewDelegate: class {
+protocol WebNavDelegate: class {
     func goBack(_: AnyObject)
     func goForward(_: AnyObject)
     func doRefresh(_: AnyObject)
@@ -19,7 +19,7 @@ protocol WebViewDelegate: class {
 
 class WebView: UIView {
     
-    weak var delegate: WebViewDelegate?
+    weak var delegate: WebNavDelegate?
     var museumURL: String!
     var museumWebView: UIWebView!
     var header = UIToolbar()

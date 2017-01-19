@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-class MuseumListVC: UIViewController, MuseumListDelegate {
+class MuseumListVC: UIViewController, NavBarDelegate {
 
-    weak var delegate: MuseumListDelegate?
+    weak var delegate: NavBarDelegate?
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
     

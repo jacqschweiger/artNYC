@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-class DetailVC: UIViewController, GMSMapViewDelegate, GoToWebViewDelegate, DetailViewDelegate {
+class DetailVC: UIViewController, GMSMapViewDelegate, showWebViewDelegate, NavBarDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum?
@@ -18,8 +18,8 @@ class DetailVC: UIViewController, GMSMapViewDelegate, GoToWebViewDelegate, Detai
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailView.delegate = self
-        detailView.detailDelegate = self
+        detailView.showWebViewDelegate = self
+        detailView.navDelegate = self
     }
 
     override func loadView(){
@@ -44,6 +44,10 @@ class DetailVC: UIViewController, GMSMapViewDelegate, GoToWebViewDelegate, Detai
     func showMap(){
         let mapViewController = MapVC()
         navigationController?.pushViewController(mapViewController, animated: false)
+    }
+
+    func goToDetailView(){
+        
     }
     
 }

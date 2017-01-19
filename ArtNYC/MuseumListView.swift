@@ -9,16 +9,15 @@
 import Foundation
 import UIKit
 
-protocol MuseumListDelegate: class {
+protocol NavBarDelegate: class {
     func goHome()
     func showMap()
-    func sortAZ()
     func goToDetailView()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    weak var delegate: MuseumListDelegate?
+    weak var delegate: NavBarDelegate?
     let header = UILabel()
     let tableView = UITableView()
     let toolbar = UIToolbar()
@@ -130,10 +129,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func showMap() {
         self.delegate?.showMap()
-    }
-    
-    func sortAZ(){
-        self.delegate?.sortAZ()
     }
     
     

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class WebVC: UIViewController, WebViewDelegate {
+class WebVC: UIViewController, WebNavDelegate {
     
     var museumURL: String!
     var webView: WebView!
