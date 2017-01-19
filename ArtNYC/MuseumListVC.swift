@@ -19,9 +19,6 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(false, animated: .init(true))
-        setFilterIcon()
-        
         store.loadMuseums()
         museumListView.delegate = self
         
@@ -29,7 +26,7 @@ class MuseumListVC: UIViewController, MuseumListDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool){
-        self.navigationController?.navigationBar.topItem?.title = "Art Museums NYC"
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func loadView() {

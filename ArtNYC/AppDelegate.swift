@@ -31,10 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
         
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(named:UIColor.ColorName.turquoise), NSFontAttributeName: UIFont(name: "Avenir Black", size: 22)!]
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Black", size: 18)!], for: .normal)
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Black", size: 18)!], for: .normal)
         
         return true
     }
