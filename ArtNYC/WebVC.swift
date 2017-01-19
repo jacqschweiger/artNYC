@@ -21,7 +21,6 @@ class WebVC: UIViewController, WebViewDelegate {
         self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
         self.view = self.webView
         webView.delegate = self
-        createBackButton()
     }
 
     func goBack(_: AnyObject) {
@@ -40,24 +39,6 @@ class WebVC: UIViewController, WebViewDelegate {
         webView.museumWebView.reload()
     }
     
-    func createBackButton(){
-        let backbutton = UIButton(type: .custom)
-        backbutton.setImage(UIImage(named: "BackNav"), for: .normal)
-        backbutton.setTitle("Back", for: .normal)
-        backbutton.setTitleColor(backbutton.tintColor, for: .normal)
-        backbutton.addTarget(self, action: #selector(WebVC.backAction), for: .touchUpInside)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
-    }
-    
-    func backAction() -> Void {
-        self.navigationController?.popViewController(animated: true)
-    }
-
-    
-    
-    
-
 }
 
 
