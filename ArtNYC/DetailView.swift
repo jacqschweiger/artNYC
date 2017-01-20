@@ -315,7 +315,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         let settingsButton = UIButton()
         settingsButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         settingsButton.setImage(UIImage(named: "Settings Icon"), for: .normal)
-        settingsButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+        settingsButton.addTarget(self, action: #selector(showSettings), for: .touchUpInside)
         
         let settingsBarButton = UIBarButtonItem()
         settingsBarButton.customView = settingsButton
@@ -346,6 +346,10 @@ class DetailView: UIView, GMSMapViewDelegate {
     
     func showMap(){
         self.navDelegate?.showMap()
+    }
+    
+    func showSettings(){
+        //TODO
     }
     
 }
