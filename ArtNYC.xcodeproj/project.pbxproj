@@ -241,6 +241,7 @@
 					};
 					713D5F251E295DA500DD76FA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X95T5846U7;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 713D5F0E1E295DA500DD76FA;
 					};
@@ -507,6 +508,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = X95T5846U7;
 				INFOPLIST_FILE = ArtNYCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYCTests;
@@ -521,6 +524,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = X95T5846U7;
 				INFOPLIST_FILE = ArtNYCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYCTests;

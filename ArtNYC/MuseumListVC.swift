@@ -12,7 +12,6 @@ import NotificationCenter
 
 class MuseumListVC: UIViewController, NavBarDelegate {
 
-    weak var delegate: NavBarDelegate?
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
     
