@@ -21,8 +21,9 @@ class DetailView: UIView, GMSMapViewDelegate {
     var museum: Museum!
     var panoView = GMSPanoramaView()
     var header = UILabel()
-     var toolbar = UIToolbar()
+    var toolbar = UIToolbar()
     var scrollView = UIScrollView()
+    var interiorLabel = UILabel()
     var nameLabel = UILabel()
     var hoursLabel = UILabel()
     var sundayLabel = UILabel()
@@ -88,29 +89,73 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        //Art Categories Label
-        scrollView.addSubview(artCategoriesLabel)
-        artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        artCategoriesLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
-        artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-        artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
-        artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        artCategoriesLabel.text = "Art"
-        artCategoriesLabel.textAlignment = .center
-        artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
-        artCategoriesLabel.textColor = UIColor.white
-        artCategoriesLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Art Categories Content
-        scrollView.addSubview(artCategoriesContent)
-        artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor, constant: 10).isActive = true
-        artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
-        
-        artCategoriesContent.text = museum.artCategories
-        artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
-        artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //Intervior View Label // Add only if museum has street view
+        if self.museum.interiorMapView == true {
+            scrollView.addSubview(interiorLabel)
+            interiorLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            interiorLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
+            interiorLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            interiorLabel.heightAnchor.constraint(equalToConstant: 20)
+            interiorLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+            interiorLabel.text = "See 360° Gallery View"
+            interiorLabel.textAlignment = .center
+            interiorLabel.font = UIFont(name: "Avenir Black", size: 20)
+            interiorLabel.textColor = UIColor.white
+            interiorLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            
+            //Art Categories Label
+            scrollView.addSubview(artCategoriesLabel)
+            artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.interiorLabel.bottomAnchor, constant: 40).isActive = true
+            artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
+            artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+            artCategoriesLabel.text = "Art"
+            artCategoriesLabel.textAlignment = .center
+            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
+            artCategoriesLabel.textColor = UIColor.white
+            artCategoriesLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            
+            //Art Categories Content
+            scrollView.addSubview(artCategoriesContent)
+            artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor, constant: 10).isActive = true
+            artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
+            
+            artCategoriesContent.text = museum.artCategories
+            artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
+            artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        }
+            
+        else {
+            
+            //Art Categories Label
+            scrollView.addSubview(artCategoriesLabel)
+            artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
+            artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
+            artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+            artCategoriesLabel.text = "Art"
+            artCategoriesLabel.textAlignment = .center
+            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
+            artCategoriesLabel.textColor = UIColor.white
+            artCategoriesLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            
+            //Art Categories Content
+            scrollView.addSubview(artCategoriesContent)
+            artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor, constant: 10).isActive = true
+            artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
+            
+            artCategoriesContent.text = museum.artCategories
+            artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
+            artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        }
         
         //Admission Label
         scrollView.addSubview(admissionLabel)
@@ -135,7 +180,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         admissionContent.text = museum.ticketPrice
         admissionContent.font = UIFont(name: "Avenir Black", size: 16)
         admissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        
         
         //Free Admission Label
         scrollView.addSubview(freeAdmissionLabel)
@@ -292,7 +336,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         websiteButton.tintColor = UIColor.white
     }
-
+    
     
     func setUpToolbar(){
         
@@ -335,7 +379,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.toolbar.setItems(toolbarButtons, animated: false)
         self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
-
+    
     func onGoToWebView(){
         self.showWebViewDelegate?.goToWebView()
     }
