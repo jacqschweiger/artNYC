@@ -69,7 +69,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         header.text = museum.title
-        header.font = UIFont(name: "Avenir Black", size: 26)
+        header.font = UIFont(name: "Avenir Black", size: 24)
         header.textAlignment = .center
         header.textColor = UIColor.white
         
