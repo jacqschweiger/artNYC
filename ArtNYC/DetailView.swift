@@ -20,7 +20,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     weak var showInfoDelegate: ShowInfoDelegate?
     weak var navDelegate: NavigationDelegate?
     var museum: Museum!
-    var panoView = GMSPanoramaView()
+    var museumImage = UIImageView()
     var header = UILabel()
     var navBar = UIToolbar()
     var scrollView = UIScrollView()
@@ -51,7 +51,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.backgroundColor = UIColor.white
         self.setUpNavBar()
         self.setUpElements()
-        self.panoView.moveNearCoordinate(museum.coordinate)
         reloadInputViews()
     }
     
@@ -74,19 +73,20 @@ class DetailView: UIView, GMSMapViewDelegate {
         header.textAlignment = .center
         header.textColor = UIColor.white
         
-        //Pano View
-        self.addSubview(panoView)
-        panoView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        panoView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
-        panoView.topAnchor.constraint(equalTo: self.header.bottomAnchor, constant: 20).isActive = true
-        panoView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
-        panoView.translatesAutoresizingMaskIntoConstraints = false
+        //Instagram View
+        self.addSubview(museumImage)
+        museumImage.backgroundColor = UIColor.blue
+        museumImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        museumImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+        museumImage.topAnchor.constraint(equalTo: self.header.bottomAnchor, constant: 20).isActive = true
+        museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
+        museumImage.translatesAutoresizingMaskIntoConstraints = false
         
         //Scroll View
         self.addSubview(scrollView)
         scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: self.panoView.bottomAnchor, constant: 10).isActive = true
+        scrollView.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 10).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         

@@ -114,10 +114,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
-        for button in navBarButtons {
-            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        }
-        
         self.addSubview(navBar)
         self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.navBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
