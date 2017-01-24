@@ -93,16 +93,21 @@ class InteriorVC: UIViewController {
         let backToDetailBarButton = UIBarButtonItem()
         backToDetailBarButton.customView = backToDetailButton
         
+        //TODO: fix title label 
+        
         let titleLabel = UILabel()
         titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         titleLabel.text = museum.title
-        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
+        titleLabel.font = UIFont(name: "Avenir Black", size: 12)
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.white
         
-        let titleBarButton = UIBarButtonItem(customView: titleLabel)
+        let titleBarButton = UIBarButtonItem()
+        titleBarButton.customView = titleLabel
         
-        let headerButtons: [UIBarButtonItem] = [backToDetailBarButton, titleBarButton]
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let headerButtons: [UIBarButtonItem] = [backToDetailBarButton, titleBarButton, spacer]
         self.header.setItems(headerButtons, animated: false)
     }
     
