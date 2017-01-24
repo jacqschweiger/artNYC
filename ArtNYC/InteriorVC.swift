@@ -22,6 +22,7 @@ class InteriorVC: UIViewController {
         super.viewDidLoad()
         
         setUpNavBar()
+        setUpHeader()
         self.panoView.moveNearCoordinate(museum.coordinate)
         setUpPanoView()
     }
@@ -66,17 +67,16 @@ class InteriorVC: UIViewController {
         
         let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
-//        for button in navBarButtons {
-//            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-//        }
-        
         self.view.addSubview(navBar)
         self.navBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         self.navBar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.navBar.translatesAutoresizingMaskIntoConstraints = false
         self.navBar.setItems(navBarButtons, animated: false)
         self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
-        
+    }
+    
+    func setUpHeader(){
+    
         //Header
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true

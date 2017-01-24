@@ -13,7 +13,7 @@ class WebVC: UIViewController, WebNavDelegate {
     
     var museumURL: String!
     var webView: WebView!
-    var toolbar: UIToolbar!
+    //var navBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()

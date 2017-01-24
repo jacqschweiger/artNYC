@@ -14,7 +14,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum?
     var mapView: GMSMapView!
-    var toolbar = UIToolbar()
+    var navBar = UIToolbar()
     var header = UILabel()
     
     override func viewDidLoad() {
@@ -26,7 +26,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         mapView.isMyLocationEnabled = false
         
-        setUpToolbar()
+        setUpNavBar()
+        setUpHeader()
         addLocations()
         
     }
@@ -43,7 +44,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
     }
     
-    func setUpToolbar (){
+    func setUpNavBar (){
         
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
@@ -71,19 +72,18 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
+        let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
-        for button in toolbarButtons {
-            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        }
-        
-        self.view.addSubview(toolbar)
-        self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.toolbar.setItems(toolbarButtons, animated: false)
-        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
-        
+        self.view.addSubview(navBar)
+        self.navBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.navBar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.navBar.translatesAutoresizingMaskIntoConstraints = false
+        self.navBar.setItems(navBarButtons, animated: false)
+        self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+    }
+    
+    func setUpHeader() {
+    
         //Header
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true

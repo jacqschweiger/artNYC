@@ -76,8 +76,8 @@ class WebView: UIView {
         let backToDetailBarButton = UIBarButtonItem()
         backToDetailBarButton.customView = backToDetailButton
         
-        let toolbarButtons: [UIBarButtonItem] = [backToDetailBarButton]
-        self.header.setItems(toolbarButtons, animated: false)
+        let backButtons: [UIBarButtonItem] = [backToDetailBarButton]
+        self.header.setItems(backButtons, animated: false)
     }
     
     func setUpWebNavBar (){

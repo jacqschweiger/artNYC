@@ -370,17 +370,13 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
-        
-        for button in toolbarButtons {
-            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        }
+        let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
         self.addSubview(navBar)
         self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.navBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.navBar.translatesAutoresizingMaskIntoConstraints = false
-        self.navBar.setItems(toolbarButtons, animated: false)
+        self.navBar.setItems(navBarButtons, animated: false)
         self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
