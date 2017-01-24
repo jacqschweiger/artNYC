@@ -22,7 +22,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var museum: Museum!
     var panoView = GMSPanoramaView()
     var header = UILabel()
-    var toolbar = UIToolbar()
+    var navBar = UIToolbar()
     var scrollView = UIScrollView()
     var seeInsideButton = UIButton()
     var nameLabel = UILabel()
@@ -49,7 +49,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         super.init(frame: frame)
         self.museum = museum
         self.backgroundColor = UIColor.white
-        self.setUpToolbar()
+        self.setUpNavBar()
         self.setUpElements()
         self.panoView.moveNearCoordinate(museum.coordinate)
         reloadInputViews()
@@ -87,7 +87,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: self.panoView.bottomAnchor, constant: 10).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         
@@ -342,7 +342,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     
-    func setUpToolbar(){
+    func setUpNavBar(){
         
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
@@ -376,15 +376,15 @@ class DetailView: UIView, GMSMapViewDelegate {
             button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
         }
         
-        self.addSubview(toolbar)
-        self.toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.toolbar.setItems(toolbarButtons, animated: false)
-        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        self.addSubview(navBar)
+        self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.navBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.navBar.translatesAutoresizingMaskIntoConstraints = false
+        self.navBar.setItems(toolbarButtons, animated: false)
+        self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
-    // MARK: Button Functions
+    // MARK: Show Info Button Functions
     
     func onGoToWebView(){
         self.showInfoDelegate?.goToWebView()

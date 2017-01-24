@@ -28,7 +28,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, Navigati
         self.view = self.detailView
     }
     
-    //Button Functions
+    // MARK: Show Info Button Functions
     
     func goToWebView() {
         let webViewController = WebVC()

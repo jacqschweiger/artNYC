@@ -30,7 +30,9 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        setUpNavBar()
         setUpElements()
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,7 +74,18 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         header.textAlignment = .center
         header.textColor = UIColor.white
         
-        //Toolbar Set Up
+        //Table View Set Up
+        self.addSubview(tableView)
+        self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
+        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+    }
+    
+    func setUpNavBar(){
+    
+        //NavBar Set Up
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         homeButton.setImage(UIImage(named: "Home Icon"), for: .normal)
@@ -111,13 +124,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.navBar.translatesAutoresizingMaskIntoConstraints = false
         self.navBar.setItems(navBarButtons, animated: false)
         self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Table View Set Up
-        self.addSubview(tableView)
-        self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        self.tableView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
-        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
