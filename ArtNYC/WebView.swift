@@ -23,17 +23,18 @@ class WebView: UIView {
     var museumURL: String!
     var museumWebView: UIWebView!
     var header = UIToolbar()
-    var webToolbar: UINavigationItem!
     var backButton: UIBarButtonItem!
-    var toolbar = UIToolbar()
+    var webNavBar = UIToolbar()
+    
     
     init(frame:CGRect, museumURL: String){
         super.init(frame: frame)
         self.museumURL = museumURL
         self.backgroundColor = UIColor.white
+        
         setUpHeader()
         setUpWebView()
-        setUpToolbar()
+        setUpWebNavBar()
 
         reloadInputViews()
     }
@@ -79,7 +80,7 @@ class WebView: UIView {
         self.header.setItems(toolbarButtons, animated: false)
     }
     
-    func setUpToolbar (){
+    func setUpWebNavBar (){
         
         let backButton = UIButton()
         backButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
@@ -115,14 +116,14 @@ class WebView: UIView {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let toolbarButtons: [UIBarButtonItem] = [backBarButton, spacer, forwardBarButton, spacer, refreshBarButton, spacer, stopBarButton]
+        let webNavBarButtons: [UIBarButtonItem] = [backBarButton, spacer, forwardBarButton, spacer, refreshBarButton, spacer, stopBarButton]
         
-        self.addSubview(toolbar)
-        self.toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.toolbar.setItems(toolbarButtons, animated: false)
-        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        self.addSubview(webNavBar)
+        self.webNavBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.webNavBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.webNavBar.translatesAutoresizingMaskIntoConstraints = false
+        self.webNavBar.setItems(webNavBarButtons, animated: false)
+        self.webNavBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
     func goBackToDetail(){

@@ -14,14 +14,14 @@ class InteriorVC: UIViewController {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
-    var toolbar = UIToolbar()
+    var navBar = UIToolbar()
     var header = UIToolbar()
     var panoView = GMSPanoramaView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpToolbar()
+        setUpNavBar()
         self.panoView.moveNearCoordinate(museum.coordinate)
         setUpPanoView()
     }
@@ -31,12 +31,12 @@ class InteriorVC: UIViewController {
         panoView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         panoView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         panoView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        panoView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
+        panoView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
         panoView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
-    func setUpToolbar (){
+    func setUpNavBar (){
         
         let homeButton = UIButton()
         homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
@@ -64,18 +64,18 @@ class InteriorVC: UIViewController {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
+        let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
-        for button in toolbarButtons {
-            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
-        }
+//        for button in navBarButtons {
+//            button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
+//        }
         
-        self.view.addSubview(toolbar)
-        self.toolbar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.toolbar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.toolbar.setItems(toolbarButtons, animated: false)
-        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        self.view.addSubview(navBar)
+        self.navBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.navBar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.navBar.translatesAutoresizingMaskIntoConstraints = false
+        self.navBar.setItems(navBarButtons, animated: false)
+        self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Header
         self.view.addSubview(header)
