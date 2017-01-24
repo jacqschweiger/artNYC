@@ -20,7 +20,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     weak var delegate: NavBarDelegate?
     let header = UILabel()
     let tableView = UITableView()
-    let toolbar = UIToolbar()
+    let navBar = UIToolbar()
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum!
     
@@ -99,29 +99,29 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let toolbarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
+        let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
         
-        for button in toolbarButtons {
+        for button in navBarButtons {
             button.tintColor = UIColor(named: UIColor.ColorName.turquoise)
         }
         
-        self.addSubview(toolbar)
-        self.toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.toolbar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.toolbar.translatesAutoresizingMaskIntoConstraints = false
-        self.toolbar.setItems(toolbarButtons, animated: false)
-        self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        self.addSubview(navBar)
+        self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.navBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.navBar.translatesAutoresizingMaskIntoConstraints = false
+        self.navBar.setItems(navBarButtons, animated: false)
+        self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Table View Set Up
         self.addSubview(tableView)
         self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        self.tableView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
         self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
-    // MARK: Toolbar Functions
+    // MARK: NavBar Functions
     
     func goHome(){
         self.delegate?.goHome()

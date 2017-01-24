@@ -98,8 +98,11 @@ class InteriorVC: UIViewController {
         self.header.setItems(headerButtons, animated: false)
     }
     
-    
-    // MARK: Toolbar Functions
+}
+
+// MARK: NavBar Functions
+
+extension InteriorVC {
     
     func goHome(){
         let homeController = MuseumListVC()

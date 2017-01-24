@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-protocol showDetailDelegate: class {
+protocol ShowDetailDelegate: class {
     func goToWebView()
     func goToInteriorView()
 }
 
 class DetailView: UIView, GMSMapViewDelegate {
     
-    weak var showDetailDelegate: showDetailDelegate?
+    weak var showDetailDelegate: ShowDetailDelegate?
     weak var navDelegate: NavBarDelegate?
     var museum: Museum!
     var panoView = GMSPanoramaView()
@@ -384,6 +384,8 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
+    // MARK: Button Functions
+    
     func onGoToWebView(){
         self.showDetailDelegate?.goToWebView()
     }
@@ -391,6 +393,9 @@ class DetailView: UIView, GMSMapViewDelegate {
     func onGoToInteriorView(){
         self.showDetailDelegate?.goToInteriorView()
     }
+    
+    
+    // MARK: NavBar Functions
     
     func goHome(){
         self.navDelegate?.goHome()

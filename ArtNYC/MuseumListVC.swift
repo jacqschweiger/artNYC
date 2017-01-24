@@ -11,7 +11,7 @@ import UIKit
 import NotificationCenter
 
 class MuseumListVC: UIViewController, NavBarDelegate {
-
+    
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
     
@@ -32,25 +32,17 @@ class MuseumListVC: UIViewController, NavBarDelegate {
         self.view = museumListView
     }
     
-    func setFilterIcon(){
-        let filterButton = UIButton()
-        filterButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        filterButton.setImage(UIImage(named: "Filter-50"), for: .normal)
-        filterButton.addTarget(self, action: #selector(sortAZ), for: .touchUpInside)
-        
-        let filterBarButton = UIBarButtonItem()
-        filterBarButton.customView = filterButton
-        
-        self.navigationItem.rightBarButtonItem = filterBarButton
-    }
-    
     func goToDetailView(){
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumListView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: false)
     }
-    
-    // MARK: Toolbar Functions
+}
+
+
+// MARK: NavBar Functions
+
+extension MuseumListVC {
     
     func goHome(){
         self.reloadInputViews()
@@ -61,13 +53,4 @@ class MuseumListVC: UIViewController, NavBarDelegate {
         navigationController?.pushViewController(mapViewController, animated: false)
     }
     
-    func sortAZ(){
-        print("sort pressed")
-        store.museums.sort { (museum1, museum2) -> Bool in
-            return museum1.title! < museum2.title!
-        }
-        DispatchQueue.main.async {
-            self.museumListView.tableView.reloadData()
-        }
-    }
 }

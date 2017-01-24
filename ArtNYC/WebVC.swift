@@ -22,6 +22,12 @@ class WebVC: UIViewController, WebNavDelegate {
         self.view = self.webView
         webView.delegate = self
     }
+    
+    func goBackToDetail(){
+        _ = self.navigationController?.popViewController(animated: false)
+    }
+    
+    // MARK: WebView Navigation Functions
 
     func goBack(_: AnyObject) {
         webView.museumWebView.goBack()
@@ -37,10 +43,6 @@ class WebVC: UIViewController, WebNavDelegate {
     
     func doRefresh(_: AnyObject) {
         webView.museumWebView.reload()
-    }
-    
-    func goBackToDetail(){
-        _ = self.navigationController?.popViewController(animated: false)
     }
     
 }

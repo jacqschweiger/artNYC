@@ -92,12 +92,15 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-
+        
     }
+}
 
-    
+
     // MARK: Toolbar Functions
-    
+
+extension MapVC {
+
     func goHome(){
         let homeController = MuseumListVC()
         navigationController?.pushViewController(homeController, animated: false)
@@ -115,7 +118,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         //TODO
     }
     
-
+    
     // MARK: GMSMapViewDelegate
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {

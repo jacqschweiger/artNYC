@@ -125,7 +125,11 @@ class WebView: UIView {
         self.toolbar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
-    // MARK: Toolbar Functions
+    func goBackToDetail(){
+        self.delegate?.goBackToDetail()
+    }
+    
+    // MARK: WebView Navigation Functions
     
     func goBack(){
         self.delegate?.goBack(UIBarButtonItem.self)
@@ -143,9 +147,6 @@ class WebView: UIView {
         self.delegate?.stop(UIBarButtonItem.self)
     }
     
-    func goBackToDetail(){
-        self.delegate?.goBackToDetail()
-    }
 }
 
 
