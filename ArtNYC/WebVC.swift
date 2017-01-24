@@ -11,14 +11,13 @@ import UIKit
 
 class WebVC: UIViewController, WebNavDelegate {
     
-    var museumURL: String!
+    var museum: Museum!
     var webView: WebView!
-    //var navBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView = WebView(frame: CGRect.zero, museumURL: museumURL)
+        self.webView = WebView(frame: CGRect.zero, museum: museum)
         self.view = self.webView
         webView.delegate = self
     }

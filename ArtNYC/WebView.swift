@@ -20,16 +20,16 @@ protocol WebNavDelegate: class {
 class WebView: UIView {
     
     weak var delegate: WebNavDelegate?
-    var museumURL: String!
+    var museum: Museum!
     var museumWebView: UIWebView!
     var header = UIToolbar()
     var backButton: UIBarButtonItem!
     var webNavBar = UIToolbar()
     
     
-    init(frame:CGRect, museumURL: String){
+    init(frame:CGRect, museum: Museum){
         super.init(frame: frame)
-        self.museumURL = museumURL
+        self.museum = museum
         self.backgroundColor = UIColor.white
         
         setUpHeader()
@@ -55,7 +55,7 @@ class WebView: UIView {
         museumWebView.backgroundColor = UIColor.white
         
         DispatchQueue.main.async {
-            let url = NSURL(string: self.museumURL)
+            let url = NSURL(string: self.museum.url)
             let request = NSURLRequest(url: url as! URL)
             self.museumWebView.loadRequest(request as URLRequest)
         }
@@ -76,8 +76,17 @@ class WebView: UIView {
         let backToDetailBarButton = UIBarButtonItem()
         backToDetailBarButton.customView = backToDetailButton
         
-        let backButtons: [UIBarButtonItem] = [backToDetailBarButton]
-        self.header.setItems(backButtons, animated: false)
+        let headerLabel = UILabel()
+        headerLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        headerLabel.text = museum.title
+        headerLabel.font = UIFont(name: "Avenir Black", size: 24)
+        headerLabel.textAlignment = .center
+        headerLabel.textColor = UIColor.white
+        
+        let headerTitle = UIBarButtonItem(customView: headerLabel)
+        //navigationController?.toolbar.setItems([toolbarTitle], animated: true)
+        let headerItems: [UIBarButtonItem] = [backToDetailBarButton, headerTitle]
+        self.header.setItems(headerItems, animated: false)
     }
     
     func setUpWebNavBar (){
