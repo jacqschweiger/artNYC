@@ -112,7 +112,7 @@ class InteriorVC: UIViewController {
     }
     
     func goToDetailView(){
-        _ = navigationController?.popViewController(animated: false)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func showSettings(){
