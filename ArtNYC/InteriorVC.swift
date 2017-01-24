@@ -80,10 +80,11 @@ class InteriorVC: UIViewController {
         //Header
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.12).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        
         
         let backToDetailButton = UIButton()
         backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
@@ -95,16 +96,6 @@ class InteriorVC: UIViewController {
         
         let headerButtons: [UIBarButtonItem] = [backToDetailBarButton]
         self.header.setItems(headerButtons, animated: false)
-        
-        
-
-//        self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-//        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
-//        self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-//        self.header.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        
     }
     
     
