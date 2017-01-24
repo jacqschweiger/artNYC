@@ -76,16 +76,7 @@ class WebView: UIView {
         let backToDetailBarButton = UIBarButtonItem()
         backToDetailBarButton.customView = backToDetailButton
         
-        let headerLabel = UILabel()
-        headerLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        headerLabel.text = museum.title
-        headerLabel.font = UIFont(name: "Avenir Black", size: 24)
-        headerLabel.textAlignment = .center
-        headerLabel.textColor = UIColor.white
-        
-        let headerTitle = UIBarButtonItem(customView: headerLabel)
-        //navigationController?.toolbar.setItems([toolbarTitle], animated: true)
-        let headerItems: [UIBarButtonItem] = [backToDetailBarButton, headerTitle]
+        let headerItems: [UIBarButtonItem] = [backToDetailBarButton]
         self.header.setItems(headerItems, animated: false)
     }
     

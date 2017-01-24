@@ -80,7 +80,6 @@ class InteriorVC: UIViewController {
         //Header
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
@@ -94,7 +93,16 @@ class InteriorVC: UIViewController {
         let backToDetailBarButton = UIBarButtonItem()
         backToDetailBarButton.customView = backToDetailButton
         
-        let headerButtons: [UIBarButtonItem] = [backToDetailBarButton]
+        let titleLabel = UILabel()
+        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        titleLabel.text = museum.title
+        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = UIColor.white
+        
+        let titleBarButton = UIBarButtonItem(customView: titleLabel)
+        
+        let headerButtons: [UIBarButtonItem] = [backToDetailBarButton, titleBarButton]
         self.header.setItems(headerButtons, animated: false)
     }
     
