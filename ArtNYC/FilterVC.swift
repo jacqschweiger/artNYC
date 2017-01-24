@@ -20,6 +20,7 @@ class FilterVC: UIViewController {
     override func loadView(){
         self.filterView = FilterView()
         self.view = self.filterView
+        
     }
     
     

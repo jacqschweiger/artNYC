@@ -23,5 +23,4 @@ class FilterView: UIView {
     }
     
     
-    
 }

@@ -55,8 +55,7 @@ extension MuseumListVC {
     
     func showSettings(){
         let filterController = FilterVC()
-        self.present(filterController, animated: false, completion: nil)
-        //navigationController?.pushViewController(mapViewController, animated: false)
+        self.present(filterController, animated: true, completion: nil)
     }
     
 }
