@@ -24,7 +24,6 @@ class DetailView: UIView, GMSMapViewDelegate {
     var header = UILabel()
     var toolbar = UIToolbar()
     var scrollView = UIScrollView()
-    var interiorLabel = UILabel()
     var seeInsideButton = UIButton()
     var nameLabel = UILabel()
     var hoursLabel = UILabel()
@@ -94,18 +93,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Intervior View Label // Add only if museum has street view
         if self.museum.interiorMapView == true {
-//            scrollView.addSubview(interiorLabel)
-//            interiorLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-//            interiorLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
-//            interiorLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-//            interiorLabel.heightAnchor.constraint(equalToConstant: 20)
-//            interiorLabel.translatesAutoresizingMaskIntoConstraints = false
-//            
-//            interiorLabel.text = "See 360° Gallery View"
-//            interiorLabel.textAlignment = .center
-//            interiorLabel.font = UIFont(name: "Avenir Black", size: 20)
-//            interiorLabel.textColor = UIColor.white
-//            interiorLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             
             seeInsideButton = UIButton(type: .custom)
             seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)

@@ -15,7 +15,7 @@ class InteriorVC: UIViewController {
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
     var toolbar = UIToolbar()
-    var header = UILabel()
+    var header = UIToolbar()
     var panoView = GMSPanoramaView()
     
     override func viewDidLoad() {
@@ -30,8 +30,8 @@ class InteriorVC: UIViewController {
         self.view.addSubview(panoView)
         panoView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         panoView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        panoView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        panoView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        panoView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
+        panoView.bottomAnchor.constraint(equalTo: self.toolbar.topAnchor).isActive = true
         panoView.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -80,11 +80,30 @@ class InteriorVC: UIViewController {
         //Header
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.12).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
+        self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         
-        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        let backToDetailButton = UIButton()
+        backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
+        backToDetailButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+        backToDetailButton.addTarget(self, action: #selector(goToDetailView), for: .touchUpInside)
+        
+        let backToDetailBarButton = UIBarButtonItem()
+        backToDetailBarButton.customView = backToDetailButton
+        
+        let headerButtons: [UIBarButtonItem] = [backToDetailBarButton]
+        self.header.setItems(headerButtons, animated: false)
+        
+        
+
+//        self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+//        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
+//        self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+//        self.header.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
     }
     
@@ -102,6 +121,7 @@ class InteriorVC: UIViewController {
     }
     
     func goToDetailView(){
+        navigationController?.popViewController(animated: true)
     }
     
     func showSettings(){
