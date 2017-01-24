@@ -65,4 +65,8 @@ extension DetailVC {
         
     }
     
+    func showSettings(){
+        
+    }
+    
 }

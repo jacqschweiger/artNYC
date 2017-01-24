@@ -13,6 +13,7 @@ protocol NavigationDelegate: class {
     func goHome()
     func showMap()
     func goToDetailView()
+    func showSettings()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
@@ -134,7 +135,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func showSettings(){
-        //TODO
+        self.delegate?.showSettings()
     }
     
 }

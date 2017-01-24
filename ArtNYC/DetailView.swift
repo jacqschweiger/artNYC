@@ -402,7 +402,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     func showSettings(){
-        //TODO
+
     }
     
 }
