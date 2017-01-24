@@ -40,7 +40,7 @@ class WebVC: UIViewController, WebNavDelegate {
     }
     
     func goBackToDetail(){
-        self.navigationController?.popViewController(animated: false)
+        _ = self.navigationController?.popViewController(animated: false)
     }
     
 }
