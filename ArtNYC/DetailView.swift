@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-protocol showWebViewDelegate: class {
+protocol showDetailDelegate: class {
     func goToWebView()
+    func goToInteriorView()
 }
 
 class DetailView: UIView, GMSMapViewDelegate {
     
-    weak var showWebViewDelegate: showWebViewDelegate?
+    weak var showDetailDelegate: showDetailDelegate?
     weak var navDelegate: NavBarDelegate?
     var museum: Museum!
     var panoView = GMSPanoramaView()
@@ -107,7 +108,7 @@ class DetailView: UIView, GMSMapViewDelegate {
 //            interiorLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             
             seeInsideButton = UIButton(type: .custom)
-            seeInsideButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
+            seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)
             scrollView.addSubview(seeInsideButton)
             seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
             seeInsideButton.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
@@ -397,7 +398,11 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     func onGoToWebView(){
-        self.showWebViewDelegate?.goToWebView()
+        self.showDetailDelegate?.goToWebView()
+    }
+    
+    func onGoToInteriorView(){
+        self.showDetailDelegate?.goToInteriorView()
     }
     
     func goHome(){
