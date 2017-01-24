@@ -24,6 +24,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var toolbar = UIToolbar()
     var scrollView = UIScrollView()
     var interiorLabel = UILabel()
+    var seeInsideButton = UIButton()
     var nameLabel = UILabel()
     var hoursLabel = UILabel()
     var sundayLabel = UILabel()
@@ -92,23 +93,37 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Intervior View Label // Add only if museum has street view
         if self.museum.interiorMapView == true {
-            scrollView.addSubview(interiorLabel)
-            interiorLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            interiorLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
-            interiorLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-            interiorLabel.heightAnchor.constraint(equalToConstant: 20)
-            interiorLabel.translatesAutoresizingMaskIntoConstraints = false
+//            scrollView.addSubview(interiorLabel)
+//            interiorLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//            interiorLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
+//            interiorLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+//            interiorLabel.heightAnchor.constraint(equalToConstant: 20)
+//            interiorLabel.translatesAutoresizingMaskIntoConstraints = false
+//            
+//            interiorLabel.text = "See 360° Gallery View"
+//            interiorLabel.textAlignment = .center
+//            interiorLabel.font = UIFont(name: "Avenir Black", size: 20)
+//            interiorLabel.textColor = UIColor.white
+//            interiorLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             
-            interiorLabel.text = "See 360° Gallery View"
-            interiorLabel.textAlignment = .center
-            interiorLabel.font = UIFont(name: "Avenir Black", size: 20)
-            interiorLabel.textColor = UIColor.white
-            interiorLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            seeInsideButton = UIButton(type: .custom)
+            seeInsideButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
+            scrollView.addSubview(seeInsideButton)
+            seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
+            seeInsideButton.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
+            seeInsideButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            seeInsideButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            seeInsideButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            seeInsideButton.setTitle("See 360° Gallery View", for: .normal)
+            seeInsideButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            seeInsideButton.tintColor = UIColor.white
+            seeInsideButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
             
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
             artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.interiorLabel.bottomAnchor, constant: 40).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 40).isActive = true
             artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -335,6 +350,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         websiteButton.setTitle("See Website", for: .normal)
         websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         websiteButton.tintColor = UIColor.white
+        websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
     }
     
     
