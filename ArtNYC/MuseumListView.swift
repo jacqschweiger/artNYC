@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol NavBarDelegate: class {
+protocol NavigationDelegate: class {
     func goHome()
     func showMap()
     func goToDetailView()
@@ -17,7 +17,7 @@ protocol NavBarDelegate: class {
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    weak var delegate: NavBarDelegate?
+    weak var delegate: NavigationDelegate?
     let header = UILabel()
     let tableView = UITableView()
     let navBar = UIToolbar()

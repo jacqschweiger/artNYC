@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-class MuseumListVC: UIViewController, NavBarDelegate {
+class MuseumListVC: UIViewController, NavigationDelegate {
     
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance

@@ -97,7 +97,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
 }
 
 
-    // MARK: Toolbar Functions
+    // MARK: NavBar Functions
 
 extension MapVC {
 
