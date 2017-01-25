@@ -74,7 +74,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         header.textColor = UIColor.white
         
         //Filter Set Up
-//        self.addSubview(filterButton)
+
         self.insertSubview(filterButton, aboveSubview: header)
         self.filterButton.setTitle("•••", for: .normal)
         self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)

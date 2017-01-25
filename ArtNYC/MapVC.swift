@@ -14,7 +14,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum?
     var mapView: GMSMapView!
-    var header = UIToolbar()
+    var header = UILabel()
+    var filterButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +44,37 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     func setUpHeader() {
-    
-        //Header
+        
+        //Header Set Up
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
-        header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        header.text = "Art Museums NYC"
+        header.font = UIFont(name: "Avenir Black", size: 26)
+        header.textAlignment = .center
+        header.textColor = UIColor.white
         
+        //Filter Set Up
+        
+        self.view.insertSubview(filterButton, aboveSubview: header)
+        self.filterButton.setTitle("•••", for: .normal)
+        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+        
+        self.filterButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -15).isActive = true
+        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+        
+    }
+    
+    func showFilter(){
+        let filterController = FilterVC()
+        filterController.modalPresentationStyle = .overFullScreen
+        filterController.modalTransitionStyle = .crossDissolve
+        self.present(filterController, animated: true, completion: nil)
     }
 
     // MARK: GMSMapViewDelegate
