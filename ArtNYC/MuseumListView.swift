@@ -61,7 +61,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         //Header Set Up
         self.addSubview(header)
         self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         

@@ -64,22 +64,23 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.addSubview(container)
         self.container.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.container.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.container.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
+        self.container.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
         self.container.translatesAutoresizingMaskIntoConstraints = false
         self.container.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Title Label
-        //self.addSubview(titleLabel)
-//        self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
-//        self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
-//        self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
-//        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-//        titleLabel.text = museum.title
-//        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
-//        titleLabel.textAlignment = .center
-//        titleLabel.textColor = UIColor.white
+        self.addSubview(titleLabel)
+        self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
+        self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
+        self.titleLabel.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+        self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
+        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        titleLabel.text = museum.title
+        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = UIColor.white
         
         //Back Button
         self.addSubview(backButton)
@@ -87,7 +88,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         
         self.backButton.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 15).isActive = true
-        self.backButton.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+        self.backButton.centerYAnchor.constraint(equalTo: self.titleLabel.centerYAnchor).isActive = true
         self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
 
