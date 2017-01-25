@@ -1,5 +1,5 @@
 //
-//  TabBarViewController.swift
+//  TabBarVC.swift
 //  ArtNYC
 //
 //  Created by Jacqueline Minneman on 1/25/17.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class TabBarVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,14 @@ class TabBarViewController: UITabBarController {
         
         tabTwo.tabBarItem = tabTwoBarItem2
         
+        // Create Tab three
+        let tabThree = FilterVC()
+        let tabThreeBarItem3 = UITabBarItem(title: "Settings", image: UIImage(named: "Settings Icon"), selectedImage: UIImage(named: "Settings Icon"))
         
-        self.viewControllers = [tabOne, tabTwo]
+        tabThree.tabBarItem = tabThreeBarItem3
+        
+        
+        self.viewControllers = [tabOne, tabTwo, tabThree]
     }
     
     // UITabBarControllerDelegate method

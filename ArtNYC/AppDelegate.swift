@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(Constants.key)
         GMSPlacesClient.provideAPIKey(Constants.key)
         
-        initialViewController  = TabBarViewController(nibName:"TabBarViewController",bundle:nil)
+        initialViewController  = TabBarVC(nibName:"TabBarVC",bundle:nil)
         
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)

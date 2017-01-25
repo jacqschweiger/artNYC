@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		710D80451E2C1750002AD134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710D80441E2C1750002AD134 /* Constants.swift */; };
 		7114BF151E37ADFC00C81949 /* InteriorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7114BF141E37ADFC00C81949 /* InteriorVC.swift */; };
-		7117758D1E390D2B0082D6CC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7117758C1E390D2B0082D6CC /* TabBarViewController.swift */; };
+		7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7117758C1E390D2B0082D6CC /* TabBarVC.swift */; };
 		7132CBF51E29752C008CA655 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF41E29752C008CA655 /* MapVC.swift */; };
 		7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF61E2978A8008CA655 /* DetailVC.swift */; };
 		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
@@ -45,7 +45,7 @@
 		517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtNYC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710D80441E2C1750002AD134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7114BF141E37ADFC00C81949 /* InteriorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteriorVC.swift; sourceTree = "<group>"; };
-		7117758C1E390D2B0082D6CC /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7117758C1E390D2B0082D6CC /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,13 +102,13 @@
 		7132CBEF1E29698A008CA655 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7117758C1E390D2B0082D6CC /* TabBarVC.swift */,
 				715204461E2A6B0300AD04AB /* MuseumListVC.swift */,
 				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
 				7132CBF41E29752C008CA655 /* MapVC.swift */,
 				716027441E2A8F7900CAF26B /* WebVC.swift */,
 				7114BF141E37ADFC00C81949 /* InteriorVC.swift */,
 				715924531E380EF00007B852 /* FilterVC.swift */,
-				7117758C1E390D2B0082D6CC /* TabBarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,7 +359,7 @@
 				7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */,
 				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
 				715924541E380EF00007B852 /* FilterVC.swift in Sources */,
-				7117758D1E390D2B0082D6CC /* TabBarViewController.swift in Sources */,
+				7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */,
 				715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
