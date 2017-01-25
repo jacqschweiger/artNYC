@@ -47,6 +47,6 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     }
     
     func goBack(){
-        _ = self.navigationController?.popViewController(animated: false)
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }

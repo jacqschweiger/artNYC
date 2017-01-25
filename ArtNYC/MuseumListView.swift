@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-protocol NavigationDelegate: class {
+protocol ShowDetailViewDelegate: class {
     func goToDetailView()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    weak var delegate: NavigationDelegate?
+    weak var delegate: ShowDetailViewDelegate?
     let header = UILabel()
     let tableView = UITableView()
     let navBar = UIToolbar()

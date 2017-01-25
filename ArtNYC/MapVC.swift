@@ -64,6 +64,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
         let detailViewController = DetailVC()
         detailViewController.museum = self.selectedMuseum
-        navigationController?.pushViewController(detailViewController, animated: false)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

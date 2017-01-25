@@ -14,125 +14,69 @@ class InteriorVC: UIViewController {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
-    var navBar = UIToolbar()
-    var header = UIToolbar()
     var panoView = GMSPanoramaView()
+    let container = UIView()
+    let titleLabel = UILabel()
+    let backButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpNavBar()
+
         setUpHeader()
+        
         self.panoView.moveNearCoordinate(museum.coordinate)
         setUpPanoView()
+    }
+
+    
+    func setUpHeader(){
+        //Header Container
+        self.view.addSubview(container)
+        self.container.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.container.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        self.container.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
+        self.container.translatesAutoresizingMaskIntoConstraints = false
+        self.container.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Title Label
+//        self.view.addSubview(titleLabel)
+//        self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
+//        self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
+//        self.titleLabel.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+//        self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
+//        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+//        titleLabel.text = museum.title
+//        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
+//        titleLabel.textAlignment = .center
+//        titleLabel.textColor = UIColor.white
+
+        //Back Button
+        self.view.addSubview(backButton)
+        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        
+        self.backButton.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 15).isActive = true
+        self.backButton.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        self.backButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setUpPanoView(){
         self.view.addSubview(panoView)
         panoView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         panoView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        panoView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        panoView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
+        panoView.topAnchor.constraint(equalTo: self.container.bottomAnchor).isActive = true
+        panoView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         panoView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    
-    func setUpNavBar (){
-        
-        let homeButton = UIButton()
-        homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        homeButton.setImage(UIImage(named: "Home Icon"), for: .normal)
-        homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
-        
-        let homeBarButton = UIBarButtonItem()
-        homeBarButton.customView = homeButton
-        
-        let mapButton = UIButton()
-        mapButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        mapButton.setImage(UIImage(named: "Compass Icon"), for: .normal)
-        mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
-        
-        let mapBarButton = UIBarButtonItem()
-        mapBarButton.customView = mapButton
-        
-        let settingsButton = UIButton()
-        settingsButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        settingsButton.setImage(UIImage(named: "Settings Icon"), for: .normal)
-        settingsButton.addTarget(self, action: #selector(showSettings), for: .touchUpInside)
-        
-        let settingsBarButton = UIBarButtonItem()
-        settingsBarButton.customView = settingsButton
-        
-        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
-        
-        self.view.addSubview(navBar)
-        self.navBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.navBar.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        self.navBar.translatesAutoresizingMaskIntoConstraints = false
-        self.navBar.setItems(navBarButtons, animated: false)
-        self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+    func goBack(){
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
-    func setUpHeader(){
-    
-        //Header
-        self.view.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        self.header.translatesAutoresizingMaskIntoConstraints = false
-        self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        
-        let backToDetailButton = UIButton()
-        backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
-        backToDetailButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-        backToDetailButton.addTarget(self, action: #selector(goToDetailView), for: .touchUpInside)
-        
-        let backToDetailBarButton = UIBarButtonItem()
-        backToDetailBarButton.customView = backToDetailButton
-        
-        //TODO: fix title label 
-        
-        let titleLabel = UILabel()
-        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        titleLabel.text = museum.title
-        titleLabel.font = UIFont(name: "Avenir Black", size: 12)
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = UIColor.white
-        
-        let titleBarButton = UIBarButtonItem()
-        titleBarButton.customView = titleLabel
-        
-        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let headerButtons: [UIBarButtonItem] = [backToDetailBarButton, titleBarButton, spacer]
-        self.header.setItems(headerButtons, animated: false)
-    }
-    
-}
-
-// MARK: NavBar Functions
-
-extension InteriorVC {
-    
-    func goHome(){
-        let homeController = MuseumListVC()
-        navigationController?.pushViewController(homeController, animated: false)
-    }
-    
-    func showMap(){
-        let mapViewController = MapVC()
-        navigationController?.pushViewController(mapViewController, animated: false)
-    }
-    
-    func goToDetailView(){
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
-    func showSettings(){
-        //TODO
-    }
 }
 

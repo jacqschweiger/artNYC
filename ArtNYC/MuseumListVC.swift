@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-class MuseumListVC: UIViewController, NavigationDelegate {
+class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
@@ -35,7 +35,7 @@ class MuseumListVC: UIViewController, NavigationDelegate {
     func goToDetailView(){
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumListView.selectedMuseum
-        navigationController?.pushViewController(detailViewController, animated: false)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
     
     func showSettings(){
