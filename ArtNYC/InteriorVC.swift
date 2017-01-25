@@ -37,20 +37,6 @@ class InteriorVC: UIViewController {
         self.container.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
         self.container.translatesAutoresizingMaskIntoConstraints = false
         self.container.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Title Label
-//        self.view.addSubview(titleLabel)
-//        self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
-//        self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
-//        self.titleLabel.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
-//        self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
-//        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-//        titleLabel.text = museum.title
-//        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
-//        titleLabel.textAlignment = .center
-//        titleLabel.textColor = UIColor.white
 
         //Back Button
         self.view.addSubview(backButton)
