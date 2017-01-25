@@ -16,6 +16,8 @@ class FilterView: UIView {
     override init(frame:CGRect){
         super.init(frame: frame)
         
+        self.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        
         self.addSubview(filterMenu)
         
         self.filterMenu.backgroundColor = UIColor.blue

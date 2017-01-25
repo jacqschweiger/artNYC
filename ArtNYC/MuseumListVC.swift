@@ -55,6 +55,7 @@ extension MuseumListVC {
     
     func showSettings(){
         let filterController = FilterVC()
+        filterController.modalPresentationStyle = .overCurrentContext
         self.present(filterController, animated: true, completion: nil)
     }
     
