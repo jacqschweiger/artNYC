@@ -77,10 +77,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        titleLabel.text = museum.title
         titleLabel.font = UIFont(name: "Avenir Black", size: 24)
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.white
+        
+        if museum.title == "The Metropolitan Museum of Art" {
+            titleLabel.text = "The Met"
+        } else if museum.title == "Solomon R. Guggenheim Museum" {
+            titleLabel.text = "The Guggenheim"
+        } else {
+            titleLabel.text = museum.title
+        }
         
         //Back Button
         self.addSubview(backButton)

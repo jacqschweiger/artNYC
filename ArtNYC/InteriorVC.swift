@@ -58,7 +58,7 @@ class InteriorVC: UIViewController {
         self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         
         self.backButton.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 15).isActive = true
-        self.backButton.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+        self.backButton.centerYAnchor.constraint(equalTo: self.container.centerYAnchor).isActive = true
         self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
         
