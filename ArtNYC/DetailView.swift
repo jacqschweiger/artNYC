@@ -49,7 +49,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         super.init(frame: frame)
         self.museum = museum
         self.backgroundColor = UIColor.white
-        self.setUpNavBar()
+        //self.setUpNavBar()
         self.setUpElements()
         reloadInputViews()
     }

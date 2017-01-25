@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(Constants.key)
         GMSPlacesClient.provideAPIKey(Constants.key)
         
-        initialViewController  = MuseumListVC(nibName:"MuseumListVC",bundle:nil)
+        initialViewController  = TabBarViewController(nibName:"TabBarViewController",bundle:nil)
         
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
@@ -30,8 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: self.initialViewController!)
         self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
-        
-//        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Black", size: 18)!], for: .normal)
         
         return true
     }

@@ -31,7 +31,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        setUpNavBar()
+        //setUpNavBar()
         setUpElements()
 
     }
@@ -78,7 +78,8 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         //Table View Set Up
         self.addSubview(tableView)
         self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        self.tableView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        self.tableView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
         self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
