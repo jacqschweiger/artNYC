@@ -11,6 +11,7 @@ import UIKit
 
 protocol ShowDetailViewDelegate: class {
     func goToDetailView()
+    func showFilter()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
@@ -21,6 +22,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     let navBar = UIToolbar()
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum!
+    var filterButton = UIButton()
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -71,6 +73,16 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         header.textAlignment = .center
         header.textColor = UIColor.white
         
+        //Filter Set Up
+//        self.addSubview(filterButton)
+        self.insertSubview(filterButton, aboveSubview: header)
+        self.filterButton.setTitle("•••", for: .normal)
+        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+        
+        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+        
         //Table View Set Up
         self.addSubview(tableView)
         self.tableView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
@@ -78,6 +90,10 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
+    }
+    
+    func showFilter(){
+        self.delegate?.showFilter()
     }
 }
 

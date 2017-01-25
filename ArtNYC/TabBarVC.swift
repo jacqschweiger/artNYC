@@ -31,7 +31,8 @@ class TabBarVC: UITabBarController {
         tabTwo.tabBarItem = tabTwoBarItem2
         
         // Create Tab three
-        let tabThree = FilterVC()
+        // TODO: Create FavoritesVC
+        let tabThree = MapVC()
         let tabThreeBarItem3 = UITabBarItem(title: "Settings", image: UIImage(named: "Settings Icon"), selectedImage: UIImage(named: "Settings Icon"))
         
         tabThree.tabBarItem = tabThreeBarItem3
@@ -44,11 +45,4 @@ class TabBarVC: UITabBarController {
     }
 }
 
-//TODO: create filter option on top right header
 
-//        func showSettings(){
-//let filterController = FilterVC()
-//filterController.modalPresentationStyle = .overFullScreen
-//filterController.modalTransitionStyle = .crossDissolve
-//self.present(filterController, animated: true, completion: nil)
-//}

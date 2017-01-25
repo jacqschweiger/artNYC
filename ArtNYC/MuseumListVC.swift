@@ -38,4 +38,11 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
+    func showFilter(){
+        let filterController = FilterVC()
+        filterController.modalPresentationStyle = .overFullScreen
+        filterController.modalTransitionStyle = .crossDissolve
+        self.present(filterController, animated: true, completion: nil)
+    }
+    
 }
