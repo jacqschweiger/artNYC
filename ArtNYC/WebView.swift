@@ -10,16 +10,20 @@ import Foundation
 import UIKit
 
 protocol WebNavDelegate: class {
-    func goBack(_: AnyObject)
     func goForward(_: AnyObject)
     func doRefresh(_: AnyObject)
     func stop(_: AnyObject)
-    func goBackToDetail()
+    func doGoBack(_: AnyObject)
+}
+
+protocol BackDelegate: class {
+    func goBack()
 }
 
 class WebView: UIView {
     
     weak var delegate: WebNavDelegate?
+    weak var backDelegate: BackDelegate?
     var museum: Museum!
     var museumWebView: UIWebView!
     var header = UIToolbar()
@@ -71,7 +75,7 @@ class WebView: UIView {
         let backToDetailButton = UIButton()
         backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
         backToDetailButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-        backToDetailButton.addTarget(self, action: #selector(goBackToDetail), for: .touchUpInside)
+        backToDetailButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         
         let backToDetailBarButton = UIBarButtonItem()
         backToDetailBarButton.customView = backToDetailButton
@@ -85,7 +89,7 @@ class WebView: UIView {
         let backButton = UIButton()
         backButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
         backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-        backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(doGoBack), for: .touchUpInside)
         
         let backBarButton = UIBarButtonItem()
         backBarButton.customView = backButton
@@ -126,14 +130,14 @@ class WebView: UIView {
         self.webNavBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
     }
     
-    func goBackToDetail(){
-        self.delegate?.goBackToDetail()
+    func goBack(){
+        self.backDelegate?.goBack()
     }
     
     // MARK: WebView Navigation Functions
     
-    func goBack(){
-        self.delegate?.goBack(UIBarButtonItem.self)
+    func doGoBack(){
+        self.delegate?.doGoBack(UIBarButtonItem.self)
     }
     
     func goForward(){

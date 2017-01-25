@@ -18,9 +18,12 @@ protocol ShowInfoDelegate: class {
 class DetailView: UIView, GMSMapViewDelegate {
     
     weak var showInfoDelegate: ShowInfoDelegate?
+    weak var backDelegate: BackDelegate?
     var museum: Museum!
     var museumImage = UIImageView()
-    var header = UILabel()
+    var container = UIView()
+    var titleLabel = UILabel()
+    var backButton = UIButton()
     var scrollView = UIScrollView()
     var seeInsideButton = UIButton()
     var nameLabel = UILabel()
@@ -57,25 +60,46 @@ class DetailView: UIView, GMSMapViewDelegate {
     
     func setUpElements() {
         
-        //Header
-        self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
-        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.header.translatesAutoresizingMaskIntoConstraints = false
+        //Header Container
+        self.addSubview(container)
+        self.container.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.container.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.container.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
+        self.container.translatesAutoresizingMaskIntoConstraints = false
+        self.container.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
-        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        header.text = museum.title
-        header.font = UIFont(name: "Avenir Black", size: 24)
-        header.textAlignment = .center
-        header.textColor = UIColor.white
+        //Title Label
+        //self.addSubview(titleLabel)
+//        self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
+//        self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
+//        self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
+//        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+//        titleLabel.text = museum.title
+//        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
+//        titleLabel.textAlignment = .center
+//        titleLabel.textColor = UIColor.white
         
-        //Instagram View
+        //Back Button
+        self.addSubview(backButton)
+        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        
+        self.backButton.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 15).isActive = true
+        self.backButton.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
+
+        self.backButton.translatesAutoresizingMaskIntoConstraints = false
+
+        
+        //Image View
         self.addSubview(museumImage)
         museumImage.backgroundColor = UIColor.blue
         museumImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         museumImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
-        museumImage.topAnchor.constraint(equalTo: self.header.bottomAnchor, constant: 20).isActive = true
+        museumImage.topAnchor.constraint(equalTo: self.container.bottomAnchor, constant: 20).isActive = true
         museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
         museumImage.translatesAutoresizingMaskIntoConstraints = false
         
@@ -347,6 +371,10 @@ class DetailView: UIView, GMSMapViewDelegate {
     
     func onGoToInteriorView(){
         self.showInfoDelegate?.goToInteriorView()
+    }
+    
+    func goBack(){
+        self.backDelegate?.goBack()
     }
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class WebVC: UIViewController, WebNavDelegate {
+class WebVC: UIViewController, WebNavDelegate, BackDelegate {
     
     var museum: Museum!
     var webView: WebView!
@@ -20,15 +20,16 @@ class WebVC: UIViewController, WebNavDelegate {
         self.webView = WebView(frame: CGRect.zero, museum: museum)
         self.view = self.webView
         webView.delegate = self
+        webView.backDelegate = self
     }
     
-    func goBackToDetail(){
+    func goBack(){
         _ = self.navigationController?.popViewController(animated: false)
     }
     
     // MARK: WebView Navigation Functions
 
-    func goBack(_: AnyObject) {
+    func doGoBack(_: AnyObject) {
         webView.museumWebView.goBack()
     }
     

@@ -40,6 +40,6 @@ class TabBarVC: UITabBarController {
         
         self.tabBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         self.tabBar.tintColor = UIColor.white
-
+        self.tabBar.unselectedItemTintColor = UIColor(named: UIColor.ColorName.darkBlue)
     }
 }
