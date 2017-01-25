@@ -15,14 +15,16 @@ class FilterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func loadView(){
+        
         self.filterView = FilterView()
-        self.view = self.filterView
+        self.view = filterView
+        
+        //self.view.addSubview(filterView)
+        
+//        self.filterView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 200).isActive = true
+//        self.filterView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 300).isActive = true
+//        self.view.translatesAutoresizingMaskIntoConstraints = false
         
     }
-    
-    
     
 }

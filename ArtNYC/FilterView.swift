@@ -11,10 +11,19 @@ import UIKit
 
 class FilterView: UIView {
     
+    var filterMenu = UIView()
+    
     override init(frame:CGRect){
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.blue
+        self.addSubview(filterMenu)
+        
+        self.filterMenu.backgroundColor = UIColor.blue
+        self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.filterMenu.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        self.filterMenu.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
     
     }
     
