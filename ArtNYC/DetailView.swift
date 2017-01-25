@@ -18,11 +18,9 @@ protocol ShowInfoDelegate: class {
 class DetailView: UIView, GMSMapViewDelegate {
     
     weak var showInfoDelegate: ShowInfoDelegate?
-    weak var navDelegate: NavigationDelegate?
     var museum: Museum!
     var museumImage = UIImageView()
     var header = UILabel()
-    var navBar = UIToolbar()
     var scrollView = UIScrollView()
     var seeInsideButton = UIButton()
     var nameLabel = UILabel()
@@ -49,7 +47,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         super.init(frame: frame)
         self.museum = museum
         self.backgroundColor = UIColor.white
-        //self.setUpNavBar()
         self.setUpElements()
         reloadInputViews()
     }
@@ -87,7 +84,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 10).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: self.navBar.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         
@@ -342,44 +339,6 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     
-    func setUpNavBar(){
-        
-        let homeButton = UIButton()
-        homeButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        homeButton.setImage(UIImage(named: "Home Icon"), for: .normal)
-        homeButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
-        
-        let homeBarButton = UIBarButtonItem()
-        homeBarButton.customView = homeButton
-        
-        let mapButton = UIButton()
-        mapButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        mapButton.setImage(UIImage(named: "Compass Icon"), for: .normal)
-        mapButton.addTarget(self, action: #selector(showMap), for: .touchUpInside)
-        
-        let mapBarButton = UIBarButtonItem()
-        mapBarButton.customView = mapButton
-        
-        let settingsButton = UIButton()
-        settingsButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        settingsButton.setImage(UIImage(named: "Settings Icon"), for: .normal)
-        settingsButton.addTarget(self, action: #selector(showSettings), for: .touchUpInside)
-        
-        let settingsBarButton = UIBarButtonItem()
-        settingsBarButton.customView = settingsButton
-        
-        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let navBarButtons: [UIBarButtonItem] = [homeBarButton, spacer, mapBarButton, spacer, settingsBarButton]
-        
-        self.addSubview(navBar)
-        self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.navBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.navBar.translatesAutoresizingMaskIntoConstraints = false
-        self.navBar.setItems(navBarButtons, animated: false)
-        self.navBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
-    }
-    
     // MARK: Show Info Button Functions
     
     func onGoToWebView(){
@@ -388,21 +347,6 @@ class DetailView: UIView, GMSMapViewDelegate {
     
     func onGoToInteriorView(){
         self.showInfoDelegate?.goToInteriorView()
-    }
-    
-    
-    // MARK: NavBar Functions
-    
-    func goHome(){
-        self.navDelegate?.goHome()
-    }
-    
-    func showMap(){
-        self.navDelegate?.showMap()
-    }
-    
-    func showSettings(){
-
     }
     
 }

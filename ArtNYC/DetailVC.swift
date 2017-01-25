@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, NavigationDelegate {
+class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum?
@@ -19,7 +19,6 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, Navigati
     override func viewDidLoad() {
         super.viewDidLoad()
         detailView.showInfoDelegate = self
-        detailView.navDelegate = self
     }
     
     override func loadView(){
@@ -45,28 +44,4 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, Navigati
         }
         navigationController?.pushViewController(interiorViewController, animated: true)
     }
-}
-
-// MARK: NavBar Functions
-
-extension DetailVC {
-    
-    func goHome(){
-        let homeViewController = MuseumListVC()
-        navigationController?.pushViewController(homeViewController, animated: false)
-    }
-    
-    func showMap(){
-        let mapViewController = MapVC()
-        navigationController?.pushViewController(mapViewController, animated: false)
-    }
-    
-    func goToDetailView(){
-        
-    }
-    
-    func showSettings(){
-        
-    }
-    
 }

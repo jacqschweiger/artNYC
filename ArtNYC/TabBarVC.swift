@@ -24,7 +24,6 @@ class TabBarVC: UITabBarController {
         
         tabOne.tabBarItem = tabOneBarItem
         
-        
         // Create Tab two
         let tabTwo = MapVC()
         let tabTwoBarItem2 = UITabBarItem(title: "Map", image: UIImage(named: "Compass Icon"), selectedImage: UIImage(named: "Compass Icon"))
@@ -37,12 +36,10 @@ class TabBarVC: UITabBarController {
         
         tabThree.tabBarItem = tabThreeBarItem3
         
-        
         self.viewControllers = [tabOne, tabTwo, tabThree]
-    }
-    
-    // UITabBarControllerDelegate method
-    func tabBarController(_ tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        print("Selected \(viewController.title!)")
+        
+        self.tabBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        self.tabBar.tintColor = UIColor.white
+
     }
 }

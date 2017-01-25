@@ -37,21 +37,6 @@ class MuseumListVC: UIViewController, NavigationDelegate {
         detailViewController.museum = self.museumListView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: false)
     }
-}
-
-
-// MARK: NavBar Functions
-
-extension MuseumListVC {
-    
-    func goHome(){
-        self.reloadInputViews()
-    }
-    
-    func showMap(){
-        let mapViewController = MapVC()
-        navigationController?.pushViewController(mapViewController, animated: false)
-    }
     
     func showSettings(){
         let filterController = FilterVC()
