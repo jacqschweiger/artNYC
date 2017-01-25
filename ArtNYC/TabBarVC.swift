@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class TabBarVC: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -43,3 +43,12 @@ class TabBarVC: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor(named: UIColor.ColorName.darkBlue)
     }
 }
+
+//TODO: create filter option on top right header
+
+//        func showSettings(){
+//let filterController = FilterVC()
+//filterController.modalPresentationStyle = .overFullScreen
+//filterController.modalTransitionStyle = .crossDissolve
+//self.present(filterController, animated: true, completion: nil)
+//}

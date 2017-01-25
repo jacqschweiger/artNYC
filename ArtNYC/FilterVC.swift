@@ -17,6 +17,7 @@ class FilterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.white
         self.filterView = FilterView()
         self.view = filterView
         
@@ -25,15 +26,15 @@ class FilterVC: UIViewController {
         dismissButton.backgroundColor = UIColor.clear
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.insertSubview(dismissButton, belowSubview: filterView)
+        
         dismissButton.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         dismissButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         dismissButton.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         dismissButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        
     }
     
     func dismissView(){
         dismiss(animated: true, completion: nil)
+
     }
-    
 }
