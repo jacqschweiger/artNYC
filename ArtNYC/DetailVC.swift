@@ -14,19 +14,18 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
-    var museumURL: String?
     var detailView: DetailView!
-    var photoURL: String!
+    var photoURL: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         detailView.showInfoDelegate = self
         detailView.backDelegate = self
+        print("detail vc \(self.photoURL)")
     }
     
     override func loadView(){
-        
-        self.detailView = DetailView(frame: CGRect.zero, museum: museum)
+        self.detailView = DetailView(frame: CGRect.zero, museum: museum, photoURL: photoURL)
         self.view = self.detailView
         self.view.reloadInputViews()
     }

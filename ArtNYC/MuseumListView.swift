@@ -130,7 +130,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         guard let placeID = self.placeID else { return }
         
         PhotosAPIClient.getPhotoReference(with: placeID) { (results) in
-            
             let photos = results["photos"] as! [[String: Any]]
             let photoDetails = photos[0]
             self.photoReference = photoDetails["photo_reference"] as! String!
