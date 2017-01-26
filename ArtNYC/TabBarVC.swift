@@ -11,12 +11,18 @@ import UIKit
 
 class TabBarVC: UITabBarController {
     
+    var placeID: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getProjectsFromAPI {
-            
+        getPlaceIDFromAPI {
         }
+        
+        getPlaceDetailsFromAPI {
+        }
+        
+        
         
     }
     
@@ -49,13 +55,21 @@ class TabBarVC: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor(named: UIColor.ColorName.darkBlue)
     }
     
-    func getProjectsFromAPI(completion: @escaping ()->()) {
+    func getPlaceIDFromAPI(completion: @escaping ()->()) {
             
         PhotosAPIClient.getPlaceID(with: { (results) in
-            print(results)
+            let newResults = results[0]
+            self.placeID = newResults["place_id"] as! String
             completion()
         })
+    }
+    
+    func getPlaceDetailsFromAPI(completion: @escaping ()->()) {
         
+        PhotosAPIClient.getPlaceDetails(with: self.placeID) { (results) in
+            print(results)
+            completion()
+        }
     }
 }
 

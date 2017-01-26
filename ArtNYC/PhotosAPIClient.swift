@@ -20,6 +20,8 @@ class PhotosAPIClient {
     var photoString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CoQBdwAAALmVFXv0igmO0Uj6MyT5N-h1zNgQIpqUvHzqmeBVcWJlfRADOb1EwvhCgwdSiAN_zFk-7K4ybHUbUjHigJjawD2rYvBTwKp8MG1Vk3ODaWxUvlsQEZwTSJIsux5HI00a8SutvpLy6jYVPFnLuXwJVRphvxtN-TfqU5rkMD0e8Br6EhAugi_MGB5o0aoni7Y2WC5iGhTxepDW_NSHpH8Y-WQkenHINrFcAw&key=\(Constants.key2)"
     
     
+    
+    
     class func getPlaceID(with completion: @escaping ([[String:AnyObject]])-> Void) {
         
         let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=200&keyword=neue+galerie&type=museum&key=\(Constants.key2)"
@@ -34,7 +36,36 @@ class PhotosAPIClient {
                         let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String: AnyObject]
                         
                         let results = responseJSON["results"]
-                        print(results ?? "no results")
+                        
+                        completion(results as! [[String : AnyObject]])
+                    
+                        
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    
+    
+    
+    class func getPlaceDetails(with placeID: String, completion: @escaping ([[String:AnyObject]])-> Void) {
+        
+        let urlString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=\(Constants.key2)"
+        
+        let url = URL(string: urlString)
+        
+        if let unwrappedURL = url {
+            let session = URLSession.shared
+            let task = session.dataTask(with: unwrappedURL) { (data, response, error) in
+                if let unwrappedData = data {
+                    do {
+                        let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String: AnyObject]
+                        
+                        let results = responseJSON["results"]
                         
                         completion(results as! [[String : AnyObject]])
                         
@@ -46,6 +77,9 @@ class PhotosAPIClient {
             task.resume()
         }
     }
+
+    
+    
 
 }
 
