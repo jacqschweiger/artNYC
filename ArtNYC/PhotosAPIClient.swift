@@ -24,7 +24,7 @@ class PhotosAPIClient {
     
     class func getPlaceID(with keyword: String, completion: @escaping ([[String:AnyObject]])-> Void) {
         
-        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=200&keyword=\(keyword)&type=museum&key=\(Constants.key2)"
+        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=500&keyword=\(keyword)&type=museum&key=\(Constants.key2)"
         
         let url = URL(string: urlString)
         

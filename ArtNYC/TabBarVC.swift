@@ -11,9 +11,6 @@ import UIKit
 
 class TabBarVC: UITabBarController {
     
-    var placeID: String!
-    var photoReference: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
  

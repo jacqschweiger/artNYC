@@ -17,6 +17,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     var detailView: DetailView!
     var placeID: String!
     var photoReference: String!
+    var photoURL: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,12 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
         detailView.backDelegate = self
         
         getPlaceIDFromAPI {
-            self.getPhotoReferenceFromAPI {
-                print(self.photoReference)
-            }
+            print("\(self.museum.title), \(self.placeID)")
+//            self.getPhotoReferenceFromAPI {
+//                guard let photoReference = self.photoReference else { return }
+//                self.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
+//                print(self.photoURL)
+//            }
         }
     }
     
