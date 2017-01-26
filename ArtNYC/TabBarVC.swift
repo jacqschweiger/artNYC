@@ -66,8 +66,8 @@ class TabBarVC: UITabBarController {
     
     func getPlaceDetailsFromAPI(completion: @escaping ()->()) {
         
-        PhotosAPIClient.getPlaceDetails(with: self.placeID) { (results) in
-            print(results)
+        PhotosAPIClient.getPlaceDetails { (results) in
+//            print(results)
             completion()
         }
     }
