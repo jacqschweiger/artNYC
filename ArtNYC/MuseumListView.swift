@@ -22,6 +22,9 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum!
     var filterButton = UIButton()
+    var placeID: String?
+    var photoReference: String?
+    var photoURL: String?
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -54,6 +57,13 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedMuseum = store.museums[indexPath.row]
+        
+        self.getPlaceIDFromAPI {
+            self.getPhotoReferenceFromAPI {
+                guard let photoReference = self.photoReference else { return }
+                self.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
+            }
+        }
         self.delegate?.goToDetailView()
     }
     
@@ -80,7 +90,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         header.textColor = UIColor.white
         
         //Filter Set Up
-
+        
         self.insertSubview(filterButton, aboveSubview: header)
         self.filterButton.setTitle("•••", for: .normal)
         self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
@@ -101,5 +111,30 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     func showFilter(){
         self.delegate?.showFilter()
     }
+    
+    // MARK: API Functions
+    
+    func getPlaceIDFromAPI(completion: @escaping ()->()) {
+        //let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+")
+        let museumTitle = "neue+galerie"
+        PhotosAPIClient.getPlaceID(with: museumTitle) { (results) in
+            let newResults = results[0]
+            self.placeID = newResults["place_id"] as! String
+            completion()
+        }
+    }
+    
+    func getPhotoReferenceFromAPI(completion: @escaping ()->()) {
+        guard let placeID = self.placeID else { return }
+        
+        PhotosAPIClient.getPhotoReference(with: placeID) { (results) in
+            
+            let photos = results["photos"] as! [[String: Any]]
+            let photoDetails = photos[0]
+            self.photoReference = photoDetails["photo_reference"] as! String!
+            completion()
+        }
+    }
+    
 }
 

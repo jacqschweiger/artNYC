@@ -14,6 +14,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
+    var museumURL: String?
     var detailView: DetailView!
     var placeID: String!
     var photoReference: String!
@@ -23,44 +24,14 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
         super.viewDidLoad()
         detailView.showInfoDelegate = self
         detailView.backDelegate = self
-        
-        getPlaceIDFromAPI {
-            print("\(self.museum.title), \(self.placeID)")
-//            self.getPhotoReferenceFromAPI {
-//                guard let photoReference = self.photoReference else { return }
-//                self.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
-//                print(self.photoURL)
-//            }
-        }
     }
     
     override func loadView(){
-        guard let museum = self.museum else { return }
+
         self.detailView = DetailView(frame: CGRect.zero, museum: museum)
         self.view = self.detailView
-    }
+        detailView.reloadInputViews()
     
-    // MARK: API Functions
-    
-    func getPlaceIDFromAPI(completion: @escaping ()->()) {
-        let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+")
-        
-        PhotosAPIClient.getPlaceID(with: museumTitle!) { (results) in
-            let newResults = results[0]
-            self.placeID = newResults["place_id"] as! String
-            completion()
-        }
-    }
-    
-    func getPhotoReferenceFromAPI(completion: @escaping ()->()) {
-        
-        PhotosAPIClient.getPhotoReference(with: self.placeID) { (results) in
-            
-            let photos = results["photos"] as! [[String: Any]]
-            let photoDetails = photos[0]
-            self.photoReference = photoDetails["photo_reference"] as! String!
-            completion()
-        }
     }
     
     // MARK: Button Functions

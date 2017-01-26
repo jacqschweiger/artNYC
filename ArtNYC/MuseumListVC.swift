@@ -14,6 +14,7 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     
     let museumListView = MuseumListView()
     var store = MuseumDataStore.sharedInstance
+    var photoURL: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     func goToDetailView(){
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumListView.selectedMuseum
+        detailViewController.photoURL = self.photoURL
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
