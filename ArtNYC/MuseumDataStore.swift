@@ -379,9 +379,7 @@ class MuseumDataStore {
                                    interiorMapView: false,
                                    photoURL: "")
         
-        //        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
-        
-        museums = [hispanicSociety]
+        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
         
         museums = self.museums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
