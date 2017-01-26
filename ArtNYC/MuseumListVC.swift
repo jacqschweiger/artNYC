@@ -13,15 +13,10 @@ import NotificationCenter
 class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     
     let museumListView = MuseumListView()
-    var store = MuseumDataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        store.loadMuseums()
         museumListView.delegate = self
-        
-        self.reloadInputViews()
     }
     
     override func viewWillAppear(_ animated: Bool){
@@ -35,8 +30,6 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     func goToDetailView(){
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumListView.selectedMuseum
-        detailViewController.photoURL = self.museumListView.photoURL
-        print("this is the home vc url: \(self.museumListView.photoURL)")
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     

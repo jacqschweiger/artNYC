@@ -18,13 +18,11 @@ class PhotosAPIClient {
     var placeDetailsString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ01_9-ZdYwokRL2JrA28GJp8&key=\(Constants.key2)"
     
     var photoString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CoQBdwAAALmVFXv0igmO0Uj6MyT5N-h1zNgQIpqUvHzqmeBVcWJlfRADOb1EwvhCgwdSiAN_zFk-7K4ybHUbUjHigJjawD2rYvBTwKp8MG1Vk3ODaWxUvlsQEZwTSJIsux5HI00a8SutvpLy6jYVPFnLuXwJVRphvxtN-TfqU5rkMD0e8Br6EhAugi_MGB5o0aoni7Y2WC5iGhTxepDW_NSHpH8Y-WQkenHINrFcAw&key=\(Constants.key2)"
-    
-    
-    
+
     
     class func getPlaceID(with keyword: String, completion: @escaping ([[String:AnyObject]])-> Void) {
         
-        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=500&keyword=\(keyword)&type=museum&key=\(Constants.key2)"
+        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=10000&keyword=\(keyword)&type=museum&key=\(Constants.key2)"
         
         let url = URL(string: urlString)
         

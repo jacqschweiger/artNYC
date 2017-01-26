@@ -15,6 +15,10 @@ class MuseumDataStore {
     static let sharedInstance = MuseumDataStore()
     
     var museums: [Museum]!
+    var placeID: String!
+    var photoReference: String!
+    var photoURL: String!
+    
     
     func loadMuseums() {
         let metMuseum = Museum(title:"The Metropolitan Museum of Art",
@@ -32,7 +36,8 @@ class MuseumDataStore {
                                artCategories: "All cultures and time periods",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7802722, longitude: -73.9622221),
                                url: "http://www.metmuseum.org/",
-                               interiorMapView: true)
+                               interiorMapView: true,
+                               photoURL: "")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
                                  logo: UIImage(named: "neueGalerieLogo")!,
@@ -49,7 +54,8 @@ class MuseumDataStore {
                                  artCategories: "Austrian & German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
                                  url: "http://neuegalerie.org/",
-                                 interiorMapView: false)
+                                 interiorMapView: false,
+                                 photoURL: "")
         
         let rubinMuseum = Museum(title: "Rubin Museum of Art",
                                  logo: UIImage(named: "rubinLogo")!,
@@ -66,7 +72,8 @@ class MuseumDataStore {
                                  artCategories: "Himalayan & Asian",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.740109, longitude: -73.9977899),
                                  url: "http://rubinmuseum.org/",
-                                 interiorMapView: true)
+                                 interiorMapView: true,
+                                 photoURL: "")
         
         let whitney = Museum(title: "Whitney Museum of American Art",
                              logo: UIImage(named: "whitneyLogo")!,
@@ -83,7 +90,8 @@ class MuseumDataStore {
                              artCategories: "American modern & contemporary",
                              coordinate: CLLocationCoordinate2D(latitude: 40.7396877, longitude: -74.0088928),
                              url: "http://whitney.org/",
-                             interiorMapView: false)
+                             interiorMapView: false,
+                             photoURL: "")
         
         
         let moma = Museum(title: "Museum of Modern Art",
@@ -101,7 +109,8 @@ class MuseumDataStore {
                           artCategories: "Modern & contemporary",
                           coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
                           url: "https://www.moma.org/",
-                          interiorMapView: true)
+                          interiorMapView: true,
+                          photoURL: "")
         
         let guggenheim = Museum(title: "Solomon R. Guggenheim Museum",
                                 logo: UIImage(named: "guggenheimLogo")!,
@@ -118,7 +127,8 @@ class MuseumDataStore {
                                 artCategories: "Modern & contemporary",
                                 coordinate: CLLocationCoordinate2D(latitude: 40.7829473, longitude: -73.959093),
                                 url: "https://www.guggenheim.org/",
-                                interiorMapView: true)
+                                interiorMapView: true,
+                                photoURL: "")
         
         let jewishMuseum = Museum(title: "Jewish Museum",
                                   logo: UIImage(named: "jewishMuseumLogo")!,
@@ -135,7 +145,8 @@ class MuseumDataStore {
                                   artCategories: "Jewish art & artists, contemporary & historic",
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
                                   url: "http://thejewishmuseum.org/",
-                                  interiorMapView: false)
+                                  interiorMapView: false,
+                                  photoURL: "")
         
         let folkArt = Museum(title: "American Folk Art Museum",
                              logo: UIImage(named: "folkArtLogo")!,
@@ -152,7 +163,8 @@ class MuseumDataStore {
                              artCategories: "American folk",
                              coordinate: CLLocationCoordinate2D(latitude: 40.7732, longitude: -73.9814),
                              url: "http://folkartmuseum.org/",
-                             interiorMapView: false)
+                             interiorMapView: false,
+                             photoURL: "")
         
         let newMuseum = Museum(title: "The New Museum",
                                logo: UIImage(named: "newMuseumLogo")!,
@@ -169,7 +181,8 @@ class MuseumDataStore {
                                artCategories: "Contemporary",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7223779, longitude: -73.993038),
                                url: "http://www.newmuseum.org/",
-                               interiorMapView: false)
+                               interiorMapView: false,
+                               photoURL: "")
         
         let museoDelBarrio = Museum(title: "El Museo Del Barrio",
                                     logo: UIImage(named: "museoDelBarrioLogo")!,
@@ -186,7 +199,8 @@ class MuseumDataStore {
                                     artCategories: "Latino, Caribbean, & Latin American",
                                     coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
                                     url: "http://www.elmuseo.org/",
-                                    interiorMapView: false)
+                                    interiorMapView: false,
+                                    photoURL: "")
         
         let mad = Museum(title: "Museum of Arts and Design",
                          logo: UIImage(named: "madLogo")!,
@@ -202,7 +216,8 @@ class MuseumDataStore {
                          freeHours: "Pay what you wish Thursdays, 6-9pm",                                    artCategories: "Craft, art & design, contemporary & historic",
                          coordinate: CLLocationCoordinate2D(latitude: 40.7674, longitude: -73.9820),
                          url: "http://www.madmuseum.org/",
-                         interiorMapView: false)
+                         interiorMapView: false,
+                         photoURL: "")
         
         let cooperHewitt = Museum(title: "Cooper Hewitt",
                                   logo: UIImage(named: "cooperHewittLogo")!,
@@ -218,7 +233,8 @@ class MuseumDataStore {
                                   freeHours: "Pay what you wish Saturdays, 6-9pm",                                    artCategories: "Design",
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7844391, longitude: -73.9578551),
                                   url: "https://www.cooperhewitt.org/",
-                                  interiorMapView: false)
+                                  interiorMapView: false,
+                                  photoURL: "")
         
         let frick = Museum(title: "The Frick Collection",
                            logo: UIImage(named: "frickLogo")!,
@@ -235,7 +251,8 @@ class MuseumDataStore {
                            artCategories: "Old Masters, European decorative",
                            coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
                            url: "http://www.frick.org/",
-                           interiorMapView: true)
+                           interiorMapView: true,
+                           photoURL: "")
         
         let drawingCenter = Museum(title: "The Drawing Center",
                                    logo: UIImage(named: "drawingCenterLogo")!,
@@ -252,7 +269,8 @@ class MuseumDataStore {
                                    artCategories: "Works on paper",
                                    coordinate: CLLocationCoordinate2D(latitude: 40.7223326, longitude: -74.0026948),
                                    url: "http://www.drawingcenter.org/",
-                                   interiorMapView: false)
+                                   interiorMapView: false,
+                                   photoURL: "")
         
         let cloisters = Museum(title: "The Met Cloisters",
                                logo: UIImage(named: "cloistersLogo")!,
@@ -268,7 +286,8 @@ class MuseumDataStore {
                                freeHours: "Pay what you wish, everyday",                               artCategories: "Medieval",
                                coordinate: CLLocationCoordinate2D(latitude: 40.8652285, longitude: -73.9310879),
                                url: "http://www.metmuseum.org/visit/met-cloisters",
-                               interiorMapView: false)
+                               interiorMapView: false,
+                               photoURL: "")
         
         let hispanicSociety = Museum(title: "Hispanic Society of America",
                                      logo: UIImage(named: "hispanicSocietyLogo")!,
@@ -285,7 +304,8 @@ class MuseumDataStore {
                                      artCategories: "Spanish & Portuguese",
                                      coordinate: CLLocationCoordinate2D(latitude: 40.8333768, longitude: -73.9470945),
                                      url: "http://hispanicsociety.org/",
-                                     interiorMapView: false)
+                                     interiorMapView: false,
+                                     photoURL: "")
         
         let metBreuer = Museum(title: "The Met Breuer",
                                logo: UIImage(named: "breuerLogo")!,
@@ -302,7 +322,8 @@ class MuseumDataStore {
                                artCategories: "Modern & contemporary",
                                coordinate: CLLocationCoordinate2D(latitude: 40.7735936, longitude: -73.9641533),
                                url: "http://www.metmuseum.org/visit/met-breuer",
-                               interiorMapView: false)
+                               interiorMapView: false,
+                               photoURL: "")
         
         let asiaSociety = Museum(title: "Asia Society",
                                  logo: UIImage(named: "asiaLogo")!,
@@ -319,7 +340,8 @@ class MuseumDataStore {
                                  artCategories: "Asian",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7700221, longitude: -73.9645825),
                                  url: "http://asiasociety.org/museum",
-                                 interiorMapView: false)
+                                 interiorMapView: false,
+                                 photoURL: "")
         
         let fit = Museum(title: "The Museum at FIT",
                          logo: UIImage(named: "fitLogo")!,
@@ -336,7 +358,8 @@ class MuseumDataStore {
                          artCategories: "Fashion",
                          coordinate: CLLocationCoordinate2D(latitude: 40.7464981, longitude: -73.993782),
                          url: "http://www.fitnyc.edu/museum/",
-                         interiorMapView: false)
+                         interiorMapView: false,
+                         photoURL: "")
         
         let morganLibrary = Museum(title: "Morgan Library & Museum",
                                    logo: UIImage(named: "morganLogo")!,
@@ -353,15 +376,69 @@ class MuseumDataStore {
                                    artCategories: "Rare books, music, drawings",
                                    coordinate: CLLocationCoordinate2D(latitude: 40.7494742, longitude: -73.9817367),
                                    url: "http://www.themorgan.org/",
-                                   interiorMapView: false)
+                                   interiorMapView: false,
+                                   photoURL: "")
         
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
+        //        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
+        
+        museums = [hispanicSociety]
         
         museums = self.museums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
         
     }
+    
+    func getMuseums(){
+        
+        print("getting museums")
+        
+        self.loadMuseums()
+        
+        print("entering get images func")
+        
+        for museum in self.museums {
+            guard let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+") else { return }
+            
+            getPlaceIDFromAPI(with: museumTitle, completion: {
+                print("placeId: \(self.placeID)")
+                self.getPhotoReferenceFromAPI {
+                    print("placeId: \(self.placeID)")
+                    print(museumTitle)
+                    
+                    guard let photoReference = self.photoReference else { return }
+                    
+                    print(photoReference)
+                    
+                    museum.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
+                    
+                    print("url//////////// \(museum.photoURL)\n\n\n\n\n\n\n\n")
+                }
+            })
+        }
+    }
+    
+    // MARK: API Functions
+    
+    func getPlaceIDFromAPI(with museumTitle: String, completion: @escaping ()->()) {
+        PhotosAPIClient.getPlaceID(with: museumTitle) { (results) in
+            let newResults = results[0]
+            self.placeID = newResults["place_id"] as! String
+            completion()
+        }
+    }
+    
+    func getPhotoReferenceFromAPI(completion: @escaping ()->()) {
+        guard let placeID = self.placeID else { return }
+        PhotosAPIClient.getPhotoReference(with: placeID) { (results) in
+            let photos = results["photos"] as! [[String: Any]]
+            let photoDetails = photos[0]
+            self.photoReference = photoDetails["photo_reference"] as! String!
+            completion()
+        }
+    }
+    
+    
     
     // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum
     
