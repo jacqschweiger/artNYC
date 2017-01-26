@@ -35,6 +35,8 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     func goToDetailView(){
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumListView.selectedMuseum
+        detailViewController.photoURL = self.museumListView.photoURL
+        print("this is the vc url: \(self.museumListView.photoURL)")
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
