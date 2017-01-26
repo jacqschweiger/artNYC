@@ -45,7 +45,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var artCategoriesContent = UILabel()
     var websiteButton: UIButton!
     var placeID: String!
-    var imageURL: String?
+    var photoURL: String?
     
     
     init(frame:CGRect, museum: Museum){
@@ -115,12 +115,14 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Image View
         self.addSubview(museumImage)
-        let urlString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CoQBdwAAAKBaoqRUTZK8K7czfSDnsMJAYayfB1Tczxg0mqCD6wYn7NhI4ICUhgeDjDUGIht3GViGT1qGgxQlfLE0yT06hxPHG5aVr6mC2upgr8bxV1pdOZgY8BKgFEQBcM4twRlzhbXLr5fJwSNSCGc4vw8Gv-mGnAn8eFpPsWyXz1uNWjx0EhBD4zTegJwXN3FiFfhOPYeqGhSC8TBD41ABiHkTGFtmw1kANQWmLA&key=AIzaSyDVfmnEa-AgJdoLFoaZcy9ZBCH3jeVEGSE"
-        //guard let urlString = self.imageURL else { return }
+        DispatchQueue.main.async {
+        //let urlString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CoQBdwAAAKBaoqRUTZK8K7czfSDnsMJAYayfB1Tczxg0mqCD6wYn7NhI4ICUhgeDjDUGIht3GViGT1qGgxQlfLE0yT06hxPHG5aVr6mC2upgr8bxV1pdOZgY8BKgFEQBcM4twRlzhbXLr5fJwSNSCGc4vw8Gv-mGnAn8eFpPsWyXz1uNWjx0EhBD4zTegJwXN3FiFfhOPYeqGhSC8TBD41ABiHkTGFtmw1kANQWmLA&key=AIzaSyDVfmnEa-AgJdoLFoaZcy9ZBCH3jeVEGSE"
+        guard let urlString = self.photoURL else { return }
         if let url = URL(string: urlString) {
             if let data = NSData(contentsOf: url) {
-                museumImage.image = UIImage(data: data as Data)
+                self.museumImage.image = UIImage(data: data as Data)
             }
+        }
         }
         
         museumImage.contentMode = .scaleAspectFit
