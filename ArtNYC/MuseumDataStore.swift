@@ -389,29 +389,20 @@ class MuseumDataStore {
     
     func getMuseums(){
         
-        print("getting museums")
-        
         self.loadMuseums()
-        
-        print("entering get images func")
         
         for museum in self.museums {
             guard let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+") else { return }
             
             getPlaceIDFromAPI(with: museumTitle, completion: {
-                print("placeId: \(self.placeID)")
+                
                 self.getPhotoReferenceFromAPI {
-                    print("placeId: \(self.placeID)")
-                    print(museumTitle)
                     
                     guard let photoReference = self.photoReference else { return }
                     
-                    print(photoReference)
-                    
                     museum.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
                     
-                    print("url//////////// \(museum.photoURL)\n\n\n\n\n\n\n\n")
-                }
+                    }
             })
         }
     }
@@ -438,6 +429,6 @@ class MuseumDataStore {
     
     
     
-    // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum
+    // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1
     
 }
