@@ -105,13 +105,21 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.backButton.centerYAnchor.constraint(equalTo: self.titleLabel.centerYAnchor).isActive = true
         self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
-
+        
         self.backButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         
         //Image View
         self.addSubview(museumImage)
-        museumImage.backgroundColor = UIColor.blue
+        
+        if let url = URL(string: PhotosAPIClient.urlString) {
+            if let data = NSData(contentsOf: url) {
+                museumImage.image = UIImage(data: data as Data)
+            }
+        }
+        
+        museumImage.contentMode = .scaleToFill
+        
         museumImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         museumImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
         museumImage.topAnchor.constraint(equalTo: self.container.bottomAnchor, constant: 20).isActive = true
