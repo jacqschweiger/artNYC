@@ -12,6 +12,7 @@ import UIKit
 class TabBarVC: UITabBarController {
     
     var placeID: String!
+    var photoReference: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,10 @@ class TabBarVC: UITabBarController {
     func getPlaceDetailsFromAPI(completion: @escaping ()->()) {
         
         PhotosAPIClient.getPlaceDetails { (results) in
-//            print(results)
+            
+            let photos = results["photos"] as! [[String: Any]]
+            let photoDetails = photos[0] as! [String:Any]
+            photoReference = photoDetails["photo_reference"]
             completion()
         }
     }
