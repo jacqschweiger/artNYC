@@ -36,6 +36,8 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
         self.view = self.detailView
     }
     
+    // MARK: API Functions
+    
     func getPlaceIDFromAPI(completion: @escaping ()->()) {
         let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+")
         
@@ -48,7 +50,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     
     func getPhotoReferenceFromAPI(completion: @escaping ()->()) {
         
-        PhotosAPIClient.getPhotoReference { (results) in
+        PhotosAPIClient.getPhotoReference(with: self.placeID) { (results) in
             
             let photos = results["photos"] as! [[String: Any]]
             let photoDetails = photos[0]

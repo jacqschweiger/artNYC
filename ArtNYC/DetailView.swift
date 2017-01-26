@@ -122,9 +122,8 @@ class DetailView: UIView, GMSMapViewDelegate {
         }
         
         museumImage.contentMode = .scaleAspectFit
-        
-        //museumImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        //museumImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+
+        museumImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         museumImage.topAnchor.constraint(equalTo: self.container.bottomAnchor, constant: 20).isActive = true
         museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
         museumImage.translatesAutoresizingMaskIntoConstraints = false

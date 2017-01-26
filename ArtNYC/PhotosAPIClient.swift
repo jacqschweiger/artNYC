@@ -52,9 +52,9 @@ class PhotosAPIClient {
     
     
     
-    class func getPhotoReference(with completion: @escaping ([String:AnyObject])-> Void) {
+    class func getPhotoReference(with placeID: String, completion: @escaping ([String:AnyObject])-> Void) {
         
-        let urlString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ01_9-ZdYwokRL2JrA28GJp8&key=\(Constants.key2)"
+        let urlString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=\(Constants.key2)"
         
         let url = URL(string: urlString)
         
