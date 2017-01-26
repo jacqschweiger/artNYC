@@ -22,9 +22,9 @@ class PhotosAPIClient {
     
     
     
-    class func getPlaceID(with completion: @escaping ([[String:AnyObject]])-> Void) {
+    class func getPlaceID(with keyword: String, completion: @escaping ([[String:AnyObject]])-> Void) {
         
-        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=200&keyword=neue+galerie&type=museum&key=\(Constants.key2)"
+        let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7813,-73.9603&radius=200&keyword=\(keyword)&type=museum&key=\(Constants.key2)"
         
         let url = URL(string: urlString)
         
@@ -52,7 +52,7 @@ class PhotosAPIClient {
     
     
     
-    class func getPlaceDetails(with completion: @escaping ([String:AnyObject])-> Void) {
+    class func getPhotoReference(with completion: @escaping ([String:AnyObject])-> Void) {
         
         let urlString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ01_9-ZdYwokRL2JrA28GJp8&key=\(Constants.key2)"
         
@@ -76,8 +76,6 @@ class PhotosAPIClient {
             task.resume()
         }
     }
-
-    
     
 
 }

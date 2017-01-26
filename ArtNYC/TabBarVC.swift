@@ -16,14 +16,7 @@ class TabBarVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getPlaceIDFromAPI {
-        }
-        
-        getPlaceDetailsFromAPI {
-        }
-        
-        
+ 
         
     }
     
@@ -56,25 +49,6 @@ class TabBarVC: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor(named: UIColor.ColorName.darkBlue)
     }
     
-    func getPlaceIDFromAPI(completion: @escaping ()->()) {
-            
-        PhotosAPIClient.getPlaceID(with: { (results) in
-            let newResults = results[0]
-            self.placeID = newResults["place_id"] as! String
-            completion()
-        })
-    }
-    
-    func getPlaceDetailsFromAPI(completion: @escaping ()->()) {
-        
-        PhotosAPIClient.getPlaceDetails { (results) in
-            
-            let photos = results["photos"] as! [[String: Any]]
-            let photoDetails = photos[0] as! [String:Any]
-            photoReference = photoDetails["photo_reference"]
-            completion()
-        }
-    }
 }
 
 

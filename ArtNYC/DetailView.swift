@@ -44,6 +44,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var artCategoriesLabel = UILabel()
     var artCategoriesContent = UILabel()
     var websiteButton: UIButton!
+    var placeID: String!
     
     
     init(frame:CGRect, museum: Museum){
@@ -79,7 +80,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.addSubview(titleLabel)
         self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
         self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
-        self.titleLabel.centerYAnchor.constraint(equalTo: self.container.centerYAnchor, constant: -5).isActive = true
+        self.titleLabel.centerYAnchor.constraint(equalTo: self.container.centerYAnchor).isActive = true
         self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -92,6 +93,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             titleLabel.text = "The Met"
         } else if museum.title == "Solomon R. Guggenheim Museum" {
             titleLabel.text = "The Guggenheim"
+        } else if museum.title == "Whitney Museum of American Art" {
+            titleLabel.text = "The Whitney"
         } else {
             titleLabel.text = museum.title
         }
@@ -120,8 +123,8 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         museumImage.contentMode = .scaleAspectFit
         
-        museumImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        museumImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+        //museumImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        //museumImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
         museumImage.topAnchor.constraint(equalTo: self.container.bottomAnchor, constant: 20).isActive = true
         museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
         museumImage.translatesAutoresizingMaskIntoConstraints = false
