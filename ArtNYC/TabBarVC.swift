@@ -17,7 +17,6 @@ class TabBarVC: UITabBarController {
         super.viewDidLoad()
         
         store.getMuseums()
- 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +35,6 @@ class TabBarVC: UITabBarController {
         tabTwo.tabBarItem = tabTwoBarItem2
         
         // Create Tab three
-        // TODO: Create FavoritesVC
         let tabThree = MapVC()
         let tabThreeBarItem3 = UITabBarItem(title: "Settings", image: UIImage(named: "Settings Icon"), selectedImage: UIImage(named: "Settings Icon"))
         
@@ -49,6 +47,7 @@ class TabBarVC: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor(named: UIColor.ColorName.darkBlue)
     }
     
+
 }
 
 

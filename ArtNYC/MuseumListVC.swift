@@ -22,6 +22,7 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     
     override func viewWillAppear(_ animated: Bool){
         self.navigationController?.isNavigationBarHidden = true
+        self.view = museumListView
         
         if store.filteredMuseums.count > 0 {
             self.museumListView.museums = store.filteredMuseums
@@ -29,9 +30,9 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
             self.museumListView.museums = store.allMuseums
         }
     }
-    
-    override func loadView() {
-        self.view = museumListView
+
+    override func viewDidAppear(_ animated: Bool) {
+        print("view did appear")
     }
     
     func goToDetailView(){

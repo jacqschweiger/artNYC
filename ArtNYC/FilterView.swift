@@ -92,7 +92,6 @@ class FilterView: UIView {
     }
     
     func closeFilterScreen(){
-        
         self.delegate?.dismissView()
     }
     

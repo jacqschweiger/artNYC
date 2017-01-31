@@ -18,7 +18,7 @@ class FilterVC: UIViewController, DismissDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.view.backgroundColor = UIColor.white
         self.filterView = FilterView()
         self.view = filterView
@@ -39,7 +39,7 @@ class FilterVC: UIViewController, DismissDelegate {
         dismissButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
     }
     
-    func dismissView(){        
+    func dismissView(){
         dismiss(animated: true, completion: nil)
     }
     
@@ -54,10 +54,9 @@ class FilterVC: UIViewController, DismissDelegate {
                 }
             }
             print(store.filteredMuseums.count)
-            museumListVC.view.reloadInputViews()
+            
         case false:
             store.filteredMuseums = []
-            museumListVC.view.reloadInputViews()
             print(store.filteredMuseums.count)
         }
     }
