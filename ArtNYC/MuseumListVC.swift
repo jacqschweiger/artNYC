@@ -13,6 +13,7 @@ import NotificationCenter
 class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     
     let museumListView = MuseumListView()
+    let store = MuseumDataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,12 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
     
     override func viewWillAppear(_ animated: Bool){
         self.navigationController?.isNavigationBarHidden = true
+        
+        if store.filteredMuseums.count > 0 {
+            self.museumListView.museums = store.filteredMuseums
+        } else if store.filteredMuseums.count == 0 {
+            self.museumListView.museums = store.allMuseums
+        }
     }
     
     override func loadView() {

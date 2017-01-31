@@ -19,7 +19,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     weak var delegate: ShowDetailViewDelegate?
     let header = UILabel()
     let tableView = UITableView()
-    var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     var museums: [Museum] = []
@@ -30,12 +29,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         setUpElements()
-        
-        if store.filteredMuseums.count > 0 {
-            self.museums = store.filteredMuseums
-        } else if store.filteredMuseums.count == 0 {
-            self.museums = store.allMuseums
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {

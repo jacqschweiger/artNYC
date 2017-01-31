@@ -14,7 +14,7 @@ class FilterVC: UIViewController, DismissDelegate {
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
-    var museumListView = MuseumListView()
+    var museumListVC = MuseumListVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class FilterVC: UIViewController, DismissDelegate {
         self.view.backgroundColor = UIColor.white
         self.filterView = FilterView()
         self.view = filterView
-        self.filterView.delegate = self 
+        self.filterView.delegate = self
         
         self.filterView.interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
         
@@ -39,24 +39,25 @@ class FilterVC: UIViewController, DismissDelegate {
         dismissButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
     }
     
-    func dismissView(){
+    func dismissView(){        
         dismiss(animated: true, completion: nil)
-
     }
     
     func filterMuseums(){
         switch self.filterView.interiorViewSwitch.isOn {
         case true:
+            self.filterView.interiorViewSwitch.setOn(true, animated: true)
+            store.filteredMuseums = []
             for museum in store.allMuseums {
                 if museum.interiorMapView == true {
                     store.filteredMuseums.append(museum)
                 }
             }
             print(store.filteredMuseums.count)
-            museumListView.reloadInputViews()
+            museumListVC.view.reloadInputViews()
         case false:
             store.filteredMuseums = []
-            museumListView.reloadInputViews()
+            museumListVC.view.reloadInputViews()
             print(store.filteredMuseums.count)
         }
     }

@@ -57,7 +57,6 @@ class FilterView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         self.filterMenu.addSubview(interiorViewSwitch)
-
         interiorViewSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
         interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
