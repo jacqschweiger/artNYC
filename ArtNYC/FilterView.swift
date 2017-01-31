@@ -16,6 +16,7 @@ class FilterView: UIView {
     let interiorViewSwitch = UISwitch()
     let freeSwitch = UISwitch()
     let openLateSwitch = UISwitch()
+    let doneButton = UIButton()
 
 
     
@@ -43,6 +44,8 @@ class FilterView: UIView {
     func setUpElements(){
         self.filterMenu.addSubview(titleLabel)
         titleLabel.text = "Filter"
+        titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
         titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: self.filterMenu.widthAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor).isActive = true
@@ -54,19 +57,39 @@ class FilterView: UIView {
 
         interiorViewSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
         interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
         
         
         self.filterMenu.addSubview(freeSwitch)
+        freeSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         freeSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
         freeSwitch.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
         freeSwitch.translatesAutoresizingMaskIntoConstraints = false
         
         
         self.filterMenu.addSubview(openLateSwitch)
+        openLateSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         openLateSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
         openLateSwitch.topAnchor.constraint(equalTo: freeSwitch.bottomAnchor, constant: 20).isActive = true
         openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.filterMenu.addSubview(doneButton)
+        doneButton.centerXAnchor.constraint(equalTo: self.filterMenu.centerXAnchor).isActive = true
+        doneButton.topAnchor.constraint(equalTo: openLateSwitch.bottomAnchor, constant: 20).isActive = true
+        doneButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        doneButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        doneButton.setTitle("Done", for: .normal)
+        doneButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+        doneButton.setTitleColor(UIColor.white, for: .normal)
+        doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        doneButton.addTarget(self, action: #selector(closeFilterScreen), for: .touchUpInside)
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+    }
+    
+    func closeFilterScreen(){
         
     }
     
