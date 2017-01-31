@@ -14,8 +14,8 @@ class MuseumDataStore {
     
     static let sharedInstance = MuseumDataStore()
     
-    var museums: [Museum]!
     var filteredMuseums: [Museum] = []
+    var allMuseums: [Museum]!
     var placeID: String!
     var photoReference: String!
     var photoURL: String!
@@ -380,9 +380,9 @@ class MuseumDataStore {
                                    interiorMapView: false,
                                    photoURL: "")
         
-        museums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, asiaSociety, fit, morganLibrary]
-        
-        museums = self.museums.sorted { (museum1, museum2) -> Bool in
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, fit, morganLibrary, asiaSociety]
+            
+        allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
         
@@ -392,7 +392,7 @@ class MuseumDataStore {
         
         self.loadMuseums()
         
-        for museum in self.museums {
+        for museum in self.allMuseums {
             guard let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+") else { return }
             
             getPlaceIDFromAPI(with: museumTitle, completion: {

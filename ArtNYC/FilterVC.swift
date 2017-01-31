@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class FilterVC: UIViewController {
+class FilterVC: UIViewController, DismissDelegate {
     
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
+    var museumListView = MuseumListView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class FilterVC: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.filterView = FilterView()
         self.view = filterView
+        self.filterView.delegate = self 
         
         self.filterView.interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
         
@@ -45,13 +47,17 @@ class FilterVC: UIViewController {
     func filterMuseums(){
         switch self.filterView.interiorViewSwitch.isOn {
         case true:
-            for museum in store.museums {
+            for museum in store.allMuseums {
                 if museum.interiorMapView == true {
                     store.filteredMuseums.append(museum)
                 }
             }
+            print(store.filteredMuseums.count)
+            museumListView.reloadInputViews()
         case false:
-            return
+            store.filteredMuseums = []
+            museumListView.reloadInputViews()
+            print(store.filteredMuseums.count)
         }
     }
 }

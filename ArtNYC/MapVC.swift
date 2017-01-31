@@ -34,7 +34,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     func addLocations(){
-        for museum in store.museums {
+        for museum in store.allMuseums {
             let position = museum.coordinate
             let marker = GMSMarker(position: position)
             if let museumTitle = museum.title {
@@ -89,7 +89,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     // MARK: GMSMapViewDelegate
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        for museum in store.museums {
+        for museum in store.allMuseums {
             if museum.title == marker.title {
                 self.selectedMuseum = museum
             }

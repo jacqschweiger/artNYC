@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol DismissDelegate: class {
+    func dismissView()
+}
+
 class FilterView: UIView {
     
     var filterMenu = UIView()
@@ -17,8 +21,7 @@ class FilterView: UIView {
     let freeSwitch = UISwitch()
     let openLateSwitch = UISwitch()
     let doneButton = UIButton()
-
-
+    var delegate: DismissDelegate?
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -91,6 +94,7 @@ class FilterView: UIView {
     
     func closeFilterScreen(){
         
+        self.delegate?.dismissView()
     }
     
     

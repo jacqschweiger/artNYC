@@ -22,6 +22,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     var store = MuseumDataStore.sharedInstance
     var selectedMuseum: Museum!
     var filterButton = UIButton()
+    var museums: [Museum] = []
         
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -29,6 +30,12 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         setUpElements()
+        
+        if store.filteredMuseums.count > 0 {
+            self.museums = store.filteredMuseums
+        } else if store.filteredMuseums.count == 0 {
+            self.museums = store.allMuseums
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,13 +43,13 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.museums.count
+        return self.museums.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MuseumTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "basicCell")
-        cell.museumNameLabel.text = self.store.museums[indexPath.row].title
-        cell.museumLogo.image = self.store.museums[indexPath.row].logo
+        cell.museumNameLabel.text = self.museums[indexPath.row].title
+        cell.museumLogo.image = self.museums[indexPath.row].logo
         return cell
     }
     
@@ -51,7 +58,7 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedMuseum = store.museums[indexPath.row]
+        self.selectedMuseum = self.museums[indexPath.row]
         self.delegate?.goToDetailView()
     }
 
