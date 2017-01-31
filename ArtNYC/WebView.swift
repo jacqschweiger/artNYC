@@ -40,7 +40,6 @@ class WebView: UIView {
         setUpWebView()
         setUpWebNavBar()
 
-        reloadInputViews()
     }
     
     required init?(coder aDecoder: NSCoder) {

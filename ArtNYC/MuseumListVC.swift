@@ -10,19 +10,21 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-class MuseumListVC: UIViewController, ShowDetailViewDelegate {
+class MuseumListVC: UIViewController, ShowDetailViewDelegate, ReloadDelegate {
     
     let museumListView = MuseumListView()
+    let filterVC = FilterVC()
     let store = MuseumDataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         museumListView.delegate = self
+        filterVC.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool){
         self.navigationController?.isNavigationBarHidden = true
-        
+        print("Calling viewwillappear")
         if store.filteredMuseums.count > 0 {
             self.museumListView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {
@@ -45,6 +47,10 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
         filterController.modalPresentationStyle = .overFullScreen
         filterController.modalTransitionStyle = .crossDissolve
         self.present(filterController, animated: true, completion: nil)
+    }
+    
+    func reloadTableView() {
+        //self.museumListView.reloadInputViews()
     }
     
 }

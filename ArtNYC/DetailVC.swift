@@ -25,7 +25,6 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     override func loadView(){
         self.detailView = DetailView(frame: CGRect.zero, museum: museum)
         self.view = self.detailView
-        self.view.reloadInputViews()
     }
     
     

@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
+protocol ReloadDelegate: class {
+    func reloadTableView()
+}
+
 class FilterVC: UIViewController, DismissDelegate {
     
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
     var museumListVC = MuseumListVC()
+    var delegate: ReloadDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +44,7 @@ class FilterVC: UIViewController, DismissDelegate {
         dismissButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
     }
     
-    func dismissView(){        
+    func dismissView(){
         dismiss(animated: true, completion: nil)
     }
     
@@ -53,12 +58,8 @@ class FilterVC: UIViewController, DismissDelegate {
                     store.filteredMuseums.append(museum)
                 }
             }
-            print(store.filteredMuseums.count)
-            museumListVC.view.reloadInputViews()
         case false:
             store.filteredMuseums = []
-            museumListVC.view.reloadInputViews()
-            print(store.filteredMuseums.count)
         }
     }
 }

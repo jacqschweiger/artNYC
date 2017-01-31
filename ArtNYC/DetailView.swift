@@ -51,7 +51,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.museum = museum
         self.backgroundColor = UIColor.white
         self.setUpElements()
-        reloadInputViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
