@@ -12,6 +12,12 @@ import UIKit
 class FilterView: UIView {
     
     var filterMenu = UIView()
+    let titleLabel = UILabel()
+    let interiorViewSwitch = UISwitch()
+    let freeSwitch = UISwitch()
+    let openLateSwitch = UISwitch()
+
+
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -19,7 +25,7 @@ class FilterView: UIView {
         self.backgroundColor = UIColor(white: 1, alpha: 0.75)
         
         self.addSubview(filterMenu)
-        self.filterMenu.backgroundColor = UIColor.blue
+        self.filterMenu.backgroundColor = UIColor.white
         self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7).isActive = true
@@ -35,9 +41,7 @@ class FilterView: UIView {
     }
     
     func setUpElements(){
-        let titleLabel = UILabel()
         self.filterMenu.addSubview(titleLabel)
-        titleLabel.backgroundColor = UIColor.red
         titleLabel.text = "Filter"
         titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: self.filterMenu.widthAnchor).isActive = true
@@ -46,13 +50,26 @@ class FilterView: UIView {
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let interiorViewSwitch = UISwitch()
         self.filterMenu.addSubview(interiorViewSwitch)
-        interiorViewSwitch.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor).isActive = true
-        interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+
+        interiorViewSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
+        interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
         
+        
+        self.filterMenu.addSubview(freeSwitch)
+        freeSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
+        freeSwitch.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
+        freeSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        self.filterMenu.addSubview(openLateSwitch)
+        openLateSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
+        openLateSwitch.topAnchor.constraint(equalTo: freeSwitch.bottomAnchor, constant: 20).isActive = true
+        openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
     }
+    
     
     
 }

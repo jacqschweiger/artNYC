@@ -15,6 +15,7 @@ class MuseumDataStore {
     static let sharedInstance = MuseumDataStore()
     
     var museums: [Museum]!
+    var filteredMuseums: [Museum] = []
     var placeID: String!
     var photoReference: String!
     var photoURL: String!

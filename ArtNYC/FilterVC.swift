@@ -13,6 +13,7 @@ class FilterVC: UIViewController {
     
     var filterView: FilterView!
     var dismissButton: UIButton!
+    var store = MuseumDataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class FilterVC: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.filterView = FilterView()
         self.view = filterView
+        
+        self.filterView.interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
         
         dismissButton = UIButton(type: .system)
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
@@ -37,5 +40,18 @@ class FilterVC: UIViewController {
     func dismissView(){
         dismiss(animated: true, completion: nil)
 
+    }
+    
+    func filterMuseums(){
+        switch self.filterView.interiorViewSwitch.isOn {
+        case true:
+            for museum in store.museums {
+                if museum.interiorMapView == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        case false:
+            return
+        }
     }
 }
