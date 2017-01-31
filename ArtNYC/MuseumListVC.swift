@@ -30,10 +30,6 @@ class MuseumListVC: UIViewController, ShowDetailViewDelegate {
             self.museumListView.museums = store.allMuseums
         }
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        print("view did appear")
-    }
     
     func goToDetailView(){
         let detailViewController = DetailVC()
