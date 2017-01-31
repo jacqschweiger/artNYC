@@ -46,6 +46,12 @@ class FilterView: UIView {
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        let interiorViewSwitch = UISwitch()
+        self.filterMenu.addSubview(interiorViewSwitch)
+        interiorViewSwitch.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor).isActive = true
+        interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+        interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
     }
     
     

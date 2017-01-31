@@ -26,6 +26,7 @@ class FilterVC: UIViewController {
         dismissButton.backgroundColor = UIColor.clear
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.insertSubview(dismissButton, belowSubview: filterView)
+        self.view.sendSubview(toBack: dismissButton)
         
         dismissButton.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         dismissButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
