@@ -62,7 +62,7 @@ struct Constants {
         case InterBlockHorizontalSpacing = 25
         case InterBlockVerticalSpacing = 40
         case GridTopMargin = 1
-        case GridBottomMargin = 100
+        case GridBottomMargin = 120
         case GridSideMargin = 24
     }
     
