@@ -2,7 +2,7 @@
 //  MuseumCollectionViewCell.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 2/1/17.
+//  Created by Jacqueline Schweiger on 2/1/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -33,14 +33,14 @@ class MuseumCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: Constants.image.HSImageWidth.rawValue).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: Constants.image.HSImageHeight.rawValue).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: Constants.image.ImageWidth.rawValue).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: Constants.image.ImageHeight.rawValue).isActive = true
         imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
         
-        imageView.layer.cornerRadius = Constants.image.HSImageCornerRadius.rawValue
-        imageView.layer.borderWidth = Constants.image.HSImageBorderWidth.rawValue
+        imageView.layer.cornerRadius = Constants.image.ImageCornerRadius.rawValue
+        imageView.layer.borderWidth = Constants.image.ImageBorderWidth.rawValue
         imageView.layer.borderColor = UIColor(named: UIColor.ColorName.oatmeal).cgColor
         imageView.clipsToBounds = true
         

@@ -2,14 +2,14 @@
 //  MuseumCollectionVC.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 2/1/17.
+//  Created by Jacqueline Schweiger on 2/1/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class MuseumCollectionVC: UIViewController {
+class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumCollectionView: MuseumCollectionView!
@@ -33,5 +33,18 @@ class MuseumCollectionVC: UIViewController {
         } else if store.filteredMuseums.count == 0 {
             self.museumCollectionView.museums = store.allMuseums
         }
+    }
+    
+    func goToDetailView(){
+        let detailViewController = DetailVC()
+        detailViewController.museum = self.museumCollectionView.selectedMuseum
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    func showFilter(){
+        let filterController = FilterVC()
+        filterController.modalPresentationStyle = .overFullScreen
+        filterController.modalTransitionStyle = .crossDissolve
+        self.present(filterController, animated: true, completion: nil)
     }
 }

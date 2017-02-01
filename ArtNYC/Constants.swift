@@ -40,22 +40,22 @@ struct Constants {
     //LAYOUT
     
     enum gridLayout: CGFloat {
-        case HSInterCardHorizontalSpacing = 30
-        case HSInterCardVerticalSpacing = 57
-        case HSGridTopMargin = 60
-        case HSGridSideMargin = 63
+        case InterBlockHorizontalSpacing = 30
+        case InterBlockVerticalSpacing = 57
+        case GridTopMargin = 60
+        case GridSideMargin = 63
     }
     
     enum cardSizes: CGFloat {
-        case HSCardWidth = 276
-        case HSCardHeight = 267
+        case BlockWidth = 276
+        case BlockHeight = 267
     }
     
     enum image: CGFloat {
-        case HSImageWidth = 276
-        case HSImageHeight = 207
-        case HSImageCornerRadius = 10
-        case HSImageBorderWidth = 2
+        case ImageWidth = 276
+        case ImageHeight = 207
+        case ImageCornerRadius = 10
+        case ImageBorderWidth = 2
     }
 
     

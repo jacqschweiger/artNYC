@@ -2,11 +2,17 @@
 //  MuseumCollectionView.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 2/1/17.
+//  Created by Jacqueline Schweiger on 2/1/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
+import Foundation
 import UIKit
+
+protocol MuseumCollectionViewDelegate: class {
+    func goToDetailView()
+    func showFilter()
+}
 
 class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -15,7 +21,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
     let header = UILabel()
     var selectedMuseum: Museum!
     var filterButton = UIButton()
-    weak var delegate: MuseumLisViewDelegate?
+    weak var delegate: MuseumCollectionViewDelegate?
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -98,30 +104,36 @@ extension MuseumCollectionView {
         cell.titleLabel.text = museums[indexPath.item].title
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedMuseum = self.museums[indexPath.row]
+        self.delegate?.goToDetailView()
+    }
+    
 }
 
 //MARK:- CollectionViewLayout
 extension MuseumCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        let verticalSpacing = Constants.gridLayout.HSInterCardVerticalSpacing.rawValue
+        let verticalSpacing = Constants.gridLayout.InterBlockVerticalSpacing.rawValue
         return verticalSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        let horizontalSpacing = Constants.gridLayout.HSInterCardHorizontalSpacing.rawValue
+        let horizontalSpacing = Constants.gridLayout.InterBlockHorizontalSpacing.rawValue
         return horizontalSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let sectionInsets = UIEdgeInsets(top: Constants.gridLayout.HSGridTopMargin.rawValue, left: Constants.gridLayout.HSGridSideMargin.rawValue, bottom: Constants.gridLayout.HSGridTopMargin.rawValue, right: Constants.gridLayout.HSGridSideMargin.rawValue)
+        let sectionInsets = UIEdgeInsets(top: Constants.gridLayout.GridTopMargin.rawValue, left: Constants.gridLayout.GridSideMargin.rawValue, bottom: Constants.gridLayout.GridTopMargin.rawValue, right: Constants.gridLayout.GridSideMargin.rawValue)
         
         return sectionInsets
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cardWidth = Constants.cardSizes.HSCardWidth.rawValue
-        let cardHeight = Constants.cardSizes.HSCardHeight.rawValue
+        let cardWidth = Constants.cardSizes.BlockWidth.rawValue
+        let cardHeight = Constants.cardSizes.BlockHeight.rawValue
         let cardSize = CGSize(width: cardWidth, height: cardHeight)
         
         return cardSize
