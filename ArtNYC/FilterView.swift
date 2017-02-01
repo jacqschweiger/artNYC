@@ -41,7 +41,6 @@ class FilterView: UIView {
     func setUpElements(){
         
         //Filter Menu
-        
         self.addSubview(filterMenu)
         self.filterMenu.backgroundColor = UIColor.white
         self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -51,7 +50,6 @@ class FilterView: UIView {
         self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
         
         //Clear Dismiss Button
-        
         let dismissButton = UIButton(type: .system)
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         dismissButton.backgroundColor = UIColor.clear
@@ -80,13 +78,18 @@ class FilterView: UIView {
         
         //Interior View Label
         self.filterMenu.addSubview(interiorViewLabel)
-        
+        interiorViewLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
+        interiorViewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        interiorViewLabel.text = "360° Gallery View"
+        interiorViewLabel.font = UIFont(name: "Avenir Black", size: 20)
+        interiorViewLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        interiorViewLabel.translatesAutoresizingMaskIntoConstraints = false
         
         
         //Interior View Switch
         self.filterMenu.addSubview(interiorViewSwitch)
-        interiorViewSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
-        interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        interiorViewSwitch.leftAnchor.constraint(equalTo: self.interiorViewLabel.rightAnchor, constant: 15).isActive = true
+        interiorViewSwitch.centerYAnchor.constraint(equalTo: interiorViewLabel.centerYAnchor).isActive = true
         interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
         interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
@@ -95,12 +98,11 @@ class FilterView: UIView {
         }
 
         
-
         //Done Button
         
         self.filterMenu.addSubview(doneButton)
         doneButton.centerXAnchor.constraint(equalTo: self.filterMenu.centerXAnchor).isActive = true
-        doneButton.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
+        doneButton.bottomAnchor.constraint(equalTo: self.filterMenu.bottomAnchor, constant: -20).isActive = true
         doneButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         doneButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
         doneButton.setTitle("Done", for: .normal)
