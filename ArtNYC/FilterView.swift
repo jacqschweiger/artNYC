@@ -18,6 +18,7 @@ class FilterView: UIView {
     
     var filterMenu = UIView()
     let titleLabel = UILabel()
+    let interiorViewLabel = UILabel()
     let interiorViewSwitch = UISwitch()
     let freeSwitch = UISwitch()
     let openLateSwitch = UISwitch()
@@ -28,8 +29,7 @@ class FilterView: UIView {
     override init(frame:CGRect){
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor(white: 1, alpha: 0.75)
-        
+        self.backgroundColor = UIColor(white: 0.5, alpha: 0.75)
         setUpElements()
     
     }
@@ -67,7 +67,7 @@ class FilterView: UIView {
         
         //Title Label
         self.filterMenu.addSubview(titleLabel)
-        titleLabel.text = "Filter"
+        titleLabel.text = "Filter Museums"
         titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         titleLabel.font = UIFont(name: "Avenir Black", size: 24)
         titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor).isActive = true
@@ -76,6 +76,11 @@ class FilterView: UIView {
         titleLabel.heightAnchor.constraint(equalTo: self.filterMenu.heightAnchor, multiplier: 0.1).isActive = true
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        //Interior View Label
+        self.filterMenu.addSubview(interiorViewLabel)
+        
         
         
         //Interior View Switch
