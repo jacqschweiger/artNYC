@@ -24,6 +24,9 @@
 		716027451E2A8F7900CAF26B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716027441E2A8F7900CAF26B /* WebVC.swift */; };
 		71732BE81E2C3D28009A5D75 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71732BE71E2C3D28009A5D75 /* WebView.swift */; };
 		717B66A81E2E756A006A604C /* MuseumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B66A71E2E756A006A604C /* MuseumListView.swift */; };
+		7183B3961E427C8400EDF9C0 /* MuseumCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3951E427C8400EDF9C0 /* MuseumCollectionVC.swift */; };
+		7183B3981E427D4D00EDF9C0 /* MuseumCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3971E427D4D00EDF9C0 /* MuseumCollectionView.swift */; };
+		7183B39A1E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3991E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
 		71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF916B1E2BDA0000943648 /* DetailView.swift */; };
@@ -65,6 +68,9 @@
 		716027441E2A8F7900CAF26B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		71732BE71E2C3D28009A5D75 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		717B66A71E2E756A006A604C /* MuseumListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumListView.swift; sourceTree = "<group>"; };
+		7183B3951E427C8400EDF9C0 /* MuseumCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCollectionVC.swift; sourceTree = "<group>"; };
+		7183B3971E427D4D00EDF9C0 /* MuseumCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCollectionView.swift; sourceTree = "<group>"; };
+		7183B3991E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCollectionViewCell.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
 		71DF916B1E2BDA0000943648 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			children = (
 				7117758C1E390D2B0082D6CC /* TabBarVC.swift */,
 				715204461E2A6B0300AD04AB /* MuseumListVC.swift */,
+				7183B3951E427C8400EDF9C0 /* MuseumCollectionVC.swift */,
 				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
 				7132CBF41E29752C008CA655 /* MapVC.swift */,
 				716027441E2A8F7900CAF26B /* WebVC.swift */,
@@ -163,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				717B66A71E2E756A006A604C /* MuseumListView.swift */,
+				7183B3971E427D4D00EDF9C0 /* MuseumCollectionView.swift */,
+				7183B3991E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift */,
 				71DF916B1E2BDA0000943648 /* DetailView.swift */,
 				715204481E2A6DC800AD04AB /* MuseumCellTableViewCell.swift */,
 				71732BE71E2C3D28009A5D75 /* WebView.swift */,
@@ -354,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7183B39A1E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift in Sources */,
 				716027451E2A8F7900CAF26B /* WebVC.swift in Sources */,
 				71732BE81E2C3D28009A5D75 /* WebView.swift in Sources */,
 				71E443EA1E3999FA0074D244 /* PhotosAPIClient.swift in Sources */,
@@ -366,7 +376,9 @@
 				715924541E380EF00007B852 /* FilterVC.swift in Sources */,
 				7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */,
 				715204491E2A6DC800AD04AB /* MuseumCellTableViewCell.swift in Sources */,
+				7183B3981E427D4D00EDF9C0 /* MuseumCollectionView.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
+				7183B3961E427C8400EDF9C0 /* MuseumCollectionVC.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
 				710D80451E2C1750002AD134 /* Constants.swift in Sources */,
 				717B66A81E2E756A006A604C /* MuseumListView.swift in Sources */,

@@ -23,7 +23,7 @@ class TabBarVC: UITabBarController {
         super.viewWillAppear(animated)
         
         // Create Tab one
-        let tabOne = MuseumListVC()
+        let tabOne = MuseumCollectionVC()
         let tabOneBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Home Icon"), selectedImage: UIImage(named: "Home Icon"))
         
         tabOne.tabBarItem = tabOneBarItem
@@ -34,13 +34,7 @@ class TabBarVC: UITabBarController {
         
         tabTwo.tabBarItem = tabTwoBarItem2
         
-        // Create Tab three
-        let tabThree = MapVC()
-        let tabThreeBarItem3 = UITabBarItem(title: "Settings", image: UIImage(named: "Settings Icon"), selectedImage: UIImage(named: "Settings Icon"))
-        
-        tabThree.tabBarItem = tabThreeBarItem3
-        
-        self.viewControllers = [tabOne, tabTwo, tabThree]
+        self.viewControllers = [tabOne, tabTwo]
         
         self.tabBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         self.tabBar.tintColor = UIColor.white

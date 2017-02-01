@@ -36,4 +36,27 @@ struct Constants {
     
     static let key2: String = "AIzaSyDVfmnEa-AgJdoLFoaZcy9ZBCH3jeVEGSE"
     
+    
+    //LAYOUT
+    
+    enum gridLayout: CGFloat {
+        case HSInterCardHorizontalSpacing = 30
+        case HSInterCardVerticalSpacing = 57
+        case HSGridTopMargin = 60
+        case HSGridSideMargin = 63
+    }
+    
+    enum cardSizes: CGFloat {
+        case HSCardWidth = 276
+        case HSCardHeight = 267
+    }
+    
+    enum image: CGFloat {
+        case HSImageWidth = 276
+        case HSImageHeight = 207
+        case HSImageCornerRadius = 10
+        case HSImageBorderWidth = 2
+    }
+
+    
 }
