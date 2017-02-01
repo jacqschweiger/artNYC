@@ -16,6 +16,8 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.museumCollectionView.delegate = self
     }
     
     override func loadView() {

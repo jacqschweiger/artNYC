@@ -44,14 +44,6 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
     }
     
     func setUpElements(){
-        self.addSubview(museumCollectionView)
-        self.museumCollectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.museumCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.museumCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.museumCollectionView.backgroundColor = UIColor.white
         
         let filler = UILabel()
         self.addSubview(filler)
@@ -73,6 +65,17 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         header.font = UIFont(name: "Avenir Black", size: 26)
         header.textAlignment = .center
         header.textColor = UIColor.white
+
+        
+        self.addSubview(museumCollectionView)
+        self.museumCollectionView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
+        self.museumCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.museumCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.museumCollectionView.backgroundColor = UIColor.white
+        
         
         //Filter Set Up
         self.insertSubview(filterButton, aboveSubview: header)
@@ -82,11 +85,14 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.filterButton.backgroundColor = UIColor.black
     }
     
     
     
     func showFilter(){
+        print("tapped")
         self.delegate?.showFilter()
     }
     
