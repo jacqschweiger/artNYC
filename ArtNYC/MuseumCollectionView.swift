@@ -11,20 +11,24 @@ import UIKit
 class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var museums: [Museum] = []
-    var collectionView: UICollectionView!
+    var museumCollectionView: UICollectionView!
+    let header = UILabel()
+    var selectedMuseum: Museum!
+    var filterButton = UIButton()
+    weak var delegate: MuseumLisViewDelegate?
     
     override init(frame:CGRect){
         super.init(frame: frame)
         
-        let layoutA = UICollectionViewFlowLayout()
-        layoutA.itemSize = CGSize(width: 100, height: 100)
+        let cvLayout = UICollectionViewFlowLayout()
+        cvLayout.itemSize = CGSize(width: 100, height: 100)
 
-        collectionView = UICollectionView(frame: self.frame, collectionViewLayout: layoutA)
+        museumCollectionView = UICollectionView(frame: self.frame, collectionViewLayout: cvLayout)
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
+        self.museumCollectionView.delegate = self
+        self.museumCollectionView.dataSource = self
         
-        collectionView.register(MuseumCollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
+        museumCollectionView.register(MuseumCollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
         
         setUpElements()
     }
@@ -34,12 +38,50 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
     }
     
     func setUpElements(){
-        self.addSubview(collectionView)
-        self.collectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.collectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.collectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(museumCollectionView)
+        self.museumCollectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.museumCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.museumCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.museumCollectionView.backgroundColor = UIColor.white
+        
+        let filler = UILabel()
+        self.addSubview(filler)
+        filler.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        filler.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        filler.heightAnchor.constraint(equalToConstant: 6).isActive = true
+        filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        filler.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Header Set Up
+        self.addSubview(header)
+        self.header.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
+        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.header.translatesAutoresizingMaskIntoConstraints = false
+        
+        header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        header.text = "Art Museums NYC"
+        header.font = UIFont(name: "Avenir Black", size: 26)
+        header.textAlignment = .center
+        header.textColor = UIColor.white
+        
+        //Filter Set Up
+        self.insertSubview(filterButton, aboveSubview: header)
+        self.filterButton.setTitle("•••", for: .normal)
+        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+        
+        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    
+    
+    func showFilter(){
+        self.delegate?.showFilter()
     }
     
 }
@@ -52,7 +94,7 @@ extension MuseumCollectionView {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCollectionViewCell
+        let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCollectionViewCell
         cell.titleLabel.text = museums[indexPath.item].title
         return cell
     }

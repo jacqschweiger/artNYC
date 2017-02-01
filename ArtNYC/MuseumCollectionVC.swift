@@ -12,7 +12,7 @@ import UIKit
 class MuseumCollectionVC: UIViewController {
     
     var store = MuseumDataStore.sharedInstance
-    var museumCollectionView = MuseumCollectionView()
+    var museumCollectionView: MuseumCollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,8 @@ class MuseumCollectionVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        //self.museumCollectionView.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
+        self.navigationController?.isNavigationBarHidden = true
+        self.view = museumCollectionView
         
         if store.filteredMuseums.count > 0 {
             self.museumCollectionView.museums = store.filteredMuseums
