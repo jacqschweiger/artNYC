@@ -14,7 +14,6 @@ class FilterVC: UIViewController, FilterViewDelegate {
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
-    var museumListVC = MuseumListVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
