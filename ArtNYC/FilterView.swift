@@ -12,7 +12,7 @@ import UIKit
 protocol FilterViewDelegate: class {
     func dismissView()
     func filterMuseums()
-}
+} 
 
 class FilterView: UIView {
     
