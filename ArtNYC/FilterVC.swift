@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FilterVC: UIViewController, DismissDelegate {
+class FilterVC: UIViewController, FilterViewDelegate {
     
     var filterView: FilterView!
     var dismissButton: UIButton!
@@ -23,20 +23,6 @@ class FilterVC: UIViewController, DismissDelegate {
         self.filterView = FilterView()
         self.view = filterView
         self.filterView.delegate = self
-        
-        self.filterView.interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
-        
-        dismissButton = UIButton(type: .system)
-        dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        dismissButton.backgroundColor = UIColor.clear
-        dismissButton.translatesAutoresizingMaskIntoConstraints = false
-        self.view.insertSubview(dismissButton, belowSubview: filterView)
-        self.view.sendSubview(toBack: dismissButton)
-        
-        dismissButton.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        dismissButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        dismissButton.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        dismissButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
     }
     
     func dismissView(){

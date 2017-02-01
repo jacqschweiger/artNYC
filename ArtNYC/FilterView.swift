@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-protocol DismissDelegate: class {
+protocol FilterViewDelegate: class {
     func dismissView()
+    func filterMuseums()
 }
 
 class FilterView: UIView {
@@ -21,20 +22,12 @@ class FilterView: UIView {
     let freeSwitch = UISwitch()
     let openLateSwitch = UISwitch()
     let doneButton = UIButton()
-    var delegate: DismissDelegate?
+    var delegate: FilterViewDelegate?
     
     override init(frame:CGRect){
         super.init(frame: frame)
         
         self.backgroundColor = UIColor(white: 1, alpha: 0.75)
-        
-        self.addSubview(filterMenu)
-        self.filterMenu.backgroundColor = UIColor.white
-        self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7).isActive = true
-        self.filterMenu.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7).isActive = true
-        self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
         
         setUpElements()
     
@@ -45,6 +38,33 @@ class FilterView: UIView {
     }
     
     func setUpElements(){
+        
+        //Filter Menu
+        
+        self.addSubview(filterMenu)
+        self.filterMenu.backgroundColor = UIColor.white
+        self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7).isActive = true
+        self.filterMenu.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7).isActive = true
+        self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Clear Dismiss Button
+        
+        let dismissButton = UIButton(type: .system)
+        dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        dismissButton.backgroundColor = UIColor.clear
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
+        self.insertSubview(dismissButton, belowSubview: filterMenu)
+        self.sendSubview(toBack: dismissButton)
+        
+        dismissButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        dismissButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        dismissButton.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        dismissButton.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        
+        
+        //Title Label
         self.filterMenu.addSubview(titleLabel)
         titleLabel.text = "Filter"
         titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
@@ -56,45 +76,61 @@ class FilterView: UIView {
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        
+        //Interior View Switch
         self.filterMenu.addSubview(interiorViewSwitch)
         interiorViewSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
         interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
         
+        interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
         
-        self.filterMenu.addSubview(freeSwitch)
-        freeSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
-        freeSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
-        freeSwitch.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
-        freeSwitch.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        self.filterMenu.addSubview(openLateSwitch)
-        openLateSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
-        openLateSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
-        openLateSwitch.topAnchor.constraint(equalTo: freeSwitch.bottomAnchor, constant: 20).isActive = true
-        openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
+
+        //Done Button
         
         self.filterMenu.addSubview(doneButton)
         doneButton.centerXAnchor.constraint(equalTo: self.filterMenu.centerXAnchor).isActive = true
-        doneButton.topAnchor.constraint(equalTo: openLateSwitch.bottomAnchor, constant: 20).isActive = true
+        doneButton.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
         doneButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         doneButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
         doneButton.setTitle("Done", for: .normal)
         doneButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
         doneButton.setTitleColor(UIColor.white, for: .normal)
         doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        doneButton.addTarget(self, action: #selector(closeFilterScreen), for: .touchUpInside)
+        doneButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         doneButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+    
     }
     
-    func closeFilterScreen(){
+    func dismissView(){
         self.delegate?.dismissView()
+    }
+    
+    func filterMuseums(){
+        self.delegate?.filterMuseums()
+    }
+    
+    func checkSwitchState(){
+        
     }
     
     
     
 }
+
+
+/*
+ self.filterMenu.addSubview(freeSwitch)
+ freeSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
+ freeSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
+ freeSwitch.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
+ freeSwitch.translatesAutoresizingMaskIntoConstraints = false
+ 
+ 
+ self.filterMenu.addSubview(openLateSwitch)
+ openLateSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
+ openLateSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
+ openLateSwitch.topAnchor.constraint(equalTo: freeSwitch.bottomAnchor, constant: 20).isActive = true
+ openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
+*/
