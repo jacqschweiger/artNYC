@@ -36,8 +36,6 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         
         museumCollectionView.register(MuseumCollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
         
-        museumCollectionView.backgroundColor = UIColor.black
-        
         setUpElements()
     }
     
@@ -109,6 +107,14 @@ extension MuseumCollectionView {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCollectionViewCell
         cell.titleLabel.text = museums[indexPath.item].title
+        if museums[indexPath.item].title == "Metropolitan Museum of Art" {
+            cell.titleLabel.text = "Metropolitan\nMuseum of Art"
+        } else if museums[indexPath.item].title == "Solomon R. Guggenheim Museum" {
+            cell.titleLabel.text = "Solomon R.\nGuggenheim Museum"
+        } else if museums[indexPath.item].title == "Whitney Museum of American Art" {
+            cell.titleLabel.text = "Whitney Museum of/nAmerican Art"
+        }
+        cell.titleLabel.numberOfLines = 0
         cell.imageView.image = self.museums[indexPath.item].logo
         return cell
     }
@@ -134,17 +140,17 @@ extension MuseumCollectionView {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let sectionInsets = UIEdgeInsets(top: Constants.gridLayout.GridTopMargin.rawValue, left: Constants.gridLayout.GridSideMargin.rawValue, bottom: Constants.gridLayout.GridTopMargin.rawValue, right: Constants.gridLayout.GridSideMargin.rawValue)
+        let sectionInsets = UIEdgeInsets(top: Constants.gridLayout.GridTopMargin.rawValue, left: Constants.gridLayout.GridSideMargin.rawValue, bottom: Constants.gridLayout.GridBottomMargin.rawValue, right: Constants.gridLayout.GridSideMargin.rawValue)
         
         return sectionInsets
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cardWidth = Constants.cardSizes.BlockWidth.rawValue
-        let cardHeight = Constants.cardSizes.BlockHeight.rawValue
-        let cardSize = CGSize(width: cardWidth, height: cardHeight)
+        let blockWidth = Constants.blockSizes.BlockWidth.rawValue
+        let blockHeight = Constants.blockSizes.BlockHeight.rawValue
+        let blockSize = CGSize(width: blockWidth, height: blockHeight)
         
-        return cardSize
+        return blockSize
     }
     
     

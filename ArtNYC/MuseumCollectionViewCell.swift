@@ -36,7 +36,6 @@ class MuseumCollectionViewCell: UICollectionViewCell {
         imageView.widthAnchor.constraint(equalToConstant: Constants.image.ImageWidth.rawValue).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: Constants.image.ImageHeight.rawValue).isActive = true
         imageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-        //imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
         
         imageView.layer.cornerRadius = Constants.image.ImageCornerRadius.rawValue
@@ -50,12 +49,12 @@ class MuseumCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(titleLabel)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 10).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         
         titleLabel.font = UIFont(name: "Avenir Black", size: 14)
         titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        titleLabel.textAlignment = .center
         
         
     }

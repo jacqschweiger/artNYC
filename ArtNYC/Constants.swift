@@ -60,12 +60,13 @@ struct Constants {
 
     enum gridLayout: CGFloat {
         case InterBlockHorizontalSpacing = 25
-        case InterBlockVerticalSpacing = 55
-        case GridTopMargin = 30
+        case InterBlockVerticalSpacing = 40
+        case GridTopMargin = 1
+        case GridBottomMargin = 100
         case GridSideMargin = 24
     }
     
-    enum cardSizes: CGFloat {
+    enum blockSizes: CGFloat {
         case BlockWidth = 150
         case BlockHeight = 151
     }
