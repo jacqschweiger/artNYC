@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class WebVC: UIViewController, WebNavDelegate, BackDelegate {
+class WebVC: UIViewController, WebViewDelegate, BackDelegate {
     
     var museum: Museum!
     var webView: WebView!

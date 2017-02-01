@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDelegate {
+class DetailVC: UIViewController, GMSMapViewDelegate, DetailViewDelegate, BackDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museum: Museum!
@@ -18,14 +18,13 @@ class DetailVC: UIViewController, GMSMapViewDelegate, ShowInfoDelegate, BackDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailView.showInfoDelegate = self
+        detailView.delegate = self
         detailView.backDelegate = self
     }
     
     override func loadView(){
         self.detailView = DetailView(frame: CGRect.zero, museum: museum)
         self.view = self.detailView
-        self.view.reloadInputViews()
     }
     
     

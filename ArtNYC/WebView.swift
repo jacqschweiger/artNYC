@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol WebNavDelegate: class {
+protocol WebViewDelegate: class {
     func goForward(_: AnyObject)
     func doRefresh(_: AnyObject)
     func stop(_: AnyObject)
@@ -22,7 +22,7 @@ protocol BackDelegate: class {
 
 class WebView: UIView {
     
-    weak var delegate: WebNavDelegate?
+    weak var delegate: WebViewDelegate?
     weak var backDelegate: BackDelegate?
     var museum: Museum!
     var museumWebView: UIWebView!

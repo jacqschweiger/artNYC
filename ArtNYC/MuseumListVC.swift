@@ -10,14 +10,19 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-class MuseumListVC: UIViewController, ShowDetailViewDelegate {
+class MuseumListVC: UIViewController, MuseumLisViewDelegate {
     
-    let museumListView = MuseumListView()
+    var museumListView = MuseumListView()
     let store = MuseumDataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         museumListView.delegate = self
+    }
+    
+    override func loadView() {
+        self.museumListView = MuseumListView(frame: CGRect.zero)
+        self.view = self.museumListView
     }
     
     override func viewWillAppear(_ animated: Bool){

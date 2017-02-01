@@ -23,7 +23,7 @@ class FilterView: UIView {
     let freeSwitch = UISwitch()
     let openLateSwitch = UISwitch()
     let doneButton = UIButton()
-    var delegate: FilterViewDelegate?
+    weak var delegate: FilterViewDelegate?
     var store = MuseumDataStore.sharedInstance
     
     override init(frame:CGRect){
@@ -51,9 +51,6 @@ class FilterView: UIView {
         
         //Clear Dismiss Button
         let dismissButton = UIButton(type: .system)
-        dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        dismissButton.backgroundColor = UIColor.clear
-        dismissButton.translatesAutoresizingMaskIntoConstraints = false
         self.insertSubview(dismissButton, belowSubview: filterMenu)
         self.sendSubview(toBack: dismissButton)
         
@@ -61,7 +58,10 @@ class FilterView: UIView {
         dismissButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         dismissButton.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         dismissButton.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
         
+        dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        dismissButton.backgroundColor = UIColor.clear
         
         //Title Label
         self.filterMenu.addSubview(titleLabel)
@@ -99,35 +99,33 @@ class FilterView: UIView {
 
         
         //Done Button
-        
         self.filterMenu.addSubview(doneButton)
         doneButton.centerXAnchor.constraint(equalTo: self.filterMenu.centerXAnchor).isActive = true
         doneButton.bottomAnchor.constraint(equalTo: self.filterMenu.bottomAnchor, constant: -20).isActive = true
         doneButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         doneButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        
         doneButton.setTitle("Done", for: .normal)
         doneButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
         doneButton.setTitleColor(UIColor.white, for: .normal)
         doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        doneButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        doneButton.translatesAutoresizingMaskIntoConstraints = false
-    
+        doneButton.addTarget(self, action: #selector(donePressed), for: .touchUpInside)
     }
     
     func dismissView(){
         self.delegate?.dismissView()
     }
     
+    func donePressed(){
+        //add reload museum delegate
+        self.delegate?.dismissView()
+    }
+    
     func filterMuseums(){
         self.delegate?.filterMuseums()
     }
-    
-    func checkSwitchState(){
-        
-    }
-    
-    
-    
+
 }
 
 

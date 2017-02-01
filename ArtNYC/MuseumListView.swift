@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-protocol ShowDetailViewDelegate: class {
+protocol MuseumLisViewDelegate: class {
     func goToDetailView()
     func showFilter()
 }
 
 class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    weak var delegate: ShowDetailViewDelegate?
+    weak var delegate: MuseumLisViewDelegate?
     let header = UILabel()
     let tableView = UITableView()
     var selectedMuseum: Museum!
@@ -100,6 +100,6 @@ class MuseumListView: UIView, UITableViewDelegate, UITableViewDataSource {
     func showFilter(){
         self.delegate?.showFilter()
     }
-    
+        
 }
 

@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-protocol ShowInfoDelegate: class {
+protocol DetailViewDelegate: class {
     func goToWebView()
     func goToInteriorView()
 }
 
 class DetailView: UIView, GMSMapViewDelegate {
     
-    weak var showInfoDelegate: ShowInfoDelegate?
+    weak var delegate: DetailViewDelegate?
     weak var backDelegate: BackDelegate?
     var museum: Museum!
     var museumImage = UIImageView()
@@ -51,7 +51,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.museum = museum
         self.backgroundColor = UIColor.white
         self.setUpElements()
-        reloadInputViews()
+//        reloadInputViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -392,11 +392,11 @@ class DetailView: UIView, GMSMapViewDelegate {
     // MARK: Show Info Button Functions
     
     func onGoToWebView(){
-        self.showInfoDelegate?.goToWebView()
+        self.delegate?.goToWebView()
     }
     
     func onGoToInteriorView(){
-        self.showInfoDelegate?.goToInteriorView()
+        self.delegate?.goToInteriorView()
     }
     
     func goBack(){

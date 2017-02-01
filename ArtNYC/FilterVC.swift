@@ -26,6 +26,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
     }
     
     func dismissView(){
+        print("dismiss delegate called")
         dismiss(animated: true, completion: nil)
     }
     
