@@ -19,7 +19,7 @@ class MuseumDataStore {
     var placeID: String!
     var photoReference: String!
     var photoURL: String!
-    
+    var interiorViewSwitchIsOn: Bool = false
     
     func loadMuseums() {
         let metMuseum = Museum(title:"The Metropolitan Museum of Art",
@@ -381,6 +381,8 @@ class MuseumDataStore {
                                    photoURL: "")
         
         allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, fit, morganLibrary, asiaSociety]
+        
+        // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1
             
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
@@ -436,6 +438,6 @@ class MuseumDataStore {
     
     
     
-    // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1
+    
     
 }

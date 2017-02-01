@@ -23,6 +23,7 @@ class FilterView: UIView {
     let openLateSwitch = UISwitch()
     let doneButton = UIButton()
     var delegate: FilterViewDelegate?
+    var store = MuseumDataStore.sharedInstance
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -83,8 +84,11 @@ class FilterView: UIView {
         interiorViewSwitch.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
-        
         interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
+        if store.interiorViewSwitchIsOn {
+            interiorViewSwitch.setOn(true, animated: false)
+        }
+
         
 
         //Done Button

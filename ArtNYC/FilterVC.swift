@@ -32,7 +32,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
     func filterMuseums(){
         switch self.filterView.interiorViewSwitch.isOn {
         case true:
-            self.filterView.interiorViewSwitch.setOn(true, animated: true)
+            store.interiorViewSwitchIsOn = true
             store.filteredMuseums = []
             for museum in store.allMuseums {
                 if museum.interiorMapView == true {
@@ -42,6 +42,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
             print(store.filteredMuseums.count)
             
         case false:
+            store.interiorViewSwitchIsOn = false
             store.filteredMuseums = []
             print(store.filteredMuseums.count)
         }
