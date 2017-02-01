@@ -22,7 +22,7 @@ class MuseumDataStore {
     var interiorViewSwitchIsOn: Bool = false
     
     func loadMuseums() {
-        let metMuseum = Museum(title:"The Metropolitan Museum of Art",
+        let metMuseum = Museum(title:"Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
                                address: "1000 5th Ave",
                                hours: ["Sunday":"10am-5:30pm",
@@ -167,7 +167,7 @@ class MuseumDataStore {
                              interiorMapView: false,
                              photoURL: "")
         
-        let newMuseum = Museum(title: "The New Museum",
+        let newMuseum = Museum(title: "New Museum",
                                logo: UIImage(named: "newMuseumLogo")!,
                                address: "235 Bowery",
                                hours: ["Sunday":"11am–6pm",
@@ -237,7 +237,7 @@ class MuseumDataStore {
                                   interiorMapView: false,
                                   photoURL: "")
         
-        let frick = Museum(title: "The Frick Collection",
+        let frick = Museum(title: "Frick Collection",
                            logo: UIImage(named: "frickLogo")!,
                            address: "1 E 70th St",
                            hours: ["Sunday":"11am–5pm",
@@ -255,7 +255,7 @@ class MuseumDataStore {
                            interiorMapView: true,
                            photoURL: "")
         
-        let drawingCenter = Museum(title: "The Drawing Center",
+        let drawingCenter = Museum(title: "Drawing Center",
                                    logo: UIImage(named: "drawingCenterLogo")!,
                                    address: "35 Wooster St",
                                    hours: ["Sunday":"12–6pm",
@@ -273,7 +273,7 @@ class MuseumDataStore {
                                    interiorMapView: false,
                                    photoURL: "")
         
-        let cloisters = Museum(title: "The Met Cloisters",
+        let cloisters = Museum(title: "Met Cloisters",
                                logo: UIImage(named: "cloistersLogo")!,
                                address: "99 Margaret Corbin Dr",
                                hours: ["Sunday":"10am–4:45pm",
@@ -308,7 +308,7 @@ class MuseumDataStore {
                                      interiorMapView: false,
                                      photoURL: "")
         
-        let metBreuer = Museum(title: "The Met Breuer",
+        let metBreuer = Museum(title: "Met Breuer",
                                logo: UIImage(named: "breuerLogo")!,
                                address: "945 Madison Ave",
                                hours: ["Sunday":"10am–5:30pm",
@@ -344,7 +344,7 @@ class MuseumDataStore {
                                  interiorMapView: false,
                                  photoURL: "")
         
-        let fit = Museum(title: "The Museum at FIT",
+        let fit = Museum(title: "Museum at FIT",
                          logo: UIImage(named: "fitLogo")!,
                          address: "227 W 27th St",
                          hours: ["Sunday":"Closed",

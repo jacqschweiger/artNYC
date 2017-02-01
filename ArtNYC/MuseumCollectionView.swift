@@ -36,6 +36,8 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         
         museumCollectionView.register(MuseumCollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
         
+        museumCollectionView.backgroundColor = UIColor.black
+        
         setUpElements()
     }
     
@@ -85,8 +87,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.filterButton.backgroundColor = UIColor.black
+
     }
     
     
@@ -108,6 +109,7 @@ extension MuseumCollectionView {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCollectionViewCell
         cell.titleLabel.text = museums[indexPath.item].title
+        cell.imageView.image = self.museums[indexPath.item].logo
         return cell
     }
     
