@@ -38,7 +38,7 @@ class MuseumDataStore {
                                coordinate: CLLocationCoordinate2D(latitude: 40.7802722, longitude: -73.9622221),
                                url: "http://www.metmuseum.org/",
                                interiorMapView: true,
-                               imageURL: "http://images.metmuseum.org/CRDImages/ep/web-large/DP-687-001.jpg")
+                               imageURL: "http://images.metmuseum.org/CRDImages/ep/web-large/DT48.jpg")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
                                  logo: UIImage(named: "neueGalerieLogo")!,
@@ -56,7 +56,7 @@ class MuseumDataStore {
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
                                  url: "http://neuegalerie.org/",
                                  interiorMapView: false,
-                                 imageURL: "http://www.neuegalerie.org/sites/default/files/resized/NG_Collection/Larger_Images/2006/2006.04.jpg")
+                                 imageURL: "http://www.neuegalerie.org/sites/default/files/adele_new.jpg")
         
         let rubinMuseum = Museum(title: "Rubin Museum of Art",
                                  logo: UIImage(named: "rubinLogo")!,
@@ -147,7 +147,7 @@ class MuseumDataStore {
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
                                   url: "http://thejewishmuseum.org/",
                                   interiorMapView: false,
-                                  imageURL: "http://72.32.137.209/piction/ump.show_public_image?v_umo=12801028&quality=O3")
+                                  imageURL: "http://72.32.137.209/piction/ump.show_public_image?v_umo=12805126&quality=O3")
         
         let folkArt = Museum(title: "American Folk Art Museum",
                              logo: UIImage(named: "folkArtLogo")!,
@@ -235,7 +235,7 @@ class MuseumDataStore {
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7844391, longitude: -73.9578551),
                                   url: "https://www.cooperhewitt.org/",
                                   interiorMapView: false,
-                                  imageURL: "https://images.collection.cooperhewitt.org/283338_92351ffd3e8469cc_b.jpg")
+                                  imageURL: "https://images.collection.cooperhewitt.org/65247_a6ebf9a09328e38d_b.jpg")
         
         let frick = Museum(title: "Frick Collection",
                            logo: UIImage(named: "frickLogo")!,
@@ -253,7 +253,7 @@ class MuseumDataStore {
                            coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
                            url: "http://www.frick.org/",
                            interiorMapView: true,
-                           imageURL: "http://collections.frick.org/internal/media/dispatcher/6509/resize:format=preview")
+                           imageURL: "http://collections.frick.org/internal/media/dispatcher/6548/resize:format=preview")
         
         let drawingCenter = Museum(title: "Drawing Center",
                                    logo: UIImage(named: "drawingCenterLogo")!,
