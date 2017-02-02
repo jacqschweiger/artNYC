@@ -79,7 +79,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        //Image View        
+        //Image View
         self.scrollView.addSubview(museumImage)
         DispatchQueue.main.async {
             

@@ -22,9 +22,9 @@ class Museum: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
     let url: String
     let interiorMapView: Bool
-    var photoURL: String
+    var imageURL: String
     
-    init(title: String, logo: UIImage, address: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: String, coordinate: CLLocationCoordinate2D, url: String, interiorMapView: Bool, photoURL: String){
+    init(title: String, logo: UIImage, address: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: String, coordinate: CLLocationCoordinate2D, url: String, interiorMapView: Bool, imageURL: String){
         self.title = title
         self.logo = logo
         self.address = address
@@ -35,7 +35,7 @@ class Museum: NSObject, MKAnnotation {
         self.coordinate = coordinate
         self.url = url
         self.interiorMapView = interiorMapView
-        self.photoURL = photoURL
+        self.imageURL = imageURL
         
         super.init()
     }

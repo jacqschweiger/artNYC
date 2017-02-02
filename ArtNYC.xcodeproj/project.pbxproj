@@ -95,9 +95,9 @@
 		7132CBEC1E29696E008CA655 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				71E443E91E3999FA0074D244 /* PhotosAPIClient.swift */,
 				7191AC881E295ECB00F2D06D /* Museum.swift */,
 				7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */,
+				71E443E91E3999FA0074D244 /* PhotosAPIClient.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
