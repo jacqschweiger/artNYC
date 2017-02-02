@@ -60,16 +60,16 @@ class DetailView: UIView, GMSMapViewDelegate {
     func setUpElements() {
         
         //Back Button
-        self.addSubview(backButton)
-        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        
-        self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
-        self.backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
-        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        self.backButton.translatesAutoresizingMaskIntoConstraints = false
+//        self.addSubview(backButton)
+//        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+//        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+//        
+//        self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
+//        self.backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
+//        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+//        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
+//        
+//        self.backButton.translatesAutoresizingMaskIntoConstraints = false
         
         //Scroll View
         self.addSubview(scrollView)
@@ -80,21 +80,29 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         //Image View
-        self.addSubview(museumImage)
-        self.museumImage.image = UIImage(named: "momaImage")
+        self.scrollView.addSubview(museumImage)
+        DispatchQueue.main.async {
+            
+            let urlString = Constants.momaImageURL
+            if let url = URL(string: urlString) {
+                if let data = NSData(contentsOf: url) {
+                    self.museumImage.image = UIImage(data: data as Data)
+                }
+            }
+        }
         
         museumImage.contentMode = .scaleAspectFill
         museumImage.clipsToBounds = true
         
         museumImage.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         museumImage.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        museumImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        museumImage.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
         museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.40).isActive = true
         museumImage.translatesAutoresizingMaskIntoConstraints = false
         
         
         //Title Label
-        self.addSubview(titleLabel)
+        self.scrollView.addSubview(titleLabel)
         self.titleLabel.topAnchor.constraint(equalTo: self.museumImage.centerYAnchor).isActive = true
         self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -121,7 +129,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)
             scrollView.addSubview(seeInsideButton)
             seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
-            seeInsideButton.topAnchor.constraint(equalTo: self.museumImage.topAnchor, constant: 20).isActive = true
+            seeInsideButton.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 20).isActive = true
             seeInsideButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
             seeInsideButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             seeInsideButton.translatesAutoresizingMaskIntoConstraints = false
@@ -161,7 +169,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
             artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.museumImage.topAnchor, constant: 20).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 20).isActive = true
             artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false

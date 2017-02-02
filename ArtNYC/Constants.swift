@@ -36,6 +36,8 @@ struct Constants {
     
     static let key2: String = "AIzaSyDVfmnEa-AgJdoLFoaZcy9ZBCH3jeVEGSE"
     
+    static let momaImageURL: String = "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/s960x960/16402527_108035876381208_1031228506978284464_o.jpg?oh=2f47fa6e26f493ac15c7bdc468782c60&oe=59007702"
+    
     
     //LAYOUT
 
