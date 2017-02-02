@@ -143,16 +143,15 @@ class DetailView: UIView, GMSMapViewDelegate {
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
             artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 40).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
             artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
             
             artCategoriesLabel.text = "Art"
-            artCategoriesLabel.textAlignment = .center
-            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
-            artCategoriesLabel.textColor = UIColor.white
-            artCategoriesLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            artCategoriesLabel.textAlignment = .left
+            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 28)
+            artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
             
             //Art Categories Content
             scrollView.addSubview(artCategoriesContent)
@@ -176,11 +175,10 @@ class DetailView: UIView, GMSMapViewDelegate {
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
             
             artCategoriesLabel.text = "Art"
-            artCategoriesLabel.textAlignment = .center
-            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
-            artCategoriesLabel.textColor = UIColor.white
-            artCategoriesLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-            
+            artCategoriesLabel.textAlignment = .left
+            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 28)
+            artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+
             //Art Categories Content
             scrollView.addSubview(artCategoriesContent)
             artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -201,10 +199,9 @@ class DetailView: UIView, GMSMapViewDelegate {
         admissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         admissionLabel.text = "Admission"
-        admissionLabel.textAlignment = .center
-        admissionLabel.font = UIFont(name: "Avenir Black", size: 20)
-        admissionLabel.textColor = UIColor.white
-        admissionLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        admissionLabel.textAlignment = .left
+        admissionLabel.font = UIFont(name: "Avenir Black", size: 28)
+        admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Admission Content
         scrollView.addSubview(admissionContent)
@@ -225,10 +222,9 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionLabel.text = "Free Admission"
-        freeAdmissionLabel.textAlignment = .center
-        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 20)
-        freeAdmissionLabel.textColor = UIColor.white
-        freeAdmissionLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        freeAdmissionLabel.textAlignment = .left
+        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 28)
+        freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Free Admission Content
         scrollView.addSubview(freeAdmissionContent)
@@ -251,10 +247,9 @@ class DetailView: UIView, GMSMapViewDelegate {
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         
         addressLabel.text = "Address"
-        addressLabel.textAlignment = .center
-        addressLabel.font = UIFont(name: "Avenir Black", size: 20)
-        addressLabel.textColor = UIColor.white
-        addressLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        addressLabel.textAlignment = .left
+        addressLabel.font = UIFont(name: "Avenir Black", size: 28)
+        addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Address Content
         scrollView.addSubview(addressContent)
@@ -275,10 +270,9 @@ class DetailView: UIView, GMSMapViewDelegate {
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         
         hoursLabel.text = "Hours"
-        hoursLabel.textAlignment = .center
-        hoursLabel.font = UIFont(name: "Avenir Black", size: 20)
-        hoursLabel.textColor = UIColor.white
-        hoursLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        hoursLabel.textAlignment = .left
+        hoursLabel.font = UIFont(name: "Avenir Black", size: 28)
+        hoursLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Days Labels
         scrollView.addSubview(sundayLabel)
