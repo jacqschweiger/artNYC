@@ -9,12 +9,20 @@
 import Foundation
 import UIKit
 
+
+
+protocol ReloadDelegate: class {
+    func reloadTableView()
+}
+
 class FilterVC: UIViewController, FilterViewDelegate {
     
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
-        
+    var delegate: ReloadDelegate?
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -38,12 +46,11 @@ class FilterVC: UIViewController, FilterViewDelegate {
                     store.filteredMuseums.append(museum)
                 }
             }
-            print(store.filteredMuseums.count)
-            
+
         case false:
             store.interiorViewSwitchIsOn = false
             store.filteredMuseums = []
-            print(store.filteredMuseums.count)
+
         }
     }
     
