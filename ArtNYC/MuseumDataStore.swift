@@ -165,7 +165,7 @@ class MuseumDataStore {
                              coordinate: CLLocationCoordinate2D(latitude: 40.7732, longitude: -73.9814),
                              url: "http://folkartmuseum.org/",
                              interiorMapView: false,
-                             imageURL: "http://collection.folkartmuseum.org/media/view/Objects/927/2216?t:state:flow=ead7575a-c907-4ad5-9e61-75a6028780be")
+                             imageURL: "http://folkartmuseum.org/content/uploads/2014/08/folk_6649_image.jpg")
         
         let newMuseum = Museum(title: "New Museum",
                                logo: UIImage(named: "newMuseumLogo")!,
@@ -360,7 +360,7 @@ class MuseumDataStore {
                          coordinate: CLLocationCoordinate2D(latitude: 40.7464981, longitude: -73.993782),
                          url: "http://www.fitnyc.edu/museum/",
                          interiorMapView: false,
-                         imageURL: "http://fashionmuseum.fitnyc.edu/media/view/Objects/34005/41740?t:state:flow=767e1b1e-5511-4405-8c2d-63acd13f7335")
+                         imageURL: "http://blog.fitnyc.edu/admissions/files/2014/09/FITmuseum.jpg")
         
         let morganLibrary = Museum(title: "Morgan Library & Museum",
                                    logo: UIImage(named: "morganLogo")!,
