@@ -7,63 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5C5484485D2912DAA417B67A103F0CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		B1BF0DE6A77060BE0CC75D6957746575 /* Pods-ArtNYC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF90FC2AA0901B8122A04C3767AED8C /* Pods-ArtNYC-dummy.m */; };
-		EC1811926EE639083027FE2278588CA0 /* Pods-ArtNYC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FA92614BB31CA1004A2254FD4FF40C /* Pods-ArtNYC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		002F1DBB8EBEC4697E294B8388560534 /* MXScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7FCA6229C7954D01B73CBF25B143E6 /* MXScrollViewController.m */; };
+		09FF02A67FD3FCD2242B2A0CB21890B9 /* MXScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D4CBFAEABB2A72F87A1A42456C171E7 /* MXScrollViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18758A05AD1B995A7911EDFB89BA6555 /* MXParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA71A342DF4062F6BAC6E8EA1F2FA57C /* MXParallaxHeader.m */; };
+		309F95BD5B8E02F0D3C8E3DA04EC34C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		933741DB7C6CA9CA7BD096A0BD3AFA1A /* MXParallaxHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BCB38336C54CB3ED8D6539CE62FE08 /* MXParallaxHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93EFD9DBF4CC4DAB6D73F2A1115860F9 /* MXParallaxHeader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E2B6B40D97B389F6722C93F7D81EEF2 /* MXParallaxHeader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95E15733F2BCC3173EC5C55D3998B717 /* MXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0FBCCEBF1BFD08B344EECEAFD78BD /* MXScrollView.m */; };
+		AEE82D08D1322493D6DDC512268E4AB7 /* Pods-ArtNYC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF90FC2AA0901B8122A04C3767AED8C /* Pods-ArtNYC-dummy.m */; };
+		B18E6AA258B1C2D346B6D7D52B595B71 /* Pods-ArtNYC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FA92614BB31CA1004A2254FD4FF40C /* Pods-ArtNYC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF7AEDC10DFA19EE70C372D30C6858D4 /* MXParallaxHeader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C37DE2375F78FECED14FC2DD37AEE5 /* MXParallaxHeader-dummy.m */; };
+		F73858285DC297190F4F0103A3D62A2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		FC07C9DF7DFEE45A3906B0513717D0EC /* MXScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1270C8B7EF238A9D24737E9942250DC6 /* MXScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		73D1A3FCB2A2CEECE91FC5EA98A0D56F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E75E5BAC0FE6E4C6A5E5F95EA6807F8A;
+			remoteInfo = MXParallaxHeader;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		08F1229163C7F5E61C7C4B361510F11C /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		056D953424E4CE9D5FDDA7DAA1CEF05F /* MXParallaxHeader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXParallaxHeader-prefix.pch"; sourceTree = "<group>"; };
+		1270C8B7EF238A9D24737E9942250DC6 /* MXScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXScrollView.h; path = MXParallaxHeader/MXScrollView.h; sourceTree = "<group>"; };
+		26B958FB4DA1EBB4D969D476F0AEAEB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32669932BCBDC0833A1AE2BB780FA73B /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		3A4E4E9FF1446525DED064FACE10A97D /* Pods-ArtNYC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ArtNYC-acknowledgements.plist"; sourceTree = "<group>"; };
+		45828407F8A1F669CA819239D0972043 /* MXParallaxHeader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXParallaxHeader.xcconfig; sourceTree = "<group>"; };
+		4788706B01EDE8053DA3516FDBD974AE /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ArtNYC.framework; path = "Pods-ArtNYC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B12500692EED097FA9B15B48115799 /* Pods-ArtNYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ArtNYC.debug.xcconfig"; sourceTree = "<group>"; };
+		4BD0FBCCEBF1BFD08B344EECEAFD78BD /* MXScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXScrollView.m; path = MXParallaxHeader/MXScrollView.m; sourceTree = "<group>"; };
 		5D75E9B73F62DBCEB02D18B697488916 /* Pods-ArtNYC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ArtNYC.modulemap"; sourceTree = "<group>"; };
 		5EC9E97E6D865A935A626DDD313A56A5 /* Pods-ArtNYC-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ArtNYC-resources.sh"; sourceTree = "<group>"; };
+		64C37DE2375F78FECED14FC2DD37AEE5 /* MXParallaxHeader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MXParallaxHeader-dummy.m"; sourceTree = "<group>"; };
 		66FA92614BB31CA1004A2254FD4FF40C /* Pods-ArtNYC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ArtNYC-umbrella.h"; sourceTree = "<group>"; };
-		70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		6C6683A87DC63130C2FE814BE74AD439 /* MXParallaxHeader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MXParallaxHeader.modulemap; sourceTree = "<group>"; };
+		6F36CA61D84B6C8D8475B408C48C5DCC /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		7953BF3F5B4ADDC6B366098B1B56F284 /* Pods-ArtNYC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ArtNYC-frameworks.sh"; sourceTree = "<group>"; };
 		7BF90FC2AA0901B8122A04C3767AED8C /* Pods-ArtNYC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ArtNYC-dummy.m"; sourceTree = "<group>"; };
+		7E2B6B40D97B389F6722C93F7D81EEF2 /* MXParallaxHeader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXParallaxHeader-umbrella.h"; sourceTree = "<group>"; };
 		81DE3363E61F6F5011EFB53EB3A747BF /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
+		82C1AE2A6C940A3A2F1DD8E42935DD6C /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A92DFDA40F47C0FD221B2872C31099A1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		AFD4D1E144CCB4285706E577C2602A44 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		B22C69ADCE7C9D529F11B17B4EF5E065 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		9D4CBFAEABB2A72F87A1A42456C171E7 /* MXScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXScrollViewController.h; path = MXParallaxHeader/MXScrollViewController.h; sourceTree = "<group>"; };
+		A3907B8D4139AFC89E2FD0FD8429085A /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		AC7FCA6229C7954D01B73CBF25B143E6 /* MXScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXScrollViewController.m; path = MXParallaxHeader/MXScrollViewController.m; sourceTree = "<group>"; };
 		B69B203C83BD900B62A2872AB8322DEF /* Pods-ArtNYC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ArtNYC-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB61DC0E45F317ED6C6EAEA2567FD298 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ArtNYC.framework; path = "Pods-ArtNYC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9317CDE759066CD26B501C7BCD47D90 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		C7BCB38336C54CB3ED8D6539CE62FE08 /* MXParallaxHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXParallaxHeader.h; path = MXParallaxHeader/MXParallaxHeader.h; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E7B4FE1AAB0DE809E625DF2F1312F212 /* MXParallaxHeader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MXParallaxHeader.framework; path = MXParallaxHeader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC423CF59324DFF30DAE566D2026E4EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F88E2A6AB865C2A1EB845B27A14348FA /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		FA71A342DF4062F6BAC6E8EA1F2FA57C /* MXParallaxHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXParallaxHeader.m; path = MXParallaxHeader/MXParallaxHeader.m; sourceTree = "<group>"; };
+		FCFE8B39EFDCE1DA68D965C6E7F96B81 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7264FDE1D6DEA7C4A836F0574B31E19C /* Frameworks */ = {
+		744B01DB778F0FA25FADEF70544B4C3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C5484485D2912DAA417B67A103F0CF /* Foundation.framework in Frameworks */,
+				F73858285DC297190F4F0103A3D62A2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6C32F4625BE8079EF5A34D5FA0AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309F95BD5B8E02F0D3C8E3DA04EC34C8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00B63D9B3EBC8ECAFD5DA8C24F1A42DF /* GooglePlaces */ = {
+		0EB29E37028232D282DF4020382D7506 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				475420FA59EFC8377CF994A338979247 /* Frameworks */,
-				4F6C8AC648A5703DF2BEC96A882D19E9 /* Resources */,
+				252293CD65DE2DD3BD3B565705243C6D /* Frameworks */,
+				FF0C89001200A8EA9D408CAEECF65056 /* Resources */,
 			);
-			name = GooglePlaces;
-			path = GooglePlaces;
+			name = Maps;
 			sourceTree = "<group>";
 		};
-		26C94CF6FBD559155351548F2127E7DB /* GoogleMaps */ = {
+		1BF126004586F906CD55D5172246F057 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2F22323EA3B1ADB4F96376E3F709A68 /* Base */,
-				488E301C4ACDDA928635C4886F5F6158 /* Maps */,
+				32669932BCBDC0833A1AE2BB780FA73B /* GooglePlaces.framework */,
 			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20463C65534F55A5212306D8DBB43A1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F36CA61D84B6C8D8475B408C48C5DCC /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		252293CD65DE2DD3BD3B565705243C6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3907B8D4139AFC89E2FD0FD8429085A /* GoogleMaps.framework */,
+				82C1AE2A6C940A3A2F1DD8E42935DD6C /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		38599B275E14A40EAD72F75B51AE5FF5 /* Targets Support Files */ = {
@@ -74,46 +128,38 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		385FA015FFB9210F372AB1078B856AAB /* Pods */ = {
+		3AD7FE23FEED0C215EE7F7DEC7E907AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26C94CF6FBD559155351548F2127E7DB /* GoogleMaps */,
-				00B63D9B3EBC8ECAFD5DA8C24F1A42DF /* GooglePlaces */,
+				E7B4FE1AAB0DE809E625DF2F1312F212 /* MXParallaxHeader.framework */,
+				4788706B01EDE8053DA3516FDBD974AE /* Pods_ArtNYC.framework */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		475420FA59EFC8377CF994A338979247 /* Frameworks */ = {
+		3D5A9CFEDD2FD2935199D29B2645B574 /* MXParallaxHeader */ = {
 			isa = PBXGroup;
 			children = (
-				70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */,
+				C7BCB38336C54CB3ED8D6539CE62FE08 /* MXParallaxHeader.h */,
+				FA71A342DF4062F6BAC6E8EA1F2FA57C /* MXParallaxHeader.m */,
+				1270C8B7EF238A9D24737E9942250DC6 /* MXScrollView.h */,
+				4BD0FBCCEBF1BFD08B344EECEAFD78BD /* MXScrollView.m */,
+				9D4CBFAEABB2A72F87A1A42456C171E7 /* MXScrollViewController.h */,
+				AC7FCA6229C7954D01B73CBF25B143E6 /* MXScrollViewController.m */,
+				961B64759C9927B6163FA49BF6E1E6D6 /* Support Files */,
 			);
-			name = Frameworks;
+			name = MXParallaxHeader;
+			path = MXParallaxHeader;
 			sourceTree = "<group>";
 		};
-		488E301C4ACDDA928635C4886F5F6158 /* Maps */ = {
+		7338633C2F3BAFB4FC6993ACC1899856 /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				82CE66B3B7EC3F6274BF43A52FEEAE6E /* Frameworks */,
-				FAC5D957D919553947FEE0A96B739CC4 /* Resources */,
+				1BF126004586F906CD55D5172246F057 /* Frameworks */,
+				C318BD27234BFE1E062E5007F2AC9E0C /* Resources */,
 			);
-			name = Maps;
-			sourceTree = "<group>";
-		};
-		4CFA8C2E94378AFFDBA3DF92FBE7E3DC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B22C69ADCE7C9D529F11B17B4EF5E065 /* GoogleMapsBase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4F6C8AC648A5703DF2BEC96A882D19E9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F88E2A6AB865C2A1EB845B27A14348FA /* GooglePlaces.bundle */,
-			);
-			name = Resources;
+			name = GooglePlaces;
+			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -129,35 +175,44 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				385FA015FFB9210F372AB1078B856AAB /* Pods */,
-				8AB4D08CA538B1D32FCC56396DE3C3AE /* Products */,
+				8F45432270102EA9F9605278EEFBFF9B /* Pods */,
+				3AD7FE23FEED0C215EE7F7DEC7E907AB /* Products */,
 				38599B275E14A40EAD72F75B51AE5FF5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		82CE66B3B7EC3F6274BF43A52FEEAE6E /* Frameworks */ = {
+		8F45432270102EA9F9605278EEFBFF9B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				08F1229163C7F5E61C7C4B361510F11C /* GoogleMaps.framework */,
-				A92DFDA40F47C0FD221B2872C31099A1 /* GoogleMapsCore.framework */,
+				9116D6EA9C9471F5033E80E2A8B41E8F /* GoogleMaps */,
+				7338633C2F3BAFB4FC6993ACC1899856 /* GooglePlaces */,
+				3D5A9CFEDD2FD2935199D29B2645B574 /* MXParallaxHeader */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		8AB4D08CA538B1D32FCC56396DE3C3AE /* Products */ = {
+		9116D6EA9C9471F5033E80E2A8B41E8F /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				BB61DC0E45F317ED6C6EAEA2567FD298 /* Pods_ArtNYC.framework */,
+				DB02C26CA6B7734DEA79F75E3DE0A2B7 /* Base */,
+				0EB29E37028232D282DF4020382D7506 /* Maps */,
 			);
-			name = Products;
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
-		B2F22323EA3B1ADB4F96376E3F709A68 /* Base */ = {
+		961B64759C9927B6163FA49BF6E1E6D6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4CFA8C2E94378AFFDBA3DF92FBE7E3DC /* Frameworks */,
+				26B958FB4DA1EBB4D969D476F0AEAEB5 /* Info.plist */,
+				6C6683A87DC63130C2FE814BE74AD439 /* MXParallaxHeader.modulemap */,
+				45828407F8A1F669CA819239D0972043 /* MXParallaxHeader.xcconfig */,
+				64C37DE2375F78FECED14FC2DD37AEE5 /* MXParallaxHeader-dummy.m */,
+				056D953424E4CE9D5FDDA7DAA1CEF05F /* MXParallaxHeader-prefix.pch */,
+				7E2B6B40D97B389F6722C93F7D81EEF2 /* MXParallaxHeader-umbrella.h */,
 			);
-			name = Base;
+			name = "Support Files";
+			path = "../Target Support Files/MXParallaxHeader";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -166,6 +221,22 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C318BD27234BFE1E062E5007F2AC9E0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCFE8B39EFDCE1DA68D965C6E7F96B81 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DB02C26CA6B7734DEA79F75E3DE0A2B7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				20463C65534F55A5212306D8DBB43A1F /* Frameworks */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		E7F0DC008773C54A8D90461DC900211B /* Pods-ArtNYC */ = {
@@ -186,10 +257,10 @@
 			path = "Target Support Files/Pods-ArtNYC";
 			sourceTree = "<group>";
 		};
-		FAC5D957D919553947FEE0A96B739CC4 /* Resources */ = {
+		FF0C89001200A8EA9D408CAEECF65056 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AFD4D1E144CCB4285706E577C2602A44 /* GoogleMaps.bundle */,
+				B9317CDE759066CD26B501C7BCD47D90 /* GoogleMaps.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -197,32 +268,61 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6501ECAD5E04FC45C1E57CE3EFF805B2 /* Headers */ = {
+		7730CA1A0C7D480C9A6FA4E2E9DFBEDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1811926EE639083027FE2278588CA0 /* Pods-ArtNYC-umbrella.h in Headers */,
+				B18E6AA258B1C2D346B6D7D52B595B71 /* Pods-ArtNYC-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB64A60513607A89CFF19E92EB7F6A04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EFD9DBF4CC4DAB6D73F2A1115860F9 /* MXParallaxHeader-umbrella.h in Headers */,
+				933741DB7C6CA9CA7BD096A0BD3AFA1A /* MXParallaxHeader.h in Headers */,
+				FC07C9DF7DFEE45A3906B0513717D0EC /* MXScrollView.h in Headers */,
+				09FF02A67FD3FCD2242B2A0CB21890B9 /* MXScrollViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D129BA8688E16D23798D3923F4CE0B70 /* Pods-ArtNYC */ = {
+		6B116B834E03134D3118A264E414BDCD /* Pods-ArtNYC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F55B1ADF36976C86B9162608986AFD4B /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */;
+			buildConfigurationList = 78FAD55567C3C69F1B4DFDC5EEB75C27 /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */;
 			buildPhases = (
-				4F58D28DC474125C72F6EA690F9481BA /* Sources */,
-				7264FDE1D6DEA7C4A836F0574B31E19C /* Frameworks */,
-				6501ECAD5E04FC45C1E57CE3EFF805B2 /* Headers */,
+				1ED17E0050AAAE42F158E9E149A8ADAB /* Sources */,
+				FA6C32F4625BE8079EF5A34D5FA0AAB4 /* Frameworks */,
+				7730CA1A0C7D480C9A6FA4E2E9DFBEDA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9006E990BF37EE422E8BE10732A4ED1D /* PBXTargetDependency */,
+			);
+			name = "Pods-ArtNYC";
+			productName = "Pods-ArtNYC";
+			productReference = 4788706B01EDE8053DA3516FDBD974AE /* Pods_ArtNYC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E75E5BAC0FE6E4C6A5E5F95EA6807F8A /* MXParallaxHeader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9594800AC07C8054887E8EA7BCD131A /* Build configuration list for PBXNativeTarget "MXParallaxHeader" */;
+			buildPhases = (
+				FC49044EAB026254DC7C4D660F051312 /* Sources */,
+				744B01DB778F0FA25FADEF70544B4C3B /* Frameworks */,
+				DB64A60513607A89CFF19E92EB7F6A04 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-ArtNYC";
-			productName = "Pods-ArtNYC";
-			productReference = BB61DC0E45F317ED6C6EAEA2567FD298 /* Pods_ArtNYC.framework */;
+			name = MXParallaxHeader;
+			productName = MXParallaxHeader;
+			productReference = E7B4FE1AAB0DE809E625DF2F1312F212 /* MXParallaxHeader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -242,27 +342,83 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8AB4D08CA538B1D32FCC56396DE3C3AE /* Products */;
+			productRefGroup = 3AD7FE23FEED0C215EE7F7DEC7E907AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D129BA8688E16D23798D3923F4CE0B70 /* Pods-ArtNYC */,
+				E75E5BAC0FE6E4C6A5E5F95EA6807F8A /* MXParallaxHeader */,
+				6B116B834E03134D3118A264E414BDCD /* Pods-ArtNYC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F58D28DC474125C72F6EA690F9481BA /* Sources */ = {
+		1ED17E0050AAAE42F158E9E149A8ADAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1BF0DE6A77060BE0CC75D6957746575 /* Pods-ArtNYC-dummy.m in Sources */,
+				AEE82D08D1322493D6DDC512268E4AB7 /* Pods-ArtNYC-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC49044EAB026254DC7C4D660F051312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF7AEDC10DFA19EE70C372D30C6858D4 /* MXParallaxHeader-dummy.m in Sources */,
+				18758A05AD1B995A7911EDFB89BA6555 /* MXParallaxHeader.m in Sources */,
+				95E15733F2BCC3173EC5C55D3998B717 /* MXScrollView.m in Sources */,
+				002F1DBB8EBEC4697E294B8388560534 /* MXScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9006E990BF37EE422E8BE10732A4ED1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MXParallaxHeader;
+			target = E75E5BAC0FE6E4C6A5E5F95EA6807F8A /* MXParallaxHeader */;
+			targetProxy = 73D1A3FCB2A2CEECE91FC5EA98A0D56F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3A1CE4183771A09E295318C3937F3BE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81DE3363E61F6F5011EFB53EB3A747BF /* Pods-ArtNYC.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ArtNYC/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ArtNYC/Pods-ArtNYC.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ArtNYC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -303,7 +459,7 @@
 			};
 			name = Release;
 		};
-		6F65FA239507A66919D41527750A5142 /* Debug */ = {
+		8BEE9B00A1955F61086381AC03909F73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47B12500692EED097FA9B15B48115799 /* Pods-ArtNYC.debug.xcconfig */;
 			buildSettings = {
@@ -338,40 +494,37 @@
 			};
 			name = Debug;
 		};
-		D63D56CB5F1561413EB8930B562A568F /* Release */ = {
+		B27874D955CABFA36A175E42F3C8B257 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81DE3363E61F6F5011EFB53EB3A747BF /* Pods-ArtNYC.release.xcconfig */;
+			baseConfigurationReference = 45828407F8A1F669CA819239D0972043 /* MXParallaxHeader.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ArtNYC/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MXParallaxHeader/MXParallaxHeader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MXParallaxHeader/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ArtNYC/Pods-ArtNYC.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ArtNYC;
+				MODULEMAP_FILE = "Target Support Files/MXParallaxHeader/MXParallaxHeader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MXParallaxHeader;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -417,6 +570,38 @@
 			};
 			name = Debug;
 		};
+		EC074175C12FDAA26FC5078D0755290B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45828407F8A1F669CA819239D0972043 /* MXParallaxHeader.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MXParallaxHeader/MXParallaxHeader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MXParallaxHeader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MXParallaxHeader/MXParallaxHeader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MXParallaxHeader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,11 +614,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F55B1ADF36976C86B9162608986AFD4B /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */ = {
+		78FAD55567C3C69F1B4DFDC5EEB75C27 /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F65FA239507A66919D41527750A5142 /* Debug */,
-				D63D56CB5F1561413EB8930B562A568F /* Release */,
+				8BEE9B00A1955F61086381AC03909F73 /* Debug */,
+				3A1CE4183771A09E295318C3937F3BE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9594800AC07C8054887E8EA7BCD131A /* Build configuration list for PBXNativeTarget "MXParallaxHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27874D955CABFA36A175E42F3C8B257 /* Debug */,
+				EC074175C12FDAA26FC5078D0755290B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
