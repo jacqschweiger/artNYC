@@ -9,20 +9,24 @@
 import Foundation
 import UIKit
 
-class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate {
+class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, FilterReloadDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumCollectionView: MuseumCollectionView!
+    var filterView: FilterView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.museumCollectionView.delegate = self
+        self.filterView.reloadDelegate = self
+        
     }
     
     override func loadView() {
-        self.museumCollectionView = MuseumCollectionView(frame: CGRect.zero)
+        self.museumCollectionView = MuseumCollectionView()
         self.view = self.museumCollectionView
+        self.filterView = FilterView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,4 +53,10 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate {
         filterController.modalTransitionStyle = .crossDissolve
         self.present(filterController, animated: true, completion: nil)
     }
+    
+    func reloadMuseums() {
+        print("should print this!!!!")
+    }
+
+    
 }

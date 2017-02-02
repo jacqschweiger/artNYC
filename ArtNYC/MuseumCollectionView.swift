@@ -87,9 +87,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
 
     }
-    
-    
-    
+
     func showFilter(){
         print("tapped")
         self.delegate?.showFilter()
@@ -152,7 +150,5 @@ extension MuseumCollectionView {
         
         return blockSize
     }
-    
-    
     
 }

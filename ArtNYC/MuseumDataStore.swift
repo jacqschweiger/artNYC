@@ -394,26 +394,26 @@ class MuseumDataStore {
         
         self.loadMuseums()
         
-//        for museum in self.allMuseums {
-//            guard let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+") else { return }
-//            
-//            getPlaceIDFromAPI(with: museumTitle, completion: {
-//                
-//                self.getPhotoReferenceFromAPI {
-//                    
-//                    if museum.title == "The Metropolitan Museum of Art" {
-//                        self.photoReference = "CoQBdwAAADz6jBzFn_Tb_6IPUwNCt0S_Enm7TXRQJa0jn1snTO6Pn4Zk0Jv5AD_BzhgdwQ0KEcRewNdkPYhB4_hJbShIl8bf6_7I0KftPp0uccqMKGt2OFSacMHK-ZxrSeYsLelUbLNXZLtbw7YrlK5e80DBrP71KilIfTF6spQfvhOUtSNyEhBwBctMqy6DuqbRmBpv4QxLGhTIH7J1ADvCC2CDumvihvzQCWOn1g"
-//                    }
-//                    
-//                    //museo del barrio, moma, rubin, drawing center?, newmuseum, asia
-//                    
-//                    guard let photoReference = self.photoReference else { return }
-//                
-//                    museum.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
-//                    
-//                    }
-//            })
-//        }
+        for museum in self.allMuseums {
+            guard let museumTitle = museum.title?.replacingOccurrences(of: " ", with: "+") else { return }
+            
+            getPlaceIDFromAPI(with: museumTitle, completion: {
+                
+                self.getPhotoReferenceFromAPI {
+                    
+                    if museum.title == "The Metropolitan Museum of Art" {
+                        self.photoReference = "CoQBdwAAADz6jBzFn_Tb_6IPUwNCt0S_Enm7TXRQJa0jn1snTO6Pn4Zk0Jv5AD_BzhgdwQ0KEcRewNdkPYhB4_hJbShIl8bf6_7I0KftPp0uccqMKGt2OFSacMHK-ZxrSeYsLelUbLNXZLtbw7YrlK5e80DBrP71KilIfTF6spQfvhOUtSNyEhBwBctMqy6DuqbRmBpv4QxLGhTIH7J1ADvCC2CDumvihvzQCWOn1g"
+                    }
+                    
+                    //museo del barrio, moma, rubin, drawing center?, newmuseum, asia
+                    
+                    guard let photoReference = self.photoReference else { return }
+                
+                    museum.photoURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(photoReference)&key=\(Constants.key2)"
+                    
+                    }
+            })
+        }
     }
     
     // MARK: API Functions

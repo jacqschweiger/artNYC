@@ -12,7 +12,12 @@ import UIKit
 protocol FilterViewDelegate: class {
     func dismissView()
     func filterMuseums()
-} 
+}
+
+protocol FilterReloadDelegate: class {
+    func reloadMuseums()
+}
+
 
 class FilterView: UIView {
     
@@ -24,6 +29,7 @@ class FilterView: UIView {
     let openLateSwitch = UISwitch()
     let doneButton = UIButton()
     weak var delegate: FilterViewDelegate?
+    weak var reloadDelegate: FilterReloadDelegate?
     var store = MuseumDataStore.sharedInstance
     
     override init(frame:CGRect){
@@ -118,7 +124,7 @@ class FilterView: UIView {
     }
     
     func donePressed(){
-        //add reload museum delegate
+        self.reloadDelegate?.reloadMuseums()
         self.delegate?.dismissView()
     }
     

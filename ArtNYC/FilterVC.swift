@@ -14,7 +14,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -25,7 +25,6 @@ class FilterVC: UIViewController, FilterViewDelegate {
     }
     
     func dismissView(){
-        print("dismiss delegate called")
         dismiss(animated: true, completion: nil)
     }
     
@@ -47,4 +46,5 @@ class FilterVC: UIViewController, FilterViewDelegate {
             print(store.filteredMuseums.count)
         }
     }
+    
 }
