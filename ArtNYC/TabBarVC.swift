@@ -16,7 +16,7 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.getMuseums()
+        store.loadMuseums()
     }
     
     override func viewWillAppear(_ animated: Bool) {

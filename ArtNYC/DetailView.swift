@@ -83,7 +83,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.scrollView.addSubview(museumImage)
         DispatchQueue.main.async {
             
-            let urlString = Constants.momaImageURL
+            let urlString = self.museum.imageURL
             if let url = URL(string: urlString) {
                 if let data = NSData(contentsOf: url) {
                     self.museumImage.image = UIImage(data: data as Data)
