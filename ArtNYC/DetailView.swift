@@ -123,72 +123,29 @@ class DetailView: UIView, GMSMapViewDelegate {
             titleLabel.text = museum.title
         }
         
-        //Intervior View Label // Add only if museum has street view
-        if self.museum.interiorMapView == true {
-            
-            seeInsideButton = UIButton(type: .custom)
-            seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)
-            scrollView.addSubview(seeInsideButton)
-            seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
-            seeInsideButton.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40).isActive = true
-            seeInsideButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            seeInsideButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-            seeInsideButton.translatesAutoresizingMaskIntoConstraints = false
-            
-            seeInsideButton.setTitle("See 360° Gallery View", for: .normal)
-            seeInsideButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-            seeInsideButton.tintColor = UIColor.white
-            seeInsideButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
-            
-            //Art Categories Label
-            scrollView.addSubview(artCategoriesLabel)
-            artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
-            artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
-            artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
-            
-            artCategoriesLabel.text = "Art"
-            artCategoriesLabel.textAlignment = .left
-            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 28)
-            artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-            
-            //Art Categories Content
-            scrollView.addSubview(artCategoriesContent)
-            artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor, constant: 10).isActive = true
-            artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
-            
-            artCategoriesContent.text = museum.artCategories
-            artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
-            artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        }
-            
-        else {
-            
-            //Art Categories Label
-            scrollView.addSubview(artCategoriesLabel)
-            artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40).isActive = true
-            artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
-            artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
-            
-            artCategoriesLabel.text = "Art"
-            artCategoriesLabel.textAlignment = .left
-            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 28)
-            artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-
-            //Art Categories Content
-            scrollView.addSubview(artCategoriesContent)
-            artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor, constant: 10).isActive = true
-            artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
-            
-            artCategoriesContent.text = museum.artCategories
-            artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
-            artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        }
+        //Art Categories Label
+        scrollView.addSubview(artCategoriesLabel)
+        artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        artCategoriesLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40).isActive = true
+        artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+        artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
+        artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        artCategoriesLabel.text = "Art"
+        artCategoriesLabel.textAlignment = .left
+        artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 28)
+        artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        
+        //Art Categories Content
+        scrollView.addSubview(artCategoriesContent)
+        artCategoriesContent.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor, constant: 10).isActive = true
+        artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        artCategoriesContent.text = museum.artCategories
+        artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
+        artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        
         
         //Admission Label
         scrollView.addSubview(admissionLabel)
@@ -351,20 +308,55 @@ class DetailView: UIView, GMSMapViewDelegate {
         saturdayLabel.font = UIFont(name: "Avenir Black", size: 16)
         saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
-        //Website Label
-        websiteButton = UIButton(type: .custom)
-        websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
-        scrollView.addSubview(websiteButton)
-        websiteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        websiteButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 20).isActive = true
-        websiteButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: -20).isActive = true
-        websiteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-        websiteButton.translatesAutoresizingMaskIntoConstraints = false
         
-        websiteButton.setTitle("See Website", for: .normal)
-        websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        websiteButton.tintColor = UIColor.white
-        websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+        //Intervior View Label // Add only if museum has street view
+        if self.museum.interiorMapView == true {
+            
+            seeInsideButton = UIButton(type: .custom)
+            seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)
+            scrollView.addSubview(seeInsideButton)
+            seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
+            seeInsideButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 40).isActive = true
+            seeInsideButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            seeInsideButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            seeInsideButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            seeInsideButton.setTitle("See 360° Gallery View", for: .normal)
+            seeInsideButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            seeInsideButton.tintColor = UIColor.white
+            seeInsideButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            
+            //Website Label
+            websiteButton = UIButton(type: .custom)
+            websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
+            scrollView.addSubview(websiteButton)
+            websiteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            websiteButton.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
+            websiteButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: -20).isActive = true
+            websiteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            websiteButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            websiteButton.setTitle("See Website", for: .normal)
+            websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            websiteButton.tintColor = UIColor.white
+            websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            
+        } else {
+            //Website Label
+            websiteButton = UIButton(type: .custom)
+            websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
+            scrollView.addSubview(websiteButton)
+            websiteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            websiteButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 20).isActive = true
+            websiteButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: -20).isActive = true
+            websiteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            websiteButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            websiteButton.setTitle("See Website", for: .normal)
+            websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+            websiteButton.tintColor = UIColor.white
+            websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+        }
     }
     
     
