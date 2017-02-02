@@ -58,28 +58,45 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     func setUpElements() {
-        let filler = UILabel()
-        self.addSubview(filler)
-        filler.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        filler.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        filler.heightAnchor.constraint(equalToConstant: 6).isActive = true
-        filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        filler.translatesAutoresizingMaskIntoConstraints = false
         
-        //Header Container
-        self.addSubview(container)
-        self.container.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
-        self.container.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.container.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
-        self.container.translatesAutoresizingMaskIntoConstraints = false
-        self.container.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        //Back Button
+        self.addSubview(backButton)
+        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        
+        self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
+        self.backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
+        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        self.backButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Scroll View
+        self.addSubview(scrollView)
+        scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Image View
+        self.addSubview(museumImage)
+        self.museumImage.image = UIImage(named: "momaImage")
+        
+        museumImage.contentMode = .scaleAspectFill
+        museumImage.clipsToBounds = true
+        
+        museumImage.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        museumImage.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        museumImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.40).isActive = true
+        museumImage.translatesAutoresizingMaskIntoConstraints = false
+        
         
         //Title Label
         self.addSubview(titleLabel)
-        self.titleLabel.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
-        self.titleLabel.centerXAnchor.constraint(equalTo: self.container.centerXAnchor).isActive = true
-        self.titleLabel.centerYAnchor.constraint(equalTo: self.container.centerYAnchor).isActive = true
-        self.titleLabel.heightAnchor.constraint(equalTo: self.container.heightAnchor).isActive = true
+        self.titleLabel.topAnchor.constraint(equalTo: self.museumImage.centerYAnchor).isActive = true
+        self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
@@ -97,46 +114,6 @@ class DetailView: UIView, GMSMapViewDelegate {
             titleLabel.text = museum.title
         }
         
-        //Back Button
-        self.addSubview(backButton)
-        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        
-        self.backButton.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 15).isActive = true
-        self.backButton.centerYAnchor.constraint(equalTo: self.titleLabel.centerYAnchor).isActive = true
-        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        self.backButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        //Image View
-        self.addSubview(museumImage)
-        DispatchQueue.main.async {
-            
-            let urlString = self.museum.photoURL
-            if let url = URL(string: urlString) {
-                if let data = NSData(contentsOf: url) {
-                    self.museumImage.image = UIImage(data: data as Data)
-                }
-            }
-        }
-        
-        museumImage.contentMode = .scaleAspectFit
-        museumImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        museumImage.topAnchor.constraint(equalTo: self.container.bottomAnchor, constant: 20).isActive = true
-        museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
-        museumImage.translatesAutoresizingMaskIntoConstraints = false
-        
-        //Scroll View
-        self.addSubview(scrollView)
-        scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 10).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         //Intervior View Label // Add only if museum has street view
         if self.museum.interiorMapView == true {
             
@@ -144,7 +121,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)
             scrollView.addSubview(seeInsideButton)
             seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
-            seeInsideButton.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
+            seeInsideButton.topAnchor.constraint(equalTo: self.museumImage.topAnchor, constant: 20).isActive = true
             seeInsideButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
             seeInsideButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             seeInsideButton.translatesAutoresizingMaskIntoConstraints = false
@@ -184,7 +161,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
             artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 20).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.museumImage.topAnchor, constant: 20).isActive = true
             artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
