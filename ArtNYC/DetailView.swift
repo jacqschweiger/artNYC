@@ -60,19 +60,19 @@ class DetailView: UIView, GMSMapViewDelegate {
     func setUpElements() {
         
         //Back Button
-//        self.addSubview(backButton)
-//        self.backButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-//        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-//        
-//        self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
-//        self.backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
-//        self.backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
-//        self.backButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
-//        
-//        self.backButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(backButton)
+        self.backButton.setImage(UIImage(named: "circleBack"), for: .normal)
+        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        
+        self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
+        self.backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+        self.backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        self.backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        self.backButton.translatesAutoresizingMaskIntoConstraints = false
         
         //Scroll View
         self.addSubview(scrollView)
+        self.sendSubview(toBack: scrollView)
         scrollView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
