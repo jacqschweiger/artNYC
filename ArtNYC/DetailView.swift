@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import GoogleMaps
-import MXParallaxHeader
 
 protocol DetailViewDelegate: class {
     func goToWebView()
@@ -80,34 +79,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        //Image View
-//        self.scrollView.addSubview(museumImage)
-//        DispatchQueue.main.async {
-//            
-//            let urlString = Constants.momaImageURL
-//            if let url = URL(string: urlString) {
-//                if let data = NSData(contentsOf: url) {
-//                    self.museumImage.image = UIImage(data: data as Data)
-//                }
-//            }
-//        }
-//        museumImage.contentMode = .scaleAspectFill
-//        scrollView.parallaxHeader.view = museumImage
-//        scrollView.parallaxHeader.height = 150
-//        scrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
-//        scrollView.parallaxHeader.minimumHeight = 20
-        
-        
-                self.scrollView.addSubview(museumImage)
-                DispatchQueue.main.async {
-        
-                    let urlString = Constants.momaImageURL
-                    if let url = URL(string: urlString) {
-                        if let data = NSData(contentsOf: url) {
-                            self.museumImage.image = UIImage(data: data as Data)
-                        }
-                    }
+        //Image View        
+        self.scrollView.addSubview(museumImage)
+        DispatchQueue.main.async {
+            
+            let urlString = Constants.momaImageURL
+            if let url = URL(string: urlString) {
+                if let data = NSData(contentsOf: url) {
+                    self.museumImage.image = UIImage(data: data as Data)
                 }
+            }
+        }
         
         museumImage.contentMode = .scaleAspectFill
         museumImage.clipsToBounds = true

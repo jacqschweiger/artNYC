@@ -4,7 +4,6 @@
 def commonPods
     pod 'GoogleMaps'
     pod 'GooglePlaces'
-    pod 'MXParallaxHeader'
 end
 
 target 'ArtNYC' do
