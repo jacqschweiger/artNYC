@@ -27,7 +27,7 @@ class WebView: UIView {
     var museum: Museum!
     var museumWebView: UIWebView!
     var header = UIToolbar()
-    var backButton: UIBarButtonItem!
+    var backButton = UIButton()
     var webNavBar = UIToolbar()
     
     
@@ -36,7 +36,7 @@ class WebView: UIView {
         self.museum = museum
         self.backgroundColor = UIColor.white
         
-        setUpHeader()
+        setUpBackButton()
         setUpWebView()
         setUpWebNavBar()
 
@@ -50,9 +50,10 @@ class WebView: UIView {
         
         museumWebView = UIWebView()
         self.addSubview(museumWebView)
+        self.sendSubview(toBack: museumWebView)
         museumWebView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         museumWebView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        museumWebView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
+        museumWebView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         museumWebView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         museumWebView.translatesAutoresizingMaskIntoConstraints = false
         museumWebView.backgroundColor = UIColor.white
@@ -64,24 +65,36 @@ class WebView: UIView {
         }
     }
     
-    func setUpHeader(){
-        self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.header.translatesAutoresizingMaskIntoConstraints = false
-        self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+    func setUpBackButton(){
+        self.addSubview(backButton)
+        self.backButton.setImage(UIImage(named: "circleBack"), for: .normal)
+        self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         
-        let backToDetailButton = UIButton()
-        backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
-        backToDetailButton.setImage(UIImage(named: "Back Icon"), for: .normal)
-        backToDetailButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        
-        let backToDetailBarButton = UIBarButtonItem()
-        backToDetailBarButton.customView = backToDetailButton
-        
-        let headerItems: [UIBarButtonItem] = [backToDetailBarButton]
-        self.header.setItems(headerItems, animated: false)
+        self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
+        self.backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+        self.backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        self.backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        self.backButton.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+//    func setUpHeader(){
+//        self.addSubview(header)
+//        self.header.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+//        self.header.translatesAutoresizingMaskIntoConstraints = false
+//        self.header.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
+//        
+//        let backToDetailButton = UIButton()
+//        backToDetailButton.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
+//        backToDetailButton.setImage(UIImage(named: "Back Icon"), for: .normal)
+//        backToDetailButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+//        
+//        let backToDetailBarButton = UIBarButtonItem()
+//        backToDetailBarButton.customView = backToDetailButton
+//        
+//        let headerItems: [UIBarButtonItem] = [backToDetailBarButton]
+//        self.header.setItems(headerItems, animated: false)
+//    }
     
     func setUpWebNavBar (){
         

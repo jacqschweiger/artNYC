@@ -103,8 +103,9 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Title Label
         self.scrollView.addSubview(titleLabel)
-        self.titleLabel.topAnchor.constraint(equalTo: self.museumImage.centerYAnchor).isActive = true
-        self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.titleLabel.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: -2).isActive = true
+        self.titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        self.titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
@@ -129,7 +130,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             seeInsideButton.addTarget(self, action: #selector(self.onGoToInteriorView), for: UIControlEvents.touchUpInside)
             scrollView.addSubview(seeInsideButton)
             seeInsideButton.heightAnchor.constraint(equalToConstant: 20)
-            seeInsideButton.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 20).isActive = true
+            seeInsideButton.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40).isActive = true
             seeInsideButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
             seeInsideButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             seeInsideButton.translatesAutoresizingMaskIntoConstraints = false
@@ -169,7 +170,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
             artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: 20).isActive = true
+            artCategoriesLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40).isActive = true
             artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             artCategoriesLabel.heightAnchor.constraint(equalToConstant: 20)
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
