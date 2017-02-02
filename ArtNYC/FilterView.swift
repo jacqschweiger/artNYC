@@ -14,7 +14,7 @@ protocol FilterViewDelegate: class {
     func filterMuseums()
 }
 
-protocol FilterReloadDelegate: class {
+protocol FilterReloadDelegate {
     func reloadMuseums()
 }
 
@@ -29,7 +29,7 @@ class FilterView: UIView {
     let openLateSwitch = UISwitch()
     let doneButton = UIButton()
     weak var delegate: FilterViewDelegate?
-    weak var reloadDelegate: FilterReloadDelegate?
+    var reloadDelegate: FilterReloadDelegate?
     var store = MuseumDataStore.sharedInstance
     
     override init(frame:CGRect){

@@ -20,7 +20,6 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
         
         self.museumCollectionView.delegate = self
         self.filterView.reloadDelegate = self
-        
     }
     
     override func loadView() {
@@ -32,7 +31,6 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.isNavigationBarHidden = true
-        self.view = museumCollectionView
         
         if store.filteredMuseums.count > 0 {
             self.museumCollectionView.museums = store.filteredMuseums
