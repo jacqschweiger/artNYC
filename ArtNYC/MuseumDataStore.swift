@@ -360,7 +360,7 @@ class MuseumDataStore {
                          coordinate: CLLocationCoordinate2D(latitude: 40.7464981, longitude: -73.993782),
                          url: "http://www.fitnyc.edu/museum/",
                          interiorMapView: false,
-                         imageURL: "http://blog.fitnyc.edu/admissions/files/2014/09/FITmuseum.jpg")
+                         imageURL: "http://www.fitnyc.edu/museum/images/ue-black-fashion-designers-92.105.8-300.jpg")
         
         let morganLibrary = Museum(title: "Morgan Library & Museum",
                                    logo: UIImage(named: "morganLogo")!,
