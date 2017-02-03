@@ -23,10 +23,12 @@ class FilterView: UIView {
     
     var filterMenu = UIView()
     let titleLabel = UILabel()
+    let freeAdmissionLabel = UILabel()
+    let freeAdmissionSwitch = UISwitch()
+    let openLateLabel = UILabel()
+    let openLateSwitch = UISwitch()
     let interiorViewLabel = UILabel()
     let interiorViewSwitch = UISwitch()
-    let freeSwitch = UISwitch()
-    let openLateSwitch = UISwitch()
     let doneButton = UIButton()
     weak var delegate: FilterViewDelegate?
     var reloadDelegate: FilterReloadDelegate?
@@ -81,20 +83,51 @@ class FilterView: UIView {
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        //Free Admission Label
+        self.filterMenu.addSubview(freeAdmissionLabel)
+        freeAdmissionLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
+        freeAdmissionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        freeAdmissionLabel.text = "Offers Free Admission"
+        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 16)
+        freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Free Admission Switch
+        self.filterMenu.addSubview(freeAdmissionSwitch)
+        freeAdmissionSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        freeAdmissionSwitch.centerYAnchor.constraint(equalTo: freeAdmissionLabel.centerYAnchor).isActive = true
+        freeAdmissionSwitch.leftAnchor.constraint(equalTo: self.freeAdmissionLabel.rightAnchor, constant: 15).isActive = true
+        freeAdmissionSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Open Late Label
+        self.filterMenu.addSubview(openLateLabel)
+        openLateLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
+        openLateLabel.topAnchor.constraint(equalTo: freeAdmissionLabel.bottomAnchor, constant: 20).isActive = true
+        openLateLabel.text = "Open Late"
+        openLateLabel.font = UIFont(name: "Avenir Black", size: 16)
+        openLateLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        openLateLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Open Late Switch
+        self.filterMenu.addSubview(openLateSwitch)
+        openLateSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
+        openLateSwitch.leftAnchor.constraint(equalTo: self.freeAdmissionSwitch.leftAnchor).isActive = true
+        openLateSwitch.centerYAnchor.constraint(equalTo: openLateLabel.centerYAnchor).isActive = true
+        openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
         
         //Interior View Label
         self.filterMenu.addSubview(interiorViewLabel)
         interiorViewLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
-        interiorViewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        interiorViewLabel.topAnchor.constraint(equalTo: openLateLabel.bottomAnchor, constant: 20).isActive = true
         interiorViewLabel.text = "360° Gallery View"
-        interiorViewLabel.font = UIFont(name: "Avenir Black", size: 20)
+        interiorViewLabel.font = UIFont(name: "Avenir Black", size: 16)
         interiorViewLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         interiorViewLabel.translatesAutoresizingMaskIntoConstraints = false
         
         
         //Interior View Switch
         self.filterMenu.addSubview(interiorViewSwitch)
-        interiorViewSwitch.leftAnchor.constraint(equalTo: self.interiorViewLabel.rightAnchor, constant: 15).isActive = true
+        interiorViewSwitch.leftAnchor.constraint(equalTo: self.freeAdmissionSwitch.leftAnchor).isActive = true
         interiorViewSwitch.centerYAnchor.constraint(equalTo: interiorViewLabel.centerYAnchor).isActive = true
         interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
@@ -133,19 +166,3 @@ class FilterView: UIView {
     }
 
 }
-
-
-/*
- self.filterMenu.addSubview(freeSwitch)
- freeSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
- freeSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
- freeSwitch.topAnchor.constraint(equalTo: interiorViewSwitch.bottomAnchor, constant: 20).isActive = true
- freeSwitch.translatesAutoresizingMaskIntoConstraints = false
- 
- 
- self.filterMenu.addSubview(openLateSwitch)
- openLateSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
- openLateSwitch.rightAnchor.constraint(equalTo: self.filterMenu.rightAnchor, constant: -20).isActive = true
- openLateSwitch.topAnchor.constraint(equalTo: freeSwitch.bottomAnchor, constant: 20).isActive = true
- openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
-*/
