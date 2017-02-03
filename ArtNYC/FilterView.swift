@@ -52,8 +52,8 @@ class FilterView: UIView {
         self.addSubview(filterMenu)
         self.filterMenu.backgroundColor = UIColor.white
         self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7).isActive = true
+        self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -20).isActive = true
+        self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
         self.filterMenu.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7).isActive = true
         self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
         
@@ -76,7 +76,7 @@ class FilterView: UIView {
         titleLabel.text = "Filter Museums"
         titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         titleLabel.font = UIFont(name: "Avenir Black", size: 24)
-        titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor, constant: 10).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: self.filterMenu.widthAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor).isActive = true
         titleLabel.heightAnchor.constraint(equalTo: self.filterMenu.heightAnchor, multiplier: 0.1).isActive = true
@@ -102,7 +102,7 @@ class FilterView: UIView {
         //Open Late Label
         self.filterMenu.addSubview(openLateLabel)
         openLateLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
-        openLateLabel.topAnchor.constraint(equalTo: freeAdmissionLabel.bottomAnchor, constant: 20).isActive = true
+        openLateLabel.topAnchor.constraint(equalTo: freeAdmissionLabel.bottomAnchor, constant: 25).isActive = true
         openLateLabel.text = "Open Late"
         openLateLabel.font = UIFont(name: "Avenir Black", size: 16)
         openLateLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
@@ -118,7 +118,7 @@ class FilterView: UIView {
         //Interior View Label
         self.filterMenu.addSubview(interiorViewLabel)
         interiorViewLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
-        interiorViewLabel.topAnchor.constraint(equalTo: openLateLabel.bottomAnchor, constant: 20).isActive = true
+        interiorViewLabel.topAnchor.constraint(equalTo: openLateLabel.bottomAnchor, constant: 25).isActive = true
         interiorViewLabel.text = "360° Gallery View"
         interiorViewLabel.font = UIFont(name: "Avenir Black", size: 16)
         interiorViewLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
