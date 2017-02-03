@@ -137,7 +137,6 @@ class FilterView: UIView {
         interiorViewSwitch.centerYAnchor.constraint(equalTo: interiorViewLabel.centerYAnchor).isActive = true
         interiorViewSwitch.onTintColor = UIColor(named: UIColor.ColorName.turquoise)
         interiorViewSwitch.translatesAutoresizingMaskIntoConstraints = false
-        interiorViewSwitch.addTarget(self, action: #selector(filterMuseums), for: UIControlEvents.valueChanged)
         if store.interiorViewSwitchIsOn {
             interiorViewSwitch.setOn(true, animated: false)
         }
@@ -165,9 +164,6 @@ class FilterView: UIView {
     func donePressed(){
         self.reloadDelegate?.reloadMuseums()
         self.delegate?.dismissView()
-    }
-    
-    func filterMuseums(){
         self.delegate?.filterMuseums()
     }
 

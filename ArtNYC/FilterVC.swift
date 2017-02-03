@@ -37,10 +37,28 @@ class FilterVC: UIViewController, FilterViewDelegate {
     }
     
     func filterMuseums(){
+        if self.filterView.interiorViewSwitch.isOn {
+            store.interiorViewSwitchIsOn = true
+        } else {
+            store.interiorViewSwitchIsOn = false
+        }
+        
+        if self.filterView.openLateSwitch.isOn {
+            store.openLateSwitchIsOn = true
+        } else {
+            store.openLateSwitchIsOn = false
+        }
+        
+        if self.filterView.freeAdmissionSwitch.isOn {
+            store.freeAdmissionSwitchIsOn = true
+        } else {
+            store.freeAdmissionSwitchIsOn = false
+        }
+        
+        print("filter museums called")
         //Interior View
         switch self.filterView.interiorViewSwitch.isOn {
         case true:
-            store.interiorViewSwitchIsOn = true
             store.filteredMuseums = []
             for museum in store.allMuseums {
                 if museum.interiorMapView == true {
@@ -49,44 +67,43 @@ class FilterVC: UIViewController, FilterViewDelegate {
             }
 
         case false:
-            store.interiorViewSwitchIsOn = false
             store.filteredMuseums = []
 
         }
         
-        //Free Admission
-        switch self.filterView.freeAdmissionSwitch.isOn {
-        case true:
-            store.freeAdmissionSwitchIsOn = true
-            store.filteredMuseums = []
-            for museum in store.allMuseums {
-                if museum.freeAdmission == true {
-                    store.filteredMuseums.append(museum)
-                }
-            }
-            
-        case false:
-            store.freeAdmissionSwitchIsOn = false
-            store.filteredMuseums = []
-            
-        }
-        
-        //Open Late
-        switch self.filterView.openLateSwitch.isOn {
-        case true:
-            store.openLateSwitchIsOn = true
-            store.filteredMuseums = []
-            for museum in store.allMuseums {
-                if museum.openLate == true {
-                    store.filteredMuseums.append(museum)
-                }
-            }
-            
-        case false:
-            store.openLateSwitchIsOn = false
-            store.filteredMuseums = []
-            
-        }
+//        //Free Admission
+//        switch self.filterView.freeAdmissionSwitch.isOn {
+//        case true:
+//            store.freeAdmissionSwitchIsOn = true
+//            store.filteredMuseums = []
+//            for museum in store.allMuseums {
+//                if museum.freeAdmission == true {
+//                    store.filteredMuseums.append(museum)
+//                }
+//            }
+//            
+//        case false:
+//            store.freeAdmissionSwitchIsOn = false
+//            store.filteredMuseums = []
+//            
+//        }
+//        
+//        //Open Late
+//        switch self.filterView.openLateSwitch.isOn {
+//        case true:
+//            store.openLateSwitchIsOn = true
+//            store.filteredMuseums = []
+//            for museum in store.allMuseums {
+//                if museum.openLate == true {
+//                    store.filteredMuseums.append(museum)
+//                }
+//            }
+//            
+//        case false:
+//            store.openLateSwitchIsOn = false
+//            store.filteredMuseums = []
+//            
+//        }
     }
     
 }
