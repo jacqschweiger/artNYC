@@ -38,6 +38,8 @@ class MuseumDataStore {
                                coordinate: CLLocationCoordinate2D(latitude: 40.7802722, longitude: -73.9622221),
                                url: "http://www.metmuseum.org/",
                                interiorMapView: true,
+                               openLate: true,
+                               freeAdmission: true,
                                imageURL: "http://images.metmuseum.org/CRDImages/ep/web-large/DT48.jpg")
         
         let neueGalerie = Museum(title: "Neue Galerie New York",
@@ -56,6 +58,8 @@ class MuseumDataStore {
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
                                  url: "http://neuegalerie.org/",
                                  interiorMapView: false,
+                                 openLate: true,
+                                 freeAdmission: true,
                                  imageURL: "http://www.neuegalerie.org/sites/default/files/adele_new.jpg")
         
         let rubinMuseum = Museum(title: "Rubin Museum of Art",
@@ -74,6 +78,8 @@ class MuseumDataStore {
                                  coordinate: CLLocationCoordinate2D(latitude: 40.740109, longitude: -73.9977899),
                                  url: "http://rubinmuseum.org/",
                                  interiorMapView: true,
+                                 openLate: true,
+                                 freeAdmission: true,
                                  imageURL: "http://rubinmuseum.org/images/content/3591/web_c2013.9a-c_front_lg__slider.jpg")
         
         let whitney = Museum(title: "Whitney Museum of American Art",
@@ -92,6 +98,8 @@ class MuseumDataStore {
                              coordinate: CLLocationCoordinate2D(latitude: 40.7396877, longitude: -74.0088928),
                              url: "http://whitney.org/",
                              interiorMapView: false,
+                             openLate: true,
+                             freeAdmission: false,
                              imageURL: "http://collectionimages.whitney.org/standard/171665/largepage.jpg")
         
         
@@ -111,6 +119,8 @@ class MuseumDataStore {
                           coordinate: CLLocationCoordinate2D(latitude: 40.7615708, longitude: -73.9773532),
                           url: "https://www.moma.org/",
                           interiorMapView: true,
+                          openLate: true,
+                          freeAdmission: true,
                           imageURL: "https://www.moma.org/media/W1siZiIsIjE1MTI3MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDEzNjZ4MTM2Nlx1MDAzZSJdXQ.jpg?sha=0aeee086f50d61a0")
         
         let guggenheim = Museum(title: "Solomon R. Guggenheim Museum",
@@ -129,6 +139,8 @@ class MuseumDataStore {
                                 coordinate: CLLocationCoordinate2D(latitude: 40.7829473, longitude: -73.959093),
                                 url: "https://www.guggenheim.org/",
                                 interiorMapView: true,
+                                openLate: false,
+                                freeAdmission: true,
                                 imageURL: "https://i0.wp.com/www.guggenheim.org/wp-content/uploads/1913/01/37.244_ph_web.jpg?w=870")
         
         let jewishMuseum = Museum(title: "Jewish Museum",
@@ -147,6 +159,8 @@ class MuseumDataStore {
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
                                   url: "http://thejewishmuseum.org/",
                                   interiorMapView: false,
+                                  openLate: true,
+                                  freeAdmission: true,
                                   imageURL: "http://72.32.137.209/piction/ump.show_public_image?v_umo=12805126&quality=O3")
         
         let folkArt = Museum(title: "American Folk Art Museum",
@@ -165,6 +179,8 @@ class MuseumDataStore {
                              coordinate: CLLocationCoordinate2D(latitude: 40.7732, longitude: -73.9814),
                              url: "http://folkartmuseum.org/",
                              interiorMapView: false,
+                             openLate: false,
+                             freeAdmission: true,
                              imageURL: "http://folkartmuseum.org/content/uploads/2014/08/folk_6649_image.jpg")
         
         let newMuseum = Museum(title: "New Museum",
@@ -183,6 +199,8 @@ class MuseumDataStore {
                                coordinate: CLLocationCoordinate2D(latitude: 40.7223779, longitude: -73.993038),
                                url: "http://www.newmuseum.org/",
                                interiorMapView: false,
+                               openLate: true,
+                               freeAdmission: true,
                                imageURL: "http://ca.newmuseum.org/media/newmuseum/images/9/1/88974_ca_object_representations_media_9191_mediumlarge.jpg")
         
         let museoDelBarrio = Museum(title: "El Museo Del Barrio",
@@ -201,6 +219,8 @@ class MuseumDataStore {
                                     coordinate: CLLocationCoordinate2D(latitude: 40.7931, longitude: -73.9514),
                                     url: "http://www.elmuseo.org/",
                                     interiorMapView: false,
+                                    openLate: false,
+                                    freeAdmission: true,
                                     imageURL: "http://www.elmuseo.org/wp-content/uploads/2014/01/1991-0488-0004W_A_PC_croppe.jpg")
         
         let mad = Museum(title: "Museum of Arts and Design",
@@ -218,6 +238,8 @@ class MuseumDataStore {
                          coordinate: CLLocationCoordinate2D(latitude: 40.7674, longitude: -73.9820),
                          url: "http://www.madmuseum.org/",
                          interiorMapView: false,
+                         openLate: true,
+                         freeAdmission: true,
                          imageURL: "http://66.223.50.254/emuseum/media/full/2010_42_1.jpg")
         
         let cooperHewitt = Museum(title: "Cooper Hewitt",
@@ -235,6 +257,8 @@ class MuseumDataStore {
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7844391, longitude: -73.9578551),
                                   url: "https://www.cooperhewitt.org/",
                                   interiorMapView: false,
+                                  openLate: true,
+                                  freeAdmission: true,
                                   imageURL: "https://images.collection.cooperhewitt.org/65247_a6ebf9a09328e38d_b.jpg")
         
         let frick = Museum(title: "Frick Collection",
@@ -253,6 +277,8 @@ class MuseumDataStore {
                            coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
                            url: "http://www.frick.org/",
                            interiorMapView: true,
+                           openLate: false,
+                           freeAdmission: true,
                            imageURL: "http://collections.frick.org/internal/media/dispatcher/6548/resize:format=preview")
         
         let drawingCenter = Museum(title: "Drawing Center",
@@ -271,6 +297,8 @@ class MuseumDataStore {
                                    coordinate: CLLocationCoordinate2D(latitude: 40.7223326, longitude: -74.0026948),
                                    url: "http://www.drawingcenter.org/",
                                    interiorMapView: false,
+                                   openLate: true,
+                                   freeAdmission: true,
                                    imageURL: "http://www.drawingcenter.org/files/a5977133e2fc65e1a662f75ef662dda0eb0b36d6.jpg")
         
         let cloisters = Museum(title: "Met Cloisters",
@@ -288,6 +316,8 @@ class MuseumDataStore {
                                coordinate: CLLocationCoordinate2D(latitude: 40.8652285, longitude: -73.9310879),
                                url: "http://www.metmuseum.org/visit/met-cloisters",
                                interiorMapView: false,
+                               openLate: false,
+                               freeAdmission: true,
                                imageURL: "http://images.metmuseum.org/CRDImages/cl/web-large/DP273206.jpg")
         
         let hispanicSociety = Museum(title: "Hispanic Society of America",
@@ -306,6 +336,8 @@ class MuseumDataStore {
                                      coordinate: CLLocationCoordinate2D(latitude: 40.8333768, longitude: -73.9470945),
                                      url: "http://hispanicsociety.org/",
                                      interiorMapView: false,
+                                     openLate: false,
+                                     freeAdmission: true,
                                      imageURL: "http://www.learn.columbia.edu/hispanic/img/art400/velazquez-girl.jpg")
         
         let metBreuer = Museum(title: "Met Breuer",
@@ -324,6 +356,8 @@ class MuseumDataStore {
                                coordinate: CLLocationCoordinate2D(latitude: 40.7735936, longitude: -73.9641533),
                                url: "http://www.metmuseum.org/visit/met-breuer",
                                interiorMapView: false,
+                               openLate: true,
+                               freeAdmission: true,
                                imageURL: "http://images.metmuseum.org/CRDImages/ma/web-large/DP362047.jpg")
         
         let asiaSociety = Museum(title: "Asia Society",
@@ -342,6 +376,8 @@ class MuseumDataStore {
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7700221, longitude: -73.9645825),
                                  url: "http://asiasociety.org/museum",
                                  interiorMapView: false,
+                                 openLate: true,
+                                 freeAdmission: true,
                                  imageURL: "http://asiasociety.org/museum/collection_media/h640/imported/1979.219-view-a.jpg")
         
         let fit = Museum(title: "Museum at FIT",
@@ -360,6 +396,8 @@ class MuseumDataStore {
                          coordinate: CLLocationCoordinate2D(latitude: 40.7464981, longitude: -73.993782),
                          url: "http://www.fitnyc.edu/museum/",
                          interiorMapView: false,
+                         openLate: true,
+                         freeAdmission: true,
                          imageURL: "http://www.fitnyc.edu/museum/images/ue-black-fashion-designers-92.105.8-300.jpg")
         
         let morganLibrary = Museum(title: "Morgan Library & Museum",
@@ -378,16 +416,18 @@ class MuseumDataStore {
                                    coordinate: CLLocationCoordinate2D(latitude: 40.7494742, longitude: -73.9817367),
                                    url: "http://www.themorgan.org/",
                                    interiorMapView: false,
+                                   openLate: true,
+                                   freeAdmission: true,
                                    imageURL: "http://www.themorgan.org/sites/default/files/styles/collection_image/public/images/collection/m638_23v_0.jpg?itok=Qhu82zYG")
         
         allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, fit, morganLibrary, asiaSociety]
         
-        // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1
-            
+        // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1, Photo Center
+        
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
         
     }
-
+    
 }
