@@ -65,6 +65,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         
         
         //Filtering Cases
+        // One switch is on
         if interiorViewSwitch.isOn && !openLateSwitch.isOn && !freeAdmissionSwitch.isOn {
             for museum in store.allMuseums {
                 if museum.interiorMapView == true {
@@ -72,6 +73,49 @@ class FilterVC: UIViewController, FilterViewDelegate {
                 }
             }
         }
+        
+        /*
+         Free = true
+         Open = false
+         360 = false
+         
+         Free = false
+         Open = true
+         360 = false
+         
+         Free = false
+         Open = false
+         360 = true
+         */
+        
+        //Two switches are on
+        
+        /*
+         Free = true
+         Open = true
+         360 = false
+         
+         Free = false
+         Open = true
+         360 = true
+         
+         Free = true
+         Open = false
+         360 = true
+        */
+
+        
+        //Three switches are on/off
+        /*
+         Free = false
+         Open = false
+         360 = false
+         
+         Free = true
+         Open = true
+         360 = true
+        */
+        
         
     }
     
