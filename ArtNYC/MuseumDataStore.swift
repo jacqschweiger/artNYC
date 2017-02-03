@@ -20,6 +20,8 @@ class MuseumDataStore {
     var photoReference: String!
     var imageURL: String!
     var interiorViewSwitchIsOn: Bool = false
+    var freeAdmissionSwitchIsOn: Bool = false
+    var openLateSwitchIsOn: Bool = false
     
     func loadMuseums() {
         let metMuseum = Museum(title: "Metropolitan Museum of Art",

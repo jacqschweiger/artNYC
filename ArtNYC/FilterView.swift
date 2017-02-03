@@ -87,7 +87,7 @@ class FilterView: UIView {
         self.filterMenu.addSubview(freeAdmissionLabel)
         freeAdmissionLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
         freeAdmissionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
-        freeAdmissionLabel.text = "Offers Free Admission"
+        freeAdmissionLabel.text = "Free Admission Hours"
         freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 16)
         freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -98,6 +98,9 @@ class FilterView: UIView {
         freeAdmissionSwitch.centerYAnchor.constraint(equalTo: freeAdmissionLabel.centerYAnchor).isActive = true
         freeAdmissionSwitch.leftAnchor.constraint(equalTo: self.freeAdmissionLabel.rightAnchor, constant: 15).isActive = true
         freeAdmissionSwitch.translatesAutoresizingMaskIntoConstraints = false
+        if store.freeAdmissionSwitchIsOn {
+            freeAdmissionSwitch.setOn(true, animated: false)
+        }
         
         //Open Late Label
         self.filterMenu.addSubview(openLateLabel)
@@ -114,6 +117,9 @@ class FilterView: UIView {
         openLateSwitch.leftAnchor.constraint(equalTo: self.freeAdmissionSwitch.leftAnchor).isActive = true
         openLateSwitch.centerYAnchor.constraint(equalTo: openLateLabel.centerYAnchor).isActive = true
         openLateSwitch.translatesAutoresizingMaskIntoConstraints = false
+        if store.openLateSwitchIsOn {
+            openLateSwitch.setOn(true, animated: false)
+        }
         
         //Interior View Label
         self.filterMenu.addSubview(interiorViewLabel)
