@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, FilterReloadDelegate {
+class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumCollectionView: MuseumCollectionView!
@@ -19,7 +19,6 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
         super.viewDidLoad()
         
         self.museumCollectionView.delegate = self
-        self.filterView.reloadDelegate = self
     }
     
     override func loadView() {

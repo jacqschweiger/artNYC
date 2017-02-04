@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import GoogleMaps
+import Kingfisher 
 
 protocol DetailViewDelegate: class {
     func goToWebView()
@@ -81,15 +82,11 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Image View
         self.scrollView.addSubview(museumImage)
-        DispatchQueue.main.async {
-            
-            let urlString = self.museum.imageURL
-            if let url = URL(string: urlString) {
-                if let data = NSData(contentsOf: url) {
-                    self.museumImage.image = UIImage(data: data as Data)
-                }
-            }
-        }
+        let urlString = self.museum.imageURL
+        let url = URL(string: urlString)
+        
+        museumImage.kf.indicatorType = .activity
+        museumImage.kf.setImage(with: url)
         
         museumImage.contentMode = .scaleAspectFill
         museumImage.clipsToBounds = true

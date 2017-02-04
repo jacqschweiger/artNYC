@@ -4,6 +4,7 @@
 def commonPods
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'Kingfisher', '~> 3.0'
 end
 
 target 'ArtNYC' do
@@ -16,6 +17,7 @@ target 'ArtNYC' do
 end
 
 #target 'ArtNYCTests' do
+#    use_frameworks!
 #    # Pods for testing
 #    commonPods
 #end

@@ -9,19 +9,11 @@
 import Foundation
 import UIKit
 
-
-
-protocol ReloadDelegate: class {
-    func reloadTableView()
-}
-
 class FilterVC: UIViewController, FilterViewDelegate {
     
     var filterView: FilterView!
     var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
-    var delegate: ReloadDelegate?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,11 +121,6 @@ class FilterVC: UIViewController, FilterViewDelegate {
             store.filteredMuseums = []
         }
         
-        
-        for museum in store.filteredMuseums {
-            print("\(museum.title):\nopen late = \(museum.openLate)\ninterior view = \(museum.interiorMapView)\nfree admission = \(museum.freeAdmission)\n\n\n")
-            
-        }
     }
     
 }

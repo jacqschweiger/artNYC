@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1931AF13398637D8AFC3488D /* Pods_ArtNYCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtNYCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA7AE539C17AC120132072E /* Pods-ArtNYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.debug.xcconfig"; sourceTree = "<group>"; };
 		517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtNYC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710D80441E2C1750002AD134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		71DF916B1E2BDA0000943648 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		71E443E91E3999FA0074D244 /* PhotosAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosAPIClient.swift; sourceTree = "<group>"; };
 		B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
-		D9DEAC22F9E6FAEB9490DF2A /* libPods-ArtNYCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArtNYCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */,
-				D9DEAC22F9E6FAEB9490DF2A /* libPods-ArtNYCTests.a */,
+				1931AF13398637D8AFC3488D /* Pods_ArtNYCTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

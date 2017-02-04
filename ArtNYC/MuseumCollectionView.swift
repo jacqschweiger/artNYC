@@ -89,7 +89,6 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
     }
 
     func showFilter(){
-        print("tapped")
         self.delegate?.showFilter()
     }
     
