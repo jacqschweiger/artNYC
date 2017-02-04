@@ -131,7 +131,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         
         
         for museum in store.filteredMuseums {
-            print("\(museum.title):\nopen late = \(museum.openLate)\ninterior view = \(museum.interiorMapView)\nfree admission = \(museum.freeAdmission)")
+            print("\(museum.title):\nopen late = \(museum.openLate)\ninterior view = \(museum.interiorMapView)\nfree admission = \(museum.freeAdmission)\n\n\n")
             
         }
     }

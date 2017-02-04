@@ -162,9 +162,10 @@ class FilterView: UIView {
     }
     
     func donePressed(){
+        self.delegate?.filterMuseums()
         self.reloadDelegate?.reloadMuseums()
         self.delegate?.dismissView()
-        self.delegate?.filterMuseums()
+        
     }
 
 }
