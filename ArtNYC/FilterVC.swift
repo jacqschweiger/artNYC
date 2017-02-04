@@ -38,13 +38,14 @@ class FilterVC: UIViewController, FilterViewDelegate {
     
     func filterMuseums(){
         
-        store.filteredMuseums = []
-        
         let interiorViewSwitch = self.filterView.interiorViewSwitch
         let freeAdmissionSwitch = self.filterView.freeAdmissionSwitch
         let openLateSwitch = self.filterView.openLateSwitch
         
-        //Maintains switch state
+        //Clear filtered museums
+        store.filteredMuseums = []
+        
+        //Maintain switch state
         if interiorViewSwitch.isOn {
             store.interiorViewSwitchIsOn = true
         } else {
@@ -74,49 +75,65 @@ class FilterVC: UIViewController, FilterViewDelegate {
             }
         }
         
-        /*
-         Free = true
-         Open = false
-         360 = false
-         
-         Free = false
-         Open = true
-         360 = false
-         
-         Free = false
-         Open = false
-         360 = true
-         */
+        if !interiorViewSwitch.isOn && !openLateSwitch.isOn && freeAdmissionSwitch.isOn {
+            for museum in store.allMuseums {
+                if museum.freeAdmission == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        }
+        
+        if !interiorViewSwitch.isOn && openLateSwitch.isOn && !freeAdmissionSwitch.isOn {
+            for museum in store.allMuseums {
+                if museum.openLate == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        }
         
         //Two switches are on
+        if !interiorViewSwitch.isOn && openLateSwitch.isOn && freeAdmissionSwitch.isOn {
+            for museum in store.allMuseums {
+                if museum.freeAdmission == true && museum.openLate == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        }
         
-        /*
-         Free = true
-         Open = true
-         360 = false
-         
-         Free = false
-         Open = true
-         360 = true
-         
-         Free = true
-         Open = false
-         360 = true
-        */
-
+        if interiorViewSwitch.isOn && openLateSwitch.isOn && !freeAdmissionSwitch.isOn {
+            for museum in store.allMuseums {
+                if museum.interiorMapView == true && museum.openLate == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        }
+        
+        if interiorViewSwitch.isOn && !openLateSwitch.isOn && freeAdmissionSwitch.isOn {
+            for museum in store.allMuseums {
+                if museum.interiorMapView == true && museum.freeAdmission == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        }
         
         //Three switches are on/off
-        /*
-         Free = false
-         Open = false
-         360 = false
-         
-         Free = true
-         Open = true
-         360 = true
-        */
+        if interiorViewSwitch.isOn && openLateSwitch.isOn && freeAdmissionSwitch.isOn {
+            for museum in store.allMuseums {
+                if museum.interiorMapView == true && museum.freeAdmission == true && museum.openLate == true {
+                    store.filteredMuseums.append(museum)
+                }
+            }
+        }
+        
+        if !interiorViewSwitch.isOn && !openLateSwitch.isOn && !freeAdmissionSwitch.isOn {
+            store.filteredMuseums = []
+        }
         
         
+        for museum in store.filteredMuseums {
+            print("\(museum.title):\nopen late = \(museum.openLate)\ninterior view = \(museum.interiorMapView)\nfree admission = \(museum.freeAdmission)")
+            
+        }
     }
     
 }
