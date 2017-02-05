@@ -102,8 +102,8 @@ class WebView: UIView {
         refreshBarButton.customView = refreshButton
         
         let stopButton = UIButton()
-        stopButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        stopButton.setImage(UIImage(named: "Stop Icon"), for: .normal)
+        stopButton.frame = CGRect(x: 0, y: 0, width: 18, height: 25)
+        stopButton.setImage(UIImage(named: "Open Icon"), for: .normal)
         stopButton.addTarget(self, action: #selector(stop), for: .touchUpInside)
         
         let stopBarButton = UIBarButtonItem()

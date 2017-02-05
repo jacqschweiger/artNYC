@@ -29,8 +29,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         setUpHeader()
         addLocations()
         
-        
-        
     }
     
     func addLocations(){
