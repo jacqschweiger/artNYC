@@ -62,7 +62,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Back Button
         self.addSubview(backButton)
-        self.backButton.setImage(UIImage(named: "circleBack"), for: .normal)
+        self.backButton.setImage(UIImage(named: "Circle Back"), for: .normal)
         self.backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         
         self.backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
