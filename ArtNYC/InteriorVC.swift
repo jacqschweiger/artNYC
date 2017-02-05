@@ -33,8 +33,8 @@ class InteriorVC: UIViewController {
         
         self.backButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 15).isActive = true
         self.backButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20).isActive = true
-        self.backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        self.backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        self.backButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        self.backButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.backButton.translatesAutoresizingMaskIntoConstraints = false
 
     }
