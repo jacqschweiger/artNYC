@@ -28,7 +28,7 @@ class WebVC: UIViewController, WebViewDelegate, BackDelegate {
     }
     
     // MARK: WebView Navigation Functions
-
+    
     func doGoBack(_: AnyObject) {
         webView.museumWebView.goBack()
     }
@@ -37,14 +37,16 @@ class WebVC: UIViewController, WebViewDelegate, BackDelegate {
         webView.museumWebView.goForward()
     }
     
-    func stop(_: AnyObject) {
-        webView.museumWebView.stopLoading()
-    }
-    
     func doRefresh(_: AnyObject) {
         webView.museumWebView.reload()
     }
     
+    func openInBrowser(_: AnyObject) {
+        let urlString = webView.museum.url
+        guard let url = URL(string: urlString) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+
+    }
 }
 
 

@@ -12,7 +12,7 @@ import UIKit
 protocol WebViewDelegate: class {
     func goForward(_: AnyObject)
     func doRefresh(_: AnyObject)
-    func stop(_: AnyObject)
+    func openInBrowser(_: AnyObject)
     func doGoBack(_: AnyObject)
 }
 
@@ -101,17 +101,17 @@ class WebView: UIView {
         let refreshBarButton = UIBarButtonItem()
         refreshBarButton.customView = refreshButton
         
-        let stopButton = UIButton()
-        stopButton.frame = CGRect(x: 0, y: 0, width: 18, height: 25)
-        stopButton.setImage(UIImage(named: "Open Icon"), for: .normal)
-        stopButton.addTarget(self, action: #selector(stop), for: .touchUpInside)
+        let openButton = UIButton()
+        openButton.frame = CGRect(x: 0, y: 0, width: 18, height: 25)
+        openButton.setImage(UIImage(named: "Open Icon"), for: .normal)
+        openButton.addTarget(self, action: #selector(openInBrowser), for: .touchUpInside)
         
-        let stopBarButton = UIBarButtonItem()
-        stopBarButton.customView = stopButton
+        let openBarButton = UIBarButtonItem()
+        openBarButton.customView = openButton
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        let webNavBarButtons: [UIBarButtonItem] = [backBarButton, spacer, forwardBarButton, spacer, refreshBarButton, spacer, stopBarButton]
+        let webNavBarButtons: [UIBarButtonItem] = [backBarButton, spacer, forwardBarButton, spacer, refreshBarButton, spacer, openBarButton]
         
         self.addSubview(webNavBar)
         self.webNavBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -139,8 +139,8 @@ class WebView: UIView {
         self.delegate?.doRefresh(UIBarButtonItem.self)
     }
     
-    func stop(){
-        self.delegate?.stop(UIBarButtonItem.self)
+    func openInBrowser(){
+        self.delegate?.openInBrowser(UIBarButtonItem.self)
     }
     
 }

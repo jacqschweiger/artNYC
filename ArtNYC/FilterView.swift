@@ -158,7 +158,6 @@ class FilterView: UIView {
     func donePressed(){
         self.delegate?.filterMuseums()
         self.delegate?.dismissView()
-        
     }
 
 }
