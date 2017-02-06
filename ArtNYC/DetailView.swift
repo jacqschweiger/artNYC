@@ -129,7 +129,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
         
         artCategoriesLabel.text = "Art"
-        artCategoriesLabel.textAlignment = .left
         artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
         artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
@@ -152,7 +151,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         admissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         admissionLabel.text = "Admission"
-        admissionLabel.textAlignment = .left
         admissionLabel.font = UIFont(name: "Avenir Black", size: 20)
         admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
@@ -174,7 +172,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionLabel.text = "Free Admission"
-        freeAdmissionLabel.textAlignment = .left
         freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 20)
         freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
@@ -197,7 +194,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         
         addressLabel.text = "Address"
-        addressLabel.textAlignment = .left
         addressLabel.font = UIFont(name: "Avenir Black", size: 20)
         addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
@@ -219,7 +215,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         
         hoursLabel.text = "Hours"
-        hoursLabel.textAlignment = .left
         hoursLabel.font = UIFont(name: "Avenir Black", size: 20)
         hoursLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
