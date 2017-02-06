@@ -40,9 +40,6 @@ class MuseumCollectionViewCell: UICollectionViewCell {
         imageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor, constant: -10).isActive = true
         
-        //imageView.layer.cornerRadius = 10
-        //imageView.layer.borderWidth = 2
-        //imageView.layer.borderColor = UIColor(named: UIColor.ColorName.turquoise).cgColor
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         
