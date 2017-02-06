@@ -156,7 +156,7 @@ class MuseumDataStore {
                                           "Friday":"11am–4pm",
                                           "Saturday":"11am–5:45pm"],
                                   ticketPrice: "$15",
-                                  freeHours: "Saturdays free; Pay what you wish Thursdays, 5–8pm",
+                                  freeHours: "Saturdays free\nPay what you wish Thursdays, 5–8pm",
                                   artCategories: "Jewish art & artists, contemporary & historic",
                                   coordinate: CLLocationCoordinate2D(latitude: 40.7854, longitude: -73.9572),
                                   url: "http://thejewishmuseum.org/",

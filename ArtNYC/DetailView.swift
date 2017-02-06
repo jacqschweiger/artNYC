@@ -185,7 +185,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionContent.numberOfLines = 0
-        freeAdmissionContent.textAlignment = .center
         freeAdmissionContent.text = museum.freeHours
         freeAdmissionContent.font = UIFont(name: "Avenir Black", size: 16)
         freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
