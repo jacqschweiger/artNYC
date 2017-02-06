@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "whitneyLogo.jpg",
+      "filename" : "whitneyLogo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "whitneyLogo@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "whitneyLogo@3x.png",
       "scale" : "3x"
     }
   ],
