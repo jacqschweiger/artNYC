@@ -27,21 +27,24 @@ class MuseumCollectionViewCell: UICollectionViewCell {
     
     private func setUpElements() {
         
+        self.contentView.backgroundColor = UIColor.white
+        
         //IMAGE SET UP
         imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         self.contentView.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: Constants.image.ImageWidth.rawValue).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: Constants.image.ImageHeight.rawValue).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         imageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         
-        imageView.layer.cornerRadius = Constants.image.ImageCornerRadius.rawValue
-        imageView.layer.borderWidth = Constants.image.ImageBorderWidth.rawValue
-        imageView.layer.borderColor = UIColor(named: UIColor.ColorName.oatmeal).cgColor
+        imageView.layer.cornerRadius = 10
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor(named: UIColor.ColorName.turquoise).cgColor
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFit
         
         
         //TITLE SET UP

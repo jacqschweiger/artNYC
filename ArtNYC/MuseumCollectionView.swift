@@ -76,7 +76,6 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         
         self.museumCollectionView.backgroundColor = UIColor.white
         
-        
         //Filter Set Up
         self.insertSubview(filterButton, aboveSubview: header)
         self.filterButton.setTitle("•••", for: .normal)
@@ -127,26 +126,20 @@ extension MuseumCollectionView {
 extension MuseumCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        let verticalSpacing = Constants.gridLayout.InterBlockVerticalSpacing.rawValue
-        return verticalSpacing
+        return 25
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        let horizontalSpacing = Constants.gridLayout.InterBlockHorizontalSpacing.rawValue
-        return horizontalSpacing
+        return 25
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let sectionInsets = UIEdgeInsets(top: Constants.gridLayout.GridTopMargin.rawValue, left: Constants.gridLayout.GridSideMargin.rawValue, bottom: Constants.gridLayout.GridBottomMargin.rawValue, right: Constants.gridLayout.GridSideMargin.rawValue)
-        
+        let sectionInsets = UIEdgeInsets(top: 25, left: 25, bottom: 100, right: 25)
         return sectionInsets
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let blockWidth = Constants.blockSizes.BlockWidth.rawValue
-        let blockHeight = Constants.blockSizes.BlockHeight.rawValue
-        let blockSize = CGSize(width: blockWidth, height: blockHeight)
-        
+        let blockSize = CGSize(width: 150, height: 150)
         return blockSize
     }
     

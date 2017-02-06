@@ -36,29 +36,4 @@ struct Constants {
     
     static let key2: String = "AIzaSyDVfmnEa-AgJdoLFoaZcy9ZBCH3jeVEGSE"
     
-    static let momaImageURL: String = "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/s960x960/16402527_108035876381208_1031228506978284464_o.jpg?oh=2f47fa6e26f493ac15c7bdc468782c60&oe=59007702"
-    
-    
-    //LAYOUT
-
-    enum gridLayout: CGFloat {
-        case InterBlockHorizontalSpacing = 25
-        case InterBlockVerticalSpacing = 40
-        case GridTopMargin = 1
-        case GridBottomMargin = 120
-        case GridSideMargin = 24
-    }
-    
-    enum blockSizes: CGFloat {
-        case BlockWidth = 150
-        case BlockHeight = 151
-    }
-    
-    enum image: CGFloat {
-        case ImageWidth = 100
-        case ImageHeight = 101
-        case ImageCornerRadius = 10
-        case ImageBorderWidth = 2
-    }
-    
 }
