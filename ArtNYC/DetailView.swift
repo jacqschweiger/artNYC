@@ -14,6 +14,7 @@ import Kingfisher
 protocol DetailViewDelegate: class {
     func goToWebView()
     func goToInteriorView()
+    func showArtWork()
 }
 
 class DetailView: UIView, GMSMapViewDelegate {
@@ -22,6 +23,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     weak var backDelegate: BackDelegate?
     var museum: Museum!
     var museumImage = UIImageView()
+    var imageButton = UIButton()
     var container = UIView()
     var titleLabel = UILabel()
     var backButton = UIButton()
@@ -96,6 +98,17 @@ class DetailView: UIView, GMSMapViewDelegate {
         museumImage.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
         museumImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.40).isActive = true
         museumImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Image Button
+        self.scrollView.addSubview(imageButton)
+        imageButton.leftAnchor.constraint(equalTo: self.museumImage.leftAnchor).isActive = true
+        imageButton.rightAnchor.constraint(equalTo: self.museumImage.rightAnchor).isActive = true
+        imageButton.topAnchor.constraint(equalTo: self.museumImage.topAnchor).isActive = true
+        imageButton.heightAnchor.constraint(equalTo: self.museumImage.heightAnchor).isActive = true
+        imageButton.backgroundColor = UIColor.clear
+        imageButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        imageButton.addTarget(self, action: #selector(showArtWork), for: .touchUpInside)
         
         
         //Title Label
@@ -360,5 +373,10 @@ class DetailView: UIView, GMSMapViewDelegate {
     func goBack(){
         self.backDelegate?.goBack()
     }
+    
+    func showArtWork(){
+        self.delegate?.showArtWork()
+    }
+    
     
 }

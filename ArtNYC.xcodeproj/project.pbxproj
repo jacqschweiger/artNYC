@@ -21,6 +21,7 @@
 		715924541E380EF00007B852 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715924531E380EF00007B852 /* FilterVC.swift */; };
 		716027451E2A8F7900CAF26B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716027441E2A8F7900CAF26B /* WebVC.swift */; };
 		71732BE81E2C3D28009A5D75 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71732BE71E2C3D28009A5D75 /* WebView.swift */; };
+		7182780B1E48F1A700FE8190 /* ArtWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */; };
 		7183B3961E427C8400EDF9C0 /* MuseumCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3951E427C8400EDF9C0 /* MuseumCollectionVC.swift */; };
 		7183B3981E427D4D00EDF9C0 /* MuseumCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3971E427D4D00EDF9C0 /* MuseumCollectionView.swift */; };
 		7183B39A1E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3991E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift */; };
@@ -63,6 +64,7 @@
 		715924531E380EF00007B852 /* FilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		716027441E2A8F7900CAF26B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		71732BE71E2C3D28009A5D75 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkVC.swift; sourceTree = "<group>"; };
 		7183B3951E427C8400EDF9C0 /* MuseumCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCollectionVC.swift; sourceTree = "<group>"; };
 		7183B3971E427D4D00EDF9C0 /* MuseumCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCollectionView.swift; sourceTree = "<group>"; };
 		7183B3991E427E2D00EDF9C0 /* MuseumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				7117758C1E390D2B0082D6CC /* TabBarVC.swift */,
 				7183B3951E427C8400EDF9C0 /* MuseumCollectionVC.swift */,
 				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
+				7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */,
 				7132CBF41E29752C008CA655 /* MapVC.swift */,
 				716027441E2A8F7900CAF26B /* WebVC.swift */,
 				7114BF141E37ADFC00C81949 /* InteriorVC.swift */,
@@ -367,6 +370,7 @@
 				7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */,
 				7183B3981E427D4D00EDF9C0 /* MuseumCollectionView.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
+				7182780B1E48F1A700FE8190 /* ArtWorkVC.swift in Sources */,
 				7183B3961E427C8400EDF9C0 /* MuseumCollectionVC.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
 				710D80451E2C1750002AD134 /* Constants.swift in Sources */,

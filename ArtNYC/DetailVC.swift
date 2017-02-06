@@ -56,4 +56,12 @@ class DetailVC: UIViewController, GMSMapViewDelegate, DetailViewDelegate, BackDe
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    func showArtWork() {
+        let artWorkVC = ArtWorkVC()
+        if let museum = museum {
+            artWorkVC.selectedMuseum = museum
+        }
+        navigationController?.pushViewController(artWorkVC, animated: false)
+    }
+    
 }

@@ -12,11 +12,13 @@ import UIKit
 class TabBarVC: UITabBarController {
     
     var store = MuseumDataStore.sharedInstance
+    var filterView: FilterView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         store.loadMuseums()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +41,7 @@ class TabBarVC: UITabBarController {
         self.tabBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         self.tabBar.tintColor = UIColor.white
         self.tabBar.unselectedItemTintColor = UIColor(named: UIColor.ColorName.darkBlue)
+    
     }
     
 

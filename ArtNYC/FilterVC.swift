@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
+protocol FilterVCDelegate: class {
+    func reloadMuseums()
+}
+
 class FilterVC: UIViewController, FilterViewDelegate {
     
     var filterView: FilterView!
-    var dismissButton: UIButton!
     var store = MuseumDataStore.sharedInstance
+    weak var delegate: FilterVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+        
     func filterMuseums(){
         
         let interiorViewSwitch = self.filterView.interiorViewSwitch
@@ -121,6 +126,8 @@ class FilterVC: UIViewController, FilterViewDelegate {
             store.filteredMuseums = []
         }
         
+        /////
+        self.delegate?.reloadMuseums()
     }
     
 }
