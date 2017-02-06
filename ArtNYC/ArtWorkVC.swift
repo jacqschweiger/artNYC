@@ -27,13 +27,10 @@ class ArtWorkVC: UIViewController {
         //Image
         guard let urlString = self.selectedMuseum?.imageURL else { return }
         let url = URL(string: urlString)
-        
         artWork.kf.setImage(with: url)
-        
         artWork.contentMode = .scaleAspectFit
         artWork.clipsToBounds = true
 
-        
         self.view.addSubview(artWork)
         artWork.translatesAutoresizingMaskIntoConstraints = false
         artWork.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9).isActive = true
@@ -54,7 +51,7 @@ class ArtWorkVC: UIViewController {
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        dismissButton.backgroundColor = UIColor.blue
+        dismissButton.backgroundColor = UIColor.black
     }
     
     
