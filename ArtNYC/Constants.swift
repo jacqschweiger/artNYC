@@ -13,7 +13,8 @@ extension UIColor {
     enum ColorName: Int {
         case oatmeal = 0xdddfd4ff
         case yellow = 0xfae596ff
-        case turquoise = 0x3fb0acff
+        //case turquoise = 0x3fb0acff
+        case turquoise = 0x02cbceff
         case darkBlue = 0x173e43ff
     }
 }
