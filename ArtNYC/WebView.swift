@@ -20,7 +20,7 @@ protocol BackDelegate: class {
     func goBack()
 }
 
-class WebView: UIView {
+class MyWebView: UIView {
     
     weak var delegate: WebViewDelegate?
     weak var backDelegate: BackDelegate?
@@ -28,6 +28,7 @@ class WebView: UIView {
     var museumWebView: UIWebView!
     var backButton = UIButton()
     var webNavBar = UIToolbar()
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
 
     
     init(frame:CGRect, museum: Museum){
@@ -62,6 +63,11 @@ class WebView: UIView {
             let request = URLRequest(url: url)
             self.museumWebView.loadRequest(request)
         }
+        
+        self.addSubview(activityView)
+        let midX = UIScreen.main.bounds.width/2
+        let midY = UIScreen.main.bounds.height/2
+        activityView.frame = CGRect(x: midX, y: midY, width: 60, height: 60)
     }
     
     func setUpBackButton(){

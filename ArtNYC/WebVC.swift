@@ -9,18 +9,22 @@
 import Foundation
 import UIKit
 
-class WebVC: UIViewController, WebViewDelegate, BackDelegate {
+class WebVC: UIViewController, WebViewDelegate, BackDelegate, UIWebViewDelegate {
     
     var museum: Museum!
-    var webView: WebView!
+    var myWebView: MyWebView!
+    var webViewer: UIWebView!
        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView = WebView(frame: CGRect.zero, museum: museum)
-        self.view = self.webView
-        webView.delegate = self
-        webView.backDelegate = self
+        self.myWebView = MyWebView(frame: CGRect.zero, museum: museum)
+        self.view = self.myWebView
+        myWebView.delegate = self
+        myWebView.backDelegate = self
+        
+        webViewer = myWebView.museumWebView
+        webViewer.delegate = self
     }
     
     func goBack(){
@@ -30,23 +34,41 @@ class WebVC: UIViewController, WebViewDelegate, BackDelegate {
     // MARK: WebView Navigation Functions
     
     func doGoBack(_: AnyObject) {
-        webView.museumWebView.goBack()
+        myWebView.museumWebView.goBack()
     }
     
     func goForward(_: AnyObject) {
-        webView.museumWebView.goForward()
+        myWebView.museumWebView.goForward()
     }
     
     func doRefresh(_: AnyObject) {
-        webView.museumWebView.reload()
+        myWebView.museumWebView.reload()
     }
     
     func openInBrowser(_: AnyObject) {
-        let urlString = webView.museum.url
+        let urlString = myWebView.museum.url
         guard let url = URL(string: urlString) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
     }
+    
+    
+    // MARK: Activity Indicator Functions
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        myWebView.activityView.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        myWebView.activityView.stopAnimating()
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        myWebView.activityView.stopAnimating()
+    }
+
+
+
     
 }
 
