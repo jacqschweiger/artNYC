@@ -32,7 +32,13 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     func addLocations(){
-        for museum in store.allMuseums {
+        var museums: [Museum] = []
+        if store.filteredMuseums == [] {
+            museums = store.allMuseums
+        } else {
+            museums = store.filteredMuseums
+        }
+        for museum in museums {
             let position = museum.coordinate
             let marker = GMSMarker(position: position)
             if let museumTitle = museum.title {

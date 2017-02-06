@@ -28,7 +28,7 @@ class WebView: UIView {
     var museumWebView: UIWebView!
     var backButton = UIButton()
     var webNavBar = UIToolbar()
-    
+
     
     init(frame:CGRect, museum: Museum){
         super.init(frame: frame)
@@ -46,6 +46,7 @@ class WebView: UIView {
     }
     
     func setUpWebView(){
+        
         museumWebView = UIWebView()
         self.addSubview(museumWebView)
         self.sendSubview(toBack: museumWebView)
@@ -57,9 +58,9 @@ class WebView: UIView {
         museumWebView.backgroundColor = UIColor.white
         
         DispatchQueue.main.async {
-            let url = NSURL(string: self.museum.url)
-            let request = NSURLRequest(url: url as! URL)
-            self.museumWebView.loadRequest(request as URLRequest)
+            guard let url = URL(string: self.museum.url) else { return }
+            let request = URLRequest(url: url)
+            self.museumWebView.loadRequest(request)
         }
     }
     
@@ -142,7 +143,8 @@ class WebView: UIView {
     func openInBrowser(){
         self.delegate?.openInBrowser(UIBarButtonItem.self)
     }
-    
+
+
 }
 
 

@@ -13,7 +13,7 @@ class WebVC: UIViewController, WebViewDelegate, BackDelegate {
     
     var museum: Museum!
     var webView: WebView!
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +47,7 @@ class WebVC: UIViewController, WebViewDelegate, BackDelegate {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
     }
+    
 }
 
 
