@@ -24,7 +24,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
         mapView.delegate = self
-        mapView.isMyLocationEnabled = false
+        mapView.isMyLocationEnabled = true
         
         setUpHeader()
         addLocations()
