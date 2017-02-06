@@ -149,6 +149,7 @@ class FilterView: UIView {
         doneButton.setTitleColor(UIColor.white, for: .normal)
         doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         doneButton.addTarget(self, action: #selector(donePressed), for: .touchUpInside)
+        
     }
     
     func dismissView(){

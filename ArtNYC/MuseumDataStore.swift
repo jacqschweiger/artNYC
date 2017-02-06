@@ -274,7 +274,7 @@ class MuseumDataStore {
                                    "Friday":"10am–6pm",
                                    "Saturday":"10am–6pm"],
                            ticketPrice: "$22",
-                           freeHours: "First Friday of every month, 6-9pm",
+                           freeHours: "Free first Friday of every month, 6-9pm\nPay what you wish Sundays, 11am-1pm",
                            artCategories: "Old Masters, European decorative",
                            coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
                            url: "http://www.frick.org/",
