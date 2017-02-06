@@ -28,7 +28,7 @@ class MyWebView: UIView {
     var museumWebView: UIWebView!
     var backButton = UIButton()
     var webNavBar = UIToolbar()
-    let activityView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
 
     
     init(frame:CGRect, museum: Museum){
@@ -65,9 +65,10 @@ class MyWebView: UIView {
         }
         
         self.addSubview(activityView)
+        activityView.color = UIColor(named: UIColor.ColorName.turquoise)
         let midX = UIScreen.main.bounds.width/2
         let midY = UIScreen.main.bounds.height/2
-        activityView.frame = CGRect(x: midX, y: midY, width: 60, height: 60)
+        activityView.frame = CGRect(x: midX, y: midY, width: 20, height: 20)
     }
     
     func setUpBackButton(){
