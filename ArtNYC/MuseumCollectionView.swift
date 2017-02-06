@@ -74,7 +74,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.museumCollectionView.backgroundColor = UIColor.white
+        self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.grey)
         
         //Filter Set Up
         self.insertSubview(filterButton, aboveSubview: header)
@@ -126,20 +126,20 @@ extension MuseumCollectionView {
 extension MuseumCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 25
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let sectionInsets = UIEdgeInsets(top: 5, left: 25, bottom: 100, right: 25)
+        let sectionInsets = UIEdgeInsets(top: 10, left: 15, bottom: 100, right: 15)
         return sectionInsets
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let blockSize = CGSize(width: 150, height: 150)
+        let blockSize = CGSize(width: 170, height: 150)
         return blockSize
     }
     

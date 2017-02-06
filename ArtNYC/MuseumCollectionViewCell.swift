@@ -35,14 +35,14 @@ class MuseumCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 90).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 90).isActive = true
         imageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor, constant: -10).isActive = true
         
-        imageView.layer.cornerRadius = 10
-        imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor(named: UIColor.ColorName.turquoise).cgColor
+        //imageView.layer.cornerRadius = 10
+        //imageView.layer.borderWidth = 2
+        //imageView.layer.borderColor = UIColor(named: UIColor.ColorName.turquoise).cgColor
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         
@@ -52,10 +52,10 @@ class MuseumCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(titleLabel)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 10).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 5).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         
-        titleLabel.font = UIFont(name: "Avenir Black", size: 14)
+        titleLabel.font = UIFont(name: "Avenir Black", size: 13)
         titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         titleLabel.textAlignment = .center
         
