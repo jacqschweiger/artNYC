@@ -49,20 +49,20 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.addSubview(filler)
         filler.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         filler.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        filler.heightAnchor.constraint(equalToConstant: 6).isActive = true
+        filler.heightAnchor.constraint(equalToConstant: 15).isActive = true
         filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         filler.translatesAutoresizingMaskIntoConstraints = false
         
         //Header Set Up
         self.addSubview(header)
         self.header.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.05).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        header.text = "Art Museums NYC"
-        header.font = UIFont(name: "Avenir Black", size: 26)
+        header.text = "Art Museums"
+        header.font = UIFont(name: "Avenir Black", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
 
@@ -134,7 +134,7 @@ extension MuseumCollectionView {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let sectionInsets = UIEdgeInsets(top: 25, left: 25, bottom: 100, right: 25)
+        let sectionInsets = UIEdgeInsets(top: 5, left: 25, bottom: 100, right: 25)
         return sectionInsets
     }
     

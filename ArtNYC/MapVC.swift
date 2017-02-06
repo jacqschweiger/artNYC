@@ -48,20 +48,20 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(filler)
         filler.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         filler.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        filler.heightAnchor.constraint(equalToConstant: 6).isActive = true
+        filler.heightAnchor.constraint(equalToConstant: 15).isActive = true
         filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         filler.translatesAutoresizingMaskIntoConstraints = false
         
         //Header Set Up
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        header.text = "Art Museums NYC"
-        header.font = UIFont(name: "Avenir Black", size: 26)
+        header.text = "Map"
+        header.font = UIFont(name: "Avenir Black", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
         
