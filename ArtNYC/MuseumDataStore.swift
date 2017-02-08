@@ -149,7 +149,7 @@ class MuseumDataStore {
                                 openLate: false,
                                 freeAdmission: true,
                                 imageURL: "https://i0.wp.com/www.guggenheim.org/wp-content/uploads/1913/01/37.244_ph_web.jpg?w=870",
-                                imageCredit: "Vasily Kandinsky. Light Picture (Helles Bild), 1913. Courtesy the Solomon. R. Guggenheim Museum.")
+                                imageCredit: "Vasily Kandinsky. Light Picture (Helles Bild), 1913. Courtesy the Solomon R. Guggenheim Museum.")
         
         let jewishMuseum = Museum(title: "Jewish Museum",
                                   logo: UIImage(named: "jewishMuseumLogo")!,

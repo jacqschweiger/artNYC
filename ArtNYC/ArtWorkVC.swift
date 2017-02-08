@@ -23,9 +23,11 @@ class ArtWorkVC: UIViewController {
     }
     
     func setUpElements() {
+        
+        guard let museum = self.selectedMuseum else { return }
     
         //Image
-        guard let urlString = self.selectedMuseum?.imageURL else { return }
+        let urlString = museum.imageURL
         let url = URL(string: urlString)
         artWork.kf.setImage(with: url)
         artWork.contentMode = .scaleAspectFit
@@ -37,6 +39,21 @@ class ArtWorkVC: UIViewController {
         artWork.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         artWork.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         artWork.backgroundColor = UIColor.black
+        
+        //Credits
+        let creditsLabel = UILabel()
+        self.view.addSubview(creditsLabel)
+        creditsLabel.translatesAutoresizingMaskIntoConstraints = false
+        creditsLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -5).isActive = true
+        creditsLabel.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
+        creditsLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20).isActive = true
+        
+        creditsLabel.text = museum.imageCredit
+        creditsLabel.font = UIFont(name: "Avenir Black", size: 10)
+        creditsLabel.textColor = UIColor.white
+        creditsLabel.numberOfLines = 0
+        
+        
         
         
         //Dismiss Button
