@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    enum ColorName: Int {
+    enum ColorName: UInt32 {
         case grey = 0xF2F1EFff
-        //case turquoise = 0x3fb0acff
         case turquoise = 0x4183D7ff
         case darkBlue = 0x173e43ff
     }

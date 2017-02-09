@@ -61,7 +61,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         //Header Set Up
         self.view.addSubview(header)
         self.header.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
-        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
+        self.header.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
         

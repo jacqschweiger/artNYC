@@ -114,7 +114,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Title Label
         self.scrollView.addSubview(titleLabel)
         self.titleLabel.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: -2).isActive = true
-        self.titleLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         self.titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -123,6 +122,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         titleLabel.font = UIFont(name: "Avenir Black", size: 28)
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.white
+        titleLabel.numberOfLines = 0
         
         if museum.title == "The Metropolitan Museum of Art" {
             titleLabel.text = "The Met"
