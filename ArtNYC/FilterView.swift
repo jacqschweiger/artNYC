@@ -49,6 +49,7 @@ class FilterView: UIView {
         self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -20).isActive = true
         self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
         self.filterMenu.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7).isActive = true
+        self.filterMenu.layer.cornerRadius = 5
         self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
         
         //Clear Dismiss Button
@@ -67,9 +68,9 @@ class FilterView: UIView {
         
         //Title Label
         self.filterMenu.addSubview(titleLabel)
-        titleLabel.text = "Filter Museums"
-        titleLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-        titleLabel.font = UIFont(name: "Avenir Black", size: 24)
+        titleLabel.text = "FILTER MUSEUMS"
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont(name: "Avenir Black", size: 18)
         titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor, constant: 10).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: self.filterMenu.widthAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor).isActive = true
@@ -145,9 +146,10 @@ class FilterView: UIView {
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         
         doneButton.setTitle("Done", for: .normal)
-        doneButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+        doneButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 18)
         doneButton.setTitleColor(UIColor.white, for: .normal)
         doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
+        doneButton.layer.cornerRadius = 5
         doneButton.addTarget(self, action: #selector(donePressed), for: .touchUpInside)
         
     }

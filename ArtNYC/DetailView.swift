@@ -325,6 +325,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             seeInsideButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             seeInsideButton.tintColor = UIColor.white
             seeInsideButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            seeInsideButton.layer.cornerRadius = 5
             
             //Website Label
             websiteButton = UIButton(type: .custom)
@@ -340,6 +341,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             websiteButton.tintColor = UIColor.white
             websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            websiteButton.layer.cornerRadius = 5
             
         } else {
             //Website Label
@@ -356,6 +358,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             websiteButton.tintColor = UIColor.white
             websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            websiteButton.layer.cornerRadius = 5
         }
     }
     

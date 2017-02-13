@@ -66,7 +66,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        header.text = "Map"
+        header.text = "MAP"
         header.font = UIFont(name: "Avenir Black", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white

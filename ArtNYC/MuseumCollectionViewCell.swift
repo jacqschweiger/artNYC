@@ -28,6 +28,7 @@ class MuseumCollectionViewCell: UICollectionViewCell {
     private func setUpElements() {
         
         self.contentView.backgroundColor = UIColor.white
+        self.contentView.layer.cornerRadius = 5
         
         //IMAGE SET UP
         imageView = UIImageView()

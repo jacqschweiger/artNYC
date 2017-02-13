@@ -61,7 +61,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        header.text = "Art Museums"
+        header.text = "ART MUSEUMS"
         header.font = UIFont(name: "Avenir Black", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
@@ -74,7 +74,8 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.grey)
+        //self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.grey)
+        self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Filter Set Up
         self.insertSubview(filterButton, aboveSubview: header)
