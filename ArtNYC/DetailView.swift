@@ -143,7 +143,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         artCategoriesLabel.text = "Art"
         artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
-        artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        //artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Art Categories Content
         scrollView.addSubview(artCategoriesContent)
@@ -153,7 +153,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         artCategoriesContent.text = museum.artCategories
         artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
-        artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         //Admission Label
@@ -165,7 +165,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         admissionLabel.text = "Admission"
         admissionLabel.font = UIFont(name: "Avenir Black", size: 20)
-        admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        //admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Admission Content
         scrollView.addSubview(admissionContent)
@@ -175,7 +175,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         admissionContent.text = museum.ticketPrice
         admissionContent.font = UIFont(name: "Avenir Black", size: 16)
-        admissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //admissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Free Admission Label
         scrollView.addSubview(freeAdmissionLabel)
@@ -186,7 +186,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         freeAdmissionLabel.text = "Free Admission"
         freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 20)
-        freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        //freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Free Admission Content
         scrollView.addSubview(freeAdmissionContent)
@@ -197,7 +197,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionContent.numberOfLines = 0
         freeAdmissionContent.text = museum.freeHours
         freeAdmissionContent.font = UIFont(name: "Avenir Black", size: 16)
-        freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Address Label
         scrollView.addSubview(addressLabel)
@@ -208,7 +208,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         addressLabel.text = "Address"
         addressLabel.font = UIFont(name: "Avenir Black", size: 20)
-        addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        //addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Address Content
         scrollView.addSubview(addressContent)
@@ -218,7 +218,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         addressContent.text = museum.address
         addressContent.font = UIFont(name: "Avenir Black", size: 16)
-        addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         //Hours Label
         scrollView.addSubview(hoursLabel)
@@ -229,7 +229,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         hoursLabel.text = "Hours"
         hoursLabel.font = UIFont(name: "Avenir Black", size: 20)
-        hoursLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+        //hoursLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Days Labels
         scrollView.addSubview(sundayLabel)
@@ -240,7 +240,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let sunday = museum.hours["Sunday"] else { return }
         sundayLabel.text = "Sunday: \(sunday)"
         sundayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        sundayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //sundayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         scrollView.addSubview(mondayLabel)
@@ -251,7 +251,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let monday = museum.hours["Monday"] else { return }
         mondayLabel.text = "Monday: \(monday)"
         mondayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        mondayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //mondayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         scrollView.addSubview(tuesdayLabel)
@@ -262,7 +262,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let tuesday = museum.hours["Tuesday"] else { return }
         tuesdayLabel.text = "Tuesday: \(tuesday)"
         tuesdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        tuesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //tuesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         scrollView.addSubview(wednesdayLabel)
@@ -273,7 +273,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let wednesday = museum.hours["Wednesday"] else { return }
         wednesdayLabel.text = "Wednesday: \(wednesday)"
         wednesdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        wednesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //wednesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         scrollView.addSubview(thursdayLabel)
@@ -284,7 +284,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let thursday = museum.hours["Thursday"] else { return }
         thursdayLabel.text = "Thursday: \(thursday)"
         thursdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        thursdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //thursdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         scrollView.addSubview(fridayLabel)
@@ -295,7 +295,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let friday = museum.hours["Friday"] else { return }
         fridayLabel.text = "Friday: \(friday)"
         fridayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        fridayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //fridayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         scrollView.addSubview(saturdayLabel)
@@ -306,7 +306,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         guard let saturday = museum.hours["Saturday"] else { return }
         saturdayLabel.text = "Saturday: \(saturday)"
         saturdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-        saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+        //saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         
         
         //Intervior View Label // Add only if museum has street view
