@@ -17,16 +17,18 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.museumCollectionView.delegate = self
-        self.filterVC.delegate = self
+
     }
     
     override func loadView() {
         self.museumCollectionView = MuseumCollectionView()
+        self.museumCollectionView.delegate = self
+        
         self.view = self.museumCollectionView
         
         self.filterVC = FilterVC()
+        self.filterVC.delegate = self
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,13 +49,18 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
     }
     
     func showFilter(){
-        let filterController = FilterVC()
-        filterController.modalPresentationStyle = .overFullScreen
-        filterController.modalTransitionStyle = .crossDissolve
-        self.present(filterController, animated: true, completion: nil)
+        filterVC.modalPresentationStyle = .overFullScreen
+        filterVC.modalTransitionStyle = .crossDissolve
+        self.present(filterVC, animated: true, completion: nil)
     }
     
     func reloadMuseums(){
+        if store.filteredMuseums.count > 0 {
+            self.museumCollectionView.museums = store.filteredMuseums
+        } else if store.filteredMuseums.count == 0 {
+            self.museumCollectionView.museums = store.allMuseums
+        }
+        self.museumCollectionView.museumCollectionView.reloadData()
         print("reload called")
     }
     

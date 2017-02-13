@@ -98,6 +98,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
 extension MuseumCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("Museum count: \(museums.count)")
         return self.museums.count
     }
     

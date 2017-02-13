@@ -34,6 +34,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
     
         
     func filterMuseums(){
+        print("Filter museums is getting called.")
         
         let interiorViewSwitch = self.filterView.interiorViewSwitch
         let freeAdmissionSwitch = self.filterView.freeAdmissionSwitch
@@ -127,6 +128,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         }
         
         /////
+        print("\nAre we reaching here.")
         self.delegate?.reloadMuseums()
     }
     
