@@ -1,5 +1,5 @@
 //
-//  MuseumCollectionVC.swift
+//  MuseumVC.swift
 //  ArtNYC
 //
 //  Created by Jacqueline Schweiger on 2/1/17.
@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, FilterVCDelegate {
+class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
-    var museumCollectionView: MuseumCollectionView!
+    var museumView: MuseumView!
     var filterVC: FilterVC!
     
     override func viewDidLoad() {
@@ -21,10 +21,10 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
     }
     
     override func loadView() {
-        self.museumCollectionView = MuseumCollectionView()
-        self.museumCollectionView.delegate = self
+        self.museumView = MuseumView()
+        self.museumView.delegate = self
         
-        self.view = self.museumCollectionView
+        self.view = self.museumView
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
@@ -36,16 +36,16 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
         self.navigationController?.isNavigationBarHidden = true
         
         if store.filteredMuseums.count > 0 {
-            self.museumCollectionView.museums = store.filteredMuseums
+            self.museumView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {
-            self.museumCollectionView.museums = store.allMuseums
+            self.museumView.museums = store.allMuseums
         }
 
     }
     
     func goToDetailView(){
         let detailViewController = DetailVC()
-        detailViewController.museum = self.museumCollectionView.selectedMuseum
+        detailViewController.museum = self.museumView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
@@ -58,11 +58,11 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
     
     func reloadMuseums(){
         if store.filteredMuseums.count > 0 {
-            self.museumCollectionView.museums = store.filteredMuseums
+            self.museumView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {
-            self.museumCollectionView.museums = store.allMuseums
+            self.museumView.museums = store.allMuseums
         }
-        self.museumCollectionView.museumCollectionView.reloadData()
+        self.museumView.museumCollectionView.reloadData()
     }
     
 }

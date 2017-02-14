@@ -1,5 +1,5 @@
 //
-//  MuseumCollectionViewCell.swift
+//  MuseumCell.swift
 //  ArtNYC
 //
 //  Created by Jacqueline Schweiger on 2/1/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MuseumCollectionViewCell: UICollectionViewCell {
+class MuseumCell: UICollectionViewCell {
     
     var imageView: UIImageView!
     var titleLabel: UILabel!

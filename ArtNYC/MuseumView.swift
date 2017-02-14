@@ -1,5 +1,5 @@
 //
-//  MuseumCollectionView.swift
+//  MuseumView.swift
 //  ArtNYC
 //
 //  Created by Jacqueline Schweiger on 2/1/17.
@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-protocol MuseumCollectionViewDelegate: class {
+protocol MuseumViewDelegate: class {
     func goToDetailView()
     func showFilter()
 }
 
-class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var museums: [Museum] = []
     var museumCollectionView: UICollectionView!
     let header = UILabel()
     var selectedMuseum: Museum!
     var filterButton = UIButton()
-    weak var delegate: MuseumCollectionViewDelegate?
+    weak var delegate: MuseumViewDelegate?
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -34,7 +34,7 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
         self.museumCollectionView.delegate = self
         self.museumCollectionView.dataSource = self
         
-        museumCollectionView.register(MuseumCollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
+        museumCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
         
         setUpElements()
     }
@@ -95,14 +95,14 @@ class MuseumCollectionView: UIView, UICollectionViewDataSource, UICollectionView
 }
 
 //MARK:- CollectionView Delegate and DataSource
-extension MuseumCollectionView {
+extension MuseumView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.museums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCollectionViewCell
+        let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
         cell.titleLabel.text = museums[indexPath.item].title
         if museums[indexPath.item].title == "Metropolitan Museum of Art" {
             cell.titleLabel.text = "Metropolitan\nMuseum of Art"
@@ -124,7 +124,7 @@ extension MuseumCollectionView {
 }
 
 //MARK:- CollectionViewLayout
-extension MuseumCollectionView {
+extension MuseumView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10

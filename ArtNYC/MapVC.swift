@@ -19,6 +19,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var filterButton = UIButton()
     var filterVC: FilterVC!
     var detailVC: DetailVC!
+    var museumVC: MuseumVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +89,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.filterButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -15).isActive = true
         self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
     func showFilter(){

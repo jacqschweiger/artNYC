@@ -25,7 +25,7 @@ class TabBarVC: UITabBarController {
         super.viewWillAppear(animated)
         
         // Create Tab one
-        let tabOne = MuseumCollectionVC()
+        let tabOne = MuseumVC()
         let tabOneBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Home Icon"), selectedImage: UIImage(named: "Home Icon"))
         
         tabOne.tabBarItem = tabOneBarItem

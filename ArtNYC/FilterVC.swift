@@ -13,9 +13,6 @@ protocol FilterVCDelegate: class {
     func reloadMuseums()
 }
 
-protocol FilterVCMapDelegate: class {
-    func reloadMap()
-}
 
 class FilterVC: UIViewController, FilterViewDelegate {
     
@@ -34,45 +31,17 @@ class FilterVC: UIViewController, FilterViewDelegate {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
-        
-        let interiorViewSwitch = self.filterView.interiorViewSwitch
-        let freeAdmissionSwitch = self.filterView.freeAdmissionSwitch
-        let openLateSwitch = self.filterView.openLateSwitch
-        
-        //Maintain switch state
-        if interiorViewSwitch.isOn {
-            store.interiorViewSwitchIsOn = true
-        } else {
-            store.interiorViewSwitchIsOn = false
-        }
-        
-        if openLateSwitch.isOn {
-            store.openLateSwitchIsOn = true
-        } else {
-            store.openLateSwitchIsOn = false
-        }
-        
-        if freeAdmissionSwitch.isOn {
-            store.freeAdmissionSwitchIsOn = true
-        } else {
-            store.freeAdmissionSwitchIsOn = false
-        }
-
-    }
-    
     func dismissView(){
         dismiss(animated: true, completion: nil)
     }
     
     func filterMuseums(){
+        //Clear filtered museums
+        store.filteredMuseums = []
+        
         let interiorViewSwitch = self.filterView.interiorViewSwitch
         let freeAdmissionSwitch = self.filterView.freeAdmissionSwitch
         let openLateSwitch = self.filterView.openLateSwitch
-        
-        //Clear filtered museums
-        store.filteredMuseums = []
         
         //Maintain switch state
         if interiorViewSwitch.isOn {
