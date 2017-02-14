@@ -28,7 +28,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.view = mapView
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

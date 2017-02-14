@@ -31,10 +31,6 @@ class FilterVC: UIViewController, FilterViewDelegate {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
-    }
-    
     func dismissView(){
         dismiss(animated: true, completion: nil)
     }
@@ -130,8 +126,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         if !interiorViewSwitch.isOn && !openLateSwitch.isOn && !freeAdmissionSwitch.isOn {
             store.filteredMuseums = []
         }
-        
-        
+
         self.delegate?.reloadMuseums()
     }
     

@@ -73,8 +73,6 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.museumCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        
-        //self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.grey)
         self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Filter Set Up

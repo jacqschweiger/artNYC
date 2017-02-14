@@ -55,7 +55,6 @@ class ArtWorkVC: UIViewController {
         
         
         
-        
         //Dismiss Button
         let dismissButton = UIButton(type: .system)
         self.view.insertSubview(dismissButton, belowSubview: artWork)

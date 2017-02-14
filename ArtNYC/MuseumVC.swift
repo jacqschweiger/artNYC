@@ -13,7 +13,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
-    var filterVC = FilterVC()
+    var filterVC: FilterVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +48,12 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
+    func test(){
+        print("test called")
+    }
+    
     func showFilter(){
+        print("MVC show filter called")
         filterVC.modalPresentationStyle = .overFullScreen
         filterVC.modalTransitionStyle = .crossDissolve
         self.present(filterVC, animated: true, completion: nil)
