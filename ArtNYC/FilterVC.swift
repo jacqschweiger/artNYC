@@ -31,6 +31,10 @@ class FilterVC: UIViewController, FilterViewDelegate {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+    }
+    
     func dismissView(){
         dismiss(animated: true, completion: nil)
     }

@@ -19,7 +19,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var filterButton = UIButton()
     var filterVC: FilterVC!
     var detailVC: DetailVC!
-    var museumVC: MuseumVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +91,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     func showFilter(){
-        filterVC = FilterVC()
         filterVC.modalPresentationStyle = .overFullScreen
         filterVC.modalTransitionStyle = .crossDissolve
         self.present(filterVC, animated: true, completion: nil)
