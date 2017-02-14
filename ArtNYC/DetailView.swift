@@ -61,7 +61,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     }
     
     func setUpElements() {
-        
+
         //Back Button
         self.addSubview(backButton)
         self.backButton.setImage(UIImage(named: "Circle Back"), for: .normal)

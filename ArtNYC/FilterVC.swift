@@ -13,6 +13,10 @@ protocol FilterVCDelegate: class {
     func reloadMuseums()
 }
 
+protocol FilterVCMapDelegate: class {
+    func reloadMap()
+}
+
 class FilterVC: UIViewController, FilterViewDelegate {
     
     var filterView: FilterView!
@@ -23,19 +27,46 @@ class FilterVC: UIViewController, FilterViewDelegate {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
+        
         self.filterView = FilterView()
         self.view = filterView
         self.filterView.delegate = self
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+        
+        let interiorViewSwitch = self.filterView.interiorViewSwitch
+        let freeAdmissionSwitch = self.filterView.freeAdmissionSwitch
+        let openLateSwitch = self.filterView.openLateSwitch
+        
+        //Maintain switch state
+        if interiorViewSwitch.isOn {
+            store.interiorViewSwitchIsOn = true
+        } else {
+            store.interiorViewSwitchIsOn = false
+        }
+        
+        if openLateSwitch.isOn {
+            store.openLateSwitchIsOn = true
+        } else {
+            store.openLateSwitchIsOn = false
+        }
+        
+        if freeAdmissionSwitch.isOn {
+            store.freeAdmissionSwitchIsOn = true
+        } else {
+            store.freeAdmissionSwitchIsOn = false
+        }
+
     }
     
     func dismissView(){
         dismiss(animated: true, completion: nil)
     }
     
-        
     func filterMuseums(){
-        print("Filter museums is getting called.")
-        
         let interiorViewSwitch = self.filterView.interiorViewSwitch
         let freeAdmissionSwitch = self.filterView.freeAdmissionSwitch
         let openLateSwitch = self.filterView.openLateSwitch
@@ -127,8 +158,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
             store.filteredMuseums = []
         }
         
-        /////
-        print("\nAre we reaching here.")
+        
         self.delegate?.reloadMuseums()
     }
     

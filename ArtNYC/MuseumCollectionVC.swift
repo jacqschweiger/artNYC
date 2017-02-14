@@ -40,6 +40,7 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
         } else if store.filteredMuseums.count == 0 {
             self.museumCollectionView.museums = store.allMuseums
         }
+
     }
     
     func goToDetailView(){
@@ -49,6 +50,7 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
     }
     
     func showFilter(){
+        filterVC = FilterVC()
         filterVC.modalPresentationStyle = .overFullScreen
         filterVC.modalTransitionStyle = .crossDissolve
         self.present(filterVC, animated: true, completion: nil)
@@ -61,7 +63,6 @@ class MuseumCollectionVC: UIViewController, MuseumCollectionViewDelegate, Filter
             self.museumCollectionView.museums = store.allMuseums
         }
         self.museumCollectionView.museumCollectionView.reloadData()
-        print("reload called")
     }
     
 }

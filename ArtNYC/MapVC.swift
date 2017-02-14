@@ -12,10 +12,13 @@ import GoogleMaps
 class MapVC: UIViewController, GMSMapViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
+    var museums: [Museum] = []
     var selectedMuseum: Museum?
     var mapView: GMSMapView!
     var header = UILabel()
     var filterButton = UIButton()
+    var filterVC: FilterVC!
+    var detailVC: DetailVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +29,21 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setUpHeader()
         addLocations()
-        
     }
     
     func addLocations(){
-        var museums: [Museum] = []
+        
         if store.filteredMuseums == [] {
             museums = store.allMuseums
         } else {
             museums = store.filteredMuseums
         }
+        
         for museum in museums {
             let position = museum.coordinate
             let marker = GMSMarker(position: position)
@@ -46,7 +52,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             }
             marker.snippet = "See more"
             marker.map = mapView
+            
         }
+
     }
     
     func setUpHeader() {
@@ -84,22 +92,29 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     func showFilter(){
-        let filterController = FilterVC()
-        filterController.modalPresentationStyle = .overFullScreen
-        filterController.modalTransitionStyle = .crossDissolve
-        self.present(filterController, animated: true, completion: nil)
+        filterVC = FilterVC()
+        filterVC.modalPresentationStyle = .overFullScreen
+        filterVC.modalTransitionStyle = .crossDissolve
+        self.present(filterVC, animated: true, completion: nil)
     }
 
     // MARK: GMSMapViewDelegate
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        for museum in store.allMuseums {
+        if store.filteredMuseums.count > 0 {
+            self.museums = store.filteredMuseums
+        } else if store.filteredMuseums.count == 0 {
+            self.museums = store.allMuseums
+        }
+
+        for museum in museums {
             if museum.title == marker.title {
                 self.selectedMuseum = museum
             }
         }
-        let detailViewController = DetailVC()
-        detailViewController.museum = self.selectedMuseum
-        navigationController?.pushViewController(detailViewController, animated: true)
+        
+        detailVC.museum = self.selectedMuseum
+        navigationController?.pushViewController(detailVC, animated: true)
     }
+
 }

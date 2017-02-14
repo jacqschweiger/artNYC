@@ -33,7 +33,6 @@ class FilterView: UIView {
         
         self.backgroundColor = UIColor(white: 0.5, alpha: 0.75)
         setUpElements()
-    
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,7 +40,7 @@ class FilterView: UIView {
     }
     
     func setUpElements(){
-        
+    
         //Filter Menu
         self.addSubview(filterMenu)
         self.filterMenu.backgroundColor = UIColor.white
@@ -151,15 +150,13 @@ class FilterView: UIView {
         doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         doneButton.layer.cornerRadius = 5
         doneButton.addTarget(self, action: #selector(donePressed), for: .touchUpInside)
-        
     }
     
     func dismissView(){
         self.delegate?.dismissView()
     }
     
-    func donePressed(){
-        print("Done has been pressed.")
+    func donePressed() {
         self.delegate?.filterMuseums()
         self.delegate?.dismissView()
     }

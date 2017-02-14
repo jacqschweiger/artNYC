@@ -24,8 +24,7 @@ class DetailVC: UIViewController, GMSMapViewDelegate, DetailViewDelegate, BackDe
         self.automaticallyAdjustsScrollViewInsets = false
         
         self.detailView.scrollView.contentInset = UIEdgeInsets.zero
-        
-        self.detailView.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero;
+        self.detailView.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
     override func loadView(){
