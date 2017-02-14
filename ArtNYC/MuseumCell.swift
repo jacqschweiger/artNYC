@@ -53,7 +53,7 @@ class MuseumCell: UICollectionViewCell {
         titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         
-        titleLabel.font = UIFont(name: "Avenir Black", size: 13)
+        titleLabel.font = UIFont(name: "Avenir", size: 13)
         titleLabel.textColor = UIColor.black
         titleLabel.textAlignment = .center
         

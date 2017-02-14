@@ -119,7 +119,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        titleLabel.font = UIFont(name: "Avenir Black", size: 28)
+        titleLabel.font = UIFont(name: "Avenir", size: 28)
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.white
         titleLabel.numberOfLines = 0
@@ -149,7 +149,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             seeInsideButton.setTitle("See 360° Gallery View", for: .normal)
             seeInsideButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             seeInsideButton.tintColor = UIColor.white
-            seeInsideButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            seeInsideButton.titleLabel?.font = UIFont(name: "Avenir", size: 20)
             seeInsideButton.layer.cornerRadius = 5
             
             //Art Categories Label
@@ -160,8 +160,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
             
             artCategoriesLabel.text = "Art"
-            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
-            //artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+            artCategoriesLabel.font = UIFont(name: "Avenir", size: 20)
             
         } else {
             
@@ -173,8 +172,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
             
             artCategoriesLabel.text = "Art"
-            artCategoriesLabel.font = UIFont(name: "Avenir Black", size: 20)
-            //artCategoriesLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+            artCategoriesLabel.font = UIFont(name: "Avenir", size: 20)
         }
         
             
@@ -185,9 +183,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
             
             artCategoriesContent.text = museum.artCategories
-            artCategoriesContent.font = UIFont(name: "Avenir Black", size: 16)
-            //artCategoriesContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-            
+            artCategoriesContent.font = UIFont(name: "Avenir", size: 16)
             
             //Admission Label
             scrollView.addSubview(admissionLabel)
@@ -197,8 +193,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             admissionLabel.translatesAutoresizingMaskIntoConstraints = false
             
             admissionLabel.text = "Admission"
-            admissionLabel.font = UIFont(name: "Avenir Black", size: 20)
-            //admissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+            admissionLabel.font = UIFont(name: "Avenir", size: 20)
             
             //Admission Content
             scrollView.addSubview(admissionContent)
@@ -207,9 +202,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             admissionContent.translatesAutoresizingMaskIntoConstraints = false
             
             admissionContent.text = museum.ticketPrice
-            admissionContent.font = UIFont(name: "Avenir Black", size: 16)
-            //admissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
-            
+            admissionContent.font = UIFont(name: "Avenir", size: 16)
+        
             //Free Admission Label
             scrollView.addSubview(freeAdmissionLabel)
             freeAdmissionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -218,8 +212,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
             
             freeAdmissionLabel.text = "Free Admission"
-            freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 20)
-            //freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+            freeAdmissionLabel.font = UIFont(name: "Avenir", size: 20)
+        
             
             //Free Admission Content
             scrollView.addSubview(freeAdmissionContent)
@@ -229,8 +223,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             freeAdmissionContent.numberOfLines = 0
             freeAdmissionContent.text = museum.freeHours
-            freeAdmissionContent.font = UIFont(name: "Avenir Black", size: 16)
-            //freeAdmissionContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            freeAdmissionContent.font = UIFont(name: "Avenir", size: 16)
+        
             
             //Address Label
             scrollView.addSubview(addressLabel)
@@ -240,9 +234,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             addressLabel.translatesAutoresizingMaskIntoConstraints = false
             
             addressLabel.text = "Address"
-            addressLabel.font = UIFont(name: "Avenir Black", size: 20)
-            //addressLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
-            
+            addressLabel.font = UIFont(name: "Avenir", size: 20)
+        
             //Address Content
             scrollView.addSubview(addressContent)
             addressContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
@@ -250,8 +243,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             addressContent.translatesAutoresizingMaskIntoConstraints = false
             
             addressContent.text = museum.address
-            addressContent.font = UIFont(name: "Avenir Black", size: 16)
-            //addressContent.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            addressContent.font = UIFont(name: "Avenir", size: 16)
+        
             
             //Hours Label
             scrollView.addSubview(hoursLabel)
@@ -261,8 +254,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             hoursLabel.translatesAutoresizingMaskIntoConstraints = false
             
             hoursLabel.text = "Hours"
-            hoursLabel.font = UIFont(name: "Avenir Black", size: 20)
-            //hoursLabel.textColor = UIColor(named: UIColor.ColorName.turquoise)
+            hoursLabel.font = UIFont(name: "Avenir", size: 20)
+        
             
             //Days Labels
             scrollView.addSubview(sundayLabel)
@@ -272,8 +265,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let sunday = museum.hours["Sunday"] else { return }
             sundayLabel.text = "Sunday: \(sunday)"
-            sundayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //sundayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            sundayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             scrollView.addSubview(mondayLabel)
@@ -283,8 +276,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let monday = museum.hours["Monday"] else { return }
             mondayLabel.text = "Monday: \(monday)"
-            mondayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //mondayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            mondayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             scrollView.addSubview(tuesdayLabel)
@@ -294,8 +287,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let tuesday = museum.hours["Tuesday"] else { return }
             tuesdayLabel.text = "Tuesday: \(tuesday)"
-            tuesdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //tuesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            tuesdayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             scrollView.addSubview(wednesdayLabel)
@@ -305,8 +298,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let wednesday = museum.hours["Wednesday"] else { return }
             wednesdayLabel.text = "Wednesday: \(wednesday)"
-            wednesdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //wednesdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            wednesdayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             scrollView.addSubview(thursdayLabel)
@@ -316,8 +309,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let thursday = museum.hours["Thursday"] else { return }
             thursdayLabel.text = "Thursday: \(thursday)"
-            thursdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //thursdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            thursdayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             scrollView.addSubview(fridayLabel)
@@ -327,8 +320,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let friday = museum.hours["Friday"] else { return }
             fridayLabel.text = "Friday: \(friday)"
-            fridayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //fridayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            fridayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             scrollView.addSubview(saturdayLabel)
@@ -338,8 +331,8 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             guard let saturday = museum.hours["Saturday"] else { return }
             saturdayLabel.text = "Saturday: \(saturday)"
-            saturdayLabel.font = UIFont(name: "Avenir Black", size: 16)
-            //saturdayLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
+            saturdayLabel.font = UIFont(name: "Avenir", size: 16)
+        
             
             
             //Website Label
@@ -355,7 +348,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             websiteButton.setTitle("See Website", for: .normal)
             websiteButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
             websiteButton.tintColor = UIColor.white
-            websiteButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 20)
+            websiteButton.titleLabel?.font = UIFont(name: "Avenir", size: 20)
             websiteButton.layer.cornerRadius = 5
     }
     

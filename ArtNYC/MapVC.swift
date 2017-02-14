@@ -16,8 +16,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     var selectedMuseum: Museum?
     var mapView: GMSMapView!
     var header = UILabel()
-    var filterButton = UIButton()
-    var filterVC: FilterVC!
     var detailVC: DetailVC!
     
     override func viewDidLoad() {
@@ -29,11 +27,11 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
         
-        filterVC = FilterVC()
+        setUpHeader()
+        addLocations()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setUpHeader()
         addLocations()
     }
     
@@ -76,26 +74,11 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         header.text = "MAP"
-        header.font = UIFont(name: "Avenir Black", size: 18)
+        header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
-        
-        //Filter Set Up
-        
-        self.view.insertSubview(filterButton, aboveSubview: header)
-        self.filterButton.setTitle("•••", for: .normal)
-        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
-        
-        self.filterButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -15).isActive = true
-        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func showFilter(){
-        filterVC.modalPresentationStyle = .overFullScreen
-        filterVC.modalTransitionStyle = .crossDissolve
-        self.present(filterVC, animated: true, completion: nil)
-    }
 
     // MARK: GMSMapViewDelegate
     
@@ -112,6 +95,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             }
         }
         
+        detailVC = DetailVC()
         detailVC.museum = self.selectedMuseum
         navigationController?.pushViewController(detailVC, animated: true)
     }

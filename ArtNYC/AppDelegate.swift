@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
         
-        let font: UIFont = UIFont(name: "Avenir Black", size: 10)!
+        let font: UIFont = UIFont(name: "Avenir", size: 10)!
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: font], for: .normal)
         
         return true

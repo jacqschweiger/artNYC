@@ -49,7 +49,7 @@ class ArtWorkVC: UIViewController {
         creditsLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20).isActive = true
         
         creditsLabel.text = museum.imageCredit
-        creditsLabel.font = UIFont(name: "Avenir Black", size: 10)
+        creditsLabel.font = UIFont(name: "Avenir", size: 10)
         creditsLabel.textColor = UIColor.white
         creditsLabel.numberOfLines = 0
         

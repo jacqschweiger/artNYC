@@ -62,7 +62,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         header.text = "ART MUSEUMS"
-        header.font = UIFont(name: "Avenir Black", size: 18)
+        header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
 

@@ -69,7 +69,7 @@ class FilterView: UIView {
         self.filterMenu.addSubview(titleLabel)
         titleLabel.text = "FILTER MUSEUMS"
         titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: "Avenir Black", size: 18)
+        titleLabel.font = UIFont(name: "Avenir", size: 18)
         titleLabel.topAnchor.constraint(equalTo: self.filterMenu.topAnchor, constant: 10).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: self.filterMenu.widthAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor).isActive = true
@@ -82,7 +82,7 @@ class FilterView: UIView {
         freeAdmissionLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
         freeAdmissionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         freeAdmissionLabel.text = "Free Admission Hours"
-        freeAdmissionLabel.font = UIFont(name: "Avenir Black", size: 16)
+        freeAdmissionLabel.font = UIFont(name: "Avenir", size: 16)
         freeAdmissionLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -101,7 +101,7 @@ class FilterView: UIView {
         openLateLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
         openLateLabel.topAnchor.constraint(equalTo: freeAdmissionLabel.bottomAnchor, constant: 25).isActive = true
         openLateLabel.text = "Open Late"
-        openLateLabel.font = UIFont(name: "Avenir Black", size: 16)
+        openLateLabel.font = UIFont(name: "Avenir", size: 16)
         openLateLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         openLateLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -120,7 +120,7 @@ class FilterView: UIView {
         interiorViewLabel.leftAnchor.constraint(equalTo: self.filterMenu.leftAnchor, constant: 20).isActive = true
         interiorViewLabel.topAnchor.constraint(equalTo: openLateLabel.bottomAnchor, constant: 25).isActive = true
         interiorViewLabel.text = "360° Gallery View"
-        interiorViewLabel.font = UIFont(name: "Avenir Black", size: 16)
+        interiorViewLabel.font = UIFont(name: "Avenir", size: 16)
         interiorViewLabel.textColor = UIColor(named: UIColor.ColorName.darkBlue)
         interiorViewLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -145,7 +145,7 @@ class FilterView: UIView {
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         
         doneButton.setTitle("Done", for: .normal)
-        doneButton.titleLabel?.font = UIFont(name: "Avenir Black", size: 18)
+        doneButton.titleLabel?.font = UIFont(name: "Avenir", size: 18)
         doneButton.setTitleColor(UIColor.white, for: .normal)
         doneButton.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         doneButton.layer.cornerRadius = 5
