@@ -128,6 +128,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         }
 
         self.delegate?.reloadMuseums()
+        //TODO: reload mapview
     }
     
 }

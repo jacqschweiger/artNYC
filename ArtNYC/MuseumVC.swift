@@ -48,12 +48,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-    func test(){
-        print("test called")
-    }
-    
     func showFilter(){
-        print("MVC show filter called")
         filterVC.modalPresentationStyle = .overFullScreen
         filterVC.modalTransitionStyle = .crossDissolve
         self.present(filterVC, animated: true, completion: nil)

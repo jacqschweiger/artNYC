@@ -32,11 +32,11 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
         addLocations()
     }
     
     func addLocations(){
-        
         if store.filteredMuseums == [] {
             museums = store.allMuseums
         } else {
@@ -83,13 +83,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     // MARK: GMSMapViewDelegate
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        if store.filteredMuseums.count > 0 {
-            self.museums = store.filteredMuseums
-        } else if store.filteredMuseums.count == 0 {
-            self.museums = store.allMuseums
-        }
 
-        for museum in museums {
+        for museum in store.allMuseums {
             if museum.title == marker.title {
                 self.selectedMuseum = museum
             }
