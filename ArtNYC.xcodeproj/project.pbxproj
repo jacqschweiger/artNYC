@@ -28,7 +28,6 @@
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
 		71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF916B1E2BDA0000943648 /* DetailView.swift */; };
-		71E443EA1E3999FA0074D244 /* PhotosAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E443E91E3999FA0074D244 /* PhotosAPIClient.swift */; };
 		BD095B46B7788DDAF717A231 /* Pods_ArtNYC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +70,6 @@
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
 		71DF916B1E2BDA0000943648 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		71E443E91E3999FA0074D244 /* PhotosAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosAPIClient.swift; sourceTree = "<group>"; };
 		B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 			children = (
 				7191AC881E295ECB00F2D06D /* Museum.swift */,
 				7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */,
-				71E443E91E3999FA0074D244 /* PhotosAPIClient.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				7183B39A1E427E2D00EDF9C0 /* MuseumCell.swift in Sources */,
 				716027451E2A8F7900CAF26B /* WebVC.swift in Sources */,
 				71732BE81E2C3D28009A5D75 /* WebView.swift in Sources */,
-				71E443EA1E3999FA0074D244 /* PhotosAPIClient.swift in Sources */,
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
 				71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */,
