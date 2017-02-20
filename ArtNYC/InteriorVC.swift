@@ -2,7 +2,7 @@
 //  InteriorVC.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 1/24/17.
+//  Created by Jacqueline Schweiger on 1/24/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -12,7 +12,6 @@ import GoogleMaps
 
 class InteriorVC: UIViewController {
     
-    var store = MuseumDataStore.sharedInstance
     var museum: Museum!
     var panoView = GMSPanoramaView()
     let backButton = UIButton()

@@ -52,7 +52,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.present(filterVC, animated: true, completion: nil)
     }
     
-    func reloadMuseums(){
+    func refreshMuseums(){
         if store.filteredMuseums.count > 0 {
             self.museumView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {

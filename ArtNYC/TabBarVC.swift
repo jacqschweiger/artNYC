@@ -2,7 +2,7 @@
 //  TabBarVC.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 1/25/17.
+//  Created by Jacqueline Schweiger on 1/25/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -12,13 +12,11 @@ import UIKit
 class TabBarVC: UITabBarController {
     
     var store = MuseumDataStore.sharedInstance
-    var filterView: FilterView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         store.loadMuseums()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

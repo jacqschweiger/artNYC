@@ -67,9 +67,6 @@ class WebVC: UIViewController, WebViewDelegate, BackDelegate, UIWebViewDelegate 
         myWebView.activityView.stopAnimating()
     }
 
-
-
-    
 }
 
 

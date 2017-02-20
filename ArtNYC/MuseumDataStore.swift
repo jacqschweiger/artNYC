@@ -16,7 +16,6 @@ class MuseumDataStore {
     
     var filteredMuseums: [Museum] = []
     var allMuseums: [Museum] = []
-    //var imageURL: String!
     var interiorViewSwitchIsOn: Bool = false
     var freeAdmissionSwitchIsOn: Bool = false
     var openLateSwitchIsOn: Bool = false

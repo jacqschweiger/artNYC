@@ -2,7 +2,7 @@
 //  FilterVC.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 1/24/17.
+//  Created by Jacqueline Schweiger on 1/24/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol FilterVCDelegate: class {
-    func reloadMuseums()
+    func refreshMuseums()
 }
 
 
@@ -128,7 +128,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
             store.filteredMuseums = []
         }
 
-        self.delegate?.reloadMuseums()
+        self.delegate?.refreshMuseums()
     }
     
 }
