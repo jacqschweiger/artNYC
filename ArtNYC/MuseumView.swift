@@ -16,6 +16,7 @@ protocol MuseumViewDelegate: class {
 
 class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var store = MuseumDataStore.sharedInstance
     var museums: [Museum] = []
     var museumCollectionView: UICollectionView!
     let header = UILabel()

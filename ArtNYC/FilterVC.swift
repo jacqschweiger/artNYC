@@ -13,12 +13,17 @@ protocol FilterVCDelegate: class {
     func reloadMuseums()
 }
 
+protocol FilterVCMapDelegate: class {
+    func reloadMapVC()
+}
+
 
 class FilterVC: UIViewController, FilterViewDelegate {
     
     var filterView: FilterView!
     var store = MuseumDataStore.sharedInstance
     weak var delegate: FilterVCDelegate?
+    weak var mapDelegate: FilterVCMapDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +133,7 @@ class FilterVC: UIViewController, FilterViewDelegate {
         }
 
         self.delegate?.reloadMuseums()
+        self.mapDelegate?.reloadMapVC()
         //TODO: reload mapview
     }
     
