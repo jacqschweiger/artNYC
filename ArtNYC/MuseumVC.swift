@@ -31,7 +31,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.navigationController?.isNavigationBarHidden = true
         
         if store.filteredMuseums.count > 0 {
@@ -39,7 +38,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         } else if store.filteredMuseums.count == 0 {
             self.museumView.museums = store.allMuseums
         }
-
     }
     
     func goToDetailView(){
