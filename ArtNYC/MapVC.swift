@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMaps
 
-class MapVC: UIViewController, GMSMapViewDelegate, FilterVCMapDelegate {
+class MapVC: UIViewController, GMSMapViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museums: [Museum] = []
@@ -17,18 +17,12 @@ class MapVC: UIViewController, GMSMapViewDelegate, FilterVCMapDelegate {
     var mapView: GMSMapView!
     var header = UILabel()
     var detailVC: DetailVC!
-    var filterVC: FilterVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view did load called")
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("map vc will appear")
-        
         let camera = GMSCameraPosition.camera(withLatitude: 40.784, longitude: -73.9654, zoom: 11.5)
         self.mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
@@ -38,13 +32,9 @@ class MapVC: UIViewController, GMSMapViewDelegate, FilterVCMapDelegate {
         setUpHeader()
         addLocations()
         
-        self.filterVC = FilterVC()
-        self.filterVC.mapDelegate = self
-        
     }
     
     func addLocations(){
-        print("map vc: add locations called")
         self.museums = []
         if store.filteredMuseums == [] {
             museums = store.allMuseums
@@ -52,7 +42,6 @@ class MapVC: UIViewController, GMSMapViewDelegate, FilterVCMapDelegate {
             museums = store.filteredMuseums
         }
         
-        print(museums.count)
         for museum in museums {
             let position = museum.coordinate
             let marker = GMSMarker(position: position)
@@ -86,15 +75,6 @@ class MapVC: UIViewController, GMSMapViewDelegate, FilterVCMapDelegate {
         header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
-    }
-    
-    func reloadMapVC(){
-        print("reload called")
-        if store.filteredMuseums.count > 0 {
-            self.museums = store.filteredMuseums
-        } else if store.filteredMuseums.count == 0 {
-            self.museums = store.allMuseums
-        }
     }
     
 
