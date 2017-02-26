@@ -252,7 +252,7 @@
 				TargetAttributes = {
 					713D5F0E1E295DA500DD76FA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = X95T5846U7;
+						DevelopmentTeam = 38BN6X8CW2;
 						ProvisioningStyle = Automatic;
 					};
 					713D5F251E295DA500DD76FA = {
@@ -504,10 +504,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X95T5846U7;
+				DEVELOPMENT_TEAM = 38BN6X8CW2;
 				INFOPLIST_FILE = ArtNYC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacqschweiger.artNYC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -519,10 +519,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X95T5846U7;
+				DEVELOPMENT_TEAM = 38BN6X8CW2;
 				INFOPLIST_FILE = ArtNYC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Flatiron.ArtNYC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacqschweiger.artNYC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
