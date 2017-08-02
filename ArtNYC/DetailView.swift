@@ -207,11 +207,17 @@ class DetailView: UIView, GMSMapViewDelegate {
             //Free Admission Label
             scrollView.addSubview(freeAdmissionLabel)
             freeAdmissionLabel.image = UIImage(named: "paintbrush_icon")
-            freeAdmissionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionContent.bottomAnchor, constant: 20).isActive = true
-            freeAdmissionLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
+            freeAdmissionLabel.topAnchor.constraint(equalTo: admissionContent.bottomAnchor, constant: 20).isActive = true
+            freeAdmissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            freeAdmissionLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
             freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
-            
+//            freeAdmissionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//            freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionContent.bottomAnchor, constant: 20).isActive = true
+//            freeAdmissionLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+
+        
+        
 //            freeAdmissionLabel.text = "Free Admission"
 //            freeAdmissionLabel.font = UIFont(name: "Avenir", size: 20)
         
