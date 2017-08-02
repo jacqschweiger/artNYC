@@ -47,7 +47,7 @@ class FilterView: UIView {
         self.filterMenu.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.filterMenu.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -20).isActive = true
         self.filterMenu.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
-        self.filterMenu.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7).isActive = true
+        self.filterMenu.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
         self.filterMenu.layer.cornerRadius = 5
         self.filterMenu.translatesAutoresizingMaskIntoConstraints = false
         
