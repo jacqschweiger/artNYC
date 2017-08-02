@@ -212,20 +212,12 @@ class DetailView: UIView, GMSMapViewDelegate {
             freeAdmissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
             freeAdmissionLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
             freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
-//            freeAdmissionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-//            freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionContent.bottomAnchor, constant: 20).isActive = true
-//            freeAdmissionLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
 
-        
-        
-//            freeAdmissionLabel.text = "Free Admission"
-//            freeAdmissionLabel.font = UIFont(name: "Avenir", size: 20)
-        
             
             //Free Admission Content
             scrollView.addSubview(freeAdmissionContent)
-            freeAdmissionContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
-            freeAdmissionContent.topAnchor.constraint(equalTo: self.freeAdmissionLabel.bottomAnchor).isActive = true
+            freeAdmissionContent.leftAnchor.constraint(equalTo: self.freeAdmissionLabel.rightAnchor, constant: 20).isActive = true
+            freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionLabel.centerYAnchor).isActive = true
             freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
             
             freeAdmissionContent.numberOfLines = 0
