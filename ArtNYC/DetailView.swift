@@ -36,7 +36,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var freeAdmissionContent = UILabel()
     var addressLabel = UIImageView()
     var addressContent = UILabel()
-    var hoursLabel = UILabel()
+    var hoursLabel = UIImageView()
     var sundayLabel = UILabel()
     var mondayLabel = UILabel()
     var tuesdayLabel = UILabel()
@@ -243,19 +243,19 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Hours Label
         scrollView.addSubview(hoursLabel)
-        hoursLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        hoursLabel.topAnchor.constraint(equalTo: self.addressContent.bottomAnchor, constant: 20).isActive = true
-        hoursLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+        hoursLabel.image = UIImage(named: "paintbrush_icon")
+        hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
+        hoursLabel.topAnchor.constraint(equalTo: addressContent.bottomAnchor, constant: 20).isActive = true
+        hoursLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        hoursLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        hoursLabel.text = "Hours"
-        hoursLabel.font = UIFont(name: "Avenir", size: 20)
         
         
         //Days Labels
         scrollView.addSubview(sundayLabel)
-        sundayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
-        sundayLabel.topAnchor.constraint(equalTo: self.hoursLabel.bottomAnchor).isActive = true
+        
+        sundayLabel.leftAnchor.constraint(equalTo: self.hoursLabel.rightAnchor, constant: 20).isActive = true
+        sundayLabel.centerYAnchor.constraint(equalTo: self.hoursLabel.centerYAnchor).isActive = true
         sundayLabel.translatesAutoresizingMaskIntoConstraints = false
         
         guard let sunday = museum.hours["Sunday"] else { return }
@@ -265,7 +265,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         scrollView.addSubview(mondayLabel)
-        mondayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
+        mondayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
         mondayLabel.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor).isActive = true
         mondayLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -276,7 +276,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         scrollView.addSubview(tuesdayLabel)
-        tuesdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
+        tuesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
         tuesdayLabel.topAnchor.constraint(equalTo: self.mondayLabel.bottomAnchor).isActive = true
         tuesdayLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -287,7 +287,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         scrollView.addSubview(wednesdayLabel)
-        wednesdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
+        wednesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
         wednesdayLabel.topAnchor.constraint(equalTo: self.tuesdayLabel.bottomAnchor).isActive = true
         wednesdayLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -298,7 +298,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         scrollView.addSubview(thursdayLabel)
-        thursdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
+        thursdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
         thursdayLabel.topAnchor.constraint(equalTo: self.wednesdayLabel.bottomAnchor).isActive = true
         thursdayLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -309,7 +309,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         scrollView.addSubview(fridayLabel)
-        fridayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
+        fridayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
         fridayLabel.topAnchor.constraint(equalTo: self.thursdayLabel.bottomAnchor).isActive = true
         fridayLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -320,7 +320,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         
         scrollView.addSubview(saturdayLabel)
-        saturdayLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
+        saturdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
         saturdayLabel.topAnchor.constraint(equalTo: self.fridayLabel.bottomAnchor).isActive = true
         saturdayLabel.translatesAutoresizingMaskIntoConstraints = false
         
