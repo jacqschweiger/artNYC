@@ -34,7 +34,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var admissionContent = UILabel()
     var freeAdmissionLabel = UIImageView()
     var freeAdmissionContent = UILabel()
-    var addressLabel = UILabel()
+    var addressLabel = UIImageView()
     var addressContent = UILabel()
     var hoursLabel = UILabel()
     var sundayLabel = UILabel()
@@ -223,18 +223,18 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Address Label
         scrollView.addSubview(addressLabel)
-        addressLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        addressLabel.topAnchor.constraint(equalTo: self.freeAdmissionContent.bottomAnchor, constant: 20).isActive = true
-        addressLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+        addressLabel.image = UIImage(named: "paintbrush_icon")
+        addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
+        addressLabel.topAnchor.constraint(equalTo: freeAdmissionContent.bottomAnchor, constant: 20).isActive = true
+        addressLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        addressLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        addressLabel.text = "Address"
-        addressLabel.font = UIFont(name: "Avenir", size: 20)
         
         //Address Content
         scrollView.addSubview(addressContent)
-        addressContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
-        addressContent.topAnchor.constraint(equalTo: self.addressLabel.bottomAnchor).isActive = true
+        addressContent.leftAnchor.constraint(equalTo: self.addressLabel.rightAnchor, constant: 20).isActive = true
+        addressContent.centerYAnchor.constraint(equalTo: self.addressLabel.centerYAnchor).isActive = true
         addressContent.translatesAutoresizingMaskIntoConstraints = false
         
         addressContent.text = museum.address
