@@ -152,6 +152,7 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
+            artCategoriesLabel.image = UIImage(named: "paintbrush_icon")
             artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
             artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
             artCategoriesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
@@ -185,7 +186,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.addSubview(admissionLabel)
         admissionLabel.image = UIImage(named: "paintbrush_icon")
         admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
-        admissionLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: 20).isActive = true
+        admissionLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: 30).isActive = true
         admissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
         admissionLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         admissionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -204,7 +205,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.addSubview(freeAdmissionLabel)
         freeAdmissionLabel.image = UIImage(named: "paintbrush_icon")
         freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
-        freeAdmissionLabel.topAnchor.constraint(equalTo: admissionContent.bottomAnchor, constant: 20).isActive = true
+        freeAdmissionLabel.topAnchor.constraint(equalTo: admissionContent.bottomAnchor, constant: 30).isActive = true
         freeAdmissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
         freeAdmissionLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -225,7 +226,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.addSubview(addressLabel)
         addressLabel.image = UIImage(named: "paintbrush_icon")
         addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
-        addressLabel.topAnchor.constraint(equalTo: freeAdmissionContent.bottomAnchor, constant: 20).isActive = true
+        addressLabel.topAnchor.constraint(equalTo: freeAdmissionContent.bottomAnchor, constant: 30).isActive = true
         addressLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
         addressLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -245,7 +246,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.addSubview(hoursLabel)
         hoursLabel.image = UIImage(named: "paintbrush_icon")
         hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
-        hoursLabel.topAnchor.constraint(equalTo: addressContent.bottomAnchor, constant: 20).isActive = true
+        hoursLabel.topAnchor.constraint(equalTo: addressContent.bottomAnchor, constant: 30).isActive = true
         hoursLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
         hoursLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
