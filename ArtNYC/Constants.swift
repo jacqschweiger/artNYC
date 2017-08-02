@@ -36,4 +36,8 @@ struct Constants {
     
     static let key2: String = "AIzaSyDVfmnEa-AgJdoLFoaZcy9ZBCH3jeVEGSE"
     
+    static let verticalSpace = 30
+    
+    static let widthSpace = 25
+    
 }
