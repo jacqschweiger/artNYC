@@ -24,12 +24,18 @@ class DetailView: UIView, GMSMapViewDelegate {
     var museum: Museum!
     var museumImage = UIImageView()
     var imageButton = UIButton()
-    var container = UIView()
-    var titleLabel = UILabel()
     var backButton = UIButton()
     var scrollView = UIScrollView()
+    var titleLabel = UILabel()
     var seeInsideButton = UIButton()
-    var nameLabel = UILabel()
+    var artCategoriesLabel = UIImageView()
+    var artCategoriesContent = UILabel()
+    var admissionLabel = UILabel()
+    var admissionContent = UILabel()
+    var freeAdmissionLabel = UIImageView()
+    var freeAdmissionContent = UILabel()
+    var addressLabel = UILabel()
+    var addressContent = UILabel()
     var hoursLabel = UILabel()
     var sundayLabel = UILabel()
     var mondayLabel = UILabel()
@@ -38,14 +44,6 @@ class DetailView: UIView, GMSMapViewDelegate {
     var thursdayLabel = UILabel()
     var fridayLabel = UILabel()
     var saturdayLabel = UILabel()
-    var addressLabel = UILabel()
-    var addressContent = UILabel()
-    var admissionLabel = UILabel()
-    var admissionContent = UILabel()
-    var freeAdmissionLabel = UIImageView()
-    var freeAdmissionContent = UILabel()
-    var artCategoriesLabel = UILabel()
-    var artCategoriesContent = UILabel()
     var websiteButton: UIButton!
     
     
@@ -154,32 +152,30 @@ class DetailView: UIView, GMSMapViewDelegate {
             
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
-            artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
             artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
-            artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            artCategoriesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
-            
-            artCategoriesLabel.text = "Art"
-            artCategoriesLabel.font = UIFont(name: "Avenir", size: 20)
             
         } else {
             
             //Art Categories Label
             scrollView.addSubview(artCategoriesLabel)
-            artCategoriesLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            artCategoriesLabel.image = UIImage(named: "paintbrush_icon")
+            artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 40).isActive = true
             artCategoriesLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 20).isActive = true
-            artCategoriesLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+            artCategoriesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
             artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
-            
-            artCategoriesLabel.text = "Art"
-            artCategoriesLabel.font = UIFont(name: "Avenir", size: 20)
+        
         }
         
             
             //Art Categories Content
             scrollView.addSubview(artCategoriesContent)
-            artCategoriesContent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 50).isActive = true
-            artCategoriesContent.topAnchor.constraint(equalTo: self.artCategoriesLabel.bottomAnchor).isActive = true
+            artCategoriesContent.leftAnchor.constraint(equalTo: self.artCategoriesLabel.rightAnchor, constant: 20).isActive = true
+            artCategoriesContent.centerYAnchor.constraint(equalTo: self.artCategoriesLabel.centerYAnchor).isActive = true
             artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
             
             artCategoriesContent.text = museum.artCategories
