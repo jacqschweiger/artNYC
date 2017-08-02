@@ -42,7 +42,7 @@ class DetailView: UIView, GMSMapViewDelegate {
     var addressContent = UILabel()
     var admissionLabel = UILabel()
     var admissionContent = UILabel()
-    var freeAdmissionLabel = UILabel()
+    var freeAdmissionLabel = UIImageView()
     var freeAdmissionContent = UILabel()
     var artCategoriesLabel = UILabel()
     var artCategoriesContent = UILabel()
@@ -206,13 +206,14 @@ class DetailView: UIView, GMSMapViewDelegate {
         
             //Free Admission Label
             scrollView.addSubview(freeAdmissionLabel)
+            freeAdmissionLabel.image = UIImage(named: "paintbrush_icon")
             freeAdmissionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
             freeAdmissionLabel.topAnchor.constraint(equalTo: self.admissionContent.bottomAnchor, constant: 20).isActive = true
             freeAdmissionLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
             freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
             
-            freeAdmissionLabel.text = "Free Admission"
-            freeAdmissionLabel.font = UIFont(name: "Avenir", size: 20)
+//            freeAdmissionLabel.text = "Free Admission"
+//            freeAdmissionLabel.font = UIFont(name: "Avenir", size: 20)
         
             
             //Free Admission Content
