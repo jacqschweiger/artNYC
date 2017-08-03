@@ -226,7 +226,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Address Label
         scrollView.addSubview(addressLabel)
-        addressLabel.image = UIImage(named: "paintbrush_icon")
+        addressLabel.image = UIImage(named: "map_icon")
         addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
         addressLabel.topAnchor.constraint(equalTo: freeAdmissionContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
         addressLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
@@ -247,7 +247,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Hours Label
         scrollView.addSubview(hoursLabel)
-        hoursLabel.image = UIImage(named: "paintbrush_icon")
+        hoursLabel.image = UIImage(named: "clock_icon")
         hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
         hoursLabel.topAnchor.constraint(equalTo: addressContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
         hoursLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
