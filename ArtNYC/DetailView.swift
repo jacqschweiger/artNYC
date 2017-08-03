@@ -184,7 +184,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Admission Label
         scrollView.addSubview(admissionLabel)
-        admissionLabel.image = UIImage(named: "paintbrush_icon")
+        admissionLabel.image = UIImage(named: "dollar_icon")
         admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
         admissionLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
         admissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
