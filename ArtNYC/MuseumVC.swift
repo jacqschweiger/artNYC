@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GooglePlaces
 
 class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
@@ -17,7 +18,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func loadView() {

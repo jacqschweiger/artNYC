@@ -181,6 +181,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         artCategoriesContent.text = museum.artCategories
         artCategoriesContent.font = UIFont(name: "Avenir", size: 16)
+        artCategoriesContent.numberOfLines = 0
         
         //Admission Label
         scrollView.addSubview(admissionLabel)
@@ -218,7 +219,6 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionLabel.centerYAnchor).isActive = true
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
         
-        freeAdmissionContent.numberOfLines = 0
         freeAdmissionContent.text = museum.freeHours
         freeAdmissionContent.font = UIFont(name: "Avenir", size: 16)
         freeAdmissionContent.numberOfLines = 0
