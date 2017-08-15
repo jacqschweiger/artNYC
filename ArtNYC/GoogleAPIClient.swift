@@ -10,7 +10,7 @@ import Foundation
 
 class GoogleAPIClient {
     
-    class func getHours(with completion: @escaping ([[String:AnyObject]])-> Void) {
+    class func getHours(with completion: @escaping ([String:AnyObject])-> Void) {
         let urlString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4&key=\(Constants.key)"
         
         let url = URL(string: urlString)
@@ -23,9 +23,9 @@ class GoogleAPIClient {
                         
                         let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String: AnyObject]
                         
-                        let resultsJSON = responseJSON["results"]
+                        let resultsJSON = responseJSON["result"]
                         
-                        completion(resultsJSON as! [[String : AnyObject]])
+                        completion(resultsJSON as! [String : AnyObject])
                     } catch {
                         print(error)
                     }
