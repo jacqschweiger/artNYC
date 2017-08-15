@@ -447,6 +447,17 @@ class MuseumDataStore {
             return museum1.title! < museum2.title!
         }
         
+        test {
+            print("called test")
+        }
+        
+    }
+    
+    func test(completion: @escaping ()->()) {
+        GoogleAPIClient.getHours { (results) in
+            print(results)
+            completion()
+        }
     }
     
 }
