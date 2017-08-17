@@ -457,9 +457,7 @@ class MuseumDataStore {
     func getHours(with completion: @escaping ()->()) {
         for museum in self.allMuseums {
             GoogleAPIClient.getHours(with: museum.placeID, completion: { (results) in
-                let newResults = results.joined(separator: "\n")
-                print(newResults)
-                museum.hours = newResults
+                museum.hours = results.joined(separator: "\n").replacingOccurrences(of: ":00 AM", with: "am").replacingOccurrences(of: ":00", with: "").replacingOccurrences(of: " AM", with: "am").replacingOccurrences(of: " PM", with: "pm")
                 print(museum.hours)
             })
         }
