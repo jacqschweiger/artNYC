@@ -15,7 +15,7 @@ class Museum: NSObject, MKAnnotation {
     let title: String?
     let address: String
     let logo: UIImage
-    let hours: [String: String]
+    var hours: [String]
     let ticketPrice: String
     let freeHours: String
     let artCategories: String
@@ -26,8 +26,9 @@ class Museum: NSObject, MKAnnotation {
     let freeAdmission: Bool
     var imageURL: String
     var imageCredit: String
+    let placeID: String
     
-    init(title: String, logo: UIImage, address: String, hours: [String: String], ticketPrice: String, freeHours: String, artCategories: String, coordinate: CLLocationCoordinate2D, url: String, interiorMapView: Bool, openLate: Bool, freeAdmission: Bool, imageURL: String, imageCredit: String){
+    init(title: String, logo: UIImage, address: String, hours: [String], ticketPrice: String, freeHours: String, artCategories: String, coordinate: CLLocationCoordinate2D, url: String, interiorMapView: Bool, openLate: Bool, freeAdmission: Bool, imageURL: String, imageCredit: String, placeID: String){
         self.title = title
         self.logo = logo
         self.address = address
@@ -42,6 +43,7 @@ class Museum: NSObject, MKAnnotation {
         self.freeAdmission = freeAdmission
         self.imageURL = imageURL
         self.imageCredit = imageCredit
+        self.placeID = placeID
         
         super.init()
     }

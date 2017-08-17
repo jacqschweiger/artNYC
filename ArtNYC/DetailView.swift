@@ -262,75 +262,76 @@ class DetailView: UIView, GMSMapViewDelegate {
         sundayLabel.centerYAnchor.constraint(equalTo: self.hoursLabel.centerYAnchor).isActive = true
         sundayLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        guard let sunday = museum.hours["Sunday"] else { return }
+        //guard let sunday = museum.hours["Sunday"] else { return }
+        let sunday = museum.hours
         sundayLabel.text = "Sunday: \(sunday)"
         sundayLabel.font = UIFont(name: "Avenir", size: 16)
+//
+//        
+//        
+//        scrollView.addSubview(mondayLabel)
+//        mondayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
+//        mondayLabel.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor).isActive = true
+//        mondayLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        guard let monday = museum.hours["Monday"] else { return }
+//        mondayLabel.text = "Monday: \(monday)"
+//        mondayLabel.font = UIFont(name: "Avenir", size: 16)
+//        
+//        
+//        
+//        scrollView.addSubview(tuesdayLabel)
+//        tuesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
+//        tuesdayLabel.topAnchor.constraint(equalTo: self.mondayLabel.bottomAnchor).isActive = true
+//        tuesdayLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        guard let tuesday = museum.hours["Tuesday"] else { return }
+//        tuesdayLabel.text = "Tuesday: \(tuesday)"
+//        tuesdayLabel.font = UIFont(name: "Avenir", size: 16)
+//        
+//        
+//        
+//        scrollView.addSubview(wednesdayLabel)
+//        wednesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
+//        wednesdayLabel.topAnchor.constraint(equalTo: self.tuesdayLabel.bottomAnchor).isActive = true
+//        wednesdayLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        guard let wednesday = museum.hours["Wednesday"] else { return }
+//        wednesdayLabel.text = "Wednesday: \(wednesday)"
+//        wednesdayLabel.font = UIFont(name: "Avenir", size: 16)
+//        
+//        
+//        
+//        scrollView.addSubview(thursdayLabel)
+//        thursdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
+//        thursdayLabel.topAnchor.constraint(equalTo: self.wednesdayLabel.bottomAnchor).isActive = true
+//        thursdayLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        guard let thursday = museum.hours["Thursday"] else { return }
+//        thursdayLabel.text = "Thursday: \(thursday)"
+//        thursdayLabel.font = UIFont(name: "Avenir", size: 16)
+//        
+//        
+//        
+//        scrollView.addSubview(fridayLabel)
+//        fridayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
+//        fridayLabel.topAnchor.constraint(equalTo: self.thursdayLabel.bottomAnchor).isActive = true
+//        fridayLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        guard let friday = museum.hours["Friday"] else { return }
+//        fridayLabel.text = "Friday: \(friday)"
+//        fridayLabel.font = UIFont(name: "Avenir", size: 16)
         
         
         
-        scrollView.addSubview(mondayLabel)
-        mondayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-        mondayLabel.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor).isActive = true
-        mondayLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        guard let monday = museum.hours["Monday"] else { return }
-        mondayLabel.text = "Monday: \(monday)"
-        mondayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
-        
-        scrollView.addSubview(tuesdayLabel)
-        tuesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-        tuesdayLabel.topAnchor.constraint(equalTo: self.mondayLabel.bottomAnchor).isActive = true
-        tuesdayLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        guard let tuesday = museum.hours["Tuesday"] else { return }
-        tuesdayLabel.text = "Tuesday: \(tuesday)"
-        tuesdayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
-        
-        scrollView.addSubview(wednesdayLabel)
-        wednesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-        wednesdayLabel.topAnchor.constraint(equalTo: self.tuesdayLabel.bottomAnchor).isActive = true
-        wednesdayLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        guard let wednesday = museum.hours["Wednesday"] else { return }
-        wednesdayLabel.text = "Wednesday: \(wednesday)"
-        wednesdayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
-        
-        scrollView.addSubview(thursdayLabel)
-        thursdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-        thursdayLabel.topAnchor.constraint(equalTo: self.wednesdayLabel.bottomAnchor).isActive = true
-        thursdayLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        guard let thursday = museum.hours["Thursday"] else { return }
-        thursdayLabel.text = "Thursday: \(thursday)"
-        thursdayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
-        
-        scrollView.addSubview(fridayLabel)
-        fridayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-        fridayLabel.topAnchor.constraint(equalTo: self.thursdayLabel.bottomAnchor).isActive = true
-        fridayLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        guard let friday = museum.hours["Friday"] else { return }
-        fridayLabel.text = "Friday: \(friday)"
-        fridayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
-        
-        scrollView.addSubview(saturdayLabel)
-        saturdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-        saturdayLabel.topAnchor.constraint(equalTo: self.fridayLabel.bottomAnchor).isActive = true
-        saturdayLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        guard let saturday = museum.hours["Saturday"] else { return }
-        saturdayLabel.text = "Saturday: \(saturday)"
-        saturdayLabel.font = UIFont(name: "Avenir", size: 16)
+//        scrollView.addSubview(saturdayLabel)
+//        saturdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
+//        saturdayLabel.topAnchor.constraint(equalTo: self.fridayLabel.bottomAnchor).isActive = true
+//        saturdayLabel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        guard let saturday = museum.hours["Saturday"] else { return }
+//        saturdayLabel.text = "Saturday: \(saturday)"
+//        saturdayLabel.font = UIFont(name: "Avenir", size: 16)
         
         
         
@@ -339,7 +340,8 @@ class DetailView: UIView, GMSMapViewDelegate {
         websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
         scrollView.addSubview(websiteButton)
         websiteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        websiteButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 20).isActive = true
+        //websiteButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 20).isActive = true
+        websiteButton.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor, constant: 20).isActive = true
         websiteButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: -20).isActive = true
         websiteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
         websiteButton.translatesAutoresizingMaskIntoConstraints = false
