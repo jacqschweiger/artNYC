@@ -25,7 +25,7 @@ class GoogleAPIClient {
                         
                         let resultJSON = responseJSON["result"] as! [String: AnyObject]
                         
-                        let hoursJSON = resultJSON["opening_hours"] as! [String: AnyObject]
+                        guard let hoursJSON = resultJSON["opening_hours"] as? [String: AnyObject] else { return }
                         
                         let weekdayJSON = hoursJSON["weekday_text"]
                         

@@ -262,7 +262,7 @@ class MuseumDataStore {
         let hispanicSociety = Museum(title: "Hispanic Society of America",
                                      logo: UIImage(named: "hispanicSocietyLogo")!,
                                      address: "613 W 155th St",
-                                     hours: "",
+                                     hours: "Temporarily closed",
                                      ticketPrice: "Free",
                                      freeHours: "Always free",
                                      artCategories: "Spanish & Portuguese",
