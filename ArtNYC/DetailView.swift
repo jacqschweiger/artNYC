@@ -266,6 +266,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         let sunday = museum.hours
         sundayLabel.text = "Sunday: \(sunday)"
         sundayLabel.font = UIFont(name: "Avenir", size: 16)
+        sundayLabel.numberOfLines = 0
 //
 //        
 //        

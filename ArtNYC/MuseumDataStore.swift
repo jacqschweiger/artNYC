@@ -24,7 +24,7 @@ class MuseumDataStore {
         let metMuseum = Museum(title: "Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
                                address: "1000 5th Ave",
-                               hours: [""],
+                               hours: "",
 //                               hours: ["Sunday":"10am-5:30pm",
 //                                       "Monday":"10am-5:30pm",
 //                                       "Tuesday":"10am-5:30pm",
@@ -450,17 +450,17 @@ class MuseumDataStore {
         }
         
         getHours { 
-            
+
         }
     }
     
     func getHours(with completion: @escaping ()->()) {
         for museum in self.allMuseums {
             GoogleAPIClient.getHours(with: museum.placeID, completion: { (results) in
-                print(museum.placeID)
+                let newResults = results.joined(separator: "\n")
+                print(newResults)
+                museum.hours = newResults
                 print(museum.hours)
-                print(results)
-                museum.hours = results
             })
         }
         completion()
