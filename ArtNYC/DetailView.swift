@@ -259,12 +259,11 @@ class DetailView: UIView, GMSMapViewDelegate {
         scrollView.addSubview(sundayLabel)
         
         sundayLabel.leftAnchor.constraint(equalTo: self.hoursLabel.rightAnchor, constant: 20).isActive = true
-        sundayLabel.centerYAnchor.constraint(equalTo: self.hoursLabel.centerYAnchor).isActive = true
+        sundayLabel.topAnchor.constraint(equalTo: self.hoursLabel.topAnchor).isActive = true
         sundayLabel.translatesAutoresizingMaskIntoConstraints = false
         
         //guard let sunday = museum.hours["Sunday"] else { return }
-        let sunday = museum.hours
-        sundayLabel.text = "Sunday: \(sunday)"
+        sundayLabel.text = museum.hours
         sundayLabel.font = UIFont(name: "Avenir", size: 16)
         sundayLabel.numberOfLines = 0
 //
