@@ -99,7 +99,8 @@ class MuseumDataStore {
                           openLate: true,
                           freeAdmission: true,
                           imageURL: "https://www.moma.org/media/W1siZiIsIjE1MTI3MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDEzNjZ4MTM2Nlx1MDAzZSJdXQ.jpg?sha=0aeee086f50d61a0",
-                          imageCredit: "Pablo Picasso. Les Demoiselles d'Avignon, 1907. Courtesy the Museum of Modern Art.")
+                          imageCredit: "Pablo Picasso. Les Demoiselles d'Avignon, 1907. Courtesy the Museum of Modern Art.",
+                          placeID: "ChIJKxDbe_lYwokRVf__s8CPn-o")
         
         let guggenheim = Museum(title: "Solomon R. Guggenheim Museum",
                                 logo: UIImage(named: "guggenheimLogo")!,
@@ -114,7 +115,8 @@ class MuseumDataStore {
                                 openLate: false,
                                 freeAdmission: true,
                                 imageURL: "https://i0.wp.com/www.guggenheim.org/wp-content/uploads/1913/01/37.244_ph_web.jpg?w=870",
-                                imageCredit: "Vasily Kandinsky. Light Picture (Helles Bild), 1913. Courtesy the Solomon R. Guggenheim Museum.")
+                                imageCredit: "Vasily Kandinsky. Light Picture (Helles Bild), 1913. Courtesy the Solomon R. Guggenheim Museum.",
+                                placeID: "ChIJmZ5emqJYwokRuDz79o0coAQ")
         
         let jewishMuseum = Museum(title: "Jewish Museum",
                                   logo: UIImage(named: "jewishMuseumLogo")!,
@@ -129,7 +131,8 @@ class MuseumDataStore {
                                   openLate: true,
                                   freeAdmission: true,
                                   imageURL: "http://72.32.137.209/piction/ump.show_public_image?v_umo=12805126&quality=O3",
-                                  imageCredit: "Sol LeWitt. Designed from Torah Ark, 2001. Courtesy the Jewish Museum.")
+                                  imageCredit: "Sol LeWitt. Designed from Torah Ark, 2001. Courtesy the Jewish Museum.",
+                                  placeID: "ChIJxY5cO6JYwokRPeVk85UNj2g")
         
         let folkArt = Museum(title: "American Folk Art Museum",
                              logo: UIImage(named: "folkArtLogo")!,
@@ -144,7 +147,8 @@ class MuseumDataStore {
                              openLate: false,
                              freeAdmission: true,
                              imageURL: "http://folkartmuseum.org/content/uploads/2014/08/folk_6649_image.jpg",
-                             imageCredit: "Unidentified artist. Soldier’s Quilt, 1854–1890. Courtesy the American Folk Art Museum.")
+                             imageCredit: "Unidentified artist. Soldier’s Quilt, 1854–1890. Courtesy the American Folk Art Museum.",
+                             placeID: "ChIJEeD6FPVYwokRgs0ZbWMrrzk")
         
         let newMuseum = Museum(title: "New Museum",
                                logo: UIImage(named: "newMuseumLogo")!,
@@ -159,7 +163,8 @@ class MuseumDataStore {
                                openLate: true,
                                freeAdmission: true,
                                imageURL: "http://ca.newmuseum.org/media/newmuseum/images/9/1/88974_ca_object_representations_media_9191_mediumlarge.jpg",
-                               imageCredit: "Rosemarie Trockel. Exhibition view of Rosemarie Trockel: A Cosmos, 2012-2013.  Photography credit: Benoit Pailley. Courtesy the New Museum.")
+                               imageCredit: "Rosemarie Trockel. Exhibition view of Rosemarie Trockel: A Cosmos, 2012-2013.  Photography credit: Benoit Pailley. Courtesy the New Museum.",
+                               placeID: "ChIJlaRS3IVZwokR2llMD6dCt-U")
         
         let museoDelBarrio = Museum(title: "El Museo Del Barrio",
                                     logo: UIImage(named: "museoDelBarrioLogo")!,
@@ -174,7 +179,8 @@ class MuseumDataStore {
                                     openLate: false,
                                     freeAdmission: true,
                                     imageURL: "http://www.elmuseo.org/wp-content/uploads/2014/01/1991-0488-0004W_A_PC_croppe.jpg",
-                                    imageCredit: "Taino artist. Untitled, Pre-Columbian. Courtesy El Museo del Barrio.")
+                                    imageCredit: "Taino artist. Untitled, Pre-Columbian. Courtesy El Museo del Barrio.",
+                                    placeID: "ChIJWT0gUBz2wokRNcAxVUphAAs")
         
         let mad = Museum(title: "Museum of Arts and Design",
                          logo: UIImage(named: "madLogo")!,
@@ -188,7 +194,8 @@ class MuseumDataStore {
                          openLate: true,
                          freeAdmission: true,
                          imageURL: "http://66.223.50.254/emuseum/media/full/2010_42_1.jpg",
-                         imageCredit: "Sarah Abramson. Volume 9 (large bun), 2009. Photography credit: Adam Krauth. Courtesy the Museum of Arts and Design.")
+                         imageCredit: "Sarah Abramson. Volume 9 (large bun), 2009. Photography credit: Adam Krauth. Courtesy the Museum of Arts and Design.",
+                         placeID: "ChIJgVtmM_ZYwokRcJJnebe5KX8")
         
         let cooperHewitt = Museum(title: "Cooper Hewitt",
                                   logo: UIImage(named: "cooperHewittLogo")!,
@@ -202,7 +209,8 @@ class MuseumDataStore {
                                   openLate: true,
                                   freeAdmission: true,
                                   imageURL: "https://images.collection.cooperhewitt.org/65247_a6ebf9a09328e38d_b.jpg",
-                                  imageCredit: "Marcel Breuer. Long Chair, 1936. Courtesy Cooper Hewitt.")
+                                  imageCredit: "Marcel Breuer. Long Chair, 1936. Courtesy Cooper Hewitt.",
+                                  placeID: "ChIJsT8qSaJYwokR-m20OGJUKCA")
         
         let frick = Museum(title: "Frick Collection",
                            logo: UIImage(named: "frickLogo")!,
@@ -217,7 +225,8 @@ class MuseumDataStore {
                            openLate: false,
                            freeAdmission: true,
                            imageURL: "http://collections.frick.org/internal/media/dispatcher/6548/resize:format=preview",
-                           imageCredit: "François Boucher. A Lady on Her Day Bed, 1743. Courtesy the Frick Collection.")
+                           imageCredit: "François Boucher. A Lady on Her Day Bed, 1743. Courtesy the Frick Collection.",
+                           placeID: "ChIJHRH97uxYwokR6CBeDyn1jtg")
         
         let drawingCenter = Museum(title: "Drawing Center",
                                    logo: UIImage(named: "drawingCenterLogo")!,
@@ -232,7 +241,8 @@ class MuseumDataStore {
                                    openLate: true,
                                    freeAdmission: true,
                                    imageURL: "http://www.drawingcenter.org/files/a5977133e2fc65e1a662f75ef662dda0eb0b36d6.jpg",
-                                   imageCredit: "Cecily Brown. Strolling Actresses (After Hogarth), 2015. Courtesy the Drawing Center.")
+                                   imageCredit: "Cecily Brown. Strolling Actresses (After Hogarth), 2015. Courtesy the Drawing Center.",
+                                   placeID: "ChIJDTWukItZwokREUciPmdlVy0")
         
         let cloisters = Museum(title: "Met Cloisters",
                                logo: UIImage(named: "cloistersLogo")!,
@@ -246,7 +256,8 @@ class MuseumDataStore {
                                openLate: false,
                                freeAdmission: true,
                                imageURL: "http://images.metmuseum.org/CRDImages/cl/web-large/DP273206.jpg",
-                               imageCredit: "Workshop of Robert Campin. Annunciation Triptych (Merode Altarpiece), 1427–32. Courtesy the Metropolitan Museum of Art.")
+                               imageCredit: "Workshop of Robert Campin. Annunciation Triptych (Merode Altarpiece), 1427–32. Courtesy the Metropolitan Museum of Art.",
+                               placeID: "ChIJK6bycAH0wokRrSnflfrnkZE")
         
         let hispanicSociety = Museum(title: "Hispanic Society of America",
                                      logo: UIImage(named: "hispanicSocietyLogo")!,
@@ -261,7 +272,8 @@ class MuseumDataStore {
                                      openLate: false,
                                      freeAdmission: true,
                                      imageURL: "http://www.learn.columbia.edu/hispanic/img/art400/velazquez-girl.jpg",
-                                     imageCredit: "Diego Velázquez. Portrait of a Little Girl, ca. 1638-44. Courtesy the Hispanic Society of America.")
+                                     imageCredit: "Diego Velázquez. Portrait of a Little Girl, ca. 1638-44. Courtesy the Hispanic Society of America.",
+                                     placeID: "ChIJv9uJC4b2wokRI7r1wOp3AHw")
         
         let metBreuer = Museum(title: "Met Breuer",
                                logo: UIImage(named: "breuerLogo")!,
@@ -276,7 +288,8 @@ class MuseumDataStore {
                                openLate: true,
                                freeAdmission: true,
                                imageURL: "http://images.metmuseum.org/CRDImages/ma/web-large/DP362047.jpg",
-                               imageCredit: "Kerry James Marshall. Untitled (Studio), 2014. Courtesy the Metropolitan Museum of Art.")
+                               imageCredit: "Kerry James Marshall. Untitled (Studio), 2014. Courtesy the Metropolitan Museum of Art.",
+                               placeID: "ChIJl-WU6pRYwokRA91OgdYWfa4")
         
         let asiaSociety = Museum(title: "Asia Society",
                                  logo: UIImage(named: "asiaLogo")!,
@@ -291,7 +304,8 @@ class MuseumDataStore {
                                  openLate: true,
                                  freeAdmission: true,
                                  imageURL: "http://asiasociety.org/museum/collection_media/h640/imported/1979.219-view-a.jpg",
-                                 imageCredit: "Kitagawa Utamaro. The Light-Hearted Type (Uwaki No Sō), From The Series Ten Studies In Female Physiognomy (Fujin Sogaku Juttai), 1791-1793. Courtesy Asia Society Museum.")
+                                 imageCredit: "Kitagawa Utamaro. The Light-Hearted Type (Uwaki No Sō), From The Series Ten Studies In Female Physiognomy (Fujin Sogaku Juttai), 1791-1793. Courtesy Asia Society Museum.",
+                                 placeID: "ChIJeXQWdutYwokRuHX2h1so5K4")
         
         let fit = Museum(title: "Museum at FIT",
                          logo: UIImage(named: "fitLogo")!,
@@ -306,7 +320,8 @@ class MuseumDataStore {
                          openLate: true,
                          freeAdmission: true,
                          imageURL: "http://www.fitnyc.edu/museum/images/ue-black-fashion-designers-92.105.8-300.jpg",
-                         imageCredit: "Stephen Burrows. Coatdress, Fall 1970. Courtesy the Museum at FIT.")
+                         imageCredit: "Stephen Burrows. Coatdress, Fall 1970. Courtesy the Museum at FIT.",
+                         placeID: "ChIJzT4qRatZwokRELNiRd8Su_4")
         
         let morganLibrary = Museum(title: "Morgan Library & Museum",
                                    logo: UIImage(named: "morganLogo")!,
@@ -321,11 +336,13 @@ class MuseumDataStore {
                                    openLate: true,
                                    freeAdmission: true,
                                    imageURL: "http://www.themorgan.org/sites/default/files/styles/collection_image/public/images/collection/m638_23v_0.jpg?itok=Qhu82zYG",
-                                   imageCredit: "Unidentified artist. Saul Slaying Nahash and the Ammonites; Samuel Anoints Saul and Sacrifices to the Lord, ca. 1240. Courtesy the Morgan Library & Museum.")
+                                   imageCredit: "Unidentified artist. Saul Slaying Nahash and the Ammonites; Samuel Anoints Saul and Sacrifices to the Lord, ca. 1240. Courtesy the Morgan Library & Museum.",
+                                   placeID: "ChIJ3453OAdZwokRja92OOKCugM")
         
         allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, fit, morganLibrary, asiaSociety]
         
         // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1, Photo Center
+        
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
