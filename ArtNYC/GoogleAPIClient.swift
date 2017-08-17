@@ -23,13 +23,14 @@ class GoogleAPIClient {
                         
                         let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String: AnyObject]
                         
-                        let resultJSON = responseJSON["result"] as! [String: AnyObject]
+                        guard let resultJSON = responseJSON["result"] as? [String: AnyObject] else { return }
                         
                         guard let hoursJSON = resultJSON["opening_hours"] as? [String: AnyObject] else { return }
                         
-                        let weekdayJSON = hoursJSON["weekday_text"]
+                        guard let weekdayJSON = hoursJSON["weekday_text"] else { return }
                         
                         completion(weekdayJSON as! [String])
+                        
                     } catch {
                         print(error)
                     }

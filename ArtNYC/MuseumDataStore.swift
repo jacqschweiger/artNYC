@@ -339,7 +339,7 @@ class MuseumDataStore {
                                    imageCredit: "Unidentified artist. Saul Slaying Nahash and the Ammonites; Samuel Anoints Saul and Sacrifices to the Lord, ca. 1240. Courtesy the Morgan Library & Museum.",
                                    placeID: "ChIJ3453OAdZwokRja92OOKCugM")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, hispanicSociety, metBreuer, fit, morganLibrary, asiaSociety]
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety]
         
         // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1, Photo Center
         
