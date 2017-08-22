@@ -39,9 +39,6 @@ class FreeTodayVC: UIViewController, MuseumViewDelegate {
         
         self.freeTodayView.museums = self.freeMuseums
         
-        for museum in self.freeTodayView.museums {
-            print(museum.title ?? "no title")
-        }
     }
     
     func goToDetailView(){
