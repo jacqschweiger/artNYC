@@ -5,7 +5,6 @@
 //  Created by Jacqueline Schweiger on 8/15/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
-
 import Foundation
 
 class GoogleAPIClient {
@@ -23,14 +22,13 @@ class GoogleAPIClient {
                         
                         let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String: AnyObject]
                         
-                        guard let resultJSON = responseJSON["result"] as? [String: AnyObject] else { return }
+                        let resultJSON = responseJSON["result"] as! [String: AnyObject]
                         
                         guard let hoursJSON = resultJSON["opening_hours"] as? [String: AnyObject] else { return }
                         
-                        guard let weekdayJSON = hoursJSON["weekday_text"] else { return }
+                        let weekdayJSON = hoursJSON["weekday_text"]
                         
                         completion(weekdayJSON as! [String])
-                        
                     } catch {
                         print(error)
                     }
@@ -40,4 +38,3 @@ class GoogleAPIClient {
         }
     }
 }
-
