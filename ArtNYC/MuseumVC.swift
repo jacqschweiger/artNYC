@@ -14,6 +14,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
+    var museumTableView: MuseumTableView!
     var filterVC: FilterVC!
     
     override func viewDidLoad() {
@@ -24,7 +25,10 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.museumView = MuseumView()
         self.museumView.delegate = self
         
-        self.view = self.museumView
+        self.museumTableView = MuseumTableView()
+        
+        //self.view = self.museumView
+        self.view = self.museumTableView
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self

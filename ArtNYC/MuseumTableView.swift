@@ -21,8 +21,12 @@ class MuseumTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     override init(frame:CGRect){
         super.init(frame: frame)
         
+        museumTableView = UITableView(frame: self.frame)
+        
         self.museumTableView.delegate = self
         self.museumTableView.dataSource = self
+        
+        museumTableView.register(CategoryRow.self, forCellReuseIdentifier: "cell")
         
         setUpElements()
     }
@@ -84,7 +88,7 @@ extension MuseumTableView {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
         return cell
     }
     
