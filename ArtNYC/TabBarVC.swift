@@ -36,12 +36,12 @@ class TabBarVC: UITabBarController {
         
         // Create Tab three
 
-//        let tabThree = FreeTodayVC()
-//        let tabThreeBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Home Icon"), selectedImage: UIImage(named: "Home Icon"))
-//        
-//        tabThree.tabBarItem = tabThreeBarItem
+        let tabThree = FreeTodayVC()
+        let tabThreeBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Home Icon"), selectedImage: UIImage(named: "Home Icon"))
         
-        self.viewControllers = [tabOne, tabTwo]
+        tabThree.tabBarItem = tabThreeBarItem
+        
+        self.viewControllers = [tabOne, tabTwo, tabThree]
         
         self.tabBar.barTintColor = UIColor(named: UIColor.ColorName.turquoise)
         self.tabBar.tintColor = UIColor.white
