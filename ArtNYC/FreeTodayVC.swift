@@ -11,4 +11,17 @@ import UIKit
 
 class FreeTodayVC: UIViewController {
     
+    let store = MuseumDataStore.sharedInstance
+    let weekday = Calendar.current.component(.weekday, from: Date())
+    var freeToday: [Museum] = []
+    
+    func findFreeMuseums(){
+        for museum in store.allMuseums {
+            if museum.freeDay.contains(weekday) {
+                freeToday.append(museum)
+            }
+        }
+    }
+    
+        
 }
