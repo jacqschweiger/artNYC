@@ -10,6 +10,9 @@
 		710D80451E2C1750002AD134 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710D80441E2C1750002AD134 /* Constants.swift */; };
 		7114BF151E37ADFC00C81949 /* InteriorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7114BF141E37ADFC00C81949 /* InteriorVC.swift */; };
 		7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7117758C1E390D2B0082D6CC /* TabBarVC.swift */; };
+		711E5EB21F4BBFE1003AE04F /* GoogleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */; };
+		711E5EB41F4BD308003AE04F /* FreeTodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E5EB31F4BD308003AE04F /* FreeTodayVC.swift */; };
+		711E5EB61F4BD61A003AE04F /* FreeTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E5EB51F4BD61A003AE04F /* FreeTodayView.swift */; };
 		7132CBF51E29752C008CA655 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF41E29752C008CA655 /* MapVC.swift */; };
 		7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF61E2978A8008CA655 /* DetailVC.swift */; };
 		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
@@ -27,6 +30,8 @@
 		7183B39A1E427E2D00EDF9C0 /* MuseumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3991E427E2D00EDF9C0 /* MuseumCell.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
+		71DBE2061F4CB702006BEEF4 /* MuseumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBE2051F4CB702006BEEF4 /* MuseumTableView.swift */; };
+		71DBE2081F4CBAAD006BEEF4 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBE2071F4CBAAD006BEEF4 /* CategoryRow.swift */; };
 		71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF916B1E2BDA0000943648 /* DetailView.swift */; };
 		BD095B46B7788DDAF717A231 /* Pods_ArtNYC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +53,9 @@
 		710D80441E2C1750002AD134 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7114BF141E37ADFC00C81949 /* InteriorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteriorVC.swift; sourceTree = "<group>"; };
 		7117758C1E390D2B0082D6CC /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIClient.swift; sourceTree = "<group>"; };
+		711E5EB31F4BD308003AE04F /* FreeTodayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTodayVC.swift; sourceTree = "<group>"; };
+		711E5EB51F4BD61A003AE04F /* FreeTodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTodayView.swift; sourceTree = "<group>"; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +77,8 @@
 		7183B3991E427E2D00EDF9C0 /* MuseumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCell.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
+		71DBE2051F4CB702006BEEF4 /* MuseumTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumTableView.swift; sourceTree = "<group>"; };
+		71DBE2071F4CBAAD006BEEF4 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		71DF916B1E2BDA0000943648 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				7191AC881E295ECB00F2D06D /* Museum.swift */,
+				711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */,
 				7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */,
 			);
 			name = Models;
@@ -106,9 +117,10 @@
 			children = (
 				7117758C1E390D2B0082D6CC /* TabBarVC.swift */,
 				7183B3951E427C8400EDF9C0 /* MuseumVC.swift */,
+				7132CBF41E29752C008CA655 /* MapVC.swift */,
+				711E5EB31F4BD308003AE04F /* FreeTodayVC.swift */,
 				7132CBF61E2978A8008CA655 /* DetailVC.swift */,
 				7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */,
-				7132CBF41E29752C008CA655 /* MapVC.swift */,
 				716027441E2A8F7900CAF26B /* WebVC.swift */,
 				7114BF141E37ADFC00C81949 /* InteriorVC.swift */,
 				715924531E380EF00007B852 /* FilterVC.swift */,
@@ -163,6 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				7183B3971E427D4D00EDF9C0 /* MuseumView.swift */,
+				71DBE2051F4CB702006BEEF4 /* MuseumTableView.swift */,
+				71DBE2071F4CBAAD006BEEF4 /* CategoryRow.swift */,
+				711E5EB51F4BD61A003AE04F /* FreeTodayView.swift */,
 				7183B3991E427E2D00EDF9C0 /* MuseumCell.swift */,
 				71DF916B1E2BDA0000943648 /* DetailView.swift */,
 				71732BE71E2C3D28009A5D75 /* WebView.swift */,
@@ -360,11 +375,16 @@
 				7132CBF51E29752C008CA655 /* MapVC.swift in Sources */,
 				713D5F1B1E295DA500DD76FA /* ArtNYC.xcdatamodeld in Sources */,
 				71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */,
+				71DBE2081F4CBAAD006BEEF4 /* CategoryRow.swift in Sources */,
+				711E5EB21F4BBFE1003AE04F /* GoogleAPIClient.swift in Sources */,
 				7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */,
 				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
 				715924541E380EF00007B852 /* FilterVC.swift in Sources */,
+				711E5EB61F4BD61A003AE04F /* FreeTodayView.swift in Sources */,
+				71DBE2061F4CB702006BEEF4 /* MuseumTableView.swift in Sources */,
 				7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */,
 				7183B3981E427D4D00EDF9C0 /* MuseumView.swift in Sources */,
+				711E5EB41F4BD308003AE04F /* FreeTodayVC.swift in Sources */,
 				713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */,
 				7182780B1E48F1A700FE8190 /* ArtWorkVC.swift in Sources */,
 				7183B3961E427C8400EDF9C0 /* MuseumVC.swift in Sources */,
