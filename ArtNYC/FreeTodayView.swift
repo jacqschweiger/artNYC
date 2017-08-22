@@ -1,40 +1,31 @@
 //
-//  MuseumView.swift
+//  FreeTodayView.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Schweiger on 2/1/17.
+//  Created by Jacqueline Minneman on 8/21/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol MuseumViewDelegate: class {
-    func goToDetailView()
-    func showFilter()
-}
-
-class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class FreeTodayView: UIView {
     
-    var museums: [Museum] = []
-    var museumCollectionView: UICollectionView!
+    var freeTodayCollectionView: UICollectionView!
     let header = UILabel()
-    var selectedMuseum: Museum!
-    var filterButton = UIButton()
-    weak var delegate: MuseumViewDelegate?
+    var museums: [Museum] = []
     
     override init(frame:CGRect){
         super.init(frame: frame)
         
         let cvLayout = UICollectionViewFlowLayout()
         cvLayout.itemSize = CGSize(width: 100, height: 100)
-
-        museumCollectionView = UICollectionView(frame: self.frame, collectionViewLayout: cvLayout)
         
-        self.museumCollectionView.delegate = self
-        self.museumCollectionView.dataSource = self
+        freeTodayCollectionView = UICollectionView(frame: self.frame, collectionViewLayout: cvLayout)
         
-        museumCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
+        freeTodayCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
+        
+        freeTodayCollectionView.backgroundColor = UIColor.red
         
         setUpElements()
     }
@@ -42,6 +33,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func setUpElements(){
         
@@ -61,46 +53,34 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.header.translatesAutoresizingMaskIntoConstraints = false
         
         header.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        header.text = "ART MUSEUMS"
+        header.text = "FREE TODAY"
         header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
-
         
-        self.addSubview(museumCollectionView)
-        self.museumCollectionView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
-        self.museumCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.museumCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
-        //Filter Set Up
-        self.insertSubview(filterButton, aboveSubview: header)
-        self.filterButton.setTitle("•••", for: .normal)
-        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+        self.addSubview(freeTodayCollectionView)
+        self.freeTodayCollectionView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
+        self.freeTodayCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.freeTodayCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        self.freeTodayCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        self.freeTodayCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.freeTodayCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
-        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
-
     }
 
-    func showFilter(){
-        self.delegate?.showFilter()
-    }
-    
+
 }
 
 //MARK:- CollectionView Delegate and DataSource
-extension MuseumView {
+extension FreeTodayView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.museums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
+        let cell = self.freeTodayCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
         cell.titleLabel.text = museums[indexPath.item].title
         if museums[indexPath.item].title == "Metropolitan Museum of Art" {
             cell.titleLabel.text = "Metropolitan\nMuseum of Art"
@@ -114,15 +94,15 @@ extension MuseumView {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.selectedMuseum = self.museums[indexPath.row]
-        self.delegate?.goToDetailView()
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        self.selectedMuseum = self.museums[indexPath.row]
+//        self.delegate?.goToDetailView()
+//    }
     
 }
 
 //MARK:- CollectionViewLayout
-extension FreeTodayView {
+extension MuseumView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
