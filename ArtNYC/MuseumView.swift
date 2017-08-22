@@ -122,7 +122,7 @@ extension MuseumView {
 }
 
 //MARK:- CollectionViewLayout
-extension FreeTodayView {
+extension MuseumView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
@@ -140,5 +140,5 @@ extension FreeTodayView {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 170, height: 150)
     }
-    
+
 }

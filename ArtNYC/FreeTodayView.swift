@@ -2,7 +2,7 @@
 //  FreeTodayView.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 8/21/17.
+//  Created by Jacqueline Schweiger on 8/21/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -14,6 +14,8 @@ class FreeTodayView: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     var freeTodayCollectionView: UICollectionView!
     let header = UILabel()
     var museums: [Museum] = []
+    var selectedMuseum: Museum!
+    weak var museumViewDelegate: MuseumViewDelegate?
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -95,15 +97,15 @@ extension FreeTodayView {
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        self.selectedMuseum = self.museums[indexPath.row]
-//        self.delegate?.goToDetailView()
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedMuseum = self.museums[indexPath.row]
+        self.museumViewDelegate?.goToDetailView()
+    }
     
 }
 
 //MARK:- CollectionViewLayout
-extension MuseumView {
+extension FreeTodayView {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10

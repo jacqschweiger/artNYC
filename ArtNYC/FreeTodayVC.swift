@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FreeTodayVC: UIViewController {
+class FreeTodayVC: UIViewController, MuseumViewDelegate {
     
     let store = MuseumDataStore.sharedInstance
     let weekday = Calendar.current.component(.weekday, from: Date())
@@ -24,6 +24,8 @@ class FreeTodayVC: UIViewController {
     override func loadView() {
         self.freeTodayView = FreeTodayView()
         self.view = self.freeTodayView
+
+        self.freeTodayView.museumViewDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,16 @@ class FreeTodayVC: UIViewController {
         for museum in self.freeTodayView.museums {
             print(museum.title ?? "no title")
         }
+    }
+    
+    func goToDetailView(){
+        let detailViewController = DetailVC()
+        detailViewController.museum = self.freeTodayView.selectedMuseum
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    func showFilter() {
+        //fix delegate to not require this
     }
         
 }
