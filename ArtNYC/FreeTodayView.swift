@@ -25,9 +25,8 @@ class FreeTodayView: UIView {
         
         freeTodayCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
         
-        freeTodayCollectionView.backgroundColor = UIColor.red
-        
         setUpElements()
+        print("Museums = \(museums)")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,7 +65,6 @@ class FreeTodayView: UIView {
         self.freeTodayCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.freeTodayCollectionView.translatesAutoresizingMaskIntoConstraints = false
         self.freeTodayCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        
     }
 
 

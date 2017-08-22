@@ -13,8 +13,8 @@ class FreeTodayVC: UIViewController {
     
     let store = MuseumDataStore.sharedInstance
     let weekday = Calendar.current.component(.weekday, from: Date())
-    var freeToday: [Museum] = []
-    var freeTodayView = FreeTodayView()
+    var freeMuseums: [Museum] = []
+    var freeTodayView: FreeTodayView!
     
     
     override func viewDidLoad() {
@@ -22,22 +22,23 @@ class FreeTodayVC: UIViewController {
     }
     
     override func loadView() {
+        self.freeTodayView = FreeTodayView()
         self.view = self.freeTodayView
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
-        
+
         for museum in store.allMuseums {
             if museum.freeDay.contains(weekday) {
-                freeToday.append(museum)
+                freeMuseums.append(museum)
             }
         }
         
-        self.freeTodayView.museums = self.freeToday
+        self.freeTodayView.museums = self.freeMuseums
+        
         for museum in self.freeTodayView.museums {
-            print(museum.title)
+            print(museum.title ?? "no title")
         }
     }
         
