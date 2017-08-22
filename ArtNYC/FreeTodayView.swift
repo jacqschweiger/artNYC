@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FreeTodayView: UIView {
+class FreeTodayView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var freeTodayCollectionView: UICollectionView!
     let header = UILabel()
@@ -25,8 +25,11 @@ class FreeTodayView: UIView {
         
         freeTodayCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
         
+        self.freeTodayCollectionView.delegate = self
+        self.freeTodayCollectionView.dataSource = self
+
         setUpElements()
-        print("Museums = \(museums)")
+
     }
     
     required init?(coder aDecoder: NSCoder) {
