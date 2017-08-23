@@ -9,4 +9,6 @@
 import Foundation
 import UIKit
 
-class CategoryRow : UITableViewCell { }
+class CategoryRow : UITableViewCell {
+    
+    }
