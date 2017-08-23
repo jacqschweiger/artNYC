@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CategoryRow : UITableViewCell {
+class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var museumCollectionView: UICollectionView!
     var store = MuseumDataStore.sharedInstance
@@ -23,6 +23,9 @@ class CategoryRow : UITableViewCell {
         museumCollectionView = UICollectionView(frame: self.frame, collectionViewLayout: cvLayout)
         
         museumCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
+        
+        self.museumCollectionView.delegate = self
+        self.museumCollectionView.dataSource = self
         
         setUpElements()
     }
