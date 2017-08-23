@@ -56,8 +56,6 @@ class MuseumCell: UICollectionViewCell {
         titleLabel.font = UIFont(name: "Avenir", size: 13)
         titleLabel.textColor = UIColor.black
         titleLabel.textAlignment = .center
-        
-        
     }
     
 }
