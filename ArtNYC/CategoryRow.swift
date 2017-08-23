@@ -18,6 +18,7 @@ class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionVie
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let cvLayout = UICollectionViewFlowLayout()
+        cvLayout.scrollDirection = .horizontal
         cvLayout.itemSize = CGSize(width: 100, height: 100)
         
         museumCollectionView = UICollectionView(frame: self.frame, collectionViewLayout: cvLayout)
@@ -42,7 +43,7 @@ class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionVie
         self.museumCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.museumCollectionView.backgroundColor = UIColor.blue
+        self.museumCollectionView.backgroundColor = UIColor.black
     }
 }
 
@@ -57,15 +58,15 @@ extension CategoryRow {
         let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
         let museums = self.store.allMuseums
         
-        cell.titleLabel.text = museums[indexPath.item].title
-        if museums[indexPath.item].title == "Metropolitan Museum of Art" {
-            cell.titleLabel.text = "Metropolitan\nMuseum of Art"
-        } else if museums[indexPath.item].title == "Solomon R. Guggenheim Museum" {
-            cell.titleLabel.text = "Solomon R. Guggenheim\n Museum"
-        } else if museums[indexPath.item].title == "Whitney Museum of American Art" {
-            cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
-        }
-        cell.titleLabel.numberOfLines = 0
+//        cell.titleLabel.text = museums[indexPath.item].title
+//        if museums[indexPath.item].title == "Metropolitan Museum of Art" {
+//            cell.titleLabel.text = "Metropolitan\nMuseum of Art"
+//        } else if museums[indexPath.item].title == "Solomon R. Guggenheim Museum" {
+//            cell.titleLabel.text = "Solomon R. Guggenheim\n Museum"
+//        } else if museums[indexPath.item].title == "Whitney Museum of American Art" {
+//            cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
+//        }
+//        cell.titleLabel.numberOfLines = 0
         cell.imageView.image = museums[indexPath.item].logo
         return cell
     }
@@ -76,3 +77,26 @@ extension CategoryRow {
 //    }
     
 }
+
+//MARK:- CollectionViewLayout
+extension MuseumView {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let sectionInsets = UIEdgeInsets(top: 11.5, left: 11.5, bottom: 60, right: 11.5)
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 170, height: 150)
+    }
+    
+}
+

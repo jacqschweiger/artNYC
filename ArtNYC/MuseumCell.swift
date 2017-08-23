@@ -36,26 +36,26 @@ class MuseumCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: 90).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        imageView.widthAnchor.constraint(equalTo: self.contentView.heightAnchor, multiplier: 0.8).isActive = true
+        imageView.heightAnchor.constraint(equalTo: self.contentView.widthAnchor, multiplier: 0.8).isActive = true
         imageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor, constant: -10).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         
         
         //TITLE SET UP
-        titleLabel = UILabel()
-        self.contentView.addSubview(titleLabel)
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-        
-        titleLabel.font = UIFont(name: "Avenir", size: 13)
-        titleLabel.textColor = UIColor.black
-        titleLabel.textAlignment = .center
+//        titleLabel = UILabel()
+//        self.contentView.addSubview(titleLabel)
+//        
+//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5).isActive = true
+//        titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
+//        
+//        titleLabel.font = UIFont(name: "Avenir", size: 13)
+//        titleLabel.textColor = UIColor.black
+//        titleLabel.textAlignment = .center
     }
     
 }
