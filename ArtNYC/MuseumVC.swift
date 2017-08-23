@@ -14,6 +14,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
+    var categoryRow: CategoryRow!
     var museumTableView: MuseumTableView!
     var filterVC: FilterVC!
     
@@ -22,8 +23,11 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     }
     
     override func loadView() {
-        self.museumView = MuseumView()
-        self.museumView.delegate = self
+//        self.museumView = MuseumView()
+//        self.museumView.delegate = self
+        
+        self.categoryRow = CategoryRow()
+        self.categoryRow.delegate = self
         
         self.museumTableView = MuseumTableView()
         
@@ -38,15 +42,18 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.navigationController?.isNavigationBarHidden = true
         
         if store.filteredMuseums.count > 0 {
-            self.museumView.museums = store.filteredMuseums
+            self.museumTableView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {
-            self.museumView.museums = store.allMuseums
+            self.museumTableView.museums = store.allMuseums
         }
     }
     
     func goToDetailView(){
+        print("go to detail view called")
         let detailViewController = DetailVC()
-        detailViewController.museum = self.museumView.selectedMuseum
+        //detailViewController.museum = self.museumView.selectedMuseum
+        detailViewController.museum = self.categoryRow.selectedMuseum
+        print("category row selected = \(self.categoryRow.selectedMuseum)")
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     

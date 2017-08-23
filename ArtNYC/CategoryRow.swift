@@ -13,6 +13,8 @@ class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionVie
     
     var museumCollectionView: UICollectionView!
     var store = MuseumDataStore.sharedInstance
+    var selectedMuseum: Museum!
+    weak var delegate: MuseumViewDelegate?
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -57,24 +59,15 @@ extension CategoryRow {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
         let museums = self.store.allMuseums
-        
-//        cell.titleLabel.text = museums[indexPath.item].title
-//        if museums[indexPath.item].title == "Metropolitan Museum of Art" {
-//            cell.titleLabel.text = "Metropolitan\nMuseum of Art"
-//        } else if museums[indexPath.item].title == "Solomon R. Guggenheim Museum" {
-//            cell.titleLabel.text = "Solomon R. Guggenheim\n Museum"
-//        } else if museums[indexPath.item].title == "Whitney Museum of American Art" {
-//            cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
-//        }
-//        cell.titleLabel.numberOfLines = 0
         cell.imageView.image = museums[indexPath.item].logo
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        self.selectedMuseum = self.museums[indexPath.row]
-//        self.delegate?.goToDetailView()
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedMuseum = self.store.allMuseums[indexPath.row]
+        print("selected museum : \(self.selectedMuseum.title)")
+        self.delegate?.goToDetailView()
+    }
     
 }
 
