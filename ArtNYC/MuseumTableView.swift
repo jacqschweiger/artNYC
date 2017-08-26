@@ -17,19 +17,26 @@ class MuseumTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     var categories: [String]!
+    var museumCollectionView: UICollectionView!
     
     override init(frame:CGRect){
         super.init(frame: frame)
         
+        museumTableView = UITableView(frame: self.frame)
+        
         self.museumTableView.delegate = self
         self.museumTableView.dataSource = self
         
+        museumTableView.register(MuseumTableViewCell.self, forCellReuseIdentifier: "cell")
+        
         setUpElements()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func setUpElements(){
         
@@ -65,7 +72,6 @@ class MuseumTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.museumTableView.translatesAutoresizingMaskIntoConstraints = false
         self.museumTableView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
     }
-    
 }
 
 //MARK:- TableView Delegate and DataSource
@@ -79,16 +85,34 @@ extension MuseumTableView {
         return categories[section]
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.black
+        
+        let headerLabel = UILabel(frame: CGRect(x: 30, y: 0, width:
+            tableView.bounds.size.width, height: tableView.bounds.size.height))
+        headerLabel.font = UIFont(name: "Avenir", size: 16)
+        headerLabel.textColor = UIColor.white
+        headerLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        headerLabel.sizeToFit()
+        headerView.addSubview(headerLabel)
+        
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MuseumTableViewCell
         return cell
     }
     
-
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
 }
+
 
