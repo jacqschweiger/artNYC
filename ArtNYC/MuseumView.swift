@@ -76,13 +76,13 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Filter Set Up
-        self.insertSubview(filterButton, aboveSubview: header)
-        self.filterButton.setTitle("•••", for: .normal)
-        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
-        
-        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+//        self.insertSubview(filterButton, aboveSubview: header)
+//        self.filterButton.setTitle("•••", for: .normal)
+//        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+//        
+//        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+//        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+//        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
 
     }
 
