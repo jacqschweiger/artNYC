@@ -188,7 +188,7 @@ class MuseumDataStore {
                                     interiorMapView: false,
                                     openLate: false,
                                     freeAdmission: true,
-                                    imageURL: "http://www.elmuseo.org/wp-content/uploads/2014/01/1991-0488-0004W_A_PC_croppe.jpg",
+                                    imageURL: "http://www.latinolife.com/wp-content/uploads/2015/05/435_MuseoTaino.jpg",
                                     imageCredit: "Taino artist. Untitled, Pre-Columbian. Courtesy El Museo del Barrio.",
                                     placeID: "ChIJWT0gUBz2wokRNcAxVUphAAs")
         
@@ -239,7 +239,7 @@ class MuseumDataStore {
                            interiorMapView: true,
                            openLate: false,
                            freeAdmission: true,
-                           imageURL: "http://collections.frick.org/internal/media/dispatcher/6548/resize:format=preview",
+                           imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Fran%C3%A7ois_Boucher_020.jpg/734px-Fran%C3%A7ois_Boucher_020.jpg",
                            imageCredit: "François Boucher. A Lady on Her Day Bed, 1743. Courtesy the Frick Collection.",
                            placeID: "ChIJHRH97uxYwokR6CBeDyn1jtg")
         
