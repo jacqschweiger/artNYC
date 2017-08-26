@@ -1,5 +1,5 @@
 //
-//  CategoryRow.swift
+//  MuseumTableViewCell.swift
 //  ArtNYC
 //
 //  Created by Jacqueline Schweiger on 8/22/17.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class MuseumTableViewCell : UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var museumCollectionView: UICollectionView!
     var store = MuseumDataStore.sharedInstance
@@ -27,15 +27,15 @@ class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionVie
         
         museumCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
         
-        self.museumCollectionView.delegate = self
-        self.museumCollectionView.dataSource = self
-        
         setUpElements()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    
     
     func setUpElements() {
         
@@ -50,7 +50,7 @@ class CategoryRow : UITableViewCell, UICollectionViewDataSource, UICollectionVie
 }
 
 //MARK:- CollectionView Delegate and DataSource
-extension CategoryRow {
+extension MuseumTableViewCell {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.store.allMuseums.count

@@ -14,7 +14,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
-    var categoryRow: CategoryRow!
+    var museumTableViewCell: MuseumTableViewCell!
     var museumTableView: MuseumTableView!
     var filterVC: FilterVC!
     
@@ -26,8 +26,8 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
 //        self.museumView = MuseumView()
 //        self.museumView.delegate = self
         
-        self.categoryRow = CategoryRow()
-        self.categoryRow.delegate = self
+        self.museumTableViewCell = MuseumTableViewCell()
+        self.museumTableViewCell.delegate = self
         
         self.museumTableView = MuseumTableView()
         
@@ -52,8 +52,8 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         print("go to detail view called")
         let detailViewController = DetailVC()
         //detailViewController.museum = self.museumView.selectedMuseum
-        detailViewController.museum = self.categoryRow.selectedMuseum
-        print("category row selected = \(self.categoryRow.selectedMuseum)")
+        detailViewController.museum = self.museumTableViewCell.selectedMuseum
+        print("category row selected = \(self.museumTableViewCell.selectedMuseum)")
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     

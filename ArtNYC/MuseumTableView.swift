@@ -17,6 +17,7 @@ class MuseumTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     var categories: [String]!
+    var museumCollectionView: UICollectionView!
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,14 +27,16 @@ class MuseumTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.museumTableView.delegate = self
         self.museumTableView.dataSource = self
         
-        museumTableView.register(CategoryRow.self, forCellReuseIdentifier: "cell")
+        museumTableView.register(MuseumTableViewCell.self, forCellReuseIdentifier: "cell")
         
         setUpElements()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func setUpElements(){
         
@@ -69,7 +72,6 @@ class MuseumTableView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.museumTableView.translatesAutoresizingMaskIntoConstraints = false
         self.museumTableView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
     }
-    
 }
 
 //MARK:- TableView Delegate and DataSource
@@ -101,16 +103,16 @@ extension MuseumTableView {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MuseumTableViewCell
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-
-
+    
 }
+
 
