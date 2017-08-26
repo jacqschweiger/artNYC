@@ -84,7 +84,7 @@ extension MuseumTableView {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
         return cell
     }
     

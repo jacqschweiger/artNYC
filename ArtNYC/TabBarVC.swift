@@ -37,7 +37,7 @@ class TabBarVC: UITabBarController {
         // Create Tab three
 
         let tabThree = FreeTodayVC()
-        let tabThreeBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Home Icon"), selectedImage: UIImage(named: "Home Icon"))
+        let tabThreeBarItem = UITabBarItem(title: "Free Today", image: UIImage(named: "$"), selectedImage: UIImage(named: "$"))
         
         tabThree.tabBarItem = tabThreeBarItem
         
