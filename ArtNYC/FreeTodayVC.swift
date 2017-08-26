@@ -24,6 +24,9 @@ class FreeTodayVC: UIViewController, MuseumViewDelegate {
     override func loadView() {
         self.freeTodayView = FreeTodayView()
         self.view = self.freeTodayView
+        
+        print("weekday is: \(weekday)")
+        print("date is \(NSDate())")
 
         self.freeTodayView.museumViewDelegate = self
     }

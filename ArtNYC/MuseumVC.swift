@@ -41,7 +41,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     }
     
     func goToDetailView(){
-        print("go to detail view called")
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: true)
