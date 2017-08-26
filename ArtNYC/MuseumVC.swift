@@ -14,8 +14,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
-    var museumTableViewCell: MuseumTableViewCell!
-    var museumTableView: MuseumTableView!
     var filterVC: FilterVC!
     
     override func viewDidLoad() {
@@ -23,16 +21,10 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     }
     
     override func loadView() {
-//        self.museumView = MuseumView()
-//        self.museumView.delegate = self
+        self.museumView = MuseumView()
+        self.museumView.delegate = self
         
-        self.museumTableViewCell = MuseumTableViewCell()
-        self.museumTableViewCell.delegate = self
-        
-        self.museumTableView = MuseumTableView()
-        
-        //self.view = self.museumView
-        self.view = self.museumTableView
+        self.view = self.museumView
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
@@ -42,18 +34,16 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.navigationController?.isNavigationBarHidden = true
         
         if store.filteredMuseums.count > 0 {
-            self.museumTableView.museums = store.filteredMuseums
+            self.museumView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {
-            self.museumTableView.museums = store.allMuseums
+            self.museumView.museums = store.allMuseums
         }
     }
     
     func goToDetailView(){
         print("go to detail view called")
         let detailViewController = DetailVC()
-        //detailViewController.museum = self.museumView.selectedMuseum
-        detailViewController.museum = self.museumTableViewCell.selectedMuseum
-        print("category row selected = \(self.museumTableViewCell.selectedMuseum)")
+        detailViewController.museum = self.museumView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
