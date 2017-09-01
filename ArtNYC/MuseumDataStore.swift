@@ -432,8 +432,6 @@ class MuseumDataStore {
         
         allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi, queens]
         
-        // TODO: - add Museum of the Moving Image, Photo Center, Queens
-        
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
         }
