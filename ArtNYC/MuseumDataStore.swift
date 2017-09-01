@@ -368,7 +368,7 @@ class MuseumDataStore {
                                    hours: "",
                                    ticketPrice: "$16 (suggested)",
                                    freeHours: "Pay what you wish everyday\nFree first Saturday of month, 5-11pm",
-                                   freeDay: [7],
+                                   freeDay: [1,2,3,4,5,6,7],
                                    artCategories: "All cultures and time periods",
                                    coordinate: CLLocationCoordinate2D(latitude: 40.6712102, longitude: -73.9658246),
                                    url: "https://www.brooklynmuseum.org/",
@@ -379,9 +379,26 @@ class MuseumDataStore {
                                    imageCredit: "Kehinde Wiley. Napoleon Leading the Army over the Alps, 2005. Courtesy the Brooklyn Museum.",
                                    placeID: "ChIJyTmcRApbwokR-oXJRqpVI8Y")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn]
+        let momaPS1 = Museum(title: "MoMA PS1",
+                              logo: UIImage(named: "momaPS1Logo")!,
+                              address: "22-25 Jackson Ave",
+                              hours: "",
+                              ticketPrice: "$10 (suggested)",
+                              freeHours: "Pay what you wish everyday",
+                              freeDay: [1,2,3,4,5,6,7],
+                              artCategories: "Contemporary",
+                              coordinate: CLLocationCoordinate2D(latitude: 40.7454941, longitude: -73.9495512),
+                              url: "http://momaps1.org/",
+                              interiorMapView: false,
+                              openLate: true,
+                              freeAdmission: true,
+                              imageURL: "http://momaps1.org/images/home/2016/2016_rockaway.jpg",
+                              imageCredit: "Katharina Grosse. Rockaway!, 2016. Courtesy the MoMA PS1.",
+                              placeID: "ChIJwfbFiiNZwokRN8hnF940DbY")
         
-        // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1, Photo Center
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1]
+        
+        // TODO: - add Noguchi Museum, Museum of the Moving Image, MoMAPS1, Photo Center, Queens
         
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
