@@ -43,7 +43,7 @@ class MuseumDataStore {
                                  address: "1048 5th Ave",
                                  hours: "",
                                  ticketPrice: "$20",
-                                 freeHours: "First Friday of every month, 6-8pm",
+                                 freeHours: "First Friday of month, 6-8pm",
                                  freeDay: [6],
                                  artCategories: "Austrian & German",
                                  coordinate: CLLocationCoordinate2D(latitude: 40.7813, longitude: -73.9603),
@@ -231,7 +231,7 @@ class MuseumDataStore {
                            address: "1 E 70th St",
                            hours: "",
                            ticketPrice: "$22",
-                           freeHours: "Free first Friday of every month, 6-9pm\nPay what you wish Sundays, 11am-1pm",
+                           freeHours: "Free first Friday of month, 6-9pm\nPay what you wish Sundays, 11am-1pm",
                            freeDay: [6, 1],
                            artCategories: "Old Masters, European decorative",
                            coordinate: CLLocationCoordinate2D(latitude: 40.7710473, longitude: -73.9673473),
@@ -362,7 +362,24 @@ class MuseumDataStore {
                                    imageCredit: "Unidentified artist. Saul Slaying Nahash and the Ammonites; Samuel Anoints Saul and Sacrifices to the Lord, ca. 1240. Courtesy the Morgan Library & Museum.",
                                    placeID: "ChIJ3453OAdZwokRja92OOKCugM")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety]
+        let brooklyn = Museum(title: "Brooklyn Museum",
+                                   logo: UIImage(named: "brooklynLogo")!,
+                                   address: "200 Eastern Pkwy",
+                                   hours: "",
+                                   ticketPrice: "$16 (suggested)",
+                                   freeHours: "Pay what you wish everyday\nFree first Saturday of month, 5-11pm",
+                                   freeDay: [7],
+                                   artCategories: "All cultures and time periods",
+                                   coordinate: CLLocationCoordinate2D(latitude: 40.6712102, longitude: -73.9658246),
+                                   url: "https://www.brooklynmuseum.org/",
+                                   interiorMapView: false,
+                                   openLate: true,
+                                   freeAdmission: true,
+                                   imageURL: "https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/2015.53_framed_PS2.jpg",
+                                   imageCredit: "Kehinde Wiley. Napoleon Leading the Army over the Alps, 2005. Courtesy the Brooklyn Museum.",
+                                   placeID: "ChIJyTmcRApbwokR-oXJRqpVI8Y")
+        
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn]
         
         // TODO: - add Noguchi Museum, Museum of the Moving Image, Brooklyn Museum, MoMAPS1, Photo Center
         
