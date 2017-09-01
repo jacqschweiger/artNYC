@@ -283,7 +283,7 @@ class MuseumDataStore {
                                      hours: "Closed for renovations",
                                      ticketPrice: "Free",
                                      freeHours: "Always free",
-                                     freeDay: [1,2,3,4,5,6,7],
+                                     freeDay: [],
                                      artCategories: "Spanish & Portuguese",
                                      coordinate: CLLocationCoordinate2D(latitude: 40.8333768, longitude: -73.9470945),
                                      url: "http://hispanicsociety.org/",
