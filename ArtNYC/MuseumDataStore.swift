@@ -396,9 +396,26 @@ class MuseumDataStore {
                               imageCredit: "Katharina Grosse. Rockaway!, 2016. Courtesy the MoMA PS1.",
                               placeID: "ChIJwfbFiiNZwokRN8hnF940DbY")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1]
+        let noguchi = Museum(title: "MoMA PS1",
+                             logo: UIImage(named: "noguchiLogo")!,
+                             address: "22-25 Jackson Ave",
+                             hours: "",
+                             ticketPrice: "$10",
+                             freeHours: "First Friday of month",
+                             freeDay: [6],
+                             artCategories: "Sculpture",
+                             coordinate: CLLocationCoordinate2D(latitude: 40.7670215, longitude: -73.9376379),
+                             url: "http://www.noguchi.org/",
+                             interiorMapView: true,
+                             openLate: false,
+                             freeAdmission: true,
+                             imageURL: "http://www.noguchi.org/sites/default/files/imagecache/main_collection_image/collection/730A.jpg",
+                             imageCredit: "Isamu Noguchi. Sun at Midnight, 1973. Courtesy the Isamu Noguchi Foundation and Garden Museum.",
+                             placeID: "ChIJUZ0c7MpYwokRh8SiMzCXL98")
         
-        // TODO: - add Noguchi Museum, Museum of the Moving Image, MoMAPS1, Photo Center, Queens
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi]
+        
+        // TODO: - add Noguchi Museum, Museum of the Moving Image, Photo Center, Queens
         
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
