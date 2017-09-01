@@ -34,7 +34,7 @@ class MuseumDataStore {
                                interiorMapView: true,
                                openLate: true,
                                freeAdmission: true,
-                               imageURL: "http://images.metmuseum.org/CRDImages/ep/web-large/DT48.jpg",
+                               imageURL: "http://bit.ly/2gwehGP",
                                imageCredit: "Claude Monet. Garden at Sainte-Adresse, 1867. Courtesy the Metropolitan Museum of Art.",
                                placeID: "ChIJb8Jg9pZYwokR-qHGtvSkLzs")
         
@@ -51,7 +51,7 @@ class MuseumDataStore {
                                  interiorMapView: false,
                                  openLate: true,
                                  freeAdmission: true,
-                                 imageURL: "http://www.neuegalerie.org/sites/default/files/adele_new.jpg",
+                                 imageURL: "http://bit.ly/2iMsuQv",
                                  imageCredit: "Gustav Klimt. Adele Bloch-Bauer I, 1907. Courtesy the Neue Galerie.",
                                  placeID: "ChIJ01_9-ZdYwokRL2JrA28GJp8")
         
@@ -68,7 +68,7 @@ class MuseumDataStore {
                                  interiorMapView: true,
                                  openLate: true,
                                  freeAdmission: true,
-                                 imageURL: "http://rubinmuseum.org/images/content/3591/web_c2013.9a-c_front_lg__slider.jpg",
+                                 imageURL: "http://bit.ly/2vxtU7A",
                                  imageCredit: "Tibetan artist. Manjushri Namasamgiti, 19th cent. Courtesy the Rubin Museum of Art.",
                                  placeID: "ChIJD4QSVbxZwokRaFPDajZtIaI")
         
@@ -85,7 +85,7 @@ class MuseumDataStore {
                              interiorMapView: false,
                              openLate: true,
                              freeAdmission: false,
-                             imageURL: "http://collectionimages.whitney.org/standard/171665/largepage.jpg",
+                             imageURL: "http://bit.ly/2iOak0I",
                              imageCredit: "Willem de Kooning. Woman and Bicycle, 1952-53. Courtesy the Whitney Museum of American Art.",
                              placeID:"ChIJN3MJ6pRYwokRiXg91flSP8Y")
         
@@ -103,7 +103,7 @@ class MuseumDataStore {
                           interiorMapView: true,
                           openLate: true,
                           freeAdmission: true,
-                          imageURL: "https://www.moma.org/media/W1siZiIsIjE1MTI3MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDEzNjZ4MTM2Nlx1MDAzZSJdXQ.jpg?sha=0aeee086f50d61a0",
+                          imageURL: "http://bit.ly/2wtK3rU",
                           imageCredit: "Pablo Picasso. Les Demoiselles d'Avignon, 1907. Courtesy the Museum of Modern Art.",
                           placeID: "ChIJKxDbe_lYwokRVf__s8CPn-o")
         
@@ -120,7 +120,7 @@ class MuseumDataStore {
                                 interiorMapView: true,
                                 openLate: false,
                                 freeAdmission: true,
-                                imageURL: "https://i0.wp.com/www.guggenheim.org/wp-content/uploads/1913/01/37.244_ph_web.jpg?w=870",
+                                imageURL: "http://bit.ly/2vxDN59",
                                 imageCredit: "Vasily Kandinsky. Light Picture (Helles Bild), 1913. Courtesy the Solomon R. Guggenheim Museum.",
                                 placeID: "ChIJmZ5emqJYwokRuDz79o0coAQ")
         
@@ -137,7 +137,7 @@ class MuseumDataStore {
                                   interiorMapView: false,
                                   openLate: true,
                                   freeAdmission: true,
-                                  imageURL: "http://72.32.137.209/piction/ump.show_public_image?v_umo=12805126&quality=O3",
+                                  imageURL: "http://bit.ly/2xCK9h1",
                                   imageCredit: "Sol LeWitt. Designed from Torah Ark, 2001. Courtesy the Jewish Museum.",
                                   placeID: "ChIJxY5cO6JYwokRPeVk85UNj2g")
         
