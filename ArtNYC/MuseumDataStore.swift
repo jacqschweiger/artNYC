@@ -280,7 +280,7 @@ class MuseumDataStore {
         let hispanicSociety = Museum(title: "Hispanic Society of America",
                                      logo: UIImage(named: "hispanicSocietyLogo")!,
                                      address: "613 W 155th St",
-                                     hours: "\nClosed for renovations",
+                                     hours: "Closed for renovations",
                                      ticketPrice: "Free",
                                      freeHours: "Always free",
                                      freeDay: [1,2,3,4,5,6,7],
