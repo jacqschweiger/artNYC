@@ -280,7 +280,7 @@ class MuseumDataStore {
         let hispanicSociety = Museum(title: "Hispanic Society of America",
                                      logo: UIImage(named: "hispanicSocietyLogo")!,
                                      address: "613 W 155th St",
-                                     hours: "Temporarily closed",
+                                     hours: "\nClosed for renovations",
                                      ticketPrice: "Free",
                                      freeHours: "Always free",
                                      freeDay: [1,2,3,4,5,6,7],
@@ -430,7 +430,7 @@ class MuseumDataStore {
                              imageCredit: "Panorama of the City of New York, 1964. Courtesy the Queens Museum.",
                              placeID: "ChIJmWMJBtBfwokR5qK7waLcgAM")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi, queens]
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi, queens, hispanicSociety]
         
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
