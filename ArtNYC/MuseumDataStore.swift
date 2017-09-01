@@ -396,7 +396,7 @@ class MuseumDataStore {
                               imageCredit: "Katharina Grosse. Rockaway!, 2016. Courtesy the MoMA PS1.",
                               placeID: "ChIJwfbFiiNZwokRN8hnF940DbY")
         
-        let noguchi = Museum(title: "MoMA PS1",
+        let noguchi = Museum(title: "Noguchi Museum",
                              logo: UIImage(named: "noguchiLogo")!,
                              address: "22-25 Jackson Ave",
                              hours: "",
@@ -413,9 +413,26 @@ class MuseumDataStore {
                              imageCredit: "Isamu Noguchi. Sun at Midnight, 1973. Courtesy the Isamu Noguchi Foundation and Garden Museum.",
                              placeID: "ChIJUZ0c7MpYwokRh8SiMzCXL98")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi]
+        let queens = Museum(title: "Queens Museum",
+                             logo: UIImage(named: "queensLogo")!,
+                             address: "Flushing Meadows Corona Park",
+                             hours: "",
+                             ticketPrice: "$8",
+                             freeHours: "None",
+                             freeDay: [],
+                             artCategories: "Contemporary and New York-related",
+                             coordinate: CLLocationCoordinate2D(latitude: 40.7459436, longitude: -73.8489266),
+                             url: "http://www.queensmuseum.org/",
+                             interiorMapView: false,
+                             openLate: false,
+                             freeAdmission: true,
+                             imageURL: "http://www.queensmuseum.org/wp-content/uploads/2013/11/Exhibitions_Panorama_Chrysler-Building-on-the-Panorama-638x319.png",
+                             imageCredit: "Panorama of the City of New York, 1964. Courtesy the Queens Museum.",
+                             placeID: "ChIJmWMJBtBfwokR5qK7waLcgAM")
         
-        // TODO: - add Noguchi Museum, Museum of the Moving Image, Photo Center, Queens
+        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi, queens]
+        
+        // TODO: - add Museum of the Moving Image, Photo Center, Queens
         
         allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
             return museum1.title! < museum2.title!
