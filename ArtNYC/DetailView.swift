@@ -114,6 +114,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         self.titleLabel.topAnchor.constraint(equalTo: self.museumImage.bottomAnchor, constant: -2).isActive = true
         self.titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         self.titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        self.titleLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
