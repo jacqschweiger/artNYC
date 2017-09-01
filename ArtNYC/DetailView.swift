@@ -28,22 +28,16 @@ class DetailView: UIView, GMSMapViewDelegate {
     var scrollView = UIScrollView()
     var titleLabel = UILabel()
     var seeInsideButton = UIButton()
-    var artCategoriesLabel = UIImageView()
+    var artCategoriesIcon = UIImageView()
     var artCategoriesContent = UILabel()
-    var admissionLabel = UIImageView()
+    var admissionIcon = UIImageView()
     var admissionContent = UILabel()
-    var freeAdmissionLabel = UIImageView()
+    var freeAdmissionIcon = UIImageView()
     var freeAdmissionContent = UILabel()
-    var addressLabel = UIImageView()
+    var addressIcon = UIImageView()
     var addressContent = UILabel()
-    var hoursLabel = UIImageView()
-    var sundayLabel = UILabel()
-    var mondayLabel = UILabel()
-    var tuesdayLabel = UILabel()
-    var wednesdayLabel = UILabel()
-    var thursdayLabel = UILabel()
-    var fridayLabel = UILabel()
-    var saturdayLabel = UILabel()
+    var hoursIcon = UIImageView()
+    var hoursContent = UILabel()
     var websiteButton: UIButton!
     
     
@@ -151,73 +145,73 @@ class DetailView: UIView, GMSMapViewDelegate {
             seeInsideButton.titleLabel?.font = UIFont(name: "Avenir", size: 20)
             seeInsideButton.layer.cornerRadius = 5
             
-            //Art Categories Label
-            scrollView.addSubview(artCategoriesLabel)
-            artCategoriesLabel.image = UIImage(named: "paintbrush_icon")
-            artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
-            artCategoriesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
-            artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+            //Art Categories Icon
+            scrollView.addSubview(artCategoriesIcon)
+            artCategoriesIcon.image = UIImage(named: "paintbrush_icon")
+            artCategoriesIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
+            artCategoriesIcon.topAnchor.constraint(equalTo: self.seeInsideButton.bottomAnchor, constant: 20).isActive = true
+            artCategoriesIcon.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            artCategoriesIcon.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            artCategoriesIcon.translatesAutoresizingMaskIntoConstraints = false
             
         } else {
             
-            //Art Categories Label
-            scrollView.addSubview(artCategoriesLabel)
-            artCategoriesLabel.image = UIImage(named: "paintbrush_icon")
-            artCategoriesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
-            artCategoriesLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 20).isActive = true
-            artCategoriesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-            artCategoriesLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
-            artCategoriesLabel.translatesAutoresizingMaskIntoConstraints = false
+            //Art Categories Icon
+            scrollView.addSubview(artCategoriesIcon)
+            artCategoriesIcon.image = UIImage(named: "paintbrush_icon")
+            artCategoriesIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
+            artCategoriesIcon.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 20).isActive = true
+            artCategoriesIcon.widthAnchor.constraint(equalToConstant: 35).isActive = true
+            artCategoriesIcon.heightAnchor.constraint(equalToConstant: 35).isActive = true
+            artCategoriesIcon.translatesAutoresizingMaskIntoConstraints = false
             
         }
         
         
         //Art Categories Content
         scrollView.addSubview(artCategoriesContent)
-        artCategoriesContent.leftAnchor.constraint(equalTo: self.artCategoriesLabel.rightAnchor, constant: 20).isActive = true
-        artCategoriesContent.centerYAnchor.constraint(equalTo: self.artCategoriesLabel.centerYAnchor).isActive = true
+        artCategoriesContent.leftAnchor.constraint(equalTo: self.artCategoriesIcon.rightAnchor, constant: 20).isActive = true
+        artCategoriesContent.centerYAnchor.constraint(equalTo: self.artCategoriesIcon.centerYAnchor).isActive = true
         artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
         
         artCategoriesContent.text = museum.artCategories
         artCategoriesContent.font = UIFont(name: "Avenir", size: 16)
         artCategoriesContent.numberOfLines = 0
         
-        //Admission Label
-        scrollView.addSubview(admissionLabel)
-        admissionLabel.image = UIImage(named: "dollar_icon")
-        admissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
-        admissionLabel.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
-        admissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        admissionLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        admissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        //Admission Icon
+        scrollView.addSubview(admissionIcon)
+        admissionIcon.image = UIImage(named: "dollar_icon")
+        admissionIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
+        admissionIcon.topAnchor.constraint(equalTo: self.artCategoriesContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
+        admissionIcon.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        admissionIcon.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        admissionIcon.translatesAutoresizingMaskIntoConstraints = false
         
         
         //Admission Content
         scrollView.addSubview(admissionContent)
-        admissionContent.leftAnchor.constraint(equalTo: self.artCategoriesLabel.rightAnchor, constant: 20).isActive = true
-        admissionContent.centerYAnchor.constraint(equalTo: self.admissionLabel.centerYAnchor).isActive = true
+        admissionContent.leftAnchor.constraint(equalTo: self.artCategoriesIcon.rightAnchor, constant: 20).isActive = true
+        admissionContent.centerYAnchor.constraint(equalTo: self.admissionIcon.centerYAnchor).isActive = true
         admissionContent.translatesAutoresizingMaskIntoConstraints = false
         
         admissionContent.text = museum.ticketPrice
         admissionContent.font = UIFont(name: "Avenir", size: 16)
         admissionContent.numberOfLines = 0
         
-        //Free Admission Label
-        scrollView.addSubview(freeAdmissionLabel)
-        freeAdmissionLabel.image = UIImage(named: "free_icon")
-        freeAdmissionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
-        freeAdmissionLabel.topAnchor.constraint(equalTo: admissionContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
-        freeAdmissionLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        freeAdmissionLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        freeAdmissionLabel.translatesAutoresizingMaskIntoConstraints = false
+        //Free Admission Icon
+        scrollView.addSubview(freeAdmissionIcon)
+        freeAdmissionIcon.image = UIImage(named: "free_icon")
+        freeAdmissionIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
+        freeAdmissionIcon.topAnchor.constraint(equalTo: admissionContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
+        freeAdmissionIcon.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        freeAdmissionIcon.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        freeAdmissionIcon.translatesAutoresizingMaskIntoConstraints = false
         
         
         //Free Admission Content
         scrollView.addSubview(freeAdmissionContent)
-        freeAdmissionContent.leftAnchor.constraint(equalTo: self.freeAdmissionLabel.rightAnchor, constant: 20).isActive = true
-        freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionLabel.centerYAnchor).isActive = true
+        freeAdmissionContent.leftAnchor.constraint(equalTo: self.freeAdmissionIcon.rightAnchor, constant: 20).isActive = true
+        freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionIcon.centerYAnchor).isActive = true
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
         
         freeAdmissionContent.text = museum.freeHours
@@ -225,20 +219,20 @@ class DetailView: UIView, GMSMapViewDelegate {
         freeAdmissionContent.numberOfLines = 0
         
         
-        //Address Label
-        scrollView.addSubview(addressLabel)
-        addressLabel.image = UIImage(named: "map_icon")
-        addressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
-        addressLabel.topAnchor.constraint(equalTo: freeAdmissionContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
-        addressLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        addressLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        //Address Icon
+        scrollView.addSubview(addressIcon)
+        addressIcon.image = UIImage(named: "map_icon")
+        addressIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
+        addressIcon.topAnchor.constraint(equalTo: freeAdmissionContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
+        addressIcon.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        addressIcon.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        addressIcon.translatesAutoresizingMaskIntoConstraints = false
         
         
         //Address Content
         scrollView.addSubview(addressContent)
-        addressContent.leftAnchor.constraint(equalTo: self.addressLabel.rightAnchor, constant: 20).isActive = true
-        addressContent.centerYAnchor.constraint(equalTo: self.addressLabel.centerYAnchor).isActive = true
+        addressContent.leftAnchor.constraint(equalTo: self.addressIcon.rightAnchor, constant: 20).isActive = true
+        addressContent.centerYAnchor.constraint(equalTo: self.addressIcon.centerYAnchor).isActive = true
         addressContent.translatesAutoresizingMaskIntoConstraints = false
         
         addressContent.text = museum.address
@@ -246,103 +240,33 @@ class DetailView: UIView, GMSMapViewDelegate {
         addressContent.numberOfLines = 0
         
         
-        //Hours Label
-        scrollView.addSubview(hoursLabel)
-        hoursLabel.image = UIImage(named: "clock_icon")
-        hoursLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
-        hoursLabel.topAnchor.constraint(equalTo: addressContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
-        hoursLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        hoursLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        hoursLabel.translatesAutoresizingMaskIntoConstraints = false
+        //Hours Icon
+        scrollView.addSubview(hoursIcon)
+        hoursIcon.image = UIImage(named: "clock_icon")
+        hoursIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(Constants.widthSpace)).isActive = true
+        hoursIcon.topAnchor.constraint(equalTo: addressContent.bottomAnchor, constant: CGFloat(Constants.verticalSpace)).isActive = true
+        hoursIcon.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        hoursIcon.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        hoursIcon.translatesAutoresizingMaskIntoConstraints = false
         
         
-        //Days Labels
-        scrollView.addSubview(sundayLabel)
+        //Hours Content
+        scrollView.addSubview(hoursContent)
         
-        sundayLabel.leftAnchor.constraint(equalTo: self.hoursLabel.rightAnchor, constant: 20).isActive = true
-        sundayLabel.topAnchor.constraint(equalTo: self.hoursLabel.topAnchor).isActive = true
-        sundayLabel.translatesAutoresizingMaskIntoConstraints = false
+        hoursContent.leftAnchor.constraint(equalTo: self.hoursIcon.rightAnchor, constant: 20).isActive = true
+        hoursContent.topAnchor.constraint(equalTo: self.hoursIcon.topAnchor).isActive = true
+        hoursContent.translatesAutoresizingMaskIntoConstraints = false
         
-        //guard let sunday = museum.hours["Sunday"] else { return }
-        sundayLabel.text = museum.hours
-        sundayLabel.font = UIFont(name: "Avenir", size: 16)
-        sundayLabel.numberOfLines = 0
-//
-//        
-//        
-//        scrollView.addSubview(mondayLabel)
-//        mondayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-//        mondayLabel.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor).isActive = true
-//        mondayLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        guard let monday = museum.hours["Monday"] else { return }
-//        mondayLabel.text = "Monday: \(monday)"
-//        mondayLabel.font = UIFont(name: "Avenir", size: 16)
-//        
-//        
-//        
-//        scrollView.addSubview(tuesdayLabel)
-//        tuesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-//        tuesdayLabel.topAnchor.constraint(equalTo: self.mondayLabel.bottomAnchor).isActive = true
-//        tuesdayLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        guard let tuesday = museum.hours["Tuesday"] else { return }
-//        tuesdayLabel.text = "Tuesday: \(tuesday)"
-//        tuesdayLabel.font = UIFont(name: "Avenir", size: 16)
-//        
-//        
-//        
-//        scrollView.addSubview(wednesdayLabel)
-//        wednesdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-//        wednesdayLabel.topAnchor.constraint(equalTo: self.tuesdayLabel.bottomAnchor).isActive = true
-//        wednesdayLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        guard let wednesday = museum.hours["Wednesday"] else { return }
-//        wednesdayLabel.text = "Wednesday: \(wednesday)"
-//        wednesdayLabel.font = UIFont(name: "Avenir", size: 16)
-//        
-//        
-//        
-//        scrollView.addSubview(thursdayLabel)
-//        thursdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-//        thursdayLabel.topAnchor.constraint(equalTo: self.wednesdayLabel.bottomAnchor).isActive = true
-//        thursdayLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        guard let thursday = museum.hours["Thursday"] else { return }
-//        thursdayLabel.text = "Thursday: \(thursday)"
-//        thursdayLabel.font = UIFont(name: "Avenir", size: 16)
-//        
-//        
-//        
-//        scrollView.addSubview(fridayLabel)
-//        fridayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-//        fridayLabel.topAnchor.constraint(equalTo: self.thursdayLabel.bottomAnchor).isActive = true
-//        fridayLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        guard let friday = museum.hours["Friday"] else { return }
-//        fridayLabel.text = "Friday: \(friday)"
-//        fridayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
-        
-//        scrollView.addSubview(saturdayLabel)
-//        saturdayLabel.leftAnchor.constraint(equalTo: self.sundayLabel.leftAnchor).isActive = true
-//        saturdayLabel.topAnchor.constraint(equalTo: self.fridayLabel.bottomAnchor).isActive = true
-//        saturdayLabel.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        guard let saturday = museum.hours["Saturday"] else { return }
-//        saturdayLabel.text = "Saturday: \(saturday)"
-//        saturdayLabel.font = UIFont(name: "Avenir", size: 16)
-        
-        
+        hoursContent.text = museum.hours
+        hoursContent.font = UIFont(name: "Avenir", size: 16)
+        hoursContent.numberOfLines = 0
         
         //Website Label
         websiteButton = UIButton(type: .custom)
         websiteButton.addTarget(self, action: #selector(self.onGoToWebView), for: UIControlEvents.touchUpInside)
         scrollView.addSubview(websiteButton)
         websiteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        //websiteButton.topAnchor.constraint(equalTo: self.saturdayLabel.bottomAnchor, constant: 20).isActive = true
-        websiteButton.topAnchor.constraint(equalTo: self.sundayLabel.bottomAnchor, constant: 20).isActive = true
+        websiteButton.topAnchor.constraint(equalTo: self.hoursContent.bottomAnchor, constant: 20).isActive = true
         websiteButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: -20).isActive = true
         websiteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
         websiteButton.translatesAutoresizingMaskIntoConstraints = false

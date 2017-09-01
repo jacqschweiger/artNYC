@@ -367,7 +367,7 @@ class MuseumDataStore {
                                    address: "200 Eastern Pkwy",
                                    hours: "",
                                    ticketPrice: "$16 (suggested)",
-                                   freeHours: "Pay what you wish everyday\nFree first Saturday of month, 5-11pm",
+                                   freeHours: "Pay what you wish, everyday\nFree first Saturday of month, 5-11pm",
                                    freeDay: [1,2,3,4,5,6,7],
                                    artCategories: "All cultures and time periods",
                                    coordinate: CLLocationCoordinate2D(latitude: 40.6712102, longitude: -73.9658246),
