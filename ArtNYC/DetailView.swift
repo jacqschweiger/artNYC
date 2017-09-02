@@ -171,12 +171,14 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Art Categories Content
         scrollView.addSubview(artCategoriesContent)
         artCategoriesContent.leftAnchor.constraint(equalTo: self.artCategoriesIcon.rightAnchor, constant: 20).isActive = true
+        artCategoriesContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         artCategoriesContent.centerYAnchor.constraint(equalTo: self.artCategoriesIcon.centerYAnchor).isActive = true
         artCategoriesContent.translatesAutoresizingMaskIntoConstraints = false
         
         artCategoriesContent.text = museum.artCategories
         artCategoriesContent.font = UIFont(name: "Avenir", size: 16)
         artCategoriesContent.numberOfLines = 0
+        
         
         //Admission Icon
         scrollView.addSubview(admissionIcon)
@@ -191,6 +193,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Admission Content
         scrollView.addSubview(admissionContent)
         admissionContent.leftAnchor.constraint(equalTo: self.artCategoriesIcon.rightAnchor, constant: 20).isActive = true
+        admissionContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         admissionContent.centerYAnchor.constraint(equalTo: self.admissionIcon.centerYAnchor).isActive = true
         admissionContent.translatesAutoresizingMaskIntoConstraints = false
         
@@ -211,6 +214,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Free Admission Content
         scrollView.addSubview(freeAdmissionContent)
         freeAdmissionContent.leftAnchor.constraint(equalTo: self.freeAdmissionIcon.rightAnchor, constant: 20).isActive = true
+        freeAdmissionContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         freeAdmissionContent.centerYAnchor.constraint(equalTo: self.freeAdmissionIcon.centerYAnchor).isActive = true
         freeAdmissionContent.translatesAutoresizingMaskIntoConstraints = false
         
@@ -232,6 +236,7 @@ class DetailView: UIView, GMSMapViewDelegate {
         //Address Content
         scrollView.addSubview(addressContent)
         addressContent.leftAnchor.constraint(equalTo: self.addressIcon.rightAnchor, constant: 20).isActive = true
+        addressContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         addressContent.centerYAnchor.constraint(equalTo: self.addressIcon.centerYAnchor).isActive = true
         addressContent.translatesAutoresizingMaskIntoConstraints = false
         
@@ -252,8 +257,8 @@ class DetailView: UIView, GMSMapViewDelegate {
         
         //Hours Content
         scrollView.addSubview(hoursContent)
-        
         hoursContent.leftAnchor.constraint(equalTo: self.hoursIcon.rightAnchor, constant: 20).isActive = true
+        hoursContent.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         hoursContent.topAnchor.constraint(equalTo: self.hoursIcon.topAnchor).isActive = true
         hoursContent.translatesAutoresizingMaskIntoConstraints = false
         
