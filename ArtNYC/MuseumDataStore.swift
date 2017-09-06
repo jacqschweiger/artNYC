@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
-import Firebase
+import FirebaseDatabase
 
 class MuseumDataStore {
     
@@ -23,8 +23,6 @@ class MuseumDataStore {
     
     
     let ref = FIRDatabase.database().reference(withPath: "museums")
-    
-    
     
     func loadMuseums() {
         
