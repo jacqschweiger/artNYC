@@ -27,6 +27,33 @@ class MuseumDataStore {
     
     func loadMuseums() {
         
+        ref.observe(.value, with: { (snapshot) in
+            print("snapshot: \(snapshot)")
+            
+            
+            
+            for item in snapshot.children {
+            
+                
+//                let newFBMuseum = Museum(title: <#T##String#>, logo: <#T##UIImage#>, address: <#T##String#>, hours: <#T##String#>, ticketPrice: <#T##String#>, freeHours: <#T##String#>, freeDay: <#T##[Int]#>, artCategories: <#T##String#>, coordinate: <#T##CLLocationCoordinate2D#>, url: <#T##String#>, interiorMapView: <#T##Bool#>, openLate: <#T##Bool#>, freeAdmission: <#T##Bool#>, imageURL: <#T##String#>, imageCredit: <#T##String#>, placeID: <#T##String#>)
+//                
+//                self.allMuseums.append(newFBMuseum)
+            }
+            
+            
+            
+        })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         let metMuseum = Museum(title: "Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
                                address: "1000 5th Ave",
@@ -436,11 +463,11 @@ class MuseumDataStore {
                              imageCredit: "Panorama of the City of New York, 1964. Courtesy the Queens Museum.",
                              placeID: "ChIJmWMJBtBfwokR5qK7waLcgAM")
         
-        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi, queens, hispanicSociety]
-        
-        allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
-            return museum1.title! < museum2.title!
-        }
+//        allMuseums = [metMuseum, rubinMuseum, frick, moma, guggenheim, neueGalerie, whitney, jewishMuseum, folkArt, newMuseum, museoDelBarrio, mad, cooperHewitt, drawingCenter, cloisters, metBreuer, fit, morganLibrary, asiaSociety, brooklyn, momaPS1, noguchi, queens, hispanicSociety]
+//        
+//        allMuseums = self.allMuseums.sorted { (museum1, museum2) -> Bool in
+//            return museum1.title! < museum2.title!
+        //}
         
         getHours {
             print("called get hours")
