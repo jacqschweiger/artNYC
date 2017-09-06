@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import GoogleMaps
 import GooglePlaces
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey(Constants.key)
         GMSPlacesClient.provideAPIKey(Constants.key)
+        
+        FIRApp.configure()
         
         initialViewController = TabBarVC(nibName:"TabBarVC",bundle:nil)
         

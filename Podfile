@@ -5,6 +5,7 @@ def commonPods
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'Kingfisher', '~> 3.0'
+    pod 'Firebase/Database'
 end
 
 target 'ArtNYC' do

@@ -7,38 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E9CC28AC8E34FE8E1C87E933E04BC7A /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37800C75417F955A4509739DD8B242CA /* ImageProcessor.swift */; };
-		179523942E7D1E3EB210EF05E2C7AE79 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EF6A8146F7C67F3391FCFFD94266B9 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20C4B562EF3D283E94A5C8DA7029A027 /* Pods-ArtNYC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FA92614BB31CA1004A2254FD4FF40C /* Pods-ArtNYC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E5E570FFC49EF98550401421A243C0F /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058CF38AF61896EEA6BF4164DB00340 /* CacheSerializer.swift */; };
-		33395912F2FFA355C4C36B7EDEAA3DA7 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B308B0E96F8F41E16C110127B1A0DAC /* ImageView+Kingfisher.swift */; };
-		33A14E817C0FA585D5DA3A55E453299D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015690684D49DB67A8A1920FCA89B34 /* Image.swift */; };
-		3414E1D9CB15149A296E16C45967B021 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2018E90C3574C1934204EDD328991B /* ImagePrefetcher.swift */; };
-		342AE33215135AD56B73580012DC22AB /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C11589D04EEA23EC6B87FAD0C49B2A7 /* AnimatedImageView.swift */; };
-		378B44CAA91C2106076668FDE72E1E02 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57168AC38FC9B2656C54288E91C8A5B /* KingfisherOptionsInfo.swift */; };
-		4089E39F76F86466B8DDD39A1C1ABB6B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFF9287B8FBB9FA80F432A8224E0843 /* Filter.swift */; };
-		52A280AB4852FDE92DF09B5E79D5C2AA /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0FB28649C775F98B685BC602725FE2 /* Indicator.swift */; };
-		6A375593407BC7937234B2B6A0811760 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE6F6B1FE23FCE9F2CFD2C6604F718 /* Kingfisher-dummy.m */; };
-		6CD63E1564618B6213B98E0ABBC3127C /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AEC90897D5BE268F6A1BC8B698BB48 /* ThreadHelper.swift */; };
-		6DA770087D354CDCD3889CDAE7C4C698 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F08C33C06B03F09E5135A0D3818B89 /* Box.swift */; };
-		6EECACDDD05DA14DDE47091689ECDA72 /* Pods-ArtNYC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF90FC2AA0901B8122A04C3767AED8C /* Pods-ArtNYC-dummy.m */; };
-		7636F846675C9F4ED96E00C6C19A4890 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D75DF662E7A71AB8B47166E99C161 /* KingfisherManager.swift */; };
-		86B7DA678C8705523C300947117C0706 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF624B58232C335DBFAEFD05BA740C /* ImageTransition.swift */; };
-		8DA7E6883118CB3C8132B64D3D43AE0B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45AA874F41FA3FC2EC3F4631B7B648 /* Resource.swift */; };
-		8E3822D698A4AA4C587D375F8DED7082 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C074C11AE6A5B57D6F593C07D4511E4 /* Foundation.framework */; };
+		0E9CC28AC8E34FE8E1C87E933E04BC7A /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A79F89535B1C69B34D59A47B0886EC9 /* ImageProcessor.swift */; };
+		179523942E7D1E3EB210EF05E2C7AE79 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CC2D3396D27149A0F018530323FC01 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E5E570FFC49EF98550401421A243C0F /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D8B5F2662903E2C8754277585B611 /* CacheSerializer.swift */; };
+		3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C074C11AE6A5B57D6F593C07D4511E4 /* Foundation.framework */; };
+		33395912F2FFA355C4C36B7EDEAA3DA7 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85323CA982DE18E01229AAAED2E4BD08 /* ImageView+Kingfisher.swift */; };
+		33A14E817C0FA585D5DA3A55E453299D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61A062CB2A1C34C7101F0BFEB3D4CE8 /* Image.swift */; };
+		3414E1D9CB15149A296E16C45967B021 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2828A0AD644D0838D9210AF778AD7054 /* ImagePrefetcher.swift */; };
+		342AE33215135AD56B73580012DC22AB /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCFB4ABBB9B93E7CEF0C70DB3E363F /* AnimatedImageView.swift */; };
+		378B44CAA91C2106076668FDE72E1E02 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85E374C9B52D310359FCB08E293B7F /* KingfisherOptionsInfo.swift */; };
+		3BB188E18E346DC92DDC385BF0D4B0D0 /* Pods-ArtNYC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF90FC2AA0901B8122A04C3767AED8C /* Pods-ArtNYC-dummy.m */; };
+		4089E39F76F86466B8DDD39A1C1ABB6B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B0DB9B8418D305C20008D9393D66C /* Filter.swift */; };
+		52A280AB4852FDE92DF09B5E79D5C2AA /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F760700D12E4ACF24D2B27E1EBDD0 /* Indicator.swift */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B713649AB2E5E8CB746823A5CC2FBC5A /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A375593407BC7937234B2B6A0811760 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DE3B806C85EFF1E73CDDD076D74E19 /* Kingfisher-dummy.m */; };
+		6CD63E1564618B6213B98E0ABBC3127C /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6A26DC41E187AF9F92323D4DE8FDA /* ThreadHelper.swift */; };
+		6DA770087D354CDCD3889CDAE7C4C698 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A691679E62866866F9C07CC4CB06B7E /* Box.swift */; };
+		7636F846675C9F4ED96E00C6C19A4890 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B29E81C74C289C976EA570CE07863 /* KingfisherManager.swift */; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD42A5C4F45EB4C43E843EDEB0953B58 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86B7DA678C8705523C300947117C0706 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964FBF06EE2EB6C10F728DF5E4A42814 /* ImageTransition.swift */; };
+		8DA7E6883118CB3C8132B64D3D43AE0B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B118323A93444D955DB9CE22A27AB77D /* Resource.swift */; };
 		92136C6584624998D5005F46C70A628B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA5794656CD6EAD5432F6E93991FC63 /* CFNetwork.framework */; };
 		9C99E45B90BD95712D9878994BFC8B88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C074C11AE6A5B57D6F593C07D4511E4 /* Foundation.framework */; };
-		9F826F893E86EB86591B637A1CE4B13A /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9073206DC5C483C81610F37976BAC75 /* String+MD5.swift */; };
-		A8F35D1EBAEF99D38F02A0B8CA5D8FBE /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ABD8E6D5502D4BCB070DC959E16073 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9CC5ED97D29C6C3DE22B78A9AA2AD91 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB17270129091C08CCEB545D351207 /* Kingfisher.swift */; };
-		DC6080C64C269628C3F5107BE87055E2 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E2E0BE69C34F0A65C81780EC0C3E7 /* ImageDownloader.swift */; };
-		EA816A580C3858934ED6FE92040C26DD /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92359D3ADEE211AD31102CEE700376AA /* RequestModifier.swift */; };
-		EE89512E8D36E67CDC525DB9D5BBF5A7 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D7275FB1F4A8E703FC516AC5A2E31 /* UIButton+Kingfisher.swift */; };
-		F8E957950566622A3E4B61AACE8F0B4A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3032F82E07B0E61E81168C84825ED3 /* ImageCache.swift */; };
+		9F826F893E86EB86591B637A1CE4B13A /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB7ACDE41E4DA8BFECD5A97326692C /* String+MD5.swift */; };
+		A8F35D1EBAEF99D38F02A0B8CA5D8FBE /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A56862E46A0CED3907E23359C1407A69 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9CC5ED97D29C6C3DE22B78A9AA2AD91 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7FD9D25A1453923B571AFC9CD22DD /* Kingfisher.swift */; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = D115013F140C280AD86518319D93E7C5 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC6080C64C269628C3F5107BE87055E2 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330091A8E7CB0A0656E399E2491D1460 /* ImageDownloader.swift */; };
+		DF054ACFF912060A5944AFC6030B1D42 /* Pods-ArtNYC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FA92614BB31CA1004A2254FD4FF40C /* Pods-ArtNYC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA816A580C3858934ED6FE92040C26DD /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07D033AE9047A2F7416C4F943382E7 /* RequestModifier.swift */; };
+		EE673202662DCCB448DCAB309A527EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C074C11AE6A5B57D6F593C07D4511E4 /* Foundation.framework */; };
+		EE89512E8D36E67CDC525DB9D5BBF5A7 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD848067E7A4A3013FD0AC8DE12E67A /* UIButton+Kingfisher.swift */; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D5806FB9052E4CA5C0EFEECCE532 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F8E957950566622A3E4B61AACE8F0B4A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA1553C9F327C39B5CD1769E8C768 /* ImageCache.swift */; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F65C036D32BA44BA2E07FEC785FFD /* GoogleToolboxForMac-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E0CC6F8CD7259D0AE3F19E6F7A041F32 /* PBXContainerItemProxy */ = {
+		D7516A1ACBFA8A1878F092A8E0B2C690 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		D859C735AA1B8CFEF0B1C23F06180A59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -48,62 +61,80 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0058CF38AF61896EEA6BF4164DB00340 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
-		008592FEB6F5ABDDF6DB37D8AE019211 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		0C3032F82E07B0E61E81168C84825ED3 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
-		10EF6A8146F7C67F3391FCFFD94266B9 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
-		20F51438A5A7F621931C24E026B7B703 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		3015690684D49DB67A8A1920FCA89B34 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
-		33AEC90897D5BE268F6A1BC8B698BB48 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
-		37800C75417F955A4509739DD8B242CA /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		17721E63D368E0FFF79EA2ED07A68D39 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		17DCFB4ABBB9B93E7CEF0C70DB3E363F /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
+		17DE3B806C85EFF1E73CDDD076D74E19 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		1A79F89535B1C69B34D59A47B0886EC9 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		1AE95D248534F1AE14E1D6F7375C48A6 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		26E6A26DC41E187AF9F92323D4DE8FDA /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
+		2828A0AD644D0838D9210AF778AD7054 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		2D9F65C036D32BA44BA2E07FEC785FFD /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		2F599161B55C1BD53A0E69F57540CCC9 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		330091A8E7CB0A0656E399E2491D1460 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
+		340B29E81C74C289C976EA570CE07863 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		3566186F4A3D489161D9CD738E294D4D /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		38072E1A9F6238B11C78AB3078861270 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ArtNYC.framework; path = "Pods-ArtNYC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4E4E9FF1446525DED064FACE10A97D /* Pods-ArtNYC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ArtNYC-acknowledgements.plist"; sourceTree = "<group>"; };
-		3CEB17270129091C08CCEB545D351207 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
+		3AE8E4DFF6F0B49503E0DAFCC226CBF2 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		47B12500692EED097FA9B15B48115799 /* Pods-ArtNYC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ArtNYC.debug.xcconfig"; sourceTree = "<group>"; };
+		4BD218C798F885A3A00BB824B1772484 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		4BD848067E7A4A3013FD0AC8DE12E67A /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		4CBAA1553C9F327C39B5CD1769E8C768 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		4CEB7ACDE41E4DA8BFECD5A97326692C /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
+		51CC2D3396D27149A0F018530323FC01 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		585D8B69734AC3467366A595C20E5B06 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		5C074C11AE6A5B57D6F593C07D4511E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5C11589D04EEA23EC6B87FAD0C49B2A7 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
 		5D75E9B73F62DBCEB02D18B697488916 /* Pods-ArtNYC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ArtNYC.modulemap"; sourceTree = "<group>"; };
 		5EC9E97E6D865A935A626DDD313A56A5 /* Pods-ArtNYC-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ArtNYC-resources.sh"; sourceTree = "<group>"; };
-		5FCF624B58232C335DBFAEFD05BA740C /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		66DE31DCF995FDDC7E3CD195F2F04114 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
 		66FA92614BB31CA1004A2254FD4FF40C /* Pods-ArtNYC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ArtNYC-umbrella.h"; sourceTree = "<group>"; };
-		681F26F20F94101CFC261BD56ABADCD8 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
-		6B2018E90C3574C1934204EDD328991B /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
-		74EE6F6B1FE23FCE9F2CFD2C6604F718 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		6B88905B0B6A79100B6ADDB47E9A557D /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
 		7953BF3F5B4ADDC6B366098B1B56F284 /* Pods-ArtNYC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ArtNYC-frameworks.sh"; sourceTree = "<group>"; };
-		7B0415382F8D68EB788FA669737347FD /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		7BE030C42450554774976BA11DA473B8 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		7BF90FC2AA0901B8122A04C3767AED8C /* Pods-ArtNYC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ArtNYC-dummy.m"; sourceTree = "<group>"; };
 		81DE3363E61F6F5011EFB53EB3A747BF /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
-		8A56B7BA8F8A2CBCAB927A9DA4869368 /* Pods_ArtNYC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ArtNYC.framework; path = "Pods-ArtNYC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C0FB28649C775F98B685BC602725FE2 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
-		8DFF9287B8FBB9FA80F432A8224E0843 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
-		913E2E0BE69C34F0A65C81780EC0C3E7 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
-		92359D3ADEE211AD31102CEE700376AA /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
-		92359D55237428760DDB2E03FD3FDECE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828B0DB9B8418D305C20008D9393D66C /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
+		85323CA982DE18E01229AAAED2E4BD08 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		88490AB4EE22CEBC2D87E4B181B04253 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		8A691679E62866866F9C07CC4CB06B7E /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A57E6EC9F4ED21E0678C2A74B5F8D7D /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B308B0E96F8F41E16C110127B1A0DAC /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
-		AF5134C33F9E604B44BA0FEBC390A447 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kingfisher.modulemap; sourceTree = "<group>"; };
-		B21D7275FB1F4A8E703FC516AC5A2E31 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		93AFB17AC439A55921BAEE9E902B5F7D /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		964FBF06EE2EB6C10F728DF5E4A42814 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		97CA8BB6E9D36CE56B51A0D54C33EA77 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		9F60D5806FB9052E4CA5C0EFEECCE532 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		A22D8B5F2662903E2C8754277585B611 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
+		A294215C0AA71D73287833F91E386440 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56862E46A0CED3907E23359C1407A69 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		AE07D033AE9047A2F7416C4F943382E7 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
+		B118323A93444D955DB9CE22A27AB77D /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
 		B69B203C83BD900B62A2872AB8322DEF /* Pods-ArtNYC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ArtNYC-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C42046ED00F075EE10D9CA6FB3F6646D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		C9073206DC5C483C81610F37976BAC75 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
-		CFBDDC54967C767FACF66FA3EB33768F /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		B713649AB2E5E8CB746823A5CC2FBC5A /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		BA3DA87F231244814AA8EBB8AEC163AE /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4E6B2501A2DD211BE7F6CAC9764D5A /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		C45C9ADAE65CFEAF3365398154DAA8AA /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		C5BBA707E7C275B7A7FCF677058CC099 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		CAF249EAB1057850C29984219686599B /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		CE85E374C9B52D310359FCB08E293B7F /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		CEEFEBD2AFE3F7A667460D84E473F135 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		D115013F140C280AD86518319D93E7C5 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		D8976927CDB1B8817D1E534D2C9A9910 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		DBA5794656CD6EAD5432F6E93991FC63 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		DCCAF52E9543C8177B2FFD499691D160 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
-		E41D75DF662E7A71AB8B47166E99C161 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
-		E7F08C33C06B03F09E5135A0D3818B89 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		DE7078AEEC7AAD0F0F3EDC093E91704E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61A062CB2A1C34C7101F0BFEB3D4CE8 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
+		EAB7FD9D25A1453923B571AFC9CD22DD /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
 		EC423CF59324DFF30DAE566D2026E4EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F57168AC38FC9B2656C54288E91C8A5B /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
-		F6ABD8E6D5502D4BCB070DC959E16073 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
-		FA53B1A80D738948C20F03BD441DCFED /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
-		FD45AA874F41FA3FC2EC3F4631B7B648 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		EC791187AD89A7DF1896257690968964 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		F42F760700D12E4ACF24D2B27E1EBDD0 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
+		FBA52B48A25E57561AFBB17466367050 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		FD42A5C4F45EB4C43E843EDEB0953B58 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		77EB5C1016F731AB8FD2374B1CA6C06F /* Frameworks */ = {
+		EBF1939D47C67FE27D706F1A3C5E5810 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3822D698A4AA4C587D375F8DED7082 /* Foundation.framework in Frameworks */,
+				EE673202662DCCB448DCAB309A527EFC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,17 +147,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00345324AE65637278EC81CA1B645759 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				681F26F20F94101CFC261BD56ABADCD8 /* GooglePlaces.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		07B963F066CF1C907024B787F3D5186F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,22 +167,67 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		12765B1C7BC5C4E80E6D205B155064B0 /* GoogleMaps */ = {
+		158E6831F5A16D8EA09B1165D9A4BF5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9976576DF7F2F8DE61081827F8ED6B6A /* Base */,
-				AFFDA7686E68661F2D9D96E3EA31E464 /* Maps */,
+				3AE8E4DFF6F0B49503E0DAFCC226CBF2 /* FirebaseInstanceID.framework */,
 			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1A2EAB939B8278293279BE788052E78E /* Resources */ = {
+		16BB1DC5931289BC7FB7FA38EFD258C7 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				7B0415382F8D68EB788FA669737347FD /* GoogleMaps.bundle */,
+				42BAE587378EB0D277A38C0B77DA97C8 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		1D3E3FC071A112232863AA19739CEA47 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB4E6B2501A2DD211BE7F6CAC9764D5A /* GooglePlaces.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		2FF1667C3502A82CB3AB30E85272882F /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				684C46E9CE7AE1861515EF67D96AE108 /* Defines */,
+				7844BE0A921A394F9375D0557BBC9981 /* NSData+zlib */,
+				94FF66157ABFF0C3DDA6663D3CFD80AC /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		35C8A319EEE65FC84EF62FDD3293B6A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88490AB4EE22CEBC2D87E4B181B04253 /* GoogleMaps.framework */,
+				C5BBA707E7C275B7A7FCF677058CC099 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3688BE502E690F81C404611916B3F132 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DA0BA6B8F879766A2CBC55D1D868964 /* Firebase */,
+				16BB1DC5931289BC7FB7FA38EFD258C7 /* FirebaseAnalytics */,
+				E81F69846C5B6D96E5F3979D1C865367 /* FirebaseCore */,
+				D22D6824EC3839A06852228F3BCD1F09 /* FirebaseDatabase */,
+				A53826F22991AA6D63FFD25E4BB2FFC1 /* FirebaseInstanceID */,
+				E8527C1E25BFDD11FFF95CC7CF874CCF /* GoogleInterchangeUtilities */,
+				A65E5E7CEFEFB863D7BC903636D071C5 /* GoogleMaps */,
+				EB4E06876C5CBDAE9B7A7DB555BDBD72 /* GooglePlaces */,
+				CFBCD1E29650FF927B3D0C9D0AAA1AF2 /* GoogleSymbolUtilities */,
+				2FF1667C3502A82CB3AB30E85272882F /* GoogleToolboxForMac */,
+				4EC81768EDE589E3D6D6EF9B570792D3 /* Kingfisher */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		38599B275E14A40EAD72F75B51AE5FF5 /* Targets Support Files */ = {
@@ -162,6 +238,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		42BAE587378EB0D277A38C0B77DA97C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8976927CDB1B8817D1E534D2C9A9910 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,18 +254,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		54CEBC305C4E4D35839E538B1481ED3B /* Support Files */ = {
+		4EC81768EDE589E3D6D6EF9B570792D3 /* Kingfisher */ = {
 			isa = PBXGroup;
 			children = (
-				92359D55237428760DDB2E03FD3FDECE /* Info.plist */,
-				AF5134C33F9E604B44BA0FEBC390A447 /* Kingfisher.modulemap */,
-				FA53B1A80D738948C20F03BD441DCFED /* Kingfisher.xcconfig */,
-				74EE6F6B1FE23FCE9F2CFD2C6604F718 /* Kingfisher-dummy.m */,
-				DCCAF52E9543C8177B2FFD499691D160 /* Kingfisher-prefix.pch */,
-				F6ABD8E6D5502D4BCB070DC959E16073 /* Kingfisher-umbrella.h */,
+				17DCFB4ABBB9B93E7CEF0C70DB3E363F /* AnimatedImageView.swift */,
+				8A691679E62866866F9C07CC4CB06B7E /* Box.swift */,
+				A22D8B5F2662903E2C8754277585B611 /* CacheSerializer.swift */,
+				828B0DB9B8418D305C20008D9393D66C /* Filter.swift */,
+				E61A062CB2A1C34C7101F0BFEB3D4CE8 /* Image.swift */,
+				4CBAA1553C9F327C39B5CD1769E8C768 /* ImageCache.swift */,
+				330091A8E7CB0A0656E399E2491D1460 /* ImageDownloader.swift */,
+				2828A0AD644D0838D9210AF778AD7054 /* ImagePrefetcher.swift */,
+				1A79F89535B1C69B34D59A47B0886EC9 /* ImageProcessor.swift */,
+				964FBF06EE2EB6C10F728DF5E4A42814 /* ImageTransition.swift */,
+				85323CA982DE18E01229AAAED2E4BD08 /* ImageView+Kingfisher.swift */,
+				F42F760700D12E4ACF24D2B27E1EBDD0 /* Indicator.swift */,
+				51CC2D3396D27149A0F018530323FC01 /* Kingfisher.h */,
+				EAB7FD9D25A1453923B571AFC9CD22DD /* Kingfisher.swift */,
+				340B29E81C74C289C976EA570CE07863 /* KingfisherManager.swift */,
+				CE85E374C9B52D310359FCB08E293B7F /* KingfisherOptionsInfo.swift */,
+				AE07D033AE9047A2F7416C4F943382E7 /* RequestModifier.swift */,
+				B118323A93444D955DB9CE22A27AB77D /* Resource.swift */,
+				4CEB7ACDE41E4DA8BFECD5A97326692C /* String+MD5.swift */,
+				26E6A26DC41E187AF9F92323D4DE8FDA /* ThreadHelper.swift */,
+				4BD848067E7A4A3013FD0AC8DE12E67A /* UIButton+Kingfisher.swift */,
+				88119F0AD502F7AFFE158DCA61733FEC /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Kingfisher";
+			name = Kingfisher;
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		5B0528202DB375E22140B8231D67B198 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFEBD2AFE3F7A667460D84E473F135 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		684C46E9CE7AE1861515EF67D96AE108 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				B713649AB2E5E8CB746823A5CC2FBC5A /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		68AA9A10F682C58AE2E785805515C694 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A295B4844514C4F62A5FB5EB9AE93242 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		6CBC1B403D8FABC087FF092E3CAAF708 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAF249EAB1057850C29984219686599B /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7844BE0A921A394F9375D0557BBC9981 /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				D115013F140C280AD86518319D93E7C5 /* GTMNSData+zlib.h */,
+				9F60D5806FB9052E4CA5C0EFEECCE532 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		7DA0BA6B8F879766A2CBC55D1D868964 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D081F38A0391ADA7F03851BF8C2DBF90 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -189,111 +339,143 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				947EC8330BF9019F0D540299F9C4C3FE /* Pods */,
-				D860E1D585D920D3C0180F43E2592AAF /* Products */,
+				3688BE502E690F81C404611916B3F132 /* Pods */,
+				CC155035B4ABCBC9ACF16CB56D064F5F /* Products */,
 				38599B275E14A40EAD72F75B51AE5FF5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		84B84A44E3870EA7984AF443A962E76F /* Frameworks */ = {
+		7F368A6D442966E7DCF50BDBD28E800E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CFBDDC54967C767FACF66FA3EB33768F /* GooglePlaces.framework */,
+				1AE95D248534F1AE14E1D6F7375C48A6 /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		947EC8330BF9019F0D540299F9C4C3FE /* Pods */ = {
+		88119F0AD502F7AFFE158DCA61733FEC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				12765B1C7BC5C4E80E6D205B155064B0 /* GoogleMaps */,
-				A75F76BC71F11AE3A60F634A2090A2CC /* GooglePlaces */,
-				ACA1F3C5F357A11FDDC8C8239639F607 /* Kingfisher */,
+				DE7078AEEC7AAD0F0F3EDC093E91704E /* Info.plist */,
+				585D8B69734AC3467366A595C20E5B06 /* Kingfisher.modulemap */,
+				6B88905B0B6A79100B6ADDB47E9A557D /* Kingfisher.xcconfig */,
+				17DE3B806C85EFF1E73CDDD076D74E19 /* Kingfisher-dummy.m */,
+				97CA8BB6E9D36CE56B51A0D54C33EA77 /* Kingfisher-prefix.pch */,
+				A56862E46A0CED3907E23359C1407A69 /* Kingfisher-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
 			sourceTree = "<group>";
 		};
-		9976576DF7F2F8DE61081827F8ED6B6A /* Base */ = {
+		94FF66157ABFF0C3DDA6663D3CFD80AC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B7633C6107193A627877FDC7C7F5F390 /* Frameworks */,
+				4BD218C798F885A3A00BB824B1772484 /* GoogleToolboxForMac.modulemap */,
+				3566186F4A3D489161D9CD738E294D4D /* GoogleToolboxForMac.xcconfig */,
+				2D9F65C036D32BA44BA2E07FEC785FFD /* GoogleToolboxForMac-dummy.m */,
+				2F599161B55C1BD53A0E69F57540CCC9 /* GoogleToolboxForMac-prefix.pch */,
+				FD42A5C4F45EB4C43E843EDEB0953B58 /* GoogleToolboxForMac-umbrella.h */,
+				A294215C0AA71D73287833F91E386440 /* Info.plist */,
 			);
-			name = Base;
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
 			sourceTree = "<group>";
 		};
-		A75F76BC71F11AE3A60F634A2090A2CC /* GooglePlaces */ = {
+		A295B4844514C4F62A5FB5EB9AE93242 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84B84A44E3870EA7984AF443A962E76F /* Frameworks */,
-				00345324AE65637278EC81CA1B645759 /* Resources */,
+				C45C9ADAE65CFEAF3365398154DAA8AA /* GoogleMapsBase.framework */,
 			);
-			name = GooglePlaces;
-			path = GooglePlaces;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ACA1F3C5F357A11FDDC8C8239639F607 /* Kingfisher */ = {
+		A53826F22991AA6D63FFD25E4BB2FFC1 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				5C11589D04EEA23EC6B87FAD0C49B2A7 /* AnimatedImageView.swift */,
-				E7F08C33C06B03F09E5135A0D3818B89 /* Box.swift */,
-				0058CF38AF61896EEA6BF4164DB00340 /* CacheSerializer.swift */,
-				8DFF9287B8FBB9FA80F432A8224E0843 /* Filter.swift */,
-				3015690684D49DB67A8A1920FCA89B34 /* Image.swift */,
-				0C3032F82E07B0E61E81168C84825ED3 /* ImageCache.swift */,
-				913E2E0BE69C34F0A65C81780EC0C3E7 /* ImageDownloader.swift */,
-				6B2018E90C3574C1934204EDD328991B /* ImagePrefetcher.swift */,
-				37800C75417F955A4509739DD8B242CA /* ImageProcessor.swift */,
-				5FCF624B58232C335DBFAEFD05BA740C /* ImageTransition.swift */,
-				9B308B0E96F8F41E16C110127B1A0DAC /* ImageView+Kingfisher.swift */,
-				8C0FB28649C775F98B685BC602725FE2 /* Indicator.swift */,
-				10EF6A8146F7C67F3391FCFFD94266B9 /* Kingfisher.h */,
-				3CEB17270129091C08CCEB545D351207 /* Kingfisher.swift */,
-				E41D75DF662E7A71AB8B47166E99C161 /* KingfisherManager.swift */,
-				F57168AC38FC9B2656C54288E91C8A5B /* KingfisherOptionsInfo.swift */,
-				92359D3ADEE211AD31102CEE700376AA /* RequestModifier.swift */,
-				FD45AA874F41FA3FC2EC3F4631B7B648 /* Resource.swift */,
-				C9073206DC5C483C81610F37976BAC75 /* String+MD5.swift */,
-				33AEC90897D5BE268F6A1BC8B698BB48 /* ThreadHelper.swift */,
-				B21D7275FB1F4A8E703FC516AC5A2E31 /* UIButton+Kingfisher.swift */,
-				54CEBC305C4E4D35839E538B1481ED3B /* Support Files */,
+				17721E63D368E0FFF79EA2ED07A68D39 /* FIRInstanceID.h */,
+				158E6831F5A16D8EA09B1165D9A4BF5D /* Frameworks */,
 			);
-			name = Kingfisher;
-			path = Kingfisher;
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		AFFDA7686E68661F2D9D96E3EA31E464 /* Maps */ = {
+		A65E5E7CEFEFB863D7BC903636D071C5 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				E7886278E3F81CCCE1EABFC686FC675E /* Frameworks */,
-				1A2EAB939B8278293279BE788052E78E /* Resources */,
+				68AA9A10F682C58AE2E785805515C694 /* Base */,
+				A81D2BE67BB1B5711C8BBEC74A46C99C /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		A81D2BE67BB1B5711C8BBEC74A46C99C /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				35C8A319EEE65FC84EF62FDD3293B6A2 /* Frameworks */,
+				CE81DA14100AA3F922247B5D1F6DB718 /* Resources */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
 		};
-		B7633C6107193A627877FDC7C7F5F390 /* Frameworks */ = {
+		AD6858897774859B6F20D79638DCB02C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				008592FEB6F5ABDDF6DB37D8AE019211 /* GoogleMapsBase.framework */,
+				EC791187AD89A7DF1896257690968964 /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D860E1D585D920D3C0180F43E2592AAF /* Products */ = {
+		B381BCED6E3440A845E46425AEB8638F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A57E6EC9F4ED21E0678C2A74B5F8D7D /* Kingfisher.framework */,
-				8A56B7BA8F8A2CBCAB927A9DA4869368 /* Pods_ArtNYC.framework */,
+				7BE030C42450554774976BA11DA473B8 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC155035B4ABCBC9ACF16CB56D064F5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DA87F231244814AA8EBB8AEC163AE /* GoogleToolboxForMac.framework */,
+				93AFB17AC439A55921BAEE9E902B5F7D /* Kingfisher.framework */,
+				38072E1A9F6238B11C78AB3078861270 /* Pods_ArtNYC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E7886278E3F81CCCE1EABFC686FC675E /* Frameworks */ = {
+		CE81DA14100AA3F922247B5D1F6DB718 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C42046ED00F075EE10D9CA6FB3F6646D /* GoogleMaps.framework */,
-				20F51438A5A7F621931C24E026B7B703 /* GoogleMapsCore.framework */,
+				FBA52B48A25E57561AFBB17466367050 /* GoogleMaps.bundle */,
 			);
-			name = Frameworks;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CFBCD1E29650FF927B3D0C9D0AAA1AF2 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				B381BCED6E3440A845E46425AEB8638F /* Frameworks */,
+			);
+			name = GoogleSymbolUtilities;
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		D081F38A0391ADA7F03851BF8C2DBF90 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				66DE31DCF995FDDC7E3CD195F2F04114 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D22D6824EC3839A06852228F3BCD1F09 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				AD6858897774859B6F20D79638DCB02C /* Frameworks */,
+			);
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
 		E7F0DC008773C54A8D90461DC900211B /* Pods-ArtNYC */ = {
@@ -314,6 +496,34 @@
 			path = "Target Support Files/Pods-ArtNYC";
 			sourceTree = "<group>";
 		};
+		E81F69846C5B6D96E5F3979D1C865367 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				6CBC1B403D8FABC087FF092E3CAAF708 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		E8527C1E25BFDD11FFF95CC7CF874CCF /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				7F368A6D442966E7DCF50BDBD28E800E /* Frameworks */,
+			);
+			name = GoogleInterchangeUtilities;
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		EB4E06876C5CBDAE9B7A7DB555BDBD72 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				5B0528202DB375E22140B8231D67B198 /* Frameworks */,
+				1D3E3FC071A112232863AA19739CEA47 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -326,33 +536,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5947D31D9200692AD726AE378E050F25 /* Headers */ = {
+		18779E70891094615E703E8DFFE4EC1B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20C4B562EF3D283E94A5C8DA7029A027 /* Pods-ArtNYC-umbrella.h in Headers */,
+				DF054ACFF912060A5944AFC6030B1D42 /* Pods-ArtNYC-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2783A4C810FD7AED4E5A213AC07BD886 /* Pods-ArtNYC */ = {
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA11E1557CA594151BCDA6E5BD2043EA /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
 			buildPhases = (
-				03B6A9EF6493DED25CF4FFB4E8B5C62A /* Sources */,
-				77EB5C1016F731AB8FD2374B1CA6C06F /* Frameworks */,
-				5947D31D9200692AD726AE378E050F25 /* Headers */,
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FF3DBECEF2BE1820D6E3EA897F3922E /* PBXTargetDependency */,
+			);
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = BA3DA87F231244814AA8EBB8AEC163AE /* GoogleToolboxForMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		45FC933352DCC91E89728F3527D21681 /* Pods-ArtNYC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A838A5305CA3E5F6641D70D87278D610 /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */;
+			buildPhases = (
+				1853E56B6DC95F9A0351A5BFEC789B1E /* Sources */,
+				EBF1939D47C67FE27D706F1A3C5E5810 /* Frameworks */,
+				18779E70891094615E703E8DFFE4EC1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A28C0D86594AAB298E80C98AD1A8F484 /* PBXTargetDependency */,
+				B4E9E4698D5EECAEE81D3479B93A6B87 /* PBXTargetDependency */,
 			);
 			name = "Pods-ArtNYC";
 			productName = "Pods-ArtNYC";
-			productReference = 8A56B7BA8F8A2CBCAB927A9DA4869368 /* Pods_ArtNYC.framework */;
+			productReference = 38072E1A9F6238B11C78AB3078861270 /* Pods_ArtNYC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4944FEC314D1A66588651D006273ADE /* Kingfisher */ = {
@@ -369,7 +607,7 @@
 			);
 			name = Kingfisher;
 			productName = Kingfisher;
-			productReference = 9A57E6EC9F4ED21E0678C2A74B5F8D7D /* Kingfisher.framework */;
+			productReference = 93AFB17AC439A55921BAEE9E902B5F7D /* Kingfisher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -389,22 +627,32 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D860E1D585D920D3C0180F43E2592AAF /* Products */;
+			productRefGroup = CC155035B4ABCBC9ACF16CB56D064F5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
 				C4944FEC314D1A66588651D006273ADE /* Kingfisher */,
-				2783A4C810FD7AED4E5A213AC07BD886 /* Pods-ArtNYC */,
+				45FC933352DCC91E89728F3527D21681 /* Pods-ArtNYC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		03B6A9EF6493DED25CF4FFB4E8B5C62A /* Sources */ = {
+		1853E56B6DC95F9A0351A5BFEC789B1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EECACDDD05DA14DDE47091689ECDA72 /* Pods-ArtNYC-dummy.m in Sources */,
+				3BB188E18E346DC92DDC385BF0D4B0D0 /* Pods-ArtNYC-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,16 +687,54 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5FF3DBECEF2BE1820D6E3EA897F3922E /* PBXTargetDependency */ = {
+		A28C0D86594AAB298E80C98AD1A8F484 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = D7516A1ACBFA8A1878F092A8E0B2C690 /* PBXContainerItemProxy */;
+		};
+		B4E9E4698D5EECAEE81D3479B93A6B87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
 			target = C4944FEC314D1A66588651D006273ADE /* Kingfisher */;
-			targetProxy = E0CC6F8CD7259D0AE3F19E6F7A041F32 /* PBXContainerItemProxy */;
+			targetProxy = D859C735AA1B8CFEF0B1C23F06180A59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		23793BF345D2B69FE9650D0116CDEF0B /* Release */ = {
+		380C30050278E488BE23DB926933212E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B88905B0B6A79100B6ADDB47E9A557D /* Kingfisher.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D591ABCBDE43DBB52A91C2A1F0A25E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81DE3363E61F6F5011EFB53EB3A747BF /* Pods-ArtNYC.release.xcconfig */;
 			buildSettings = {
@@ -477,38 +763,6 @@
 				PRODUCT_NAME = Pods_ArtNYC;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		380C30050278E488BE23DB926933212E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA53B1A80D738948C20F03BD441DCFED /* Kingfisher.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Kingfisher;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -557,7 +811,7 @@
 		};
 		6E53245BBAAAB71AD4E0EE52CA99FD28 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA53B1A80D738948C20F03BD441DCFED /* Kingfisher.xcconfig */;
+			baseConfigurationReference = 6B88905B0B6A79100B6ADDB47E9A557D /* Kingfisher.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -588,9 +842,9 @@
 			};
 			name = Debug;
 		};
-		7034523DC95B65FB19AF468D73286567 /* Debug */ = {
+		D60CD877A708870E2BE96B83BA32F883 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47B12500692EED097FA9B15B48115799 /* Pods-ArtNYC.debug.xcconfig */;
+			baseConfigurationReference = 3566186F4A3D489161D9CD738E294D4D /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -603,21 +857,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ArtNYC/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ArtNYC/Pods-ArtNYC.modulemap";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ArtNYC;
+				PRODUCT_NAME = GoogleToolboxForMac;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -668,6 +918,74 @@
 			};
 			name = Debug;
 		};
+		F066921CBDBDB5F45795E50FBC5AC972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3566186F4A3D489161D9CD738E294D4D /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F5E407F7D8E56C927FFE5F87DDFEA187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B12500692EED097FA9B15B48115799 /* Pods-ArtNYC.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ArtNYC/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ArtNYC/Pods-ArtNYC.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ArtNYC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -689,11 +1007,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA11E1557CA594151BCDA6E5BD2043EA /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */ = {
+		A838A5305CA3E5F6641D70D87278D610 /* Build configuration list for PBXNativeTarget "Pods-ArtNYC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7034523DC95B65FB19AF468D73286567 /* Debug */,
-				23793BF345D2B69FE9650D0116CDEF0B /* Release */,
+				F5E407F7D8E56C927FFE5F87DDFEA187 /* Debug */,
+				4D591ABCBDE43DBB52A91C2A1F0A25E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60CD877A708870E2BE96B83BA32F883 /* Debug */,
+				F066921CBDBDB5F45795E50FBC5AC972 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -384,7 +384,7 @@ class MuseumDataStore {
                               address: "22-25 Jackson Ave",
                               hours: "",
                               ticketPrice: "$10 (suggested)",
-                              freeHours: "Pay what you wish everyday",
+                              freeHours: "Pay what you wish, everyday",
                               freeDay: [1,2,3,4,5,6,7],
                               artCategories: "Contemporary",
                               coordinate: CLLocationCoordinate2D(latitude: 40.7454941, longitude: -73.9495512),
