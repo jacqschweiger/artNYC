@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+import Firebase
 
 class MuseumDataStore {
     
@@ -20,7 +21,17 @@ class MuseumDataStore {
     var freeAdmissionSwitchIsOn: Bool = false
     var openLateSwitchIsOn: Bool = false
     
+    
+    let ref = FIRDatabase.database().reference(withPath: "museums")
+    
+    
+    
     func loadMuseums() {
+        
+        
+        
+        
+        
         let metMuseum = Museum(title: "Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
                                address: "1000 5th Ave",
