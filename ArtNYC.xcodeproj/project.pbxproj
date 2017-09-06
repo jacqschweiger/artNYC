@@ -13,6 +13,7 @@
 		711E5EB21F4BBFE1003AE04F /* GoogleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */; };
 		711E5EB41F4BD308003AE04F /* FreeTodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E5EB31F4BD308003AE04F /* FreeTodayVC.swift */; };
 		711E5EB61F4BD61A003AE04F /* FreeTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E5EB51F4BD61A003AE04F /* FreeTodayView.swift */; };
+		7123A70E1F607B4700EBE6F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7123A70D1F607B4700EBE6F7 /* GoogleService-Info.plist */; };
 		7132CBF51E29752C008CA655 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF41E29752C008CA655 /* MapVC.swift */; };
 		7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132CBF61E2978A8008CA655 /* DetailVC.swift */; };
 		713D5F131E295DA500DD76FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F121E295DA500DD76FA /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIClient.swift; sourceTree = "<group>"; };
 		711E5EB31F4BD308003AE04F /* FreeTodayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTodayVC.swift; sourceTree = "<group>"; };
 		711E5EB51F4BD61A003AE04F /* FreeTodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTodayView.swift; sourceTree = "<group>"; };
+		7123A70D1F607B4700EBE6F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7132CBF41E29752C008CA655 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7132CBF61E2978A8008CA655 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		713D5F0F1E295DA500DD76FA /* ArtNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 		713D5F061E295DA500DD76FA = {
 			isa = PBXGroup;
 			children = (
+				7123A70D1F607B4700EBE6F7 /* GoogleService-Info.plist */,
 				713D5F111E295DA500DD76FA /* ArtNYC */,
 				713D5F291E295DA500DD76FA /* ArtNYCTests */,
 				713D5F101E295DA500DD76FA /* Products */,
@@ -298,6 +301,7 @@
 			files = (
 				713D5F201E295DA500DD76FA /* LaunchScreen.storyboard in Resources */,
 				713D5F1D1E295DA500DD76FA /* Assets.xcassets in Resources */,
+				7123A70E1F607B4700EBE6F7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

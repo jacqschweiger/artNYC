@@ -49,4 +49,5 @@ class Museum: NSObject, MKAnnotation {
         
         super.init()
     }
+    
 }

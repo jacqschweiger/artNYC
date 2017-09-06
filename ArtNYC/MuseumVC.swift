@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import GooglePlaces
+import FirebaseDatabase
 
 class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
@@ -18,7 +19,35 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        store.ref.observe(.value, with: { (snapshot) in
+            var fbMuseums: [Museum] = []
+            
+            print("snapshot: \(snapshot)")
+            
+//            for item in snapshot.children {
+//                let newFBMuseum = Museum(snapshot: item as! FIRDataSnapshot)
+//                fbMuseums.append(newFBMuseum)
+//            }
+        })
     }
+    
+    //
+//    ref.observe(.value, with: { snapshot in
+//    // 2
+//    var newItems: [GroceryItem] = []
+//    
+//    // 3
+//    for item in snapshot.children {
+//    // 4
+//    let groceryItem = GroceryItem(snapshot: item as! FIRDataSnapshot)
+//    newItems.append(groceryItem)
+//    }
+//    
+//    // 5
+//    self.items = newItems
+//    self.tableView.reloadData()
+//    })
     
     override func loadView() {
         self.museumView = MuseumView()

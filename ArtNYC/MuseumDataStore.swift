@@ -14,6 +14,7 @@ import FirebaseDatabase
 class MuseumDataStore {
     
     static let sharedInstance = MuseumDataStore()
+    let ref = FIRDatabase.database().reference(withPath: "museums")
     
     var filteredMuseums: [Museum] = []
     var allMuseums: [Museum] = []
@@ -22,13 +23,9 @@ class MuseumDataStore {
     var openLateSwitchIsOn: Bool = false
     
     
-    let ref = FIRDatabase.database().reference(withPath: "museums")
+
     
     func loadMuseums() {
-        
-        
-        
-        
         
         let metMuseum = Museum(title: "Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
