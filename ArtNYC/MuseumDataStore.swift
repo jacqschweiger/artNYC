@@ -32,12 +32,8 @@ class MuseumDataStore {
             print("*****\(snapshot.childSnapshot(forPath: "brooklyn"))")
             guard let childSnapshot = snapshot.childSnapshot(forPath: "brooklyn") as? FIRDataSnapshot else { return }
             
-            print(childSnapshot)
-            
             guard let brooklynData = childSnapshot.value as? [String:AnyObject] else {return}
-            
-            print(brooklynData)
-            
+
             print("*** \(brooklynData["address"])")
                 
                 
