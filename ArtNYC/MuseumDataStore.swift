@@ -26,13 +26,27 @@ class MuseumDataStore {
 
     
     func loadMuseums() {
-        
+        print("load called")
         ref.observe(.value, with: { (snapshot) in
-            for item in snapshot.children {
-                print("item: \(item)")
+            
+            print("*****\(snapshot.childSnapshot(forPath: "brooklyn"))")
+            guard let childSnapshot = snapshot.childSnapshot(forPath: "brooklyn") as? FIRDataSnapshot else { return }
+            
+            print(childSnapshot)
+            
+            guard let brooklynData = childSnapshot.value as? [String:AnyObject] else {return}
+            
+            print(brooklynData)
+            
+            print("*** \(brooklynData["address"])")
+                
+                
+                
+//            for item in snapshot.children {
+//                print("item: \(item)")
+                
 //                let newFBMuseum = Museum(snapshot: snapshot)
 //                self.allMuseums.append(newFBMuseum!)
-            }
         })
 
         
