@@ -28,31 +28,13 @@ class MuseumDataStore {
     func loadMuseums() {
         
         ref.observe(.value, with: { (snapshot) in
-            print("snapshot: \(snapshot)")
-            
-            
-            
             for item in snapshot.children {
-            
-                
-//                let newFBMuseum = Museum(title: <#T##String#>, logo: <#T##UIImage#>, address: <#T##String#>, hours: <#T##String#>, ticketPrice: <#T##String#>, freeHours: <#T##String#>, freeDay: <#T##[Int]#>, artCategories: <#T##String#>, coordinate: <#T##CLLocationCoordinate2D#>, url: <#T##String#>, interiorMapView: <#T##Bool#>, openLate: <#T##Bool#>, freeAdmission: <#T##Bool#>, imageURL: <#T##String#>, imageCredit: <#T##String#>, placeID: <#T##String#>)
-//                
-//                self.allMuseums.append(newFBMuseum)
+                print("item: \(item)")
+//                let newFBMuseum = Museum(snapshot: snapshot)
+//                self.allMuseums.append(newFBMuseum!)
             }
-            
-            
-            
         })
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
         let metMuseum = Museum(title: "Metropolitan Museum of Art",
                                logo: UIImage(named: "metLogo")!,
