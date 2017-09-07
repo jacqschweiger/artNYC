@@ -61,8 +61,13 @@ class Museum: NSObject, MKAnnotation {
         freeHours = snapshotValue["freeHours"] as! String
         freeDay = snapshotValue["freeDay"] as! [Int]
         artCategories = snapshotValue["artCategories"] as! String
-        guard let coordinates = snapshotValue["coordinate"] as? [String : Int] else { return }
-        coordinate = CLLocationCoordinate2D(latitude: coordinates["latitude"] as? Int, longitude: coordinates["longitude"] as! Int)
+        coordinate = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
+//        let coordinates = snapshotValue["coordinate"] as! [String : Double]
+//        guard let latitude = coordinates["latitude"] as? Double else { return }
+//        guard let longitude = coordinates["longitude"] as? Double else { return }
+//        coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        openLate = snapshotValue["openLate"] as! Bool
+        freeAdmission = snapshotValue["openLate"] as! Bool
         url = snapshotValue["url"] as! String
         interiorMapView = snapshotValue["interiorMapView"] as! Bool
         imageURL = snapshotValue["imageURL"] as! String
