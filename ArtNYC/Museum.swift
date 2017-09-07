@@ -52,12 +52,22 @@ class Museum: NSObject, MKAnnotation {
     }
     
     init(snapshot: FIRDataSnapshot) {
-//        key = snapshot.key
-//        let snapshotValue = snapshot.value as! [String: AnyObject]
-//        name = snapshotValue["name"] as! String
-//        addedByUser = snapshotValue["addedByUser"] as! String
-//        completed = snapshotValue["completed"] as! Bool
-//        ref = snapshot.ref
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        title = snapshotValue["title"] as! String
+        address = snapshotValue["address"] as! String
+        logo = UIImage(named: snapshotValue["logo"] as! String)!
+        hours = snapshotValue["hours"] as! String
+        ticketPrice = snapshotValue["ticketPrice"] as! String
+        freeHours = snapshotValue["freeHours"] as! String
+        freeDay = snapshotValue["freeDay"] as! [Int]
+        artCategories = snapshotValue["artCategories"] as! String
+        guard let coordinates = snapshotValue["coordinate"] as? [String : Int] else { return }
+        coordinate = CLLocationCoordinate2D(latitude: coordinates["latitude"] as? Int, longitude: coordinates["longitude"] as! Int)
+        url = snapshotValue["url"] as! String
+        interiorMapView = snapshotValue["interiorMapView"] as! Bool
+        imageURL = snapshotValue["imageURL"] as! String
+        imageCredit = snapshotValue["imageCredit"] as! String
+        placeID = snapshotValue["placeID"] as! String
     }
     
 }
