@@ -32,7 +32,8 @@ class MuseumDataStore {
             for item in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 guard let itemDict = item.value as? [String: Any] else { return }
                 guard let title = itemDict["title"] as? String else { return }
-                guard let logo = itemDict["logo"] as? String else { return }
+                guard let logoString = itemDict["logo"] as? String else { return }
+                guard let logo = UIImage(named: logoString) else { return }
                 guard let address = itemDict["address"] as? String else { return }
                 guard let hours = itemDict["hours"] as? String else { return }
                 guard let freeHours = itemDict["freeHours"] as? String else { return }
@@ -40,16 +41,17 @@ class MuseumDataStore {
                 guard let artCategories = itemDict["artCategories"] as? String else { return }
                 let coordinate = CLLocationCoordinate2D(latitude: -40, longitude: 70)
                 guard let url = itemDict["url"] as? String else { return }
-                guard let interiorMapView = itemDict["interiorMapView"] as? String else { return }
+                guard let interiorMapView = itemDict["interiorMapView"] as? Bool else { return }
                 guard let openLate = itemDict["openLate"] as? Bool else { return }
                 guard let freeAdmission = itemDict["freeAdmission"] as? Bool else { return }
                 guard let imageURL = itemDict["imageURL"] as? String else { return }
                 guard let imageCredit = itemDict["imageCredit"] as? String else { return }
                 guard let placeID = itemDict["placeID"] as? String else { return }
+                guard let ticketPrice = itemDict["ticketPrice"] as? String else { return }
 
                 
-                let newFBMuseum = Museum(title: title, logo: logo, address: address, hours: hours, ticketPrice: ticketPrice, freeHours: freeHours, freeDay: freeDay, artCategories: artCategories, coordinate: coordinate, url: url, interiorMapView: interiorMapView, openLate: openLate, freeAdmission: freeAdmission, imageURL: imageURL, imageCredit: imageCredeit, placeID: placeID)
-                
+                let newFBMuseum = Museum(title: title, logo: logo, address: address, hours: hours, ticketPrice: ticketPrice, freeHours: freeHours, freeDay: freeDay, artCategories: artCategories, coordinate: coordinate, url: url, interiorMapView: interiorMapView, openLate: openLate, freeAdmission: freeAdmission, imageURL: imageURL, imageCredit: imageCredit, placeID: placeID)
+                print("******\n\n\n\\n\n\(newFBMuseum.title)")
                 self.allMuseums.append(newFBMuseum)
             }
 
