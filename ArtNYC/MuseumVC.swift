@@ -18,6 +18,8 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        store.loadMuseums()
     }
     
     override func loadView() {
@@ -28,6 +30,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -11,12 +11,11 @@ import UIKit
 
 class TabBarVC: UITabBarController {
     
-    var store = MuseumDataStore.sharedInstance
+    //var store = MuseumDataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.loadMuseums()
     }
     
     override func viewWillAppear(_ animated: Bool) {

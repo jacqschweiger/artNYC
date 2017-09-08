@@ -51,7 +51,7 @@ class MuseumDataStore {
 
                 
                 let newFBMuseum = Museum(title: title, logo: logo, address: address, hours: hours, ticketPrice: ticketPrice, freeHours: freeHours, freeDay: freeDay, artCategories: artCategories, coordinate: coordinate, url: url, interiorMapView: interiorMapView, openLate: openLate, freeAdmission: freeAdmission, imageURL: imageURL, imageCredit: imageCredit, placeID: placeID)
-                print("******\n\n\n\\n\n\(newFBMuseum.title)")
+                print("******\n\n\n\\n\n\(newFBMuseum.title!)!")
                 self.allMuseums.append(newFBMuseum)
             }
 
