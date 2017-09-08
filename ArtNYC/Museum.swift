@@ -51,9 +51,5 @@ class Museum: NSObject, MKAnnotation {
         super.init()
     }
     
-    convenience init(title: String, address: String) {
-        self.init(title: title, address: address)
-    }
-    
     
 }
