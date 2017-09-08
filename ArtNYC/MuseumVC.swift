@@ -20,6 +20,9 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         super.viewDidLoad()
         
         store.loadMuseums()
+        store.getHours {
+            print("Called get hours")
+        }
     }
     
     override func loadView() {

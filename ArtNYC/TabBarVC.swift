@@ -11,8 +11,6 @@ import UIKit
 
 class TabBarVC: UITabBarController {
     
-    //var store = MuseumDataStore.sharedInstance
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
