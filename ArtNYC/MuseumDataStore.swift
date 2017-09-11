@@ -41,7 +41,13 @@ class MuseumDataStore {
                 guard let freeHours = itemDict["freeHours"] as? String else { return }
                 guard let freeDay = itemDict["freeDay"] as? [Int] else { return }
                 guard let artCategories = itemDict["artCategories"] as? String else { return }
-                let coordinate = CLLocationCoordinate2D(latitude: -40, longitude: 70)
+                
+                guard let coordinates = itemDict["coordinate"] as? [String: AnyObject] else { return }
+                print(coordinates)
+                guard let latitude = coordinates["latitude"] as? Double else { return }
+                guard let longitude = coordinates["longitude"] as? Double else { return }
+                let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                
                 guard let url = itemDict["url"] as? String else { return }
                 guard let interiorMapView = itemDict["interiorMapView"] as? Bool else { return }
                 guard let openLate = itemDict["openLate"] as? Bool else { return }
