@@ -14,6 +14,7 @@ import FirebaseDatabase
 class MuseumDataStore {
     
     static let sharedInstance = MuseumDataStore()
+    fileprivate init() {}
     let ref = FIRDatabase.database().reference(withPath: "museums")
     
     var filteredMuseums: [Museum] = []
@@ -23,13 +24,10 @@ class MuseumDataStore {
     var openLateSwitchIsOn: Bool = false
     
     func loadMuseums(completion: @escaping () -> ()) {
-        print("load museums called")
         
         if self.allMuseums.count == 0 {
         
         ref.observe(.value, with: { (snapshot) in
-            
-            print("snapshot count = \(snapshot.children.allObjects.count)")
             
             for item in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 guard let itemDict = item.value as? [String: Any] else { return }

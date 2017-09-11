@@ -19,11 +19,13 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.loadMuseums {
-            self.store.getHours {
-                
+        self.store.loadMuseums {
+            OperationQueue.main.addOperation {
+                self.reloadInputViews()
+                self.museumView.museumCollectionView.reloadData()
             }
         }
+        
     }
     
     override func loadView() {
