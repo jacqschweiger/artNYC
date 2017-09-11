@@ -14,7 +14,8 @@ import FirebaseDatabase
 class MuseumDataStore {
     
     static let sharedInstance = MuseumDataStore()
-    fileprivate init() {}
+    private init() {}
+    
     let ref = FIRDatabase.database().reference(withPath: "museums")
     
     var filteredMuseums: [Museum] = []
@@ -41,7 +42,6 @@ class MuseumDataStore {
                 guard let artCategories = itemDict["artCategories"] as? String else { return }
                 
                 guard let coordinates = itemDict["coordinate"] as? [String: AnyObject] else { return }
-                print(coordinates)
                 guard let latitude = coordinates["latitude"] as? Double else { return }
                 guard let longitude = coordinates["longitude"] as? Double else { return }
                 let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

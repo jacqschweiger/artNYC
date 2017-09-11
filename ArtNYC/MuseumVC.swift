@@ -20,11 +20,13 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         super.viewDidLoad()
         
         self.store.loadMuseums {
-            OperationQueue.main.addOperation {
+            DispatchQueue.main.async {
                 self.reloadInputViews()
                 self.museumView.museumCollectionView.reloadData()
             }
         }
+        
+        print("all museums: \(self.store.allMuseums.count)")
         
     }
     
@@ -36,7 +38,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
-        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +50,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
             self.museumView.museums = store.allMuseums
         }
         
-        print("** view will appear")
     }
     
     func goToDetailView(){
