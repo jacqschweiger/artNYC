@@ -22,9 +22,14 @@ class MuseumDataStore {
     var freeAdmissionSwitchIsOn: Bool = false
     var openLateSwitchIsOn: Bool = false
     
-    func loadMuseums() {
-        print("load called")
+    func loadMuseums(completion: @escaping () -> ()) {
+        print("load museums called")
+        
+        if self.allMuseums.count == 0 {
+        
         ref.observe(.value, with: { (snapshot) in
+            
+            print("snapshot count = \(snapshot.children.allObjects.count)")
             
             for item in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 guard let itemDict = item.value as? [String: Any] else { return }
@@ -48,10 +53,14 @@ class MuseumDataStore {
 
                 
                 let newFBMuseum = Museum(title: title, logo: logo, address: address, hours: hours, ticketPrice: ticketPrice, freeHours: freeHours, freeDay: freeDay, artCategories: artCategories, coordinate: coordinate, url: url, interiorMapView: interiorMapView, openLate: openLate, freeAdmission: freeAdmission, imageURL: imageURL, imageCredit: imageCredit, placeID: placeID)
-                print("******\n\n\n\\n\n\(newFBMuseum.title!)!")
+                
                 self.allMuseums.append(newFBMuseum)
             }
         })
+        
+        completion()
+            
+        }
     }
     
     

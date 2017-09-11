@@ -19,9 +19,10 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.loadMuseums()
-        store.getHours {
-            print("Called get hours")
+        store.loadMuseums {
+            self.store.getHours {
+                
+            }
         }
     }
     
@@ -44,6 +45,8 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         } else if store.filteredMuseums.count == 0 {
             self.museumView.museums = store.allMuseums
         }
+        
+        print("** view will appear")
     }
     
     func goToDetailView(){
