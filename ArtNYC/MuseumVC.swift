@@ -18,19 +18,17 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.store.loadMuseums {
-            DispatchQueue.main.async {
+        print("1")
+        self.store.loadMuseums {_ in
+            print("4")
                 self.reloadInputViews()
                 self.museumView.museumCollectionView.reloadData()
-            }
+            print("5")
         }
-        
-        print("all museums: \(self.store.allMuseums.count)")
-        
     }
     
     override func loadView() {
+        
         self.museumView = MuseumView()
         self.museumView.delegate = self
         
@@ -38,10 +36,11 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         self.navigationController?.isNavigationBarHidden = true
         
         if store.filteredMuseums.count > 0 {

@@ -25,11 +25,12 @@ class MuseumDataStore {
     var openLateSwitchIsOn: Bool = false
     
     func loadMuseums(completion: @escaping () -> ()) {
-        
+        print("2")
         if self.allMuseums.count == 0 {
-        
+        print("2.5")
+    
         ref.observe(.value, with: { (snapshot) in
-            
+            print("7")
             for item in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 guard let itemDict = item.value as? [String: Any] else { return }
                 guard let title = itemDict["title"] as? String else { return }
@@ -61,8 +62,9 @@ class MuseumDataStore {
                 self.allMuseums.append(newFBMuseum)
             }
         })
-        
+        print("3")
         completion()
+            print("6")
             
         }
     }
@@ -77,5 +79,6 @@ class MuseumDataStore {
         completion()
         
     }
+    
     
 }
