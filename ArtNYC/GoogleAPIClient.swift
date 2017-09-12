@@ -38,8 +38,4 @@ class GoogleAPIClient {
         }
     }
     
-    class func getMuseums(with completion: @escaping ([Museum])-> ()) {
-        
-    }
-    
 }
