@@ -19,13 +19,9 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MuseumDataStore.loadMuseums { (museum) in
-            DispatchQueue.main.async {
-                self.reloadInputViews()
-                self.museumView.museumCollectionView.reloadData()
-            }
+        store.loadMuseums { 
+            
         }
-        
     }
     
     override func loadView() {
