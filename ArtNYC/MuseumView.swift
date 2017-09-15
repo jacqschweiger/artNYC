@@ -22,6 +22,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     weak var delegate: MuseumViewDelegate?
+    var store = MuseumDataStore.sharedInstance
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -37,6 +38,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         museumCollectionView.register(MuseumCell.self, forCellWithReuseIdentifier: "basicCell")
         
         setUpElements()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

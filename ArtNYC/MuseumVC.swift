@@ -19,11 +19,15 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.loadMuseums { 
+        if store.allMuseums.count == 0 {
             
+            self.store.loadMuseums()
+        
         }
+        
     }
     
+
     override func loadView() {
         
         self.museumView = MuseumView()
