@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				7191AC881E295ECB00F2D06D /* Museum.swift */,
-				711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */,
 				7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */,
+				711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */,
 				7123A70F1F6237B100EBE6F7 /* Museums.swift */,
 			);
 			name = Models;

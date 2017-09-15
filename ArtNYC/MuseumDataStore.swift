@@ -16,21 +16,21 @@ class MuseumDataStore {
     static let sharedInstance = MuseumDataStore()
     private init() {}
     
-    let ref = FIRDatabase.database().reference(withPath: "museums")
-    
     var filteredMuseums: [Museum] = []
     var allMuseums: [Museum] = []
     var interiorViewSwitchIsOn: Bool = false
     var freeAdmissionSwitchIsOn: Bool = false
     var openLateSwitchIsOn: Bool = false
     
-    func loadMuseums(completion: @escaping () -> ()) {
-        print("2")
-        if self.allMuseums.count == 0 {
-        print("2.5")
-    
+    class func loadMuseums(completion: @escaping ([Museum]) -> ()) {
+        
+        let ref = FIRDatabase.database().reference(withPath: "museums")
+        var museums = [Museum]()
+        
+        print("entering load museums")
+        
         ref.observe(.value, with: { (snapshot) in
-            print("7")
+            print("entering fb call")
             for item in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 guard let itemDict = item.value as? [String: Any] else { return }
                 guard let title = itemDict["title"] as? String else { return }
@@ -55,18 +55,15 @@ class MuseumDataStore {
                 guard let imageCredit = itemDict["imageCredit"] as? String else { return }
                 guard let placeID = itemDict["placeID"] as? String else { return }
                 guard let ticketPrice = itemDict["ticketPrice"] as? String else { return }
-
+                
                 
                 let newFBMuseum = Museum(title: title, logo: logo, address: address, hours: hours, ticketPrice: ticketPrice, freeHours: freeHours, freeDay: freeDay, artCategories: artCategories, coordinate: coordinate, url: url, interiorMapView: interiorMapView, openLate: openLate, freeAdmission: freeAdmission, imageURL: imageURL, imageCredit: imageCredit, placeID: placeID)
                 
-                self.allMuseums.append(newFBMuseum)
+                museums.append(newFBMuseum)
             }
         })
-        print("3")
-        completion()
-            print("6")
-            
-        }
+        
+        completion(museums)
     }
     
     
