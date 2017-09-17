@@ -13,7 +13,6 @@ import GooglePlaces
 class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     var store = MuseumDataStore.sharedInstance
-    var fbmgr = FirebaseManager.shared
     var museumView: MuseumView!
     var filterVC: FilterVC!
     
@@ -23,14 +22,25 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         if store.allMuseums.count == 0 {
             
             store.getMuseums {
+                print("1. \(self.store.allMuseums.count)")
                 DispatchQueue.main.async {
-                    self.reloadInputViews()
+                    print("2. \(self.store.allMuseums.count)")
+                    self.museumView.museums = self.store.allMuseums
+                    
                     self.museumView.museumCollectionView.reloadData()
+                    
+                    print("3. \(self.store.allMuseums.count)")
+                    
+                    print("museums: \(self.museumView.museums.count)")
+                    
                 }
+                print("4. \(self.store.allMuseums.count)")
             }
             
+            print("5. \(self.store.allMuseums.count)")
             
         }
+
         
     }
     
@@ -44,7 +54,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
         self.filterVC = FilterVC()
         self.filterVC.delegate = self
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
