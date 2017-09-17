@@ -37,7 +37,6 @@ class MuseumDataStore {
         
         firebaseManager.getFBSnapshot { (results) in //[[String: Any]]
             for itemDict in results { //[String:Any]
-                for item in itemDict {
                     guard let title = itemDict["title"] as? String else { return }
                     guard let logoString = itemDict["logo"] as? String else { return }
                     guard let logo = UIImage(named: logoString) else { return }
@@ -65,8 +64,7 @@ class MuseumDataStore {
                     
                     self.allMuseums.append(newFBMuseum)
                     
-                    print(self.allMuseums.count)
-                }
+                
             }
         }
     }

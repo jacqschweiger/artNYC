@@ -2,7 +2,7 @@
 //  FirebaseManager.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Schweiger on 9/17/17.
+//  Created by Jacqueline Minneman on 9/17/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import FirebaseDatabase
 import UIKit
 import MapKit
 
-final class FirebaseManager {
+class FirebaseManager {
     
     static let shared = FirebaseManager()
     let ref = FIRDatabase.database().reference(withPath: "museums")
