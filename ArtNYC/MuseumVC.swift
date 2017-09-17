@@ -21,7 +21,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
         if store.allMuseums.count == 0 {
             
-            self.store.loadMuseums()
+            
         
         }
         

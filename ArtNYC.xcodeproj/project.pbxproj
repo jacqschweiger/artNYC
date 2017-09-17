@@ -32,6 +32,7 @@
 		7183B39A1E427E2D00EDF9C0 /* MuseumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183B3991E427E2D00EDF9C0 /* MuseumCell.swift */; };
 		7191AC891E295ECB00F2D06D /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC881E295ECB00F2D06D /* Museum.swift */; };
 		7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */; };
+		71C184BF1F6EE0C800475698 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C184BE1F6EE0C800475698 /* FirebaseManager.swift */; };
 		71DF916C1E2BDA0000943648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF916B1E2BDA0000943648 /* DetailView.swift */; };
 		BD095B46B7788DDAF717A231 /* Pods_ArtNYC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517B64BFC3874CBBB1849E84 /* Pods_ArtNYC.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		7183B3991E427E2D00EDF9C0 /* MuseumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumCell.swift; sourceTree = "<group>"; };
 		7191AC881E295ECB00F2D06D /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDataStore.swift; sourceTree = "<group>"; };
+		71C184BE1F6EE0C800475698 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		71DF916B1E2BDA0000943648 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B8234785D53539CE7208B710 /* Pods-ArtNYC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtNYC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtNYC/Pods-ArtNYC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			children = (
 				7191AC881E295ECB00F2D06D /* Museum.swift */,
 				7191AC8A1E29607700F2D06D /* MuseumDataStore.swift */,
+				71C184BE1F6EE0C800475698 /* FirebaseManager.swift */,
 				711E5EB11F4BBFE1003AE04F /* GoogleAPIClient.swift */,
 				7123A70F1F6237B100EBE6F7 /* Museums.swift */,
 			);
@@ -390,6 +393,7 @@
 				7183B3961E427C8400EDF9C0 /* MuseumVC.swift in Sources */,
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
 				710D80451E2C1750002AD134 /* Constants.swift in Sources */,
+				71C184BF1F6EE0C800475698 /* FirebaseManager.swift in Sources */,
 				715924521E380D120007B852 /* FilterView.swift in Sources */,
 				7114BF151E37ADFC00C81949 /* InteriorVC.swift in Sources */,
 			);
