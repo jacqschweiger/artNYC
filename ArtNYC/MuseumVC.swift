@@ -65,6 +65,8 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
  
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         self.store.filteredMuseums = self.store.allMuseums.filter({( museum : Museum) -> Bool in
+            
+            print("\n\n\nsearch text = \(searchText), \(self.store.filteredMuseums.count)")
             return (museum.title?.lowercased().contains(searchText.lowercased()))!
         })
         self.museumView.museumCollectionView.reloadData()
