@@ -30,7 +30,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         let cvLayout = UICollectionViewFlowLayout()
         cvLayout.itemSize = CGSize(width: 100, height: 100)
-
+        
         museumCollectionView = UICollectionView(frame: self.frame, collectionViewLayout: cvLayout)
         
         self.museumCollectionView.delegate = self
@@ -50,6 +50,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         //Search Set Up
         self.addSubview(searchController.searchBar)
+        searchController.searchBar.delegate = self
         searchController.searchBar.isHidden = true
         
         //Header Set Up
@@ -64,7 +65,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
-
+        
         
         self.addSubview(museumCollectionView)
         self.museumCollectionView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
@@ -83,7 +84,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
-
+    
     func showFilter(){
         self.delegate?.showFilter()
     }
@@ -91,21 +92,6 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     func showSearch(){
         self.delegate?.showFilter()
         searchController.searchBar.isHidden = false
-    }
-    
-    //Search Controller Functions
-    
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return self.searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func isFiltering() -> Bool {
-        return self.searchController.isActive && !searchBarIsEmpty()
-    }
-    
-    func noSearchText()-> Bool {
-        return self.searchController.isActive && self.searchBarIsEmpty()
     }
     
 }
@@ -181,5 +167,28 @@ extension MuseumView {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 170, height: 150)
     }
+    
+}
 
+//MARK:- Search Controller Functions
+extension MuseumView: UISearchBarDelegate {
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return self.searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        return self.searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func noSearchText()-> Bool {
+        return self.searchController.isActive && self.searchBarIsEmpty()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchController.searchBar.isHidden = true
+    }
+
+    
 }
