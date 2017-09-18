@@ -50,8 +50,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         //Search Set Up
         self.addSubview(searchController.searchBar)
-        searchController.searchBar.barTintColor = UIColor.black
-
+        
         //Header Set Up
         self.addSubview(header)
         self.header.topAnchor.constraint(equalTo: searchController.searchBar.bottomAnchor).isActive = true

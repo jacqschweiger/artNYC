@@ -37,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let font: UIFont = UIFont(name: "Avenir", size: 10)!
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: font], for: .normal)
         
+        UISearchBar.appearance().barTintColor = UIColor.black
+        UISearchBar.appearance().tintColor = UIColor.white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.black
+        
         return true
     }
     
