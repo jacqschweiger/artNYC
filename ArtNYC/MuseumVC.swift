@@ -86,7 +86,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         //self.present(filterVC, animated: true, completion: nil)
         searchVC = SearchVC()
         searchVC.modalPresentationStyle = .overFullScreen
-        //searchVC.modalTransitionStyle = .crossDissolve
+        searchVC.modalTransitionStyle = .crossDissolve
         self.present(searchVC, animated: true, completion: nil)
     }
     
