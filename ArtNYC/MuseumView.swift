@@ -89,6 +89,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func showSearch(){
+        self.delegate?.showFilter()
         searchController.searchBar.isHidden = false
     }
     
@@ -100,14 +101,12 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func isFiltering() -> Bool {
-        
         return self.searchController.isActive && !searchBarIsEmpty()
     }
     
     func noSearchText()-> Bool {
         return self.searchController.isActive && self.searchBarIsEmpty()
     }
-    
     
 }
 
@@ -154,7 +153,7 @@ extension MuseumView {
         if isFiltering() {
             museum = self.store.filteredMuseums[indexPath.item]
         } else {
-            museum = self.museums[indexPath.item]
+            museum = self.store.allMuseums[indexPath.item]
         }
         
         self.selectedMuseum = museum

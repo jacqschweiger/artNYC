@@ -15,6 +15,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
     var filterVC: FilterVC!
+    var searchVC: SearchVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,9 +81,13 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     }
     
     func showFilter(){
-        filterVC.modalPresentationStyle = .overFullScreen
-        filterVC.modalTransitionStyle = .crossDissolve
-        self.present(filterVC, animated: true, completion: nil)
+        //filterVC.modalPresentationStyle = .overFullScreen
+        //filterVC.modalTransitionStyle = .crossDissolve
+        //self.present(filterVC, animated: true, completion: nil)
+        searchVC = SearchVC()
+        searchVC.modalPresentationStyle = .overFullScreen
+        //searchVC.modalTransitionStyle = .crossDissolve
+        self.present(searchVC, animated: true, completion: nil)
     }
     
     func refreshMuseums(){
