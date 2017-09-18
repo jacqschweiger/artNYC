@@ -139,7 +139,15 @@ extension MuseumView {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.selectedMuseum = self.museums[indexPath.row]
+        let museum: Museum
+        
+        if isFiltering() {
+            museum = self.store.filteredMuseums[indexPath.item]
+        } else {
+            museum = self.museums[indexPath.item]
+        }
+        
+        self.selectedMuseum = museum
         self.delegate?.goToDetailView()
     }
     
