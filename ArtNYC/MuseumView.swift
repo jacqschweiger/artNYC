@@ -48,14 +48,9 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     
     func setUpElements(){
         
-        //Search Set Up
-        self.addSubview(searchController.searchBar)
-        searchController.searchBar.delegate = self
-        searchController.searchBar.isHidden = true
-        
         //Header Set Up
         self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
+        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
@@ -65,6 +60,17 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
+        
+        //Search Set Up
+        self.insertSubview(searchController.searchBar, aboveSubview: self.header)
+        self.sendSubview(toBack: self.header)
+        
+        //self.addSubview(searchController.searchBar)
+        searchController.searchBar.delegate = self
+        searchController.searchBar.isHidden = true
+        searchController.searchBar.topAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
+
         
         
         self.addSubview(museumCollectionView)
