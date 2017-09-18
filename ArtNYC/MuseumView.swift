@@ -53,7 +53,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         //Header Set Up
         self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: searchController.searchBar.bottomAnchor).isActive = true
+        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
@@ -74,18 +74,20 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Filter Set Up
-        self.insertSubview(filterButton, aboveSubview: header)
-        self.filterButton.setTitle("•••", for: .normal)
-        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
-        
-        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+//        self.insertSubview(filterButton, aboveSubview: header)
+//        self.filterButton.setTitle("•••", for: .normal)
+//        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+//        
+//        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+//        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+//        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
     func showFilter(){
         self.delegate?.showFilter()
     }
+    
+    //Search Controller Functions
     
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil
@@ -93,7 +95,6 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func isFiltering() -> Bool {
-        print("\n\n\n\n\n\n\n\n\nFis empty??? \(searchBarIsEmpty())")
         return self.searchController.isActive && !searchBarIsEmpty()
     }
     
@@ -106,6 +107,7 @@ extension MuseumView {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if isFiltering() {
+            print("\n\n\n\n\n yes is filtering")
             return self.store.filteredMuseums.count
         }
         
@@ -113,8 +115,10 @@ extension MuseumView {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
         let museum: Museum
+        
         if isFiltering() {
             museum = self.store.filteredMuseums[indexPath.item]
         } else {

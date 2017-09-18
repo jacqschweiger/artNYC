@@ -100,6 +100,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
 extension MuseumVC: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+        filterContentForSearchText(self.museumView.searchController.searchBar.text!)
     }
 }
