@@ -35,6 +35,8 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         definesPresentationContext = true
         extendedLayoutIncludesOpaqueBars = true
         
+        self.navigationController?.isNavigationBarHidden = true
+        
     }
     
 
@@ -52,8 +54,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.navigationController?.isNavigationBarHidden = true
-        
         if store.filteredMuseums.count > 0 {
             self.museumView.museums = store.filteredMuseums
         } else if store.filteredMuseums.count == 0 {
@@ -65,8 +65,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
  
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         self.store.filteredMuseums = self.store.allMuseums.filter({( museum : Museum) -> Bool in
-            
-            print("\n\n\nsearch text = \(searchText), \(self.store.filteredMuseums.count)")
+
             return (museum.title?.lowercased().contains(searchText.lowercased()))!
         })
         self.museumView.museumCollectionView.reloadData()
@@ -87,12 +86,12 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     }
     
     func refreshMuseums(){
-        if store.filteredMuseums.count > 0 {
-            self.museumView.museums = store.filteredMuseums
-        } else if store.filteredMuseums.count == 0 {
-            self.museumView.museums = store.allMuseums
-        }
-        self.museumView.museumCollectionView.reloadData()
+//        if store.filteredMuseums.count > 0 {
+//            self.museumView.museums = store.filteredMuseums
+//        } else if store.filteredMuseums.count == 0 {
+//            self.museumView.museums = store.allMuseums
+//        }
+//        self.museumView.museumCollectionView.reloadData()
     }
     
     

@@ -50,6 +50,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         //Search Set Up
         self.addSubview(searchController.searchBar)
+        searchController.searchBar.isHidden = true
         
         //Header Set Up
         self.addSubview(header)
@@ -74,17 +75,21 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Filter Set Up
-//        self.insertSubview(filterButton, aboveSubview: header)
-//        self.filterButton.setTitle("•••", for: .normal)
-//        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
-//        
-//        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-//        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-//        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+        self.insertSubview(filterButton, aboveSubview: header)
+        self.filterButton.setTitle("•••", for: .normal)
+        self.filterButton.addTarget(self, action: #selector(showSearch), for: .touchUpInside)
+        
+        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
     func showFilter(){
         self.delegate?.showFilter()
+    }
+    
+    func showSearch(){
+        searchController.searchBar.isHidden = false
     }
     
     //Search Controller Functions
@@ -95,7 +100,12 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func isFiltering() -> Bool {
+        
         return self.searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func noSearchText()-> Bool {
+        return self.searchController.isActive && self.searchBarIsEmpty()
     }
     
     
@@ -107,11 +117,11 @@ extension MuseumView {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if isFiltering() {
-            print("\n\n\n\n\n yes is filtering")
             return self.store.filteredMuseums.count
+        } else if noSearchText() {
+            return self.store.allMuseums.count
         }
-        
-        return self.museums.count
+        return self.store.allMuseums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -122,7 +132,7 @@ extension MuseumView {
         if isFiltering() {
             museum = self.store.filteredMuseums[indexPath.item]
         } else {
-            museum = self.museums[indexPath.item]
+            museum = self.store.allMuseums[indexPath.item]
         }
         
         cell.titleLabel.text = museum.title
