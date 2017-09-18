@@ -19,7 +19,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     var museums: [Museum] = []
     var museumCollectionView: UICollectionView!
     let header = UILabel()
-    let searchBar = UISearchBar()
+    let searchController = UISearchController(searchResultsController: nil)
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     weak var delegate: MuseumViewDelegate?
@@ -56,14 +56,16 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         filler.translatesAutoresizingMaskIntoConstraints = false
         
-        //Header Set Up
+        //Search Set Up
+        let searchBar = searchController.searchBar
         self.addSubview(searchBar)
-        self.searchBar.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
-        self.searchBar.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.searchBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.searchBar.translatesAutoresizingMaskIntoConstraints = false
-        self.searchBar.barTintColor = UIColor.black
+        searchBar.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
+        searchBar.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        searchBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.barTintColor = UIColor.black
         
+        //Header Set Up
         self.addSubview(header)
         self.header.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
@@ -100,23 +102,45 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.delegate?.showFilter()
     }
     
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return self.searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        return self.searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    
 }
 
 //MARK:- CollectionView Delegate and DataSource
 extension MuseumView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if isFiltering() {
+            return self.store.filteredMuseums.count
+        }
+        
         return self.museums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.museumCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
-        cell.titleLabel.text = museums[indexPath.item].title
-        if museums[indexPath.item].title == "Metropolitan Museum of Art" {
+        let museum: Museum
+        if isFiltering() {
+            museum = self.store.filteredMuseums[indexPath.item]
+        } else {
+            museum = self.museums[indexPath.item]
+        }
+        
+        cell.titleLabel.text = museum.title
+        if museum.title == "Metropolitan Museum of Art" {
             cell.titleLabel.text = "Metropolitan\nMuseum of Art"
-        } else if museums[indexPath.item].title == "Solomon R. Guggenheim Museum" {
+        } else if museum.title == "Solomon R. Guggenheim Museum" {
             cell.titleLabel.text = "Solomon R. Guggenheim\n Museum"
-        } else if museums[indexPath.item].title == "Whitney Museum of American Art" {
+        } else if museum.title == "Whitney Museum of American Art" {
             cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
         }
         cell.titleLabel.numberOfLines = 0

@@ -20,20 +20,19 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         super.viewDidLoad()
         
         if store.allMuseums.count == 0 {
-            
             store.getMuseums {
-                
                 DispatchQueue.main.async {
                     self.museumView.museums = self.store.allMuseums
-                    
                     self.store.getHours {
                         self.museumView.museumCollectionView.reloadData()
                     }
-                    
                 }
             }
         }
-
+        
+        self.museumView.searchController.searchResultsUpdater = self
+        self.museumView.searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
         
     }
     
@@ -62,6 +61,18 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         
     }
     
+
+    
+ 
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        self.store.filteredMuseums = self.store.allMuseums.filter({( museum : Museum) -> Bool in
+            return (museum.title?.lowercased().contains(searchText.lowercased()))!
+        })
+        self.museumView.museumCollectionView.reloadData()
+    }
+    
+    
+    
     func goToDetailView(){
         let detailViewController = DetailVC()
         detailViewController.museum = self.museumView.selectedMuseum
@@ -83,4 +94,13 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.museumView.museumCollectionView.reloadData()
     }
     
+    
+    
+}
+
+extension MuseumVC: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
 }
