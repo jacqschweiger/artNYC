@@ -33,6 +33,7 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.museumView.searchController.searchResultsUpdater = self
         self.museumView.searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
+        extendedLayoutIncludesOpaqueBars = true
         
     }
     
@@ -60,8 +61,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         }
         
     }
-    
-
     
  
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {

@@ -48,26 +48,13 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     
     func setUpElements(){
         
-        let filler = UILabel()
-        self.addSubview(filler)
-        filler.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        filler.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        filler.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        filler.translatesAutoresizingMaskIntoConstraints = false
-        
         //Search Set Up
-        let searchBar = searchController.searchBar
-        self.addSubview(searchBar)
-        searchBar.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
-        searchBar.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        searchBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.barTintColor = UIColor.black
-        
+        self.addSubview(searchController.searchBar)
+        searchController.searchBar.barTintColor = UIColor.black
+
         //Header Set Up
         self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
+        self.header.topAnchor.constraint(equalTo: searchController.searchBar.bottomAnchor).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
@@ -88,14 +75,13 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         
         //Filter Set Up
-//        self.insertSubview(filterButton, aboveSubview: header)
-//        self.filterButton.setTitle("•••", for: .normal)
-//        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
-//        
-//        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-//        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-//        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
-
+        self.insertSubview(filterButton, aboveSubview: header)
+        self.filterButton.setTitle("•••", for: .normal)
+        self.filterButton.addTarget(self, action: #selector(showFilter), for: .touchUpInside)
+        
+        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
     func showFilter(){
@@ -108,6 +94,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func isFiltering() -> Bool {
+        print("\n\n\n\n\n\n\n\n\nFis empty??? \(searchBarIsEmpty())")
         return self.searchController.isActive && !searchBarIsEmpty()
     }
     
