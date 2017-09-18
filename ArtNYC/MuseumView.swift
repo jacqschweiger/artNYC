@@ -19,6 +19,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     var museums: [Museum] = []
     var museumCollectionView: UICollectionView!
     let header = UILabel()
+    let searchBar = UISearchBar()
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     weak var delegate: MuseumViewDelegate?
@@ -56,8 +57,15 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         filler.translatesAutoresizingMaskIntoConstraints = false
         
         //Header Set Up
+        self.addSubview(searchBar)
+        self.searchBar.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
+        self.searchBar.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        self.searchBar.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        self.searchBar.translatesAutoresizingMaskIntoConstraints = false
+        self.searchBar.barTintColor = UIColor.black
+        
         self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: filler.bottomAnchor).isActive = true
+        self.header.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
