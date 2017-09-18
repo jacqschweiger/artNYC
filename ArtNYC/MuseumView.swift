@@ -134,7 +134,7 @@ extension MuseumView {
             cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
         }
         cell.titleLabel.numberOfLines = 0
-        cell.imageView.image = self.museums[indexPath.item].logo
+        cell.imageView.image = museum.logo
         return cell
     }
     
