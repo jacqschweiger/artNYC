@@ -1,3 +1,18 @@
-# artNYC
-Currently in development
-Art Museums NYC is an app that provides a directory of art museums in Manhattan. Currently, users can access general museum info, including the type of art shown, ticket prices, free admission info, hours, and address. Users can also view the museum's location on Google maps, stroll through an interior museum Google street view (if available), and view the museum's website in-app. Additional features in progress. 
+# Art Museums NYC
+An iOS app designed to serve as a one-stop, comprehensive directory of New York City’s art museums 
+
+* Discover NYC art museums both big and small  
+* Access easy-to-read visiting info
+* View a daily listing of art museums with FREE admission 
+* Take a virtual gallery stroll
+* See a map of museum locations
+* Access museum websites
+
+Written in Swift and compatible with iPhones. Now available in the [App Store](https://itunes.apple.com/us/app/art-museums-nyc/id1215413645?ls=1&mt=8)
+
+# Features
+* Built using MVC design pattern and programmatic UI 
+* Configured Firebase Database to store and display museum info
+* Accessed Google Places data through RESTful API to display visiting info and interior street views
+* Integrated Kingfisher CocoaPod for asynchronous image downloading and caching
+* Utilized UISearchController to provide search functionality 
