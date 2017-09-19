@@ -1,7 +1,14 @@
 # Art Museums NYC
 An iOS app designed to serve as a one-stop, comprehensive directory of New York City’s art museums 
 
-* Discover NYC art museums both big and small  
+<img
+ src="https://github.com/jacqschweiger/artNYC/blob/master/homeScreenshot.png" width = "200"> <img
+ src="https://github.com/jacqschweiger/artNYC/blob/master/detailScreenshot.png" width = "200"> <img
+ src="https://github.com/jacqschweiger/artNYC/blob/master/galleryScreenshot.png" width = "200"> <img
+ src="https://github.com/jacqschweiger/artNYC/blob/master/mapScreenshot.png" width = "200"> 
+
+
+* Discover museums both big and small with the only app devoted solely to art museums in NYC
 * Access easy-to-read visiting info
 * View a daily listing of art museums with FREE admission 
 * Take a virtual gallery stroll
@@ -15,4 +22,4 @@ Written in Swift and compatible with iPhones. Now available in the [App Store](h
 * Configured Firebase Database to store and display museum info
 * Accessed Google Places data through RESTful API to display visiting info and interior street views
 * Integrated Kingfisher CocoaPod for asynchronous image downloading and caching
-* Utilized UISearchController to provide search functionality 
+* Implemented UISearchController to provide search functionality 
