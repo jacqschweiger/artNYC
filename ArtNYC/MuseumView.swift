@@ -60,19 +60,13 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         header.font = UIFont(name: "Avenir", size: 18)
         header.textAlignment = .center
         header.textColor = UIColor.white
-        
+    
         //Search Set Up
-        self.insertSubview(searchController.searchBar, aboveSubview: self.header)
-        self.sendSubview(toBack: self.header)
-        
-        //self.addSubview(searchController.searchBar)
+        self.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
         searchController.searchBar.isHidden = true
-        searchController.searchBar.topAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
-
         
-        
+        //CollectionView Set Up
         self.addSubview(museumCollectionView)
         self.museumCollectionView.topAnchor.constraint(equalTo: self.header.bottomAnchor).isActive = true
         self.museumCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -96,7 +90,9 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func showSearch(){
-        self.delegate?.showFilter()
+        sendSubview(toBack: self.header)
+        bringSubview(toFront: searchController.searchBar)
+        searchController.searchBar.delegate = self
         searchController.searchBar.isHidden = false
     }
     
@@ -194,6 +190,8 @@ extension MuseumView: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchController.searchBar.isHidden = true
+        searchController.searchBar.sendSubview(toBack: self.header)
+        self.header.bringSubview(toFront: searchController.searchBar)
     }
 
     

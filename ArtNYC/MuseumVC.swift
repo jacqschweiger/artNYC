@@ -23,9 +23,10 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
             store.getMuseums {
                 DispatchQueue.main.async {
                     self.museumView.museums = self.store.allMuseums
-                    self.store.getHours {
-                        self.museumView.museumCollectionView.reloadData()
-                    }
+self.museumView.museumCollectionView.reloadData()
+//                    self.store.getHours {
+//                        self.museumView.museumCollectionView.reloadData()
+//                    }
                 }
             }
         }
