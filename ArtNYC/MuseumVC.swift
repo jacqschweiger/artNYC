@@ -15,6 +15,9 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
     var filterVC: FilterVC!
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
