@@ -77,11 +77,12 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         //Filter Set Up
         self.insertSubview(filterButton, aboveSubview: header)
-        self.filterButton.setTitle("•••", for: .normal)
+        self.filterButton.setImage(#imageLiteral(resourceName: "searchIcon"), for: .normal)
         self.filterButton.addTarget(self, action: #selector(showSearch), for: .touchUpInside)
         
         self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.filterButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
