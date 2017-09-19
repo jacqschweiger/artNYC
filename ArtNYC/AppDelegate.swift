@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UISearchBar.appearance().barTintColor = UIColor.black
         UISearchBar.appearance().tintColor = UIColor.white
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.black
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([NSFontAttributeName : UIFont(name: "Avenir", size: 16)], for: .normal)
         
         return true
     }
