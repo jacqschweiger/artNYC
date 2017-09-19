@@ -82,7 +82,8 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.filterButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.filterButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        self.filterButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
         self.filterButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
