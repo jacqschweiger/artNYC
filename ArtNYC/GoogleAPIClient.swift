@@ -10,6 +10,8 @@ import Foundation
 class GoogleAPIClient {
     
     class func getHours(with placeID: String, completion: @escaping ([String])-> Void) {
+        print("get hours called")
+        
         let urlString = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=\(Constants.key)"
         
         let url = URL(string: urlString)

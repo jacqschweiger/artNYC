@@ -19,7 +19,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     var museums: [Museum] = []
     var museumCollectionView: UICollectionView!
     let header = UILabel()
-    let searchController = UISearchController(searchResultsController: nil)
+    var searchController: UISearchController!
     var selectedMuseum: Museum!
     var filterButton = UIButton()
     weak var delegate: MuseumViewDelegate?
@@ -62,6 +62,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         header.textColor = UIColor.white
     
         //Search Set Up
+        searchController = UISearchController(searchResultsController: nil)
         self.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
         searchController.searchBar.isHidden = true
