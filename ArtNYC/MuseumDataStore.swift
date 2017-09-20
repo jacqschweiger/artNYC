@@ -16,15 +16,12 @@ class MuseumDataStore {
     static let sharedInstance = MuseumDataStore()
     private init() {}
     
-    var allMuseums: [Museum] = []
     var firebaseManager = FirebaseManager.shared
-    
+    var allMuseums: [Museum] = []
     var filteredMuseums: [Museum] = []
-    var interiorViewSwitchIsOn: Bool = false
-    var freeAdmissionSwitchIsOn: Bool = false
-    var openLateSwitchIsOn: Bool = false
-
     
+    
+
     func getMuseums(with completion: @escaping ()->()) {
         
         firebaseManager.getFBSnapshot { (results) in
