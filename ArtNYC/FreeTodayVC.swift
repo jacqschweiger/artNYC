@@ -46,9 +46,5 @@ class FreeTodayVC: UIViewController, MuseumViewDelegate {
         detailViewController.museum = self.freeTodayView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: true)
     }
-    
-    func showFilter() {
-        //fix delegate to not require this
-    }
         
 }
