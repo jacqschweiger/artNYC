@@ -49,7 +49,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         //Header Set Up
         self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
+        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
@@ -73,8 +73,8 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         self.searchButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         self.searchButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.searchButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        self.searchButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        self.searchButton.widthAnchor.constraint(equalToConstant: 22).isActive = true
+        self.searchButton.heightAnchor.constraint(equalToConstant: 22).isActive = true
         self.searchButton.translatesAutoresizingMaskIntoConstraints = false
         
         //CollectionView Set Up

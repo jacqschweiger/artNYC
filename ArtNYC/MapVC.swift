@@ -59,7 +59,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(filler)
         filler.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         filler.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        filler.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        filler.heightAnchor.constraint(equalToConstant: 10).isActive = true
         filler.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
         filler.translatesAutoresizingMaskIntoConstraints = false
         

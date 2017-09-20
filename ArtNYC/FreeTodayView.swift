@@ -43,7 +43,7 @@ class FreeTodayView: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         
         //Header Set Up
         self.addSubview(header)
-        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
+        self.header.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
         self.header.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.07).isActive = true
         self.header.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.header.translatesAutoresizingMaskIntoConstraints = false
