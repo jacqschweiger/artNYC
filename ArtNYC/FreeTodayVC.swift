@@ -2,7 +2,7 @@
 //  FreeTodayVC.swift
 //  ArtNYC
 //
-//  Created by Jacqueline Minneman on 8/21/17.
+//  Created by Jacqueline Schweiger on 8/21/17.
 //  Copyright © 2017 Jacqueline Schweiger. All rights reserved.
 //
 
