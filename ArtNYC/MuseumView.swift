@@ -120,15 +120,6 @@ extension MuseumView {
             museum = self.store.allMuseums[indexPath.item]
         }
         
-        cell.titleLabel.text = museum.title
-        if museum.title == "Metropolitan Museum of Art" {
-            cell.titleLabel.text = "Metropolitan\nMuseum of Art"
-        } else if museum.title == "Solomon R. Guggenheim Museum" {
-            cell.titleLabel.text = "Solomon R. Guggenheim\n Museum"
-        } else if museum.title == "Whitney Museum of American Art" {
-            cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
-        }
-        cell.titleLabel.numberOfLines = 0
         cell.imageView.image = museum.logo
         return cell
     }

@@ -76,15 +76,6 @@ extension FreeTodayView {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.freeTodayCollectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! MuseumCell
-        cell.titleLabel.text = museums[indexPath.item].title
-        if museums[indexPath.item].title == "Metropolitan Museum of Art" {
-            cell.titleLabel.text = "Metropolitan\nMuseum of Art"
-        } else if museums[indexPath.item].title == "Solomon R. Guggenheim Museum" {
-            cell.titleLabel.text = "Solomon R. Guggenheim\n Museum"
-        } else if museums[indexPath.item].title == "Whitney Museum of American Art" {
-            cell.titleLabel.text = "Whitney Museum of\nAmerican Art"
-        }
-        cell.titleLabel.numberOfLines = 0
         cell.imageView.image = self.museums[indexPath.item].logo
         return cell
     }

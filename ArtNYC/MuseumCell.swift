@@ -44,18 +44,6 @@ class MuseumCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         
-        
-        //TITLE SET UP
-        titleLabel = UILabel()
-//        self.contentView.addSubview(titleLabel)
-//        
-//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//        titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5).isActive = true
-//        titleLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-//        
-//        titleLabel.font = UIFont(name: "Avenir", size: 13)
-//        titleLabel.textColor = UIColor.black
-//        titleLabel.textAlignment = .center
     }
     
 }
