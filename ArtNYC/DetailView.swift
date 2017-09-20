@@ -122,7 +122,9 @@ class DetailView: UIView, GMSMapViewDelegate {
         } else if museum.title == "Solomon R. Guggenheim Museum" {
             titleLabel.text = "The Guggenheim"
         } else if museum.title == "Whitney Museum of American Art" {
-            titleLabel.text = "The Whitney"
+            titleLabel.text = "The Whitney"}
+        else if museum.title == "Jacques Marchais Museum of Tibetan Art" {
+            titleLabel.text = "Tibetan Museum"
         } else {
             titleLabel.text = museum.title
         }
