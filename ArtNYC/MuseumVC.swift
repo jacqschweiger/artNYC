@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 import GooglePlaces
 
-class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
+class MuseumVC: UIViewController, MuseumViewDelegate {
     
     var store = MuseumDataStore.sharedInstance
     var museumView: MuseumView!
-    var filterVC: FilterVC!
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -50,9 +49,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         self.museumView.delegate = self
         
         self.view = self.museumView
-        
-        self.filterVC = FilterVC()
-        self.filterVC.delegate = self
 
     }
     
@@ -82,24 +78,6 @@ class MuseumVC: UIViewController, MuseumViewDelegate, FilterVCDelegate {
         detailViewController.museum = self.museumView.selectedMuseum
         navigationController?.pushViewController(detailViewController, animated: true)
     }
-    
-    func showFilter(){
-//        filterVC.modalPresentationStyle = .overFullScreen
-//        filterVC.modalTransitionStyle = .crossDissolve
-//        self.present(filterVC, animated: true, completion: nil)
-
-    }
-    
-    func refreshMuseums(){
-//        if store.filteredMuseums.count > 0 {
-//            self.museumView.museums = store.filteredMuseums
-//        } else if store.filteredMuseums.count == 0 {
-//            self.museumView.museums = store.allMuseums
-//        }
-//        self.museumView.museumCollectionView.reloadData()
-    }
-    
-    
     
 }
 

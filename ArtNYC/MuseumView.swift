@@ -21,7 +21,7 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     let header = UILabel()
     var searchController: UISearchController!
     var selectedMuseum: Museum!
-    var filterButton = UIButton()
+    var searchButton = UIButton()
     weak var delegate: MuseumViewDelegate?
     var store = MuseumDataStore.sharedInstance
     
@@ -61,11 +61,22 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         header.textAlignment = .center
         header.textColor = UIColor.white
     
-        //Search Set Up
+        //Search Controller Set Up
         searchController = UISearchController(searchResultsController: nil)
         self.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
         searchController.searchBar.isHidden = true
+        
+        //Search Button Set Up
+        self.insertSubview(searchButton, aboveSubview: header)
+        self.searchButton.setImage(#imageLiteral(resourceName: "searchIcon"), for: .normal)
+        self.searchButton.addTarget(self, action: #selector(showSearch), for: .touchUpInside)
+        
+        self.searchButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        self.searchButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
+        self.searchButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        self.searchButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        self.searchButton.translatesAutoresizingMaskIntoConstraints = false
         
         //CollectionView Set Up
         self.addSubview(museumCollectionView)
@@ -75,21 +86,6 @@ class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         self.museumCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         self.museumCollectionView.translatesAutoresizingMaskIntoConstraints = false
         self.museumCollectionView.backgroundColor = UIColor(named: UIColor.ColorName.turquoise)
-        
-        //Filter Set Up
-        self.insertSubview(filterButton, aboveSubview: header)
-        self.filterButton.setImage(#imageLiteral(resourceName: "searchIcon"), for: .normal)
-        self.filterButton.addTarget(self, action: #selector(showSearch), for: .touchUpInside)
-        
-        self.filterButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-        self.filterButton.centerYAnchor.constraint(equalTo: self.header.centerYAnchor).isActive = true
-        self.filterButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        self.filterButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        self.filterButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    func showFilter(){
-        self.delegate?.showFilter()
     }
     
     func showSearch(){
