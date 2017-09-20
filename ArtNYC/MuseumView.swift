@@ -11,7 +11,6 @@ import UIKit
 
 protocol MuseumViewDelegate: class {
     func goToDetailView()
-    func showFilter()
 }
 
 class MuseumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
