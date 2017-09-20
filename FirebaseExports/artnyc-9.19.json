@@ -1,0 +1,508 @@
+{
+  "museums" : {
+    "asiaSociety " : {
+      "address" : "725 Park Ave",
+      "artCategories" : "Asian",
+      "coordinate" : {
+        "latitude" : 40.7700221,
+        "longitude" : -73.9645825
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6 ],
+      "freeHours" : "Fridays, 6-9pm",
+      "hours" : "",
+      "imageCredit" : "Kitagawa Utamaro. The Light-Hearted Type (Uwaki No Sō), From The Series Ten Studies In Female Physiognomy (Fujin Sogaku Juttai), 1791-1793. Courtesy Asia Society Museum.",
+      "imageURL" : "http://asiasociety.org/museum/collection_media/h640/imported/1979.219-view-a.jpg",
+      "interiorMapView" : false,
+      "logo" : "asiaLogo",
+      "openLate" : true,
+      "placeID" : "ChIJeXQWdutYwokRuHX2h1so5K4",
+      "ticketPrice" : "$12",
+      "title" : "Asia Society",
+      "url" : "http://asiasociety.org/museum"
+    },
+    "brooklyn" : {
+      "address" : "200 Eastern Pkwy",
+      "artCategories" : "All cultures and time periods",
+      "coordinate" : {
+        "latitude" : 40.6712102,
+        "longitude" : -73.9658246
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Pay what you wish, everyday\nFree first Saturday of month, 5-11pm",
+      "hours" : "",
+      "imageCredit" : "Kehinde Wiley. Napoleon Leading the Army over the Alps, 2005. Courtesy the Brooklyn Museum.",
+      "imageURL" : "https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/2015.53_framed_PS2.jpg",
+      "interiorMapView" : false,
+      "logo" : "brooklynLogo",
+      "openLate" : true,
+      "placeID" : "ChIJyTmcRApbwokR-oXJRqpVI8Y",
+      "ticketPrice" : "$16 (suggested)",
+      "title" : "BROOKLYN MUSEUM",
+      "url" : "https://www.brooklynmuseum.org/"
+    },
+    "cloisters " : {
+      "address" : "99 Margaret Corbin Dr",
+      "artCategories" : "Medieval",
+      "coordinate" : {
+        "latitude" : 40.8652285,
+        "longitude" : -73.9310879
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Pay what you wish, everyday",
+      "hours" : "",
+      "imageCredit" : "Workshop of Robert Campin. Annunciation Triptych (Merode Altarpiece), 1427–32. Courtesy the Metropolitan Museum of Art.",
+      "imageURL" : "http://images.metmuseum.org/CRDImages/cl/web-large/DP273206.jpg",
+      "interiorMapView" : false,
+      "logo" : "cloistersLogo",
+      "openLate" : false,
+      "placeID" : "ChIJK6bycAH0wokRrSnflfrnkZE",
+      "ticketPrice" : "$25 (suggested)",
+      "title" : "Met Cloisters",
+      "url" : "http://www.metmuseum.org/visit/met-cloisters"
+    },
+    "cooperHewitt " : {
+      "address" : "2 E 91st St",
+      "artCategories" : "Design",
+      "coordinate" : {
+        "latitude" : 40.7844391,
+        "longitude" : -73.9578551
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 7 ],
+      "freeHours" : "Pay what you wish Saturdays, 6-9pm",
+      "hours" : "",
+      "imageCredit" : "Marcel Breuer. Long Chair, 1936. Courtesy Cooper Hewitt.",
+      "imageURL" : "https://images.collection.cooperhewitt.org/65247_a6ebf9a09328e38d_b.jpg",
+      "interiorMapView" : false,
+      "logo" : "cooperHewittLogo",
+      "openLate" : true,
+      "placeID" : "ChIJsT8qSaJYwokR-m20OGJUKCA",
+      "ticketPrice" : "$18",
+      "title" : "Cooper Hewitt",
+      "url" : "https://www.cooperhewitt.org/"
+    },
+    "drawingCenter " : {
+      "address" : "35 Wooster St",
+      "artCategories" : "Works on paper",
+      "coordinate" : {
+        "latitude" : 40.7223326,
+        "longitude" : -74.0026948
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 5 ],
+      "freeHours" : "Thursdays, 6–8pm",
+      "hours" : "",
+      "imageCredit" : "Cecily Brown. Strolling Actresses (After Hogarth), 2015. Courtesy the Drawing Center.",
+      "imageURL" : "http://www.drawingcenter.org/files/a5977133e2fc65e1a662f75ef662dda0eb0b36d6.jpg",
+      "interiorMapView" : false,
+      "logo" : "drawingCenterLogo",
+      "openLate" : true,
+      "placeID" : "ChIJDTWukItZwokREUciPmdlVy0",
+      "ticketPrice" : "$5",
+      "title" : "Drawing Center",
+      "url" : "http://www.drawingcenter.org/"
+    },
+    "fit " : {
+      "address" : "227 W 27th St",
+      "artCategories" : "Fashion",
+      "coordinate" : {
+        "latitude" : 40.7464981,
+        "longitude" : -73.993782
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Always free",
+      "hours" : "",
+      "imageCredit" : "Stephen Burrows. Coatdress, Fall 1970. Courtesy the Museum at FIT.",
+      "imageURL" : "http://www.fitnyc.edu/museum/images/ue-black-fashion-designers-92.105.8-300.jpg",
+      "interiorMapView" : false,
+      "logo" : "fitLogo",
+      "openLate" : true,
+      "placeID" : "ChIJzT4qRatZwokRELNiRd8Su_4",
+      "ticketPrice" : "Free",
+      "title" : "Museum at FIT",
+      "url" : "http://www.fitnyc.edu/museum/"
+    },
+    "folkArt " : {
+      "address" : "2 Lincoln Square",
+      "artCategories" : "American folk",
+      "coordinate" : {
+        "latitude" : 40.7732,
+        "longitude" : -73.9814
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Always free",
+      "hours" : "",
+      "imageCredit" : "Unidentified artist. Soldier’s Quilt, 1854–1890. Courtesy the American Folk Art Museum.",
+      "imageURL" : "http://folkartmuseum.org/content/uploads/2014/08/folk_6649_image.jpg",
+      "interiorMapView" : false,
+      "logo" : "folkArtLogo",
+      "openLate" : false,
+      "placeID" : "ChIJEeD6FPVYwokRgs0ZbWMrrzk",
+      "ticketPrice" : "Free",
+      "title" : "American Folk Art Museum",
+      "url" : "http://folkartmuseum.org/"
+    },
+    "frick " : {
+      "address" : "1 E 70th St",
+      "artCategories" : "Old Masters, European decorative",
+      "coordinate" : {
+        "latitude" : 40.7710473,
+        "longitude" : -73.9673473
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6, 1 ],
+      "freeHours" : "Free first Friday of every month, 6-9pm\\nPay what you wish Sundays, 11am-1pm",
+      "hours" : "",
+      "imageCredit" : "Jean-Auguste-Dominique Ingres. Comtesse d'Haussonville, 1845. Courtesy the Frick Collection.",
+      "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Jean-Auguste-Dominique_Ingres_-_Comtesse_d%27Haussonville_-_Google_Art_Project.jpg/330px-Jean-Auguste-Dominique_Ingres_-_Comtesse_d%27Haussonville_-_Google_Art_Project.jpg",
+      "interiorMapView" : true,
+      "logo" : "frickLogo",
+      "openLate" : false,
+      "placeID" : "ChIJHRH97uxYwokR6CBeDyn1jtg",
+      "ticketPrice" : "$22",
+      "title" : "Frick Collection",
+      "url" : "http://www.frick.org/"
+    },
+    "guggenheim " : {
+      "address" : "1071 5th Ave",
+      "artCategories" : "Modern & contemporary",
+      "coordinate" : {
+        "latitude" : 40.7829473,
+        "longitude" : -73.959093
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 7 ],
+      "freeHours" : "Pay what you wish Saturdays, 5:45–7:45pm",
+      "hours" : "",
+      "imageCredit" : "Vasily Kandinsky. Light Picture (Helles Bild), 1913. Courtesy the Solomon R. Guggenheim Museum.",
+      "imageURL" : "https://i0.wp.com/www.guggenheim.org/wp-content/uploads/1913/01/37.244_ph_web.jpg?w=870",
+      "interiorMapView" : true,
+      "logo" : "guggenheimLogo",
+      "openLate" : false,
+      "placeID" : "ChIJmZ5emqJYwokRuDz79o0coAQ",
+      "ticketPrice" : "$15",
+      "title" : "Solomon R. Guggenheim Museum",
+      "url" : "https://www.guggenheim.org/"
+    },
+    "hispanicSociety " : {
+      "address" : "613 W 155th St",
+      "artCategories" : "Spanish & Portuguese",
+      "coordinate" : {
+        "latitude" : 40.8333768,
+        "longitude" : -73.9470945
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 0 ],
+      "freeHours" : "Always free",
+      "hours" : "Temporarily closed for renovations",
+      "imageCredit" : "Diego Velázquez. Portrait of a Little Girl, ca. 1638-44. Courtesy the Hispanic Society of America.",
+      "imageURL" : "http://www.learn.columbia.edu/hispanic/img/art400/velazquez-girl.jpg",
+      "interiorMapView" : false,
+      "logo" : "hispanicSocietyLogo",
+      "openLate" : false,
+      "placeID" : "ChIJv9uJC4b2wokRI7r1wOp3AHw",
+      "ticketPrice" : "Free",
+      "title" : "Hispanic Society of America",
+      "url" : "http://hispanicsociety.org/"
+    },
+    "jewishMuseum " : {
+      "address" : "1109 5th Ave",
+      "artCategories" : "Jewish art & artists, contemporary & historic",
+      "coordinate" : {
+        "latitude" : 40.7854,
+        "longitude" : -73.9572
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 5, 7 ],
+      "freeHours" : "Saturdays free\\nPay what you wish Thursdays, 5–8pm",
+      "hours" : "",
+      "imageCredit" : "Sol LeWitt. Designed from Torah Ark, 2001. Courtesy the Jewish Museum.",
+      "imageURL" : "http://72.32.137.209/piction/ump.show_public_image?v_umo=12805126&quality=O3",
+      "interiorMapView" : false,
+      "logo" : "jewishMuseumLogo",
+      "openLate" : true,
+      "placeID" : "ChIJxY5cO6JYwokRPeVk85UNj2g",
+      "ticketPrice" : "$15",
+      "title" : "Jewish Museum",
+      "url" : "http://thejewishmuseum.org/"
+    },
+    "mad " : {
+      "address" : "2 Columbus Circle",
+      "artCategories" : "Craft, art & design, contemporary & historic",
+      "coordinate" : {
+        "latitude" : 40.7674,
+        "longitude" : -73.982
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 5 ],
+      "freeHours" : "Pay what you wish Thursdays, 6-9pm",
+      "hours" : "",
+      "imageCredit" : "Sarah Abramson. Volume 9 (large bun), 2009. Photography credit: Adam Krauth. Courtesy the Museum of Arts and Design.",
+      "imageURL" : "http://66.223.50.254/emuseum/media/full/2010_42_1.jpg",
+      "interiorMapView" : false,
+      "logo" : "madLogo",
+      "openLate" : true,
+      "placeID" : "ChIJgVtmM_ZYwokRcJJnebe5KX8",
+      "ticketPrice" : "$16",
+      "title" : "Museum of Arts and Design",
+      "url" : "http://www.madmuseum.org/"
+    },
+    "metBreuer " : {
+      "address" : "945 Madison Ave",
+      "artCategories" : "Modern & contemporary",
+      "coordinate" : {
+        "latitude" : 40.7735936,
+        "longitude" : -73.9641533
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Pay what you wish, everyday",
+      "hours" : "",
+      "imageCredit" : "Kerry James Marshall. Untitled (Studio), 2014. Courtesy the Metropolitan Museum of Art.",
+      "imageURL" : "http://images.metmuseum.org/CRDImages/ma/web-large/DP362047.jpg",
+      "interiorMapView" : false,
+      "logo" : "breuerLogo",
+      "openLate" : true,
+      "placeID" : "ChIJl-WU6pRYwokRA91OgdYWfa4",
+      "ticketPrice" : "$25 (suggested)",
+      "title" : "Met Breuer",
+      "url" : "http://www.metmuseum.org/visit/met-breuer"
+    },
+    "metMuseum " : {
+      "address" : "1000 5th Ave",
+      "artCategories" : "All cultures and time periods",
+      "coordinate" : {
+        "latitude" : 40.7802722,
+        "longitude" : -73.9622221
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Pay what you wish, everyday",
+      "hours" : "",
+      "imageCredit" : "Claude Monet. Garden at Sainte-Adresse, 1867. Courtesy the Metropolitan Museum of Art.",
+      "imageURL" : "http://images.metmuseum.org/CRDImages/ep/web-large/DT48.jpg",
+      "interiorMapView" : true,
+      "logo" : "metLogo",
+      "openLate" : true,
+      "placeID" : "ChIJb8Jg9pZYwokR-qHGtvSkLzs",
+      "ticketPrice" : "$25 (suggested)",
+      "title" : "Metropolitan Museum of Art",
+      "url" : "http://www.metmuseum.org/"
+    },
+    "moma " : {
+      "address" : "11 W 53rd St",
+      "artCategories" : "Modern & contemporary",
+      "coordinate" : {
+        "latitude" : 40.7615708,
+        "longitude" : -73.9773532
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6 ],
+      "freeHours" : "Fridays, 4-8pm",
+      "hours" : "",
+      "imageCredit" : "Pablo Picasso. Les Demoiselles d'Avignon, 1907. Courtesy the Museum of Modern Art.",
+      "imageURL" : "https://www.moma.org/media/W1siZiIsIjE1MTI3MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDEzNjZ4MTM2Nlx1MDAzZSJdXQ.jpg?sha=0aeee086f50d61a0",
+      "interiorMapView" : true,
+      "logo" : "momaLogo",
+      "openLate" : true,
+      "placeID" : "ChIJKxDbe_lYwokRVf__s8CPn-o",
+      "ticketPrice" : "$25",
+      "title" : "Museum of Modern Art",
+      "url" : "https://www.moma.org/"
+    },
+    "momaPS1" : {
+      "address" : "22-25 Jackson Ave",
+      "artCategories" : "Contemporary",
+      "coordinate" : {
+        "latitude" : 40.7454941,
+        "longitude" : -73.9495512
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 1, 2, 3, 4, 5, 6, 7 ],
+      "freeHours" : "Pay what you wish, everyday",
+      "hours" : "",
+      "imageCredit" : "Katharina Grosse. Rockaway!, 2016. Courtesy the MoMA PS1.",
+      "imageURL" : "http://momaps1.org/images/home/2016/2016_rockaway.jpg",
+      "interiorMapView" : false,
+      "logo" : "momaPS1Logo",
+      "openLate" : true,
+      "placeID" : "ChIJwfbFiiNZwokRN8hnF940DbY",
+      "ticketPrice" : "$10 (suggested)",
+      "title" : "MoMA PS1",
+      "url" : "http://momaps1.org/"
+    },
+    "morganLibrary " : {
+      "address" : "225 Madison Ave",
+      "artCategories" : "Rare books, music, drawings",
+      "coordinate" : {
+        "latitude" : 40.7494742,
+        "longitude" : -73.9817367
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6 ],
+      "freeHours" : "Fridays, 7-9pm",
+      "hours" : "",
+      "imageCredit" : "Unidentified artist. Saul Slaying Nahash and the Ammonites; Samuel Anoints Saul and Sacrifices to the Lord, ca. 1240. Courtesy the Morgan Library & Museum.",
+      "imageURL" : "http://www.themorgan.org/sites/default/files/styles/collection_image/public/images/collection/m638_23v_0.jpg?itok=Qhu82zYG",
+      "interiorMapView" : false,
+      "logo" : "morganLogo",
+      "openLate" : true,
+      "placeID" : "ChIJ3453OAdZwokRja92OOKCugM",
+      "ticketPrice" : "$20",
+      "title" : "Morgan Library & Museum",
+      "url" : "http://www.themorgan.org/"
+    },
+    "museoDelBarrio " : {
+      "address" : "1230 5th Ave",
+      "artCategories" : "Latino, Caribbean, & Latin American",
+      "coordinate" : {
+        "latitude" : 40.7931,
+        "longitude" : -73.9514
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 7 ],
+      "freeHours" : "Every third Saturday of the month",
+      "hours" : "",
+      "imageCredit" : "Taino artist. Untitled, Pre-Columbian. Courtesy El Museo del Barrio.",
+      "imageURL" : "http://www.elmuseo.org/wp-content/uploads/2014/01/1991-0488-0004W_A_PC_croppe.jpg",
+      "interiorMapView" : false,
+      "logo" : "museoDelBarrioLogo",
+      "openLate" : false,
+      "placeID" : "ChIJWT0gUBz2wokRNcAxVUphAAs",
+      "ticketPrice" : "$9",
+      "title" : "El Museo Del Barrio",
+      "url" : "http://www.elmuseo.org/"
+    },
+    "neueGalerie " : {
+      "address" : "1048 5th Ave",
+      "artCategories" : "Austrian & German",
+      "coordinate" : {
+        "latitude" : 40.7813,
+        "longitude" : -73.9603
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6 ],
+      "freeHours" : "First Friday of every month, 6-8pm",
+      "hours" : "",
+      "imageCredit" : "Gustav Klimt. Adele Bloch-Bauer I, 1907. Courtesy the Neue Galerie.",
+      "imageURL" : "http://www.neuegalerie.org/sites/default/files/adele_new.jpg",
+      "interiorMapView" : false,
+      "logo" : "neueGalerieLogo",
+      "openLate" : true,
+      "placeID" : "ChIJ01_9-ZdYwokRL2JrA28GJp8",
+      "ticketPrice" : "$20",
+      "title" : "Neue Galerie New York",
+      "url" : "http://neuegalerie.org/"
+    },
+    "newMuseum " : {
+      "address" : "235 Bowery",
+      "artCategories" : "Contemporary",
+      "coordinate" : {
+        "latitude" : 40.7223779,
+        "longitude" : -73.993038
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 5 ],
+      "freeHours" : "Pay what you wish Thursdays, 7-9pm",
+      "hours" : "",
+      "imageCredit" : "Rosemarie Trockel. Exhibition view of Rosemarie Trockel: A Cosmos, 2012-2013.  Photography credit: Benoit Pailley. Courtesy the New Museum.",
+      "imageURL" : "http://ca.newmuseum.org/media/newmuseum/images/9/1/88974_ca_object_representations_media_9191_mediumlarge.jpg",
+      "interiorMapView" : false,
+      "logo" : "newMuseumLogo",
+      "openLate" : true,
+      "placeID" : "ChIJlaRS3IVZwokR2llMD6dCt-U",
+      "ticketPrice" : "$18",
+      "title" : "New Museum",
+      "url" : "http://www.newmuseum.org/"
+    },
+    "noguchi" : {
+      "address" : "22-25 Jackson Ave",
+      "artCategories" : "Sculpture",
+      "coordinate" : {
+        "latitude" : 40.7670215,
+        "longitude" : -73.9376379
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6 ],
+      "freeHours" : "First Friday of month",
+      "hours" : "",
+      "imageCredit" : "Isamu Noguchi. Sun at Midnight, 1973. Courtesy the Isamu Noguchi Foundation and Garden Museum.",
+      "imageURL" : "http://www.noguchi.org/sites/default/files/imagecache/main_collection_image/collection/730A.jpg",
+      "interiorMapView" : true,
+      "logo" : "noguchiLogo",
+      "openLate" : false,
+      "placeID" : "ChIJUZ0c7MpYwokRh8SiMzCXL98",
+      "ticketPrice" : "$10",
+      "title" : "Noguchi Museum",
+      "url" : "http://www.noguchi.org/"
+    },
+    "queens" : {
+      "address" : "Flushing Meadows Corona Park",
+      "artCategories" : "Contemporary and New York-related",
+      "coordinate" : {
+        "latitude" : 40.7459436,
+        "longitude" : -73.8489266
+      },
+      "freeAdmission" : false,
+      "freeDay" : [ 0 ],
+      "freeHours" : "None",
+      "hours" : "",
+      "imageCredit" : "Panorama of the City of New York, 1964. Courtesy the Queens Museum.",
+      "imageURL" : "http://www.queensmuseum.org/wp-content/uploads/2013/11/Exhibitions_Panorama_Chrysler-Building-on-the-Panorama-638x319.png",
+      "interiorMapView" : false,
+      "logo" : "queensLogo",
+      "openLate" : false,
+      "placeID" : "ChIJmWMJBtBfwokR5qK7waLcgAM",
+      "ticketPrice" : "$8",
+      "title" : "Queens Museum",
+      "url" : "http://www.queensmuseum.org/"
+    },
+    "rubinMuseum " : {
+      "address" : "150 W 17th St",
+      "artCategories" : "Himalayan & Asian",
+      "coordinate" : {
+        "latitude" : 40.740109,
+        "longitude" : -73.9977899
+      },
+      "freeAdmission" : true,
+      "freeDay" : [ 6 ],
+      "freeHours" : "Fridays 6–10pm",
+      "hours" : "",
+      "imageCredit" : "Tibetan artist. Manjushri Namasamgiti, 19th cent. Courtesy the Rubin Museum of Art.",
+      "imageURL" : "http://rubinmuseum.org/images/content/3591/web_c2013.9a-c_front_lg__slider.jpg",
+      "interiorMapView" : true,
+      "logo" : "rubinLogo",
+      "openLate" : true,
+      "placeID" : "ChIJD4QSVbxZwokRaFPDajZtIaI",
+      "ticketPrice" : "$20",
+      "title" : "Rubin Museum of Art",
+      "url" : "http://rubinmuseum.org/"
+    },
+    "whitney " : {
+      "address" : "99 Gansevoort St",
+      "artCategories" : "American modern & contemporary",
+      "coordinate" : {
+        "latitude" : 40.7396877,
+        "longitude" : -74.0088928
+      },
+      "freeAdmission" : false,
+      "freeDay" : [ 0 ],
+      "freeHours" : "None",
+      "hours" : "",
+      "imageCredit" : "Willem de Kooning. Woman and Bicycle, 1952-53. Courtesy the Whitney Museum of American Art.",
+      "imageURL" : "http://collectionimages.whitney.org/standard/171665/largepage.jpg",
+      "interiorMapView" : false,
+      "logo" : "whitneyLogo",
+      "openLate" : true,
+      "placeID" : "ChIJN3MJ6pRYwokRiXg91flSP8Y",
+      "ticketPrice" : "$25",
+      "title" : "Whitney Museum of American Art",
+      "url" : "http://whitney.org/"
+    }
+  }
+}
