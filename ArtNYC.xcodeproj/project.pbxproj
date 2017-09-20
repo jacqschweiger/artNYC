@@ -22,8 +22,6 @@
 		713D5F1D1E295DA500DD76FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1C1E295DA500DD76FA /* Assets.xcassets */; };
 		713D5F201E295DA500DD76FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */; };
 		713D5F2B1E295DA500DD76FA /* ArtNYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */; };
-		715924521E380D120007B852 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715924511E380D120007B852 /* FilterView.swift */; };
-		715924541E380EF00007B852 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715924531E380EF00007B852 /* FilterVC.swift */; };
 		716027451E2A8F7900CAF26B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716027441E2A8F7900CAF26B /* WebVC.swift */; };
 		71732BE81E2C3D28009A5D75 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71732BE71E2C3D28009A5D75 /* WebView.swift */; };
 		7182780B1E48F1A700FE8190 /* ArtWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */; };
@@ -70,8 +68,6 @@
 		713D5F261E295DA500DD76FA /* ArtNYCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtNYCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		713D5F2A1E295DA500DD76FA /* ArtNYCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtNYCTests.swift; sourceTree = "<group>"; };
 		713D5F2C1E295DA500DD76FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		715924511E380D120007B852 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		715924531E380EF00007B852 /* FilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		716027441E2A8F7900CAF26B /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		71732BE71E2C3D28009A5D75 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkVC.swift; sourceTree = "<group>"; };
@@ -127,7 +123,6 @@
 				7182780A1E48F1A700FE8190 /* ArtWorkVC.swift */,
 				716027441E2A8F7900CAF26B /* WebVC.swift */,
 				7114BF141E37ADFC00C81949 /* InteriorVC.swift */,
-				715924531E380EF00007B852 /* FilterVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -184,7 +179,6 @@
 				7183B3991E427E2D00EDF9C0 /* MuseumCell.swift */,
 				71DF916B1E2BDA0000943648 /* DetailView.swift */,
 				71732BE71E2C3D28009A5D75 /* WebView.swift */,
-				715924511E380D120007B852 /* FilterView.swift */,
 				713D5F1E1E295DA500DD76FA /* LaunchScreen.storyboard */,
 			);
 			name = Views;
@@ -383,7 +377,6 @@
 				711E5EB21F4BBFE1003AE04F /* GoogleAPIClient.swift in Sources */,
 				7132CBF71E2978A8008CA655 /* DetailVC.swift in Sources */,
 				7191AC8B1E29607700F2D06D /* MuseumDataStore.swift in Sources */,
-				715924541E380EF00007B852 /* FilterVC.swift in Sources */,
 				711E5EB61F4BD61A003AE04F /* FreeTodayView.swift in Sources */,
 				7117758D1E390D2B0082D6CC /* TabBarVC.swift in Sources */,
 				7183B3981E427D4D00EDF9C0 /* MuseumView.swift in Sources */,
@@ -394,7 +387,6 @@
 				7191AC891E295ECB00F2D06D /* Museum.swift in Sources */,
 				710D80451E2C1750002AD134 /* Constants.swift in Sources */,
 				71C184BF1F6EE0C800475698 /* FirebaseManager.swift in Sources */,
-				715924521E380D120007B852 /* FilterView.swift in Sources */,
 				7114BF151E37ADFC00C81949 /* InteriorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
